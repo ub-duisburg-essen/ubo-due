@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<navigation root="true">
+
+  <item id="home" />
+  <item id="login" />
+  <item id="dozbib" />
+
+  <item id="profile" ref="servlets/MCRUserServlet?action=show" role="submitter">
+    <label xml:lang="de">Mein Profil</label>
+    <label xml:lang="en">My profile</label>
+  </item>
+
+  <item menu="main">
+    <item ref="search.xed">
+      <label xml:lang="de">Suchen</label>
+      <label xml:lang="en">Search</label>
+      <item id="dozbib.search-simple" ref="search.xed">
+        <label xml:lang="de">Erweiterte Suche</label>
+        <label xml:lang="en">Extended search</label>
+      </item>
+      <item id="dozbib.search-expert" ref="search-expert.xed" role="admin">
+        <label xml:lang="de">Expertensuche</label>
+        <label xml:lang="en">Expert search</label>
+      </item>
+      <item id="dozbib.search" />
+    </item>
+    <item ref="newPublication.xed" id="dozbib.new.publication">
+      <label xml:lang="de">Publikation melden</label>
+      <label xml:lang="en">Register a publication</label>
+      <item id="dozbib.edit.publication" />
+    </item>
+    <item ref="list-wizard.xed" id="dozbib.list-wizard">
+      <label xml:lang="de">Persönliche Publikationsliste</label>
+      <label xml:lang="en">Personal publication list</label>
+    </item>
+    <item ref="statistics.xml" id="dozbib.stats">
+      <label xml:lang="de">Statistiken</label>
+      <label xml:lang="en">Statistics</label>
+    </item>
+    <item ref="import-list.xed" role="admin">
+      <label xml:lang="de">Importieren</label>
+      <label xml:lang="en">Import</label>
+      <item id="dozbib.import.list" ref="import-list.xed" role="admin">
+        <label xml:lang="de">Literaturliste importieren</label>
+        <label xml:lang="en">Import publication list</label>
+      </item>
+      <item id="dozbib.import.evaluna" ref="import-from-evaluna.xed" role="admin">
+        <label xml:lang="de">aus EVALuna Biblio</label>
+        <label xml:lang="en">from EVALuna Biblio</label>
+      </item>
+    </item>
+    <item id="dozbib.duplicates" ref="duplicates.xml" role="admin">
+      <label xml:lang="de">Dubletten</label>
+      <label xml:lang="en">Duplicates</label>
+    </item>
+  </item>
+
+  <!-- added by ubo_softec -->
+  <item menu="information">
+    <label xml:lang="de">Informationen der UDE für...</label>
+    <label xml:lang="en">Information of UDE for...</label>
+
+    <item id="interest" href="https://www.uni-due.de/de/interessierte.php">
+      <label xml:lang="de">Studieninteressierte</label>
+      <label xml:lang="en">Prospective Students</label>
+    </item>
+    <item id="doctorate" href="https://www.uni-due.de/de/studierende.php">
+      <label xml:lang="de">Studierende</label>
+      <label xml:lang="en">Current Students</label>
+    </item>
+    <item id="doctorate" href="https://www.uni-due.de/de/promovierende.php">
+      <label xml:lang="de">Promovierende</label>
+      <label xml:lang="en">Ph.D. Students</label>
+    </item>
+    <item id="alumni" href="https://www.uni-due.de/de/alumni/">
+      <label xml:lang="de">Alumni</label>
+    </item>
+    <item id="employed" href="https://www.uni-due.de/verwaltung/beschaeftigte.php">
+      <label xml:lang="de">Beschäftigte</label>
+      <label xml:lang="en">Employees</label>
+    </item>
+    <item id="economy" href="https://www.uni-due.de/de/wirtschaft/">
+      <label xml:lang="de">Wirtschaft</label>
+      <label xml:lang="en">Economy</label>
+    </item>
+    <item id="press" href="https://www.uni-due.de/de/presse/index.php">
+      <label xml:lang="de">Presse</label>
+      <label xml:lang="en">Press</label>
+    </item>
+    <item id="international" href="https://www.uni-due.de/international/">
+      <label xml:lang="de">International</label>
+      <label xml:lang="en">International</label>
+    </item>
+  </item>
+
+  <item role="meta">
+    <item ref="contact.xml">
+      <label xml:lang="de">Kontakt</label>
+      <label xml:lang="en">Contact</label>
+    </item>
+    <item ref="impressum.xml">
+      <label xml:lang="de">Impressum</label>
+      <label xml:lang="en">Imprint</label>
+    </item>
+  </item>
+
+</navigation>
