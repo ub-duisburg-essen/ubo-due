@@ -15,6 +15,7 @@
 
   <xsl:param name="CurrentLang" />
   <xsl:param name="DefaultLang" />
+  <xsl:param name="UBO.Login.Path" />
 
   <xsl:variable name="AvailableLanguages" select="'de,en'" />
 
@@ -303,7 +304,7 @@
       <xsl:when test="mcrxsl:isCurrentUserGuestUser()">
         <li class="nav-item">
           <xsl:variable name="url" select="encoder:encode(string($RequestURL))" />
-          <a id="loginURL" class="nav-link" href="{$WebApplicationBaseURL}login.xed?url={$url}">Anmelden</a>
+          <a id="loginURL" class="nav-link" href="{$WebApplicationBaseURL}{$UBO.Login.Path}?url={$url}">Anmelden</a>
         </li>
       </xsl:when>
       <xsl:otherwise>
