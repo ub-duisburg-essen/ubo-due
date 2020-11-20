@@ -6,6 +6,11 @@
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
+  div.pagetitle h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
   .head-bar {
     border-bottom: 1px solid $gray-light; // from uni page
     height: 35px;                         // from uni page

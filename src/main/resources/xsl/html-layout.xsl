@@ -347,20 +347,20 @@
   <xsl:template name="breadcrumbPath">
     <nav class="rootline" aria-label="breadcrumb">
       <ol class="breadcrumb py-1" vocab="http://schema.org/" typeof="BreadcrumbList">
-        <li property="itemListElement" typeof="ListItem">
+        <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
           <a href="https://www.uni-due.de/ub/" property="item" typeof="WebPage">
             <i class="fas fa-home"></i>
             <xsl:value-of select="i18n:translate('navigation.UB')" />
           </a>
         </li>
-        <li property="itemListElement" typeof="ListItem">
+        <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
           <a href="{$WebApplicationBaseURL}" property="item" typeof="WebPage">
             <xsl:value-of select="i18n:translate('navigation.Home')" />
           </a>
         </li>
         <xsl:apply-templates mode="breadcrumb" select="$CurrentItem/ancestor-or-self::item[@label|label][ancestor-or-self::*=$navigation.tree[@role='main']]" />
         <xsl:for-each select="body/ul[@id='breadcrumb']/li">
-          <li property="itemListElement" typeof="ListItem">
+          <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
             <xsl:copy-of select="node()" />
           </li>
         </xsl:for-each>
@@ -369,7 +369,7 @@
   </xsl:template>
 
   <xsl:template match="item" mode="breadcrumb">
-    <li property="itemListElement" typeof="ListItem">
+    <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
       <xsl:call-template name="output.item.label" />
     </li>
   </xsl:template>
