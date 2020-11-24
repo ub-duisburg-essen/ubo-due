@@ -485,17 +485,17 @@
                     </a>
                   </li>
                   <li>
-                    <a href="/content/brand/impressum.xml" class="footer-menu__entry">
+                    <a href="/impressum.xml" class="footer-menu__entry">
                       <i class="fas fa-comments" /> Impressum
                     </a>
                   </li>
                   <li>
-                    <a href="/content/brand/datenschutz.xml" class="footer-menu__entry">
+                    <a href="https://www.uni-due.de/ub/dsgvo.php" class="footer-menu__entry">
                       <i class="fas fa-user-shield" /> Datenschutz
                     </a>
                   </li>
                   <li>
-                    <a href="/content/brand/accessibility.xml" class="footer-menu__entry">
+                    <a href="/accessibility.xml" class="footer-menu__entry">
                       <i class="fas fa-universal-access" /> Barrierefreiheit
                     </a>
                   </li>
