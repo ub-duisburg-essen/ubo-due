@@ -6,9 +6,15 @@
   <item id="login" />
   <item id="dozbib" />
 
-  <item id="profile" ref="servlets/MCRUserServlet?action=show" role="submitter">
-    <label xml:lang="de">Mein Profil</label>
-    <label xml:lang="en">My profile</label>
+  <item menu="header">
+    <item href="https://www.uni-due.de/ub/" icon="info-circle">
+      <label xml:lang="de">Universitätsbibliothek</label>
+      <label xml:lang="en">University library</label>
+    </item>
+    <item href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php" icon="info-circle">
+      <label xml:lang="de">Open Access</label>
+      <label xml:lang="en">Open Access</label>
+    </item>
   </item>
 
   <item menu="main">
@@ -56,52 +62,44 @@
     </item>
   </item>
 
-  <!-- added by ubo_softec -->
-  <item menu="information">
-    <label xml:lang="de">Informationen der UDE für...</label>
-    <label xml:lang="en">Information of UDE for...</label>
-
-    <item id="interest" href="https://www.uni-due.de/de/interessierte.php">
-      <label xml:lang="de">Studieninteressierte</label>
-      <label xml:lang="en">Prospective Students</label>
-    </item>
-    <item id="doctorate" href="https://www.uni-due.de/de/studierende.php">
-      <label xml:lang="de">Studierende</label>
-      <label xml:lang="en">Current Students</label>
-    </item>
-    <item id="doctorate" href="https://www.uni-due.de/de/promovierende.php">
-      <label xml:lang="de">Promovierende</label>
-      <label xml:lang="en">Ph.D. Students</label>
-    </item>
-    <item id="alumni" href="https://www.uni-due.de/de/alumni/">
-      <label xml:lang="de">Alumni</label>
-    </item>
-    <item id="employed" href="https://www.uni-due.de/verwaltung/beschaeftigte.php">
-      <label xml:lang="de">Beschäftigte</label>
-      <label xml:lang="en">Employees</label>
-    </item>
-    <item id="economy" href="https://www.uni-due.de/de/wirtschaft/">
-      <label xml:lang="de">Wirtschaft</label>
-      <label xml:lang="en">Economy</label>
-    </item>
-    <item id="press" href="https://www.uni-due.de/de/presse/index.php">
-      <label xml:lang="de">Presse</label>
-      <label xml:lang="en">Press</label>
-    </item>
-    <item id="international" href="https://www.uni-due.de/international/">
-      <label xml:lang="de">International</label>
-      <label xml:lang="en">International</label>
+  <item menu="user">
+    <item ref="servlets/MCRUserServlet?action=show">
+      <label xml:lang="de">Mein Profil</label>
+      <label xml:lang="en">My profile</label>
     </item>
   </item>
 
-  <item role="meta">
-    <item ref="contact.xml">
-      <label xml:lang="de">Kontakt</label>
-      <label xml:lang="en">Contact</label>
+  <item menu="admin">
+    <item ref="modules/webcli/launchpad.xml">
+      <label xml:lang="de">WebCLI</label>
+      <label xml:lang="en">WebCLI</label>
     </item>
-    <item ref="impressum.xml">
+    <item ref="modules/classeditor/classificationEditor.xml?XSL.classeditor.showId=true">
+      <label xml:lang="de">Klassifikationseditor</label>
+      <label xml:lang="en">Classification editor</label>
+    </item>
+  </item>
+
+  <item menu="footer">
+    <item href="https://www.uni-due.de/infoline/" icon="phone">
+      <label xml:lang="de">Infoline</label>
+      <label xml:lang="en">Infoline</label>
+    </item>
+    <item href="https://www.uni-due.de/de/hilfe_im_notfall.php" icon="exclamation-triangle">
+      <label xml:lang="de">Hilfe im Notfall</label>
+      <label xml:lang="en">Emergency handling</label>
+    </item>
+    <item ref="impressum.xml" icon="comments">
       <label xml:lang="de">Impressum</label>
       <label xml:lang="en">Imprint</label>
+    </item>
+    <item href="https://www.uni-due.de/ub/dsgvo.php" icon="user-shield">
+      <label xml:lang="de">Datenschutz</label>
+      <label xml:lang="en">Privacy policy</label>
+    </item>
+    <item ref="accessibility.xml" icon="universal-access">
+      <label xml:lang="de">Barrierefreiheit</label>
+      <label xml:lang="en">Accessibility</label>
     </item>
   </item>
 

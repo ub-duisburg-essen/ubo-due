@@ -97,18 +97,16 @@
         <div class="mir-prop-nav">
           <nav>
             <ul class="navbar-nav flex-row flex-wrap align-items-center">
-              <li>
-                <a href="https://www.uni-due.de/ub/" data-toggle="tooltip" title="Universitätsbibliothek Duisburg-Essen">
-                  <i class="fas fa-fw fa-info-circle"></i>
-                  <span class="icon-label">Universitätsbibliothek</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php" data-toggle="tooltip" title="Open Access: Förderung und Informationen">
-                  <i class="fas fa-fw fa-info-circle" />
-                  <span class="icon-label">Open Access</span>
-                </a>
-              </li>
+              <xsl:for-each select="$navigation.tree/item[@menu='header']/item">
+                <li>
+                  <a href="{@href}">
+                    <i class="fas fa-fw fa-{@icon}" />
+                    <span class="icon-label">
+                      <xsl:call-template name="output.label.for.lang" />
+                    </span>
+                  </a>
+                </li>
+              </xsl:for-each>
               <xsl:call-template name="language-switcher" />
             </ul>
           </nav>
@@ -309,6 +307,7 @@
       </xsl:when>
       <xsl:otherwise>
         <li class="nav-item dropdown">
+
           <a id="currentUser" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
             <xsl:choose>
               <xsl:when test="contains($CurrentUser,'@')">
@@ -320,28 +319,33 @@
             </xsl:choose>
             <span class="caret" />
           </a>
+
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
+
             <xsl:if test="contains($CurrentUser,'@')">
-              <li>
-                <a href="{$ServletsBaseURL}MCRUserServlet?action=show" class="dropdown-item">Mein Profil</a>
-              </li>
+              <xsl:apply-templates select="$navigation.tree/item[@menu='user']/item" mode="dropdown" />
             </xsl:if>
             <xsl:if xmlns:check="xalan://unidue.ubo.AccessControl" test="check:currentUserIsAdmin()">
-              <li>
-                <a href="{$WebApplicationBaseURL}modules/webcli/launchpad.xml" class="dropdown-item">WebCLI</a>
-              </li>
-              <li>
-                <a href="{$WebApplicationBaseURL}modules/classeditor/classificationEditor.xml?XSL.classeditor.showId=true" class="dropdown-item">Klassifikationseditor</a>
-              </li>
+              <xsl:apply-templates select="$navigation.tree/item[@menu='admin']/item" mode="dropdown" />
             </xsl:if>
+
             <li class="dropdown-divider" role="presentation" />
             <li>
               <a id="logoutURL" class="dropdown-item" href="{$ServletsBaseURL}logout">Abmelden</a>
             </li>
           </ul>
+
         </li>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+
+  <xsl:template match="item" mode="dropdown">
+    <li>
+      <a href="{$WebApplicationBaseURL}{@ref}" class="dropdown-item">
+        <xsl:call-template name="output.label.for.lang" />
+      </a>
+    </li>
   </xsl:template>
 
   <!-- ==================== TITLE BREADCRUMB CONTAINER ==================== -->
@@ -483,31 +487,21 @@
 
               <nav id="navigationFooter" class="navbar">
                 <ul>
-                  <li>
-                    <a href="https://www.uni-due.de/infoline/" class="footer-menu__entry">
-                      <i class="fas fa-fw fa-phone" /> Infoline
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.uni-due.de/de/hilfe_im_notfall.php" class="footer-menu__entry">
-                      <i class="fas fa-fw fa-exclamation-triangle" /> Hilfe im Notfall
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/impressum.xml" class="footer-menu__entry">
-                      <i class="fas fa-comments" /> Impressum
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.uni-due.de/ub/dsgvo.php" class="footer-menu__entry">
-                      <i class="fas fa-user-shield" /> Datenschutz
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/accessibility.xml" class="footer-menu__entry">
-                      <i class="fas fa-universal-access" /> Barrierefreiheit
-                    </a>
-                  </li>
+                  <xsl:for-each select="$navigation.tree/item[@menu='footer']/item">
+                    <li>
+                      <a href="{@href}" class="footer-menu__entry">
+                        <xsl:copy-of select="@href" />
+                        <xsl:for-each select="@ref">
+                          <xsl:attribute name="href">
+                            <xsl:value-of select="concat($WebApplicationBaseURL,.)" />
+                          </xsl:attribute>
+                        </xsl:for-each>
+                        <i class="fas fa-fw fa-{@icon}" />
+                        <xsl:text> </xsl:text>
+                        <xsl:call-template name="output.label.for.lang" />
+                      </a>
+                    </li>
+                  </xsl:for-each>
                 </ul>
               </nav>
 
