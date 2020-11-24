@@ -134,10 +134,10 @@
 <!--         <label xml:lang="en">German</label> -->
 <!--       </language> -->
       <li class="nav-item dropdown ml-auto mir-lang">
-        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" title="mir.language.change">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" title="Sprache wechseln">
           <i class="flag flag-{$curLang/language/@xmlCode}" />
           <span class="current-language">
-            <xsl:value-of select="$curLang/language/@xmlCode" />
+            <xsl:value-of select="translate($curLang/language/@xmlCode,'den','DEN')" />
           </span>
           <span class="caret" />
         </a>
