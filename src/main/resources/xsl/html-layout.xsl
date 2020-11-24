@@ -310,15 +310,20 @@
       <xsl:otherwise>
         <li class="nav-item dropdown">
           <a id="currentUser" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-            <xsl:value-of select="$CurrentUser" />
+            <xsl:choose>
+              <xsl:when test="contains($CurrentUser,'@')">
+                <xsl:value-of select="substring-before($CurrentUser,'@')" />
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="$CurrentUser" />
+              </xsl:otherwise>
+            </xsl:choose>
             <span class="caret" />
           </a>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
             <xsl:if test="contains($CurrentUser,'@')">
               <li>
-                <a href="{$ServletsBaseURL}MCRUserServlet?action=show" class="dropdown-item">
-                  <xsl:value-of select="substring-before($CurrentUser,'@')" />
-                </a>
+                <a href="{$ServletsBaseURL}MCRUserServlet?action=show" class="dropdown-item">Mein Profil</a>
               </li>
             </xsl:if>
             <li>
