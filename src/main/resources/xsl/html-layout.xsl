@@ -326,6 +326,15 @@
                 <a href="{$ServletsBaseURL}MCRUserServlet?action=show" class="dropdown-item">Mein Profil</a>
               </li>
             </xsl:if>
+            <xsl:if xmlns:check="xalan://unidue.ubo.AccessControl" test="check:currentUserIsAdmin()">
+              <li>
+                <a href="{$WebApplicationBaseURL}modules/webcli/launchpad.xml" class="dropdown-item">WebCLI</a>
+              </li>
+              <li>
+                <a href="{$WebApplicationBaseURL}modules/classeditor/classificationEditor.xml?XSL.classeditor.showId=true" class="dropdown-item">Klassifikationseditor</a>
+              </li>
+            </xsl:if>
+            <li class="dropdown-divider" role="presentation" />
             <li>
               <a id="logoutURL" class="dropdown-item" href="{$ServletsBaseURL}logout">Abmelden</a>
             </li>
