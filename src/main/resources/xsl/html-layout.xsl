@@ -506,7 +506,7 @@
                 <ul class="nav">
                   <li>© UB Duisburg-Essen</li>
                   <li>
-                    <a href="mailto:duepublico@ub.uni-due.de" class="footer-menu__entry">
+                    <a href="mailto:universitaetsbibliographie.ub@uni-due.de" class="footer-menu__entry">
                       <i class="fas fa-fw fa-envelope" /> universitaetsbibliographie.ub@uni-due.de
                     </a>
                   </li>
