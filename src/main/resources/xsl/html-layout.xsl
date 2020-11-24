@@ -302,7 +302,9 @@
       <xsl:when test="mcrxsl:isCurrentUserGuestUser()">
         <li class="nav-item">
           <xsl:variable name="url" select="encoder:encode(string($RequestURL))" />
-          <a id="loginURL" class="nav-link" href="{$WebApplicationBaseURL}{$UBO.Login.Path}?url={$url}">Anmelden</a>
+          <a id="loginURL" class="nav-link" href="{$WebApplicationBaseURL}{$UBO.Login.Path}?url={$url}">
+            <xsl:value-of select="i18n:translate('component.userlogin.button.login')" />
+          </a>
         </li>
       </xsl:when>
       <xsl:otherwise>
@@ -331,7 +333,9 @@
 
             <li class="dropdown-divider" role="presentation" />
             <li>
-              <a id="logoutURL" class="dropdown-item" href="{$ServletsBaseURL}logout">Abmelden</a>
+              <a id="logoutURL" class="dropdown-item" href="{$ServletsBaseURL}logout">
+                <xsl:value-of select="i18n:translate('component.userlogin.button.logout')" />
+              </a>
             </li>
           </ul>
 
@@ -368,7 +372,7 @@
       <ol class="breadcrumb py-1" vocab="http://schema.org/" typeof="BreadcrumbList">
         <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
           <a href="https://www.uni-due.de/ub/" property="item" typeof="WebPage">
-            <i class="fas fa-home"></i>
+            <i class="fas fa-home" />
             <xsl:value-of select="i18n:translate('navigation.UB')" />
           </a>
         </li>
