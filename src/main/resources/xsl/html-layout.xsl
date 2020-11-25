@@ -226,10 +226,26 @@
           <div class="col-12 col-md">
             <form action="{$WebApplicationBaseURL}servlets/solr/select" class="searchfield_box form-inline my-2 my-lg-0" role="search">
               <div class="input-group mb-3">
-                <input id="searchInput" class="form-control mr-sm-2 search-query" type="search" name="q" placeholder="Publikationen suchen" aria-label="Search" />
+                <input id="searchInput" class="form-control mr-sm-2 search-query" type="search" name="qq" placeholder="Publikationen suchen" aria-label="Search" />
                 <input type="hidden" name="sort" value="year desc" />
                 <input type="hidden" name="fl" value="*" />
                 <input type="hidden" name="rows" value="10" />
+
+                <!-- Standard users must only find confirmed publications, admins find all publications -->
+                <input type="hidden" name="q">
+                  <xsl:attribute name="value">
+                    <xsl:choose>
+                      <xsl:when xmlns:check="xalan://unidue.ubo.AccessControl" test="check:currentUserIsAdmin()">
+                        <xsl:text>objectProject:ubo</xsl:text>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:text>status:confirmed</xsl:text>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                    <xsl:text> AND ${qq}</xsl:text>
+                  </xsl:attribute>
+                </input>
+
                 <div class="input-group-append">
                   <button class="btn btn-primary" type="submit"><i class="fas fa-search" /></button>
                 </div>
