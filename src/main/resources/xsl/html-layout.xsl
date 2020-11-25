@@ -132,7 +132,7 @@
 <!--         <label xml:lang="en">German</label> -->
 <!--       </language> -->
       <li class="nav-item dropdown ml-auto mir-lang">
-        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" title="Sprache wechseln">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" title="{i18n:translate('ude.layout.changeLanguage')}">
           <i class="flag flag-{$curLang/language/@xmlCode}" />
           <span class="current-language">
             <xsl:value-of select="translate($curLang/language/@xmlCode,'den','DEN')" />
@@ -146,12 +146,12 @@
               <xsl:variable name="langDef" select="document(concat('language:',$lang))" />
               <li>
                 <xsl:variable name="langURL">
-                  <xsl:call-template name="mir.languageLink">
+                  <xsl:call-template name="layout.languageLink">
                     <xsl:with-param name="lang" select="$langDef/language/@xmlCode" />
                   </xsl:call-template>
                 </xsl:variable>
                 <xsl:variable name="langTitle">
-                  <xsl:apply-templates select="$langDef/language" mode="mir.langTitle" />
+                  <xsl:apply-templates select="$langDef/language" mode="layout.langTitle" />
                 </xsl:variable>
                 <a href="{$langURL}" class="dropdown-item" title="{$langTitle}">
                   <i class="flag flag-{$langDef/language/@xmlCode}" />
@@ -165,7 +165,7 @@
     </xsl:if>
   </xsl:template>
 
-  <xsl:template match="language" mode="mir.langTitle">
+  <xsl:template match="language" mode="layout.langTitle">
     <xsl:variable name="code" select="@xmlCode" />
     <xsl:choose>
       <xsl:when test="label[lang($code)]">
@@ -183,7 +183,7 @@
     </xsl:choose>
   </xsl:template>
 
-  <xsl:template name="mir.languageLink">
+  <xsl:template name="layout.languageLink">
     <xsl:param name="lang" />
     <xsl:variable name="langURL">
       <xsl:call-template name="UrlSetParam">
@@ -205,15 +205,21 @@
         <div class="row">
           <div class="col-12 col-sm-6 col-md-auto">
             <a href="https://www.uni-due.de/de/index.php" id="udeLogo" class="containsimage">
-              <span>Universität Duisburg-Essen</span>
-              <img src="{$WebApplicationBaseURL}images/UDE-logo-claim.svg" alt="Logo Duisburg-Essen" width="1052" height="414" />
+              <span>
+                <xsl:value-of select="i18n:translate('ude.university')" />
+              </span>
+              <img src="{$WebApplicationBaseURL}images/UDE-logo-claim.svg" alt="Logo {i18n:translate('ude.university')}" width="1052" height="414" />
             </a>
           </div>
           <div class="col-12 col-sm-6 col-md-auto">
             <div id="orgaunitTitle">
               <a href="{$WebApplicationBaseURL}">
-                <h1>Universitätsbibliographie</h1>
-                <h2>Publikationsverzeichnis der Universität Duisburg-Essen</h2>
+                <h1>
+                  <xsl:value-of select="i18n:translate('ude.ubo')" />
+                </h1>
+                <h2>
+                  <xsl:value-of select="i18n:translate('ude.ubo.subTitle')" />
+                </h2>
               </a>
             </div>
           </div>
@@ -245,7 +251,7 @@
 
           <button class="navbar-toggler" type="button"
             data-toggle="collapse" data-target="#mir-main-nav-collapse-box"
-            aria-controls="mir-main-nav-collapse-box" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="mir-main-nav-collapse-box" aria-expanded="false" aria-label="{i18n:translate('ude.layout.toggleNavigation')}">
             <span class="navbar-toggler-icon" />
           </button>
 
@@ -267,21 +273,24 @@
   <!-- ==================== BASKET MENU ==================== -->
 
   <xsl:template name="menu.basket">
-    <xsl:variable name="basketType" select="'bibentries'" />
-    <xsl:variable name="basket" select="document(concat('basket:',$basketType))/basket" />
-    <xsl:variable name="entryCount" select="count($basket/entry)" />
-    <xsl:variable name="basketTitle">
-      <xsl:choose>
-        <xsl:when test="$entryCount = 0">Keine Publikationen auf der Merkliste</xsl:when>
-        <xsl:when test="$entryCount = 1">Eine Publikation auf der Merkliste</xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="i18n:translate('basket.numEntries.many',$entryCount)" disable-output-escaping="yes" />
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
+    <xsl:variable name="basket" select="document('basket:bibentries')/basket" />
+      <xsl:variable name="entryCount" select="count($basket/entry)" />
 
     <li class="dropdown" id="basket-list-item">
-      <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" title="{$basketTitle}">
+      <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">
+        <xsl:attribute name="title">
+          <xsl:choose>
+            <xsl:when test="$entryCount = 0">
+              <xsl:value-of select="i18n:translate('basket.numEntries.none')" />
+            </xsl:when>
+            <xsl:when test="$entryCount = 1">
+              <xsl:value-of select="i18n:translate('basket.numEntries.one')" />
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="i18n:translate('basket.numEntries.many',$entryCount)" />
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:attribute>
         <i class="fas fa-bookmark" />
         <sup>
           <xsl:value-of select="$entryCount" />
@@ -289,7 +298,9 @@
       </a>
       <ul class="dropdown-menu" role="menu">
         <li>
-          <a  class="dropdown-item" href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type={$basket/@type}&amp;action=show">Korb anzeigen</a>
+          <a  class="dropdown-item" href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type={$basket/@type}&amp;action=show">
+            <xsl:value-of select="i18n:translate('basket.show')" />
+          </a>
         </li>
       </ul>
     </li>
@@ -373,12 +384,12 @@
         <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
           <a href="https://www.uni-due.de/ub/" property="item" typeof="WebPage">
             <i class="fas fa-home" />
-            <xsl:value-of select="i18n:translate('navigation.UB')" />
+            <xsl:text>UB</xsl:text>
           </a>
         </li>
         <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
           <a href="{$WebApplicationBaseURL}" property="item" typeof="WebPage">
-            <xsl:value-of select="i18n:translate('navigation.Home')" />
+            <xsl:value-of select="i18n:translate('ude.ubo')" />
           </a>
         </li>
         <xsl:apply-templates mode="breadcrumb" select="$CurrentItem/ancestor-or-self::item[@label|label][ancestor-or-self::*=$navigation.tree[@role='main']]" />
@@ -483,7 +494,7 @@
 
             <div class="col" id="footerLogo">
               <a href="https://www.uni-due.de/de/index.php" class="containsimage">
-                <img src="{$WebApplicationBaseURL}images/UDE-logo-claim-dark.svg" class="mb-5" alt="Logo Universität Duisburg-Essen" width="1052" height="414" />
+                <img src="{$WebApplicationBaseURL}images/UDE-logo-claim-dark.svg" class="mb-5" alt="Logo {i18n:translate('ude.university')}" width="1052" height="414" />
               </a>
             </div>
 
@@ -511,10 +522,13 @@
 
               <div id="footerCopyright" class="navbar">
                 <ul class="nav">
-                  <li>© UB Duisburg-Essen</li>
                   <li>
-                    <a href="mailto:universitaetsbibliographie.ub@uni-due.de" class="footer-menu__entry">
-                      <i class="fas fa-fw fa-envelope" /> universitaetsbibliographie.ub@uni-due.de
+                    <xsl:value-of select="i18n:translate('ude.layout.copyright')" />
+                  </li>
+                  <li>
+                    <a href="mailto:{i18n:translate('ude.contact.mail')}" class="footer-menu__entry">
+                      <i class="fas fa-fw fa-envelope" />
+                      <xsl:value-of select="i18n:translate('ude.contact.mail')" />
                     </a>
                   </li>
                 </ul>
