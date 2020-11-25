@@ -344,7 +344,7 @@
 
             <li class="dropdown-divider" role="presentation" />
             <li>
-              <a id="logoutURL" class="dropdown-item" href="{$ServletsBaseURL}logout">
+              <a id="logoutURL" class="dropdown-item" href="{$ServletsBaseURL}logout?url=/index.xed">
                 <xsl:value-of select="i18n:translate('component.userlogin.button.logout')" />
               </a>
             </li>
