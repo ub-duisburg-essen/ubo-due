@@ -236,7 +236,7 @@
                   <xsl:attribute name="value">
                     <xsl:choose>
                       <xsl:when xmlns:check="xalan://unidue.ubo.AccessControl" test="check:currentUserIsAdmin()">
-                        <xsl:text>objectProject:ubo</xsl:text>
+                        <xsl:text>objectType:mods</xsl:text>
                       </xsl:when>
                       <xsl:otherwise>
                         <xsl:text>status:confirmed</xsl:text>
