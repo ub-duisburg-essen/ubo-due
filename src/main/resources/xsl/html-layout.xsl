@@ -235,7 +235,7 @@
                 <input type="hidden" name="q">
                   <xsl:attribute name="value">
                     <xsl:choose>
-                      <xsl:when xmlns:check="xalan://unidue.ubo.AccessControl" test="check:currentUserIsAdmin()">
+                      <xsl:when xmlns:check="xalan://org.mycore.ubo.AccessControl" test="check:currentUserIsAdmin()">
                         <xsl:text>objectType:mods</xsl:text>
                       </xsl:when>
                       <xsl:otherwise>
@@ -354,7 +354,7 @@
             <xsl:if test="contains($CurrentUser,'@')">
               <xsl:apply-templates select="$navigation.tree/item[@menu='user']/item" mode="dropdown" />
             </xsl:if>
-            <xsl:if xmlns:check="xalan://unidue.ubo.AccessControl" test="check:currentUserIsAdmin()">
+            <xsl:if xmlns:check="xalan://org.mycore.ubo.AccessControl" test="check:currentUserIsAdmin()">
               <xsl:apply-templates select="$navigation.tree/item[@menu='admin']/item" mode="dropdown" />
             </xsl:if>
 
