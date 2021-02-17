@@ -384,11 +384,13 @@
   <xsl:template name="title.breadcrumb.container">
     <div id="pagetitlecontainer">
       <div class="container-background">
-        <div class="container pagetitle">
-          <h1>
-            <xsl:value-of select="head/title" disable-output-escaping="yes" />
-          </h1>
-          <xsl:call-template name="breadcrumbPath" />
+        <div class="container">
+          <div class="pagetitle">
+            <h1>
+              <xsl:value-of select="head/title" disable-output-escaping="yes" />
+            </h1>
+            <xsl:call-template name="breadcrumbPath" />
+          </div>
         </div>
       </div>
     </div>
