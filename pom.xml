@@ -8,7 +8,7 @@
   <parent>
     <groupId>org.mycore</groupId>
     <artifactId>mycore-parent</artifactId>
-    <version>45-SNAPSHOT</version>
+    <version>45</version>
     <relativePath />
   </parent>
 
