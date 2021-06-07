@@ -31,12 +31,12 @@
       </item>
       <item id="dozbib.search" />
     </item>
-    <item ref="newPublication.xed" id="dozbib.new.publication">
+    <item ref="newPublication.xed" id="dozbib.new.publication" role="admin">
       <label xml:lang="de">Publikation melden</label>
       <label xml:lang="en">Register a publication</label>
       <item id="dozbib.edit.publication" />
     </item>
-    <item ref="list-wizard.xed" id="dozbib.list-wizard">
+    <item ref="list-wizard.xed" id="dozbib.list-wizard" role="admin">
       <label xml:lang="de">Persönliche Publikationsliste</label>
       <label xml:lang="en">Personal publication list</label>
     </item>
