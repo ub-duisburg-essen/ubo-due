@@ -401,7 +401,7 @@
       <ol class="breadcrumb py-1" vocab="http://schema.org/" typeof="BreadcrumbList">
         <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
           <a href="https://www.uni-due.de/ub/" property="item" typeof="WebPage">
-            <i class="fas fa-home" />
+            <i class="fas fa-home mr-2" />
             <xsl:text>UB</xsl:text>
           </a>
         </li>
