@@ -289,7 +289,7 @@
   <!-- ==================== BASKET MENU ==================== -->
 
   <xsl:template name="menu.basket">
-    <xsl:variable name="basket" select="document('basket:bibentries')/basket" />
+    <xsl:variable name="basket" select="document('basket:objects')/basket" />
       <xsl:variable name="entryCount" select="count($basket/entry)" />
 
     <li class="dropdown" id="basket-list-item">
