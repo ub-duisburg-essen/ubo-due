@@ -226,7 +226,7 @@
           <div class="col-12 col-md">
             <form action="{$WebApplicationBaseURL}servlets/solr/select" class="searchfield_box form-inline my-2 my-lg-0" role="search">
               <div class="input-group mb-3">
-                <input id="searchInput" class="form-control mr-sm-2 search-query" type="search" name="qq" placeholder="Publikationen suchen" aria-label="Search" />
+                <input id="searchInput" class="form-control mr-sm-2 search-query" type="search" name="qq" placeholder="{i18n:translate('ude.layout.searchPublications')}" aria-label="{i18n:translate('ude.layout.searchPublications')}" />
                 <input type="hidden" name="sort" value="year desc" />
                 <input type="hidden" name="fl" value="*" />
                 <input type="hidden" name="rows" value="10" />
