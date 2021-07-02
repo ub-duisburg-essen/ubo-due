@@ -31,7 +31,7 @@
       </item>
       <item id="dozbib.search" />
     </item>
-    <item ref="newPublication.xed" id="dozbib.new.publication" role="admin">
+    <item ref="newPublication.xed" id="dozbib.new.publication">
       <label xml:lang="de">Publikation melden</label>
       <label xml:lang="en">Register a publication</label>
       <item id="dozbib.edit.publication" />

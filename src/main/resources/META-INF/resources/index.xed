@@ -4,17 +4,6 @@
  <title xml:lang="de">Universitätsbibliographie der Universität Duisburg-Essen</title>
  <title xml:lang="en">Bibliography of the University of Duisburg-Essen</title>
 
- <article class="card mb-3">
-   <div class="card-body text-danger">
-     <h3>+++ Wichtiger Hinweis +++</h3>
-      <p>
-        Die Universitätsbibliographie steht aufgrund dringender Wartungsarbeiten vorübergehend nur im lesenden Modus zur Verfügung!
-        Sie können Publikationen suchen und finden – neue Publikationen melden können Sie momentan nicht!
-        Vielen Dank für Ihr Verständnis.
-      </p>
-   </div>
- </article>
-
  <article class="card mb-3" xml:lang="de">
    <div class="card-body">
      <h3>Die Universitätsbibliographie</h3>
