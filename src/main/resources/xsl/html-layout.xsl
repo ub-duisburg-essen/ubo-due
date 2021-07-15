@@ -351,16 +351,14 @@
 
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
 
-            <xsl:if test="contains($CurrentUser,'@')">
+            <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
               <xsl:apply-templates select="$navigation.tree/item[@menu='user']/item" mode="dropdown" />
             </xsl:if>
             <xsl:if xmlns:check="xalan://org.mycore.ubo.AccessControl" test="check:currentUserIsAdmin()">
               <xsl:apply-templates select="$navigation.tree/item[@menu='admin']/item" mode="dropdown" />
             </xsl:if>
-
-            <li class="dropdown-divider" role="presentation" />
             <li>
-              <a id="logoutURL" class="dropdown-item" href="{$ServletsBaseURL}logout?url=/index.xed">
+              <a id="logoutURL" class="dropdown-item" href="{$ServletsBaseURL}logout?url={$WebApplicationBaseURL}">
                 <xsl:value-of select="i18n:translate('component.userlogin.button.logout')" />
               </a>
             </li>

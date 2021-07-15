@@ -70,13 +70,29 @@
   </item>
 
   <item menu="admin">
-    <item ref="modules/webcli/launchpad.xml">
-      <label xml:lang="de">WebCLI</label>
-      <label xml:lang="en">WebCLI</label>
+    <item id="user.admin" ref="servlets/MCRUserServlet" role="admin">
+      <label xml:lang="de">Nutzerverwaltung</label>
+      <label xml:lang="en">Admin Users</label>
     </item>
-    <item ref="modules/classeditor/classificationEditor.xml?XSL.classeditor.showId=true">
+    <item id="user.new" ref="authorization/new-user.xed?action=save" role="admin">
+      <label xml:lang="de">Nutzer anlegen</label>
+      <label xml:lang="en">Create User</label>
+    </item>
+    <item id="acl.editor" ref="rsc/ACLE/start" role="admin">
+      <label xml:lang="de">ACL-Editor</label>
+      <label xml:lang="en">ACL Editor</label>
+    </item>
+    <item id="dozbib.duplicates" ref="duplicates.xml" role="admin">
+      <label xml:lang="de">Dubletten-Bericht</label>
+      <label xml:lang="en">Duplicates report</label>
+    </item>
+    <item id="classeditor" ref="modules/classeditor/classificationEditor.xml" role="admin">
       <label xml:lang="de">Klassifikationseditor</label>
       <label xml:lang="en">Classification editor</label>
+    </item>
+    <item id="webcli" ref="modules/webcli/launchpad.xml" role="admin">
+      <label xml:lang="de">WebCLI</label>
+      <label xml:lang="en">WebCLI</label>
     </item>
   </item>
 
