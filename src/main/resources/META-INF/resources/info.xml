@@ -1,255 +1,350 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<webpage lastModified="$Date: 2016-05-20 08:54:29 +0200 (Fr, 20 Mai 2016) $" id="dozbib.info">
+<webpage lastModified="$Date: 2016-05-20 08:54:29 +0200 (Fr, 20 Mai 2016) $" id="dozbib.info" xmlns:i18n="http://www.mycore.org/i18n">
  <title xml:lang="de">Informationen zur UBO</title>
  <title xml:lang="en">Information about the UBO</title>
-  
-  
-  <article xml:lang="de" class="card mb-1">
-    <div class="card-body bg-alternative">
-      <h3>Forschung sichtbar machen</h3>
-      <img src="../images/ubo_wordcloud.PNG" alt="UBO Wordcloud" class="img-fluid float-right" />    
-      <p>
-      Die Universitätsbibliographie verzeichnet sämtliche Publikationen, die Sie als Wissenschaftler:innen der UDE veröffentlichen – damit helfen wir, 
-      Ihre Forschung international sichtbar zu machen. <br/> 
-      ... hier müssen Bilder hin... 
-      </p>              
-    </div>
-  </article>
-  
-   
-  <article xml:lang="de" class="card mb-1">
-  <div class="card-body bg-alternative">
-     <h3>Um das zu erreichen, sind wir für Sie da:  </h3>         
-    </div>
-  <div class="accordion" role="tablist" aria-multiselectable="true">
 
-      <div class="card">
-        <div class="card-header" role="tab" id="headingOne">
-          <h5 class="card-title with-icon">
-            <i class="fas fa-info-circle" aria-hidden="true" />
-            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseOne" aria-expanded="false"
-              aria-controls="collapseOne">
-              Wir importieren täglich Daten aus großen, fächerübergreifenden Datenbanken in die UBO
-            </a>
-          </h5>
-        </div>
-        <div id="collapseOne" class="card-collapse collapse out" role="tabcard" aria-labelledby="headingOne">
-          <div class="card-body">
+  <section id="info" class="freestyle" >
 
-            <h5>Datenbanken... </h5>
-             <p>
-             ... wie <a href="https://www.scopus.com/" target="_blank">Scopus</a> und <a href="https://www.webofscience.com" target="_blank">Web of Science</a>, die fächerübergreifend 
-             Publikationen verzeichnen, werden von uns über Schnittstellen täglich auf neue Publikationen von UDE-Angehörigen durchsucht. 
-             Diese Daten werden automatisiert in die UBO importiert und von unserem Redaktionsteam kontrolliert, ggf. korrigiert, mit den LSF-Personen-IDs verknüpft und
-             letztlich freigeschaltet. 
-             </p> 
+    <div class="bg-filter-blue p-3">
+        <div class="row">
+          <div class="col">
+            <article class="card">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="card-body">
+                    <h3>
+                      <i18n:de>Forschung sichtbar machen</i18n:de>
+                    </h3>
+                    <p>
+                      Die Universitätsbibliographie verzeichnet sämtliche
+                      Publikationen, die Sie als Wissenschaftler:innen der UDE
+                      veröffentlichen – damit helfen wir,
+                      Ihre Forschung international sichtbar zu machen. <br/>
+                      ... hier müssen Bilder hin...
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <img
+                    src="images/ubo_wordcloud.PNG"
+                    alt="UBO Wordcloud"
+                    class="img-fluid" />
+                </div>
+              </div>
+            </article>
           </div>
+        </div>
+    </div>
+
+    <div class="bg-filter-lightblue p-3 mt-3">
+      <div class="row">
+        <div class="col">
+
+          <article>
+            <h3 class="bg-white p-3">Wir sind für Sie da</h3>
+            <div class="accordion" role="tablist" aria-multiselectable="true">
+
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingOne"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-down icon-opened pr-3" aria-hidden="true"></i>
+                    Wir importieren täglich Daten aus großen, fächerübergreifenden Datenbanken in die UBO
+                  </h5>
+                </div>
+                <div
+                  id="collapseOne"
+                  class="card-collapse collapse out"
+                  role="tabcard"
+                  aria-labelledby="headingOne">
+                  <div class="card-body">
+                    <h5>Datenbanken... </h5>
+                     <p>
+                       ... wie <a href="https://www.scopus.com/" target="_blank">Scopus
+                      </a> und <a href="https://www.webofscience.com" target="_blank"> Web of Science</a>,
+                      die fächerübergreifend Publikationen verzeichnen, werden von uns über Schnittstellen
+                      täglich auf neue Publikationen von UDE-Angehörigen durchsucht.
+                      Diese Daten werden automatisiert in die UBO importiert und von unserem Redaktionsteam kontrolliert, ggf. korrigiert, mit den LSF-Personen-IDs verknüpft und
+                      letztlich freigeschaltet.
+                     </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingTwo"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-down icon-opened pr-3" aria-hidden="true"></i>
+                    Wir prüfen Ihre gemeldeten Publikationen und ergänzen ggf. Informationen
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="card-collapse collapse" role="tabcard" aria-labelledby="headingTwo">
+                  <div class="card-body">
+                    <h5>Das Redaktionsteam... </h5>
+                     <p>
+                     ... erhält zu jeder neu gemeldeten Publikation eine E-Mail und prüft daraufhin die Daten auf Vollständigkeit, ergänzt ggf. fehlende Informationen, verknüpft die Autoren mit
+                     den LSF-IDs und schaltet die Einträge frei. Danach sind die Publikationen in der UBO auffindbar und tauchen automatisch in den Publikationslisten auf den UDE-Personenseiten
+                     auf - ebenso in den Publikationslisten, die Sie aus der UBO in Ihre persönliche Webseiten einbinden.
+                     </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingThree"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-down icon-opened pr-3" aria-hidden="true"></i>
+                    Wir reichern Ihre Publikationsdaten mit Identifiern wie DOI, PubMed-ID und Scopus-ID an
+                  </h5>
+                </div>
+                <div id="collapseThree" class="card-collapse collapse" role="tabcard" aria-labelledby="headingThree">
+                  <div class="card-body">
+                    <h5>Wichtige Identifier... </h5>
+                     <p>
+                       ... wie DOI, PubMed-ID usw. sind hilfreich, um Publikationen eindeutig zu identifizieren. Wir bemühen uns, diese IDs zu ermitteln und ergänzen, falls diese Informationen fehlen
+                       sollten. <br/>
+                       Die UBO-Einträge sind über die eingetragenen Identifier mit den Publikationen verlinkt. <br/>
+                       Diese IDs haben wir eingebunden:
+                    </p>
+                     <ul>
+                       <li><a href="https://www.doi.org/" target="_blank">DOI</a></li>
+                       <li><a href="http://www.persistent-identifier.de/" target="_blank">URN</a></li>
+                       <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed ID</a></li>
+                       <li><a href="https://www.scopus.com/" target="_blank">Scopus ID</a></li>
+                     </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingFour"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour">
+                  <h5 class="card-title">
+                      <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                      <i class="fa fa-chevron-circle-down icon-opened pr-3" aria-hidden="true"></i>
+                      Wir sorgen für qualitativ hochwertige Metadaten
+                  </h5>
+                </div>
+                <div id="collapseFour" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFour">
+                  <div class="card-body">
+                    <h5> Die Metadaten... </h5>
+                     <p>
+                     ... mit denen die Publikationen beschrieben werden, sind wichtig für verlustfreie Datenexporte und die korrekte Ausgabe in den verschiedenen Zitationsstilen.
+                     Daher kontrollieren wir die Korrektheit der Metadaten nach dem Import bzw. nach der Eingabe und korrigieren diese ggf.
+                     </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingFive"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-down icon-opened pr-3" aria-hidden="true"></i>
+                    Wir unterstützen die Verknüpfung mit ORCID - und verknüpfen mit weiteren Personen-IDs
+                  </h5>
+                </div>
+                <div id="collapseFive" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFive">
+                  <div class="card-body">
+                    <h5> Die ORCID-Anbindung ... </h5>
+                     <p>
+                     ... ist ja quasi da ....
+                     </p>
+                     <h5> Weitere Personen-IDs </h5>
+                     <p>
+                     <ul>
+                       <li><strong>LSF-ID:</strong> über die LSF-ID werden die Personen mit dem <a href="https://campus.uni-due.de/lsf" target="_blank">LSF</a> der UDE verknüft.
+                       Darüber werden die Publikationen in die UDE-Personenseiten eingebunden</li>
+                       <li><strong>ResearcherID:</strong> ist der Personen-Identifier der Datenbank <a href="https://www.webofscience.com" target="_blank">Web of Science</a></li>
+                       <li><strong>Sopus Author ID:</strong> ist der Personen-Identifier der Datenbank <a href="https://www.scopus.com/" target="_blank">Scopus</a></li>
+                       <li><strong>GND:</strong> Die <a href="https://gnd.network/" target="_blank">Gemeinsame Normdatei (GND)</a> ist eine Normdatei für Personen, Körperschaften, Kongresse, Geografika, Sachschlagwörter und Werktitel.
+                       Sie wird von der Deutschen Nationalbibliothek (DNB), allen deutschsprachigen Bibliotheksverbünden, der Zeitschriftendatenbank (ZDB)
+                       und zahlreichen weiteren Institutionen kooperativ geführt.</li>
+                     </ul>
+                     </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingSix"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-down icon-opened pr-3" aria-hidden="true"></i>
+                    Wir helfen Ihnen bei der Erstellung Ihrer persönlichen Publikationslisten
+                  </h5>
+                </div>
+                <div id="collapseSix" class="card-collapse collapse" role="tabcard" aria-labelledby="headingSix">
+                  <div class="card-body">
+                    <h5> Ihre persöniche Publikationsliste ... </h5>
+                     <p>
+                     ... können Sie ganz einfach mit Ihren Daten aus der UBO generieren.
+                     Sie können Trefferlisten in unterschiedlichen Formaten exportieren und in Ihre Webseiten einbinden.
+                     Weitere Informationen dazu finden Sie <a href="list-wizard.xed">hier</a>.
+                     </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingSeven"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="collapseSeven">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-down icon-opened pr-3" aria-hidden="true"></i>
+                      Wir kennzeichnen Open Access Publikationen
+                  </h5>
+                </div>
+                <div id="collapseSeven" class="card-collapse collapse" role="tabcard" aria-labelledby="headingSeven">
+                  <div class="card-body">
+                    <h5> Open Access Publikationen...  </h5>
+                     <p>
+                     ... werden in der UBO gekennzeichnet. So ist es auf einen Blick zu erkennen, ob eine Publikation frei zugänglich ist.
+                     </p>
+                     <p>Informationen zu den in der UBO verwendeten OA-Kategorien und unserem Verständnis von Open Access finden Sie
+                     <a href="https://www.uni-due.de/ub/publikationsdienste/oa_kategorien.php" target="_blank">hier</a>.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingEight"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseEight"
+                  aria-expanded="false"
+                  aria-controls="collapseEight">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-down icon-opened pr-3" aria-hidden="true"></i>
+                    Wir können Bibliometrie und Statistik
+                  </h5>
+                </div>
+                <div id="collapseEight" class="card-collapse collapse" role="tabcard" aria-labelledby="headingEight">
+                  <div class="card-body">
+
+                    <h5> Bibliometrische Anfragen ...  </h5>
+                     <p>
+                     ... können sinnvoll auf der Datenbasis der UBO beantwortet werden. Weitere Anreicherung mit Informationen aus externen Quellen sind möglich.
+                     </p>
+                     <p>Weitere Informationen zur Bibliometrie finden Sie <a href="https://www.uni-due.de/ub/bibliometrie/" target="_blank">hier</a>.</p>
+
+                     <h5> Statistiken ...  </h5>
+                     <p>
+                     ... können sowohl über den <a href="statistics.xml">Gesamtbestand der UBO</a> als auch zu einzelnen Trefferlisten abgerufen werden.
+                     </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </article>
         </div>
       </div>
-
-      <div class="card">
-        <div class="card-header" role="tab" id="headingTwo">
-          <h5 class="card-title with-icon">
-            <i class="fas fa-info-circle" aria-hidden="true" />
-            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseTwo" aria-expanded="false"
-              aria-controls="collapseTwo">
-              Wir prüfen Ihre gemeldeten Publikationen und ergänzen ggf. Informationen
-            </a>
-          </h5>
-        </div>
-        <div id="collapseTwo" class="card-collapse collapse" role="tabcard" aria-labelledby="headingTwo">
-          <div class="card-body">
-
-            <h5>Das Redaktionsteam... </h5>
-             <p>
-             ... erhält zu jeder neu gemeldeten Publikation eine E-Mail und prüft daraufhin die Daten auf Vollständigkeit, ergänzt ggf. fehlende Informationen, verknüpft die Autoren mit 
-             den LSF-IDs und schaltet die Einträge frei. Danach sind die Publikationen in der UBO auffindbar und tauchen automatisch in den Publikationslisten auf den UDE-Personenseiten 
-             auf - ebenso in den Publikationslisten, die Sie aus der UBO in Ihre persönliche Webseiten einbinden. 
-             </p> 
-          </div>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-header" role="tab" id="headingThree">
-          <h5 class="card-title with-icon">
-            <i class="fas fa-info-circle" aria-hidden="true" />
-            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseThree" aria-expanded="false"
-              aria-controls="collapseThree">
-              Wir reichern Ihre Publikationsdaten mit Identifiern wie DOI, PubMed-ID und Scopus-ID an
-            </a>
-          </h5>
-        </div>
-        <div id="collapseThree" class="card-collapse collapse" role="tabcard" aria-labelledby="headingThree">
-          <div class="card-body">
-
-            <h5>Wichtige Identifier... </h5>
-             <p>
-             ... wie DOI, PubMed-ID usw. sind hilfreich, um Publikationen eindeutig zu identifizieren. Wir bemühen uns, diese IDs zu ermitteln und ergänzen, falls diese Informationen fehlen
-             sollten. <br/>
-             Die UBO-Einträge sind über die eingetragenen Identifier mit den Publikationen verlinkt. <br/>
-             Diese IDs haben wir eingebunden: 
-             <u>
-             <li><a href="https://www.doi.org/" target="_blank">DOI</a></li>
-             <li><a href="http://www.persistent-identifier.de/" target="_blank">URN</a></li>
-             <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed ID</a></li>
-             <li><a href="https://www.scopus.com/" target="_blank">Scopus ID</a></li>
-             </u>
-             </p> 
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header" role="tab" id="headingFour">
-          <h5 class="card-title with-icon">
-            <i class="fas fa-info-circle" aria-hidden="true" />
-            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseFour" aria-expanded="false"
-              aria-controls="collapseFour">
-              Wir sorgen für qualitativ hochwertige Metadaten
-            </a>
-          </h5>
-        </div>
-        <div id="collapseFour" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFour">
-          <div class="card-body">
-
-            <h5> Die Metadaten... </h5>
-             <p>
-             ... mit denen die Publikationen beschrieben werden, sind wichtig für verlustfreie Datenexporte und die korrekte Ausgabe in den verschiedenen Zitationsstilen. 
-             Daher kontrollieren wir die Korrektheit der Metadaten nach dem Import bzw. nach der Eingabe und korrigieren diese ggf.   
-             </p> 
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header" role="tab" id="headingFive">
-          <h5 class="card-title with-icon">
-            <i class="fas fa-info-circle" aria-hidden="true" />
-            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseFive" aria-expanded="false"
-              aria-controls="collapseFive">
-              Wir unterstützen die Verknüpfung mit ORCID - und verknüpfen mit weiteren Personen-IDs
-            </a>
-          </h5>
-        </div>
-        <div id="collapseFive" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFive">
-          <div class="card-body">
-
-            <h5> Die ORCID-Anbindung ... </h5>
-             <p>
-             ... ist ja quasi da ....    
-             </p> 
-             <h5> Weitere Personen-IDs </h5>
-             <p>
-             <ul>
-             <li><strong>LSF-ID:</strong> über die LSF-ID werden die Personen mit dem <a href="https://campus.uni-due.de/lsf" target="_blank">LSF</a> der UDE verknüft. 
-             Darüber werden die Publikationen in die UDE-Personenseiten eingebunden</li>  
-             <li><strong>ResearcherID:</strong> ist der Personen-Identifier der Datenbank <a href="https://www.webofscience.com" target="_blank">Web of Science</a></li>
-             <li><strong>Sopus Author ID:</strong> ist der Personen-Identifier der Datenbank <a href="https://www.scopus.com/" target="_blank">Scopus</a></li>
-             <li><strong>GND:</strong> Die <a href="https://gnd.network/" target="_blank">Gemeinsame Normdatei (GND)</a> ist eine Normdatei für Personen, Körperschaften, Kongresse, Geografika, Sachschlagwörter und Werktitel.
-             Sie wird von der Deutschen Nationalbibliothek (DNB), allen deutschsprachigen Bibliotheksverbünden, der Zeitschriftendatenbank (ZDB) 
-             und zahlreichen weiteren Institutionen kooperativ geführt.</li>
-             </ul>  
-             </p>
-          </div>
-        </div>
-      </div>  
-      
-      <div class="card">
-        <div class="card-header" role="tab" id="headingSix">
-          <h5 class="card-title with-icon">
-            <i class="fas fa-info-circle" aria-hidden="true" />
-            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseSix" aria-expanded="false"
-              aria-controls="collapseSix">
-              Wir helfen Ihnen bei der Erstellung Ihrer persönlichen Publikationslisten
-            </a>
-          </h5>
-        </div>
-        <div id="collapseSix" class="card-collapse collapse" role="tabcard" aria-labelledby="headingSix">
-          <div class="card-body">
-
-            <h5> Ihre persöniche Publikationsliste ... </h5>
-             <p>
-             ... können Sie ganz einfach mit Ihren Daten aus der UBO generieren.
-             Sie können Trefferlisten in unterschiedlichen Formaten exportieren und in Ihre Webseiten einbinden. 
-             Weitere Informationen dazu finden Sie <a href="../list-wizard.xed">hier</a>.  
-             </p> 
-          </div>
-        </div>
-      </div>  
-      
-      <div class="card">
-        <div class="card-header" role="tab" id="headingSeven">
-          <h5 class="card-title with-icon">
-            <i class="fas fa-info-circle" aria-hidden="true" />
-            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseSeven" aria-expanded="false"
-              aria-controls="collapseSeven">
-              Wir kennzeichnen Open Access Publikationen 
-            </a>
-          </h5>
-        </div>
-        <div id="collapseSeven" class="card-collapse collapse" role="tabcard" aria-labelledby="headingSeven">
-          <div class="card-body">
-
-            <h5> Open Access Publikationen...  </h5>
-             <p>
-             ... werden in der UBO gekennzeichnet. So ist es auf einen Blick zu erkennen, ob eine Publikation frei zugänglich ist.   
-             </p> 
-             <p>Informationen zu den in der UBO verwendeten OA-Kategorien und unserem Verständnis von Open Access finden Sie 
-             <a href="https://www.uni-due.de/ub/publikationsdienste/oa_kategorien.php" target="_blank">hier</a>.</p>
-          </div>
-        </div>
-      </div>    
-      
-      <div class="card">
-        <div class="card-header" role="tab" id="headingEight">
-          <h5 class="card-title with-icon">
-            <i class="fas fa-info-circle" aria-hidden="true" />
-            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseEight" aria-expanded="false"
-              aria-controls="collapseEight">
-              Wir können Bibliometrie und Statistik  
-            </a>
-          </h5>
-        </div>
-        <div id="collapseEight" class="card-collapse collapse" role="tabcard" aria-labelledby="headingEight">
-          <div class="card-body">
-
-            <h5> Bibliometrische Anfragen ...  </h5>
-             <p>
-             ... können sinnvoll auf der Datenbasis der UBO beantwortet werden. Weitere Anreicherung mit Informationen aus externen Quellen sind möglich. 
-             </p>
-             <p>Weitere Informationen zur Bibliometrie finden Sie <a href="https://www.uni-due.de/ub/bibliometrie/" target="_blank">hier</a>.</p>
-             
-             <h5> Statistiken ...  </h5>
-             <p>
-             ... können sowohl über den <a href="../statistics.xml">Gesamtbestand der UBO</a> als auch zu einzelnen Trefferlisten abgerufen werden. 
-             </p>
-          </div>
-        </div>
-      </div> 
-      
     </div>
-  
-  </article>
- 
-  
-  <article xml:lang="de" class="card mb-1">
-    <div class="card-body bg-alternative">
-      <h3>Kontakt</h3>
-      <p>
-       Haben Sie Fragen zur Universitätsbibliographie oder benötigen Hilfe oder Beratung, melden Sie sich bei uns: 
-      </p>
-      <p>
-      Redaktionsteam der Universitätsbibliographie: <br/>      
-      <a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de</a>
-      </p>
-      <p>
-      Kerstin Ponten (Teamleitung) <br/>
-      <a href="mailto:universitaetsbibliographie@ub.uni-due.de">kerstin.ponten@uni-due.de</a> <br/>
-      Tel.: 0201 / 183-6019      
-      </p>
+    <div class="bg-filter-blue p-3 mt-3">
+      <div class="row">
+        <div class="col">
+          <article class="card">
+            <div class="row">
+              <div class="col-lg-4">
+                <img
+                  src="images/UBO_Postkarte.PNG"
+                  alt="UBO Postkarte"
+                  class="img-fluid" />
+              </div>
+              <div class="col-lg-8">
+                <div class="card-body">
+                  <h3 class="card-title">
+                    Kontakt
+                  </h3>
+                  <p class="card-text">
+                    Haben Sie Fragen zur Universitätsbibliographie
+                    oder benötigen Hilfe oder Beratung, melden Sie sich bei uns:
+                  </p>
+                  <p class="card-text">
+                    Redaktionsteam der Universitätsbibliographie
+                    <br/>
+                    <a href="mailto:universitaetsbibliographie@ub.uni-due.de">
+                      universitaetsbibliographie@ub.uni-due.de
+                    </a>
+                  </p>
+                  <p class="card-text">
+                    Kerstin Ponten (Teamleitung)
+                    <br/>
+                    <a href="mailto:universitaetsbibliographie@ub.uni-due.de">
+                      kerstin.ponten@uni-due.de
+                    </a><br/>
+                    Tel.: 0201 / 183-6019
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
     </div>
-  </article>
+  </section>
 
 </webpage>
