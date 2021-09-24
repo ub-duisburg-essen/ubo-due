@@ -1,41 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <webpage lastModified="$Date$" id="dozbib">
- <title xml:lang="de">Universitätsbibliographie der Universität Duisburg-Essen</title>
- <title xml:lang="en">Bibliography of the University of Duisburg-Essen</title>
+ <title xml:lang="de">Universitätsbibliographie (UBO) der Universität Duisburg-Essen</title>
+ <title xml:lang="en">University Bibliography (UBO) of the University of Duisburg-Essen</title>
 
  <article class="card mb-3" xml:lang="de">
    <div class="card-body">
-     <h3>Die Universitätsbibliographie</h3>
+     <h3>Die Universitätsbibliographie (UBO)</h3>
       <p>
-        ist der zentrale Publikationsnachweis der Universität Duisburg-Essen,
-        der online die Publikationstätigkeit der Hochschulangehörigen verzeichnet.
-        Die Einträge beruhen auf Angaben der Autoren selbst und auf Importe aus Publikationsdatenbanken.
-        Die Universitätsbibliographie wird von der Universitätsbibliothek betrieben.
-        Unser Redaktionsteam prüft und vervollständigt die Neueinträge.
+        ist der zentrale Publikationsnachweis der Universität Duisburg-Essen - hier wird online die Publikationstätigkeit aller Hochschulangehörigen verzeichnet. 
       </p>
-      <h3>Sie sind Angehöriger der Universität Duisburg-Essen?</h3>
+    </div>
+ </article>
+ 
+ <article class="card mb-3" xml:lang="de">
+   <div class="card-body">     
+      <h3>Publikationen melden</h3>
       <p>
-        Helfen Sie uns bei der Vervollständigung!<br/>
-        <a href="../newPublication.xed">Hier können Sie Ihre Publikation an die Universitätsbibliographie melden</a>
+        Sie sind Angehöriger der UDE? <br/> 
+        Helfen Sie uns bei der Vollständigkeit!<br/>
+        <a href="../newPublication.xed">Hier können Sie Ihre Publikation an die Universitätsbibliographie melden</a> <br/>
+        Oder schicken Sie uns IhrePublikationsliste in einem beliebigen Format: 
+        	<a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de</a>
       </p>
    </div>
  </article>
+ 
   <article class="card mb-3" xml:lang="en">
     <div class="card-body">
       <h3>The University Bibliography</h3>
       <p>
-        is the central resource of Duisburg-Essen University
-        that lists all publication activities of the university members.
-        The entries are based on information provided by the authors themselves and on imports from publication databases.
-        The bibliography is run by the university library.
-        Our editoral team revises and completes new entries.
+        is the central publication directory of Duisburg-Essen University - here the publication activities of all university members are recorded online. 
       </p>
+    </div>
+   </article>  
+   
+   <article class="card mb-3" xml:lang="en"> 
+    <div class="card-body">
       <h3>
-        As a member of Duisburg-Essen University</h3>
+        Registering publication</h3>
       <p>
+        You are a member of the UDE?
         Help us to complete the bibliography!<br/>
-        <a href="../newPublication.xed">Here you can register your own publication</a>
+        <a href="../newPublication.xed">Here you can register your own publication</a> <br/>
+        Or send us your publication list in any format:  
+        <a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de </a>
       </p>
     </div>
   </article>
@@ -80,15 +89,72 @@
       </xed:form>
     </div>
   </article>
-
-  <xinclude uri="xslStyle:response-newest:solr:q=status:confirmed+AND+year:2021&amp;rows=4&amp;sort=created+desc,year+desc&amp;facet=false&amp;fl=id,year" />
-
+  
+  
+  
+  <article class="card mb-3" xml:lang="de">
+   <div class="card-body">
+     <h3>Publikationslisten</h3>
+      <p>
+        Wenn Ihre Publikationen in der UBO verzeichnet sind, können Sie Ihre Publikationsliste in Ihre eigene Website einbinden. 
+        Dabei sind Ihre Daten stets tagesaktuell, sofern Sie uns neue Titel melden. <br/>
+        Hier können Sie Ihre persönliche Publikationsliste erstellen und nachnutzen: <a href="../list-wizard.xed">Persönliche Publikationsliste erstellen</a>         
+      </p>  
+    </div>
+  </article>    
+  
+  <article class="card mb-3" xml:lang="de">
+   <div class="card-body">    
+      <h3>Informationen zur UBO</h3>
+      <p>
+        <a href="../info.xml">Wissenswertes für die Nutzer:innen der UBO</a>
+      </p>         
+   </div>
+ </article>
+ 
+ <article class="card mb-3" xml:lang="en">
+   <div class="card-body">
+     <h3>Publikation lists</h3>
+      <p>
+        If your publications are listed in the UBO, you can integrate your publication list into your own website. 
+         Your data will always be up-to-date, provided you register new titles. <br/>
+        Here you can create and reuse your personal publication list: <a href="../list-wizard.xed">Build your personal publication list</a>         
+      </p>  
+   </div>
+ </article>   
+  
+  <article class="card mb-3" xml:lang="en">
+   <div class="card-body">    
+      <h3>Information about the UBO</h3>
+      <p>
+        <a href="../info.xml">Things to know for UBO users</a>
+      </p>         
+   </div>
+ </article>
+  
   <aside id="sidebar">
-    <xinclude uri="xslStyle:response-sidebar-mini:solr:q=status:confirmed&amp;rows=0" />
-    <xinclude uri="xslStyle:response-sidebar-admin:solr:q=*:*&amp;rows=0&amp;facet=true&amp;facet.field=status&amp;facet.mincount=0&amp;facet.range=created&amp;facet.range=modified&amp;facet.range.start=NOW/DAY-30DAY&amp;facet.range.end=NOW&amp;facet.range.gap=%2B1DAY" />
-    <xinclude uri="xslStyle:response-sidebar-admin:solr:q=status:imported+AND+importID:*&amp;rows=0&amp;facet=true&amp;facet.sort=index&amp;facet.limit=-1&amp;facet.field=importID" />
-
-    <article class="card" xml:lang="de">
+  
+  <article class="card" xml:lang="de">
+      <div class="card-body bg-alternative">
+        <hgroup>
+          <h3>Zahlen zur UBO</h3>          
+        </hgroup>
+        <p>
+         Gesamtzahl der verzeichneten Publikationen <br/>
+         Aktuelle Publikationen (laufendes Jahr + Vorjahr) <br/>
+         OA-Veröffentlichungen an der UDE <br/>
+         …          
+        </p>        
+      </div>
+    </article>
+    
+    <article class="card">
+      <div class="card-body bg-alternative">
+        <img src="../images/UBO_Postkarte.PNG" alt="UBO Postkarte" class="img-fluid" />              
+      </div>
+    </article>
+  
+  <article class="card" xml:lang="de">
       <div class="card-body bg-alternative">
         <hgroup>
           <h3>Kontakt:</h3>
