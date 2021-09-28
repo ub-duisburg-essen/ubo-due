@@ -242,7 +242,7 @@
                         <xsl:text>status:confirmed</xsl:text>
                       </xsl:otherwise>
                     </xsl:choose>
-                    <xsl:text> AND ${qq}</xsl:text>
+                    <xsl:text> AND all:${qq}</xsl:text>
                   </xsl:attribute>
                 </input>
 
