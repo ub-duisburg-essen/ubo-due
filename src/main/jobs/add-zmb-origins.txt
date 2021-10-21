@@ -12,7 +12,7 @@ select objects with solr query ae_lsf:(49457 OR 11734 OR 51943 OR 14386 OR 51479
 execute for selected edit {x} at publication add origin 09.03
 select objects with solr query ae_lsf:(14381 OR 52590 OR 51606 OR 56143) AND year:[2010 TO *] -origin:09.03 in core main
 execute for selected edit {x} at publication add origin 09.03
-select objects with solr query ae_lsf:(52773 OR 53501 OR 49588 OR 53246 OR 60963 OR 16246) AND year:[2011 TO *] -origin:09.03 in core main
+select objects with solr query ae_lsf:(52773 OR 53501 OR 49588 OR 53246 OR 16246) AND year:[2011 TO *] -origin:09.03 in core main
 execute for selected edit {x} at publication add origin 09.03
 select objects with solr query ae_lsf:(53303 OR 57733 OR 54417) AND year:[2012 TO *] -origin:09.03 in core main
 execute for selected edit {x} at publication add origin 09.03 
@@ -35,4 +35,6 @@ execute for selected edit {x} at publication add origin 09.03
 select objects with solr query ae_lsf:(61771 OR 61871 OR 61955 OR 61959 OR 59763 OR 58530) AND year:[2021 TO *] -origin:09.03 in core main
 execute for selected edit {x} at publication add origin 09.03
 select objects with solr query ae_lsf:14547 AND year:[2008 TO 2019] -origin:09.03 in core main
+execute for selected edit {x} at publication add origin 09.03
+select objects with solr query ae_lsf:60963 AND year:[2011 TO 2021] -origin:09.03 in core main
 execute for selected edit {x} at publication add origin 09.03
