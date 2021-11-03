@@ -20,6 +20,10 @@
   <url>https://bibliographie.ub.uni-due.de</url>
   <description>Universitätsbibliographie der Universität Duisburg-Essen</description>
 
+  <properties>
+    <mycore.version>2020.06.3-SNAPSHOT</mycore.version>
+  </properties>
+
   <build>
     <plugins>
       <plugin>
@@ -39,5 +43,19 @@
       </plugin>
     </plugins>
   </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.mycore</groupId>
+      <artifactId>mycore-user2</artifactId>
+      <version>${mycore.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mycore.ubo</groupId>
+      <artifactId>ubo-common</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 
 </project>

@@ -330,8 +330,7 @@
         <li class="nav-item">
           <xsl:variable name="url" select="encoder:encode(string($RequestURL))" />
           <a id="loginURL" class="nav-link" href="{$WebApplicationBaseURL}{$UBO.Login.Path}?url={$url}">
-            <xsl:text>Administrator</xsl:text>
-            <!-- <xsl:value-of select="i18n:translate('component.userlogin.button.login')" />  -->
+            <xsl:value-of select="i18n:translate('component.userlogin.button.login')" />
           </a>
         </li>
       </xsl:when>
