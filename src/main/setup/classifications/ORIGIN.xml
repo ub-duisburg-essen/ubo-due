@@ -677,6 +677,10 @@
 			<category ID="08.04">
 				<label xml:lang="de" text="Physikalische Chemie" />
 			</category>
+			<category ID="08.09">
+                <label xml:lang="de" text="Umweltmikrobiologie und Biotechnologie (UMB)"/> 
+                <label xml:lang="en" text="Environmental Microbiology and Biotechnology" /> 
+            </category>
 			<category ID="08.05">
 				<label xml:lang="de" text="Technische Chemie" />
 			</category>
@@ -1462,6 +1466,9 @@
 				<label xml:lang="de" text="Essener Kolleg für Geschlechterforschung" />
 				<label xml:lang="en" text="Essen College of Gender Research"/>
 			</category>
+			<category ID="IZIM">
+                <label xml:lang="de" text="Interdisziplinäres Zentrum für Integrations- und Migrationsforschung (InZentIM)"/> 
+            </category>
 			<category ID="ZEB">
 				<label xml:lang="de" text="Interdisziplinäres Zentrum für Bildungsforschung" />
 				<label xml:lang="en" text="Interdisciplinary Centre for Educational Research"/>
