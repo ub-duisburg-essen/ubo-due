@@ -1177,6 +1177,10 @@
 					<label xml:lang="en" text="Clinic for Urology"/>
 					<label xml:lang="x-eva" text="54" />
 				</category>
+				<category ID="14.07.10">
+					<label xml:lang="de" text="Zentrum für Notfallmedizin"/>
+					<label xml:lang="en" text="Center for Emergency Medicine"/>
+				</category>
 				<category ID="14.01.24">
 					<label xml:lang="x-eva" text="55" />
 					<label xml:lang="de" text="Institut für Allgemeinmedizin" />
