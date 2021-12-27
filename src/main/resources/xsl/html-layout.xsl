@@ -326,6 +326,7 @@
 
   <xsl:template name="menu.login">
     <xsl:choose>
+      <xsl:when test="/html/@id='login'" />
       <xsl:when test="mcrxsl:isCurrentUserGuestUser()">
         <li class="nav-item">
           <xsl:variable name="url" select="encoder:encode(string($RequestURL))" />
