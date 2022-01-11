@@ -19,7 +19,7 @@
 		<category ID="anko">
 			<label xml:lang="de" text="Angewandte Kognitionswissenschaft" />
 			<label xml:lang="en" text="Applied Cognitive Science" />
-			<label xml:lang="x-e-mail" text="anke.petschenka@uni-due.de" />
+			<label xml:lang="x-e-mail" text="anke.petschenka@uni-due.de simona.koch@uni-due.de" />
 		</category>		
 		<category ID="ang">
 			<label xml:lang="de" text="Anglistik" />
@@ -133,7 +133,7 @@
 		<category ID="psy">
 			<label xml:lang="de" text="Psychologie" />
 			<label xml:lang="en" text="Psychology" />
-			<label xml:lang="x-e-mail" text="anke.petschenka@uni-due.de" />
+			<label xml:lang="x-e-mail" text="anke.petschenka@uni-due.de simona.koch@uni-due.de" />
 		</category>
 		<category ID="recht">
 			<label xml:lang="de" text="Rechtswissenschaften" />
