@@ -56,10 +56,6 @@
         <label xml:lang="en">from EVALuna Biblio</label>
       </item>
     </item>
-    <item id="dozbib.duplicates" ref="duplicates.xml" role="admin">
-      <label xml:lang="de">Dubletten</label>
-      <label xml:lang="en">Duplicates</label>
-    </item>
   </item>
 
   <item menu="user">
@@ -70,6 +66,10 @@
   </item>
 
   <item menu="admin">
+    <item id="dozbib.duplicates" ref="duplicates.xml" role="admin">
+      <label xml:lang="de">Dubletten-Bericht</label>
+      <label xml:lang="en">Duplicates report</label>
+    </item>
     <item id="user.admin" ref="servlets/MCRUserServlet" role="admin">
       <label xml:lang="de">Nutzerverwaltung</label>
       <label xml:lang="en">Admin Users</label>
@@ -81,10 +81,6 @@
     <item id="acl.editor" ref="rsc/ACLE/start" role="admin">
       <label xml:lang="de">ACL-Editor</label>
       <label xml:lang="en">ACL Editor</label>
-    </item>
-    <item id="dozbib.duplicates" ref="duplicates.xml" role="admin">
-      <label xml:lang="de">Dubletten-Bericht</label>
-      <label xml:lang="en">Duplicates report</label>
     </item>
     <item id="classeditor" ref="modules/classeditor/classificationEditor.xml" role="admin">
       <label xml:lang="de">Klassifikationseditor</label>
