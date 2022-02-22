@@ -16,6 +16,13 @@
       background-size: cover;
       padding-bottom: 8rem;
     }
+    & > div.bodywrapper.home {
+      background-color: #5b7cc3;
+      background-image: url("../../../images/background-camp-e_xl.jpg");
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-attachment: fixed;
+    }
   }
 
   // dark intro tile for picture backgrounds ===================================
@@ -103,6 +110,10 @@
     background: linear-gradient(to bottom, rgba(191, 214, 248, 0.9) 0%, rgba(115, 147, 211, 0.9) 100%), url("../../../images/background-camp-e_xl.jpg") no-repeat 50% fixed;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url("../../../images/background-camp-e_xl.jpg") no-repeat 50% fixed;
     background-size: cover;
+  }
+
+  .bg-filter-blue {
+    background-color:rgba(0, 59, 122, .9);
   }
 
 

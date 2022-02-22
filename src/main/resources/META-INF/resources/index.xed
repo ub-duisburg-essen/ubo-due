@@ -1,191 +1,212 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<webpage lastModified="$Date$" id="dozbib">
- <title xml:lang="de">Universitätsbibliographie (UBO) der Universität Duisburg-Essen</title>
- <title xml:lang="en">University Bibliography (UBO) of the University of Duisburg-Essen</title>
+  <webpage lastModified="$Date$" id="dozbib" xmlns:i18n="http://www.mycore.org/i18n">
+    <title xml:lang="de">Universitätsbibliographie (UBO) der Universität Duisburg-Essen</title>
+    <title xml:lang="en">University Bibliography (UBO) of the University of Duisburg-Essen</title>
 
- <article class="card mb-3" xml:lang="de">
-   <div class="card-body">
-     <h3>Die Universitätsbibliographie (UBO)</h3>
-      <p>
-        ist der zentrale Publikationsnachweis der Universität Duisburg-Essen - hier wird online die Publikationstätigkeit aller Hochschulangehörigen verzeichnet. 
-      </p>
-    </div>
- </article>
- 
- <article class="card mb-3" xml:lang="de">
-   <div class="card-body">     
-      <h3>Publikationen melden</h3>
-      <p>
-        Sie sind Angehöriger der UDE? <br/> 
-        Helfen Sie uns bei der Vollständigkeit!<br/>
-        <a href="../newPublication.xed">Hier können Sie Ihre Publikation an die Universitätsbibliographie melden</a> <br/>
-        Oder schicken Sie uns IhrePublikationsliste in einem beliebigen Format: 
-        	<a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de</a>
-      </p>
-   </div>
- </article>
- 
-  <article class="card mb-3" xml:lang="en">
-    <div class="card-body">
-      <h3>The University Bibliography</h3>
-      <p>
-        is the central publication directory of Duisburg-Essen University - here the publication activities of all university members are recorded online. 
-      </p>
-    </div>
-   </article>  
-   
-   <article class="card mb-3" xml:lang="en"> 
-    <div class="card-body">
-      <h3>
-        Registering publication</h3>
-      <p>
-        You are a member of the UDE?
-        Help us to complete the bibliography!<br/>
-        <a href="../newPublication.xed">Here you can register your own publication</a> <br/>
-        Or send us your publication list in any format:  
-        <a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de </a>
-      </p>
-    </div>
-  </article>
+    <section id="home" class="freestyle" >
 
-  <article class="card mb-3">
-    <div class="card-body">
-      <xed:form xmlns:xed="http://www.mycore.de/xeditor" method="post" role="form">
-        <div class="form-group form-inline mb-0">
+      <!-- search -->
+      <div class="row mt-3 mb-1">
+        <div class="col">
+          <article class="card card-search mb-3">
+            <div class="card-body">
 
-          <xed:bind xpath="/query">
-            <xed:bind xpath="@mask" default="index.xed" />
-            <xed:bind xpath="@numPerPage" default="10" />
-            <xed:bind xpath="conditions[@format='xml']/boolean[@operator='and']">
-              <xed:bind xpath="condition[@field='all'][@operator='contains']/@value">
-                <label for="input" class="mycore-form-label">
-                  <xed:output i18n="ubo.search.simple" />
-                </label>
-                <input id="input" type="text" class="mycore-form-input form-control-sm mr-2" />
-              </xed:bind>
+              <xed:form xmlns:xed="http://www.mycore.de/xeditor" method="post" role="form">
+                <div class="form-group form-inline mb-0">
+                  <xed:bind xpath="/query">
+                    <xed:bind xpath="@mask" default="index.xed" />
+                    <xed:bind xpath="@numPerPage" default="10" />
+                    <xed:bind xpath="conditions[@format='xml']/boolean[@operator='and']">
+                      <xed:bind xpath="condition[@field='all'][@operator='contains']/@value">
+                        <label for="input" class="mycore-form-label">
+                          <xed:output i18n="ubo.search.simple" />
+                        </label>
+                        <input id="input" type="text" class="mycore-form-input form-control-sm mr-2" />
+                      </xed:bind>
+                      <!-- Standard users must only find confirmed publications, admins find all publications -->
+                      <xed:choose>
+                        <xed:when test="not(xed:call-java('org.mycore.ubo.AccessControl','currentUserIsAdmin'))">
+                          <xed:bind xpath="condition[@field='status'][@operator='='][@value='confirmed']" />
+                        </xed:when>
+                        <xed:otherwise>
+                          <xed:bind xpath="condition[@field='objectType'][@operator='='][@value='mods']" />
+                        </xed:otherwise>
+                      </xed:choose>
+                    </xed:bind>
+                    <xed:bind xpath="sortBy[field[@name='year'][@order='descending']]" />
+                  </xed:bind>
+                  <button class="btn btn-sm btn-primary" type="submit" xed:target="servlet" xed:href="MCRQLSearchServlet">
+                    <xed:output i18n="button.search" />
+                  </button>
+                </div>
+              </xed:form>
 
-              <!-- Standard users must only find confirmed publications, admins find all publications -->
-              <xed:choose>
-                <xed:when test="not(xed:call-java('org.mycore.ubo.AccessControl','currentUserIsAdmin'))">
-                  <xed:bind xpath="condition[@field='status'][@operator='='][@value='confirmed']" />
-                </xed:when>
-                <xed:otherwise>
-                  <xed:bind xpath="condition[@field='objectType'][@operator='='][@value='mods']" />
-                </xed:otherwise>
-              </xed:choose>
-
-            </xed:bind>
-
-            <xed:bind xpath="sortBy[field[@name='year'][@order='descending']]" />
-
-          </xed:bind>
-
-          <button class="btn btn-sm btn-primary" type="submit" xed:target="servlet" xed:href="MCRQLSearchServlet">
-            <xed:output i18n="button.search" />
-          </button>
-
+              <p class="card-search__info">
+                <i18n:de>Die Universitätsbibliographie (UBO) ist der zentrale
+                  Publikationsnachweis der Universität Duisburg-Essen - hier
+                  wird online die Publikationstätigkeit aller
+                  Hochschulangenhörigen verzeichnet.</i18n:de>
+                <i18n:en>The University Bibliography is the central publication
+                  directory of Duisburg-Essen University - here the publication
+                  activities of all university members are recorded online.</i18n:en>
+              </p>
+            </div>
+          </article>
         </div>
-      </xed:form>
-    </div>
-  </article>
-  
-  
-  
-  <article class="card mb-3" xml:lang="de">
-   <div class="card-body">
-     <h3>Publikationslisten</h3>
-      <p>
-        Wenn Ihre Publikationen in der UBO verzeichnet sind, können Sie Ihre Publikationsliste in Ihre eigene Website einbinden. 
-        Dabei sind Ihre Daten stets tagesaktuell, sofern Sie uns neue Titel melden. <br/>
-        Hier können Sie Ihre persönliche Publikationsliste erstellen und nachnutzen: <a href="../list-wizard.xed">Persönliche Publikationsliste erstellen</a>         
-      </p>  
-    </div>
-  </article>    
-  
-  <article class="card mb-3" xml:lang="de">
-   <div class="card-body">    
-      <h3>Informationen zur UBO</h3>
-      <p>
-        <a href="../info.xml">Wissenswertes für die Nutzer:innen der UBO</a>
-      </p>         
-   </div>
- </article>
- 
- <article class="card mb-3" xml:lang="en">
-   <div class="card-body">
-     <h3>Publikation lists</h3>
-      <p>
-        If your publications are listed in the UBO, you can integrate your publication list into your own website. 
-         Your data will always be up-to-date, provided you register new titles. <br/>
-        Here you can create and reuse your personal publication list: <a href="../list-wizard.xed">Build your personal publication list</a>         
-      </p>  
-   </div>
- </article>   
-  
-  <article class="card mb-3" xml:lang="en">
-   <div class="card-body">    
-      <h3>Information about the UBO</h3>
-      <p>
-        <a href="../info.xml">Things to know for UBO users</a>
-      </p>         
-   </div>
- </article>
-  
-  <aside id="sidebar">
-  
-  <article class="card" xml:lang="de">
-      <div class="card-body bg-alternative">
-        <hgroup>
-          <h3>Zahlen zur UBO</h3>          
-        </hgroup>
-        <p>
-         Gesamtzahl der verzeichneten Publikationen <br/>
-         Aktuelle Publikationen (laufendes Jahr + Vorjahr) <br/>
-         OA-Veröffentlichungen an der UDE <br/>
-         …          
-        </p>        
       </div>
-    </article>
-    
-    <article class="card">
-      <div class="card-body bg-alternative">
-        <img src="../images/UBO_Postkarte.PNG" alt="UBO Postkarte" class="img-fluid" />              
-      </div>
-    </article>
-  
-  <article class="card" xml:lang="de">
-      <div class="card-body bg-alternative">
-        <hgroup>
-          <h3>Kontakt:</h3>
-        </hgroup>
-        <p>
-          <a href="mailto:universitaetsbibliographie@ub.uni-due.de">
-            <span>universitaetsbibliographie<br/>@ub.uni-due.de</span>
-          </a>
-        </p>
-        <p>
-          Universitätsbibliothek<br/>
-          Tel.: 0201 / 183-3728
-        </p>
-      </div>
-    </article>
-    <article class="card" xml:lang="en">
-      <div class="card-body bg-alternative">
-        <hgroup>
-          <h3>Contact:</h3>
-        </hgroup>
-        <p>
-          <a href="mailto:universitaetsbibliographie@ub.uni-due.de">
-            <span>universitaetsbibliographie<br/>@ub.uni-due.de</span>
-          </a>
-        </p>
-        <p>
-          University library<br/>
-          Phone: 0201 / 183-3728
-        </p>
-      </div>
-    </article>
-  </aside>
 
-</webpage>
+      <div class="bg-filter-blue p-3">
+
+      <!-- register/list -->
+      <div class="row mb-3">
+
+        <div class="col-6">
+          <article class="card mb-3">
+            <div class="card-body">
+              <h3 class="card-title">
+                <i18n:de>Publikationen melden</i18n:de>
+                <i18n:en>Registering publication</i18n:en>
+              </h3>
+              <p class="card-text">
+                <i18n:de>Sie sind Angehöriger der UDE?</i18n:de>
+                <i18n:en>You are a member of the UDE?</i18n:en>
+                <br/>
+                <i18n:de>Helfen Sie uns bei der Vollständigkeit!</i18n:de>
+                <i18n:en>Help us to complete the bibliography!</i18n:en>
+                <br/>
+                <a href="../newPublication.xed">
+                  <i18n:de>Melden Sie Ihre Publikation an die
+                    Universitätsbibliographie.</i18n:de>
+                  <i18n:en>Register your own publication.</i18n:en>
+                </a>
+                <br/>
+                <i18n:de>Oder schicken Sie uns IhrePublikationsliste in einem
+                  beliebigen Format:</i18n:de>
+                <i18n:en>Or send us your publication list in any format:</i18n:en>
+                <a href="mailto:universitaetsbibliographie@ub.uni-due.de">
+                  universitaetsbibliographie@ub.uni-due.de
+                </a>
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-6">
+          <article class="card mb-3">
+            <div class="card-body">
+              <h3 class="card-title">
+                <i18n:de>Publikationslisten</i18n:de>
+                <i18n:en>Publikation lists</i18n:en>
+              </h3>
+               <p class="card-text">
+                <i18n:de>Wenn Ihre Publikationen in der UBO verzeichnet sind,
+                  können Sie Ihre Publikationsliste in Ihre eigene Website
+                  einbinden. Dabei sind Ihre Daten stets tagesaktuell, sofern
+                  Sie uns neue Titel melden.</i18n:de>
+                <i18n:en>If your publications are listed in the UBO, you can
+                  integrate your publication list into your own website.
+                  Your data will always be up-to-date, provided you register
+                  new titles.</i18n:en>
+                <br/>
+                <i18n:de>Hier können Sie Ihre persönliche Publikationsliste
+                  erstellen und nachnutzen:</i18n:de>
+                <i18n:en>Here you can create and reuse your
+                  personal publication list:</i18n:en>
+                <a href="../list-wizard.xed">
+                  <i18n:de>Persönliche Publikationsliste erstellen</i18n:de>
+                  <i18n:en>Build your personal publication list</i18n:en>
+                </a>
+               </p>
+             </div>
+           </article>
+        </div>
+
+      </div>
+
+      <!-- info -->
+      <div class="row mb-3">
+        <div class="col-12">
+          <article class="card mb-3">
+            <div class="card-body">
+              <h3 class="card-title">
+                <i18n:de>Informationen zur UBO</i18n:de>
+                <i18n:en>Information about the UBO</i18n:en>
+              </h3>
+              <p class="card-text">
+                <a href="../info.xml">
+                  <i18n:de>Wissenswertes für die Nutzer:innen der UBO</i18n:de>
+                  <i18n:en>Things to know for UBO users</i18n:en>
+                </a>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- statistic -->
+      <div class="row">
+        <div class="col-12">
+          <h3 class="text-white text-center">Zahlen zur UBO</h3>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-4">
+          <article class="card mb-3">
+            <div class="card-body">
+              Gesamtzahl der verzeichneten Publikationen
+            </div>
+          </article>
+        </div>
+        <div class="col-4">
+          <article class="card mb-3">
+            <div class="card-body">
+              Aktuelle Publikationen (laufendes Jahr + Vorjahr)
+            </div>
+          </article>
+        </div>
+        <div class="col-4">
+          <article class="card mb-3">
+            <div class="card-body">
+              OA-Veröffentlichungen an der UDE
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- contact -->
+      <div class="row">
+        <div class="col-12">
+          <article class="card">
+            <div class="row">
+              <div class="col-4">
+                <img src="../images/UBO_Postkarte.PNG" alt="UBO Postkarte" class="img-fluid" />
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title">
+                    <i18n:de>Kontakt</i18n:de>
+                    <i18n:en>Contact</i18n:en>
+                  </h3>
+                  <p class="card-text">
+                    <a href="mailto:universitaetsbibliographie@ub.uni-due.de">
+                      <span>universitaetsbibliographie@ub.uni-due.de</span>
+                    </a>
+                  </p>
+                  <p class="card-text">
+                    <i18n:de>Universitätsbibliothek</i18n:de>
+                    <i18n:en>University library</i18n:en>
+                    <br/>
+                    <i18n:de>Tel.: 0201 / 183-3728</i18n:de>
+                    <i18n:en>Phone: 0201 / 183-3728</i18n:en>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      </div>
+
+    </section>
+  </webpage>
