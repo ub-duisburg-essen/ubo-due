@@ -84,6 +84,18 @@
     }
   }
 
+  .card-search {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    &__info {
+      margin-left: 25%;
+      margin-right: 15%;
+      padding-left: 1rem;
+      margin-top: 2rem;
+      line-height: 1.8rem;
+    }
+  }
+
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {
   // add/overwrite styles for responsive level lg and lower

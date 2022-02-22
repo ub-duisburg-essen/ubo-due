@@ -427,8 +427,20 @@
   <!-- ==================== MAIN CONTENT ==================== -->
 
   <xsl:template name="layout.body">
+
     <div class="bodywrapper pt-3">
-      <div class="container d-flex flex-column flex-grow-1">
+      <xsl:if test="body/section[@id='home']">
+        <xsl:attribute name="class">
+          <xsl:value-of select="'bodywrapper pt-3 home'" />
+        </xsl:attribute>
+      </xsl:if>
+
+      <div class="container">
+
+        <xsl:if test="body/section[@class='freestyle']">
+          <xsl:copy-of select="body/section[@class='freestyle']" />
+        </xsl:if>
+
         <div class="row">
           <div class="col-lg">
             <xsl:call-template name="layout.inhalt" />
@@ -439,11 +451,7 @@
             </div>
           </xsl:if>
         </div>
-        <div class="row">
-          <div class="col">
-            <hr class="mb-0"/>
-          </div>
-        </div>
+
       </div>
     </div>
   </xsl:template>
@@ -452,7 +460,7 @@
     <section role="main" id="inhalt">
       <xsl:choose>
         <xsl:when test="$allowed.to.see.this.page = 'true'">
-          <xsl:copy-of select="body/*[not(@id='sidebar')][not(@id='breadcrumb')]" />
+          <xsl:copy-of select="body/*[not(@id='sidebar')][not(@id='breadcrumb')][not(@class='freestyle')]" />
         </xsl:when>
         <xsl:otherwise>
           <h3>
