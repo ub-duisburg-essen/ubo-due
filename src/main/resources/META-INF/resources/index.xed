@@ -75,7 +75,7 @@
                 <i18n:de>Helfen Sie uns bei der Vollständigkeit!</i18n:de>
                 <i18n:en>Help us to complete the bibliography!</i18n:en>
                 <br/>
-                <a href="../newPublication.xed">
+                <a href="newPublication.xed">
                   <i18n:de>Melden Sie Ihre Publikation an die
                     Universitätsbibliographie.</i18n:de>
                   <i18n:en>Register your own publication.</i18n:en>
@@ -113,7 +113,7 @@
                   erstellen und nachnutzen:</i18n:de>
                 <i18n:en>Here you can create and reuse your
                   personal publication list:</i18n:en>
-                <a href="../list-wizard.xed">
+                <a href="list-wizard.xed">
                   <i18n:de>Persönliche Publikationsliste erstellen</i18n:de>
                   <i18n:en>Build your personal publication list</i18n:en>
                 </a>
@@ -134,7 +134,7 @@
                 <i18n:en>Information about the UBO</i18n:en>
               </h3>
               <p class="card-text">
-                <a href="../info.xml">
+                <a href="info.xml">
                   <i18n:de>Wissenswertes für die Nutzer:innen der UBO</i18n:de>
                   <i18n:en>Things to know for UBO users</i18n:en>
                 </a>
