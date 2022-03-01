@@ -4,6 +4,9 @@
     <title xml:lang="de">Universitätsbibliographie (UBO) der Universität Duisburg-Essen</title>
     <title xml:lang="en">University Bibliography (UBO) of the University of Duisburg-Essen</title>
 
+    <script src="webjars/highcharts/5.0.1/highcharts.src.js" type="text/javascript"></script>
+    <script src="webjars/highcharts/5.0.1/themes/grid.js" type="text/javascript"></script>
+
     <section id="home" class="freestyle" >
 
       <!-- search -->
@@ -154,7 +157,8 @@
         <div class="col-4">
           <article class="card mb-3">
             <div class="card-body">
-              Gesamtzahl der verzeichneten Publikationen
+              <!-- Gesamtzahl der verzeichneten Publikationen -->
+              <xinclude uri="xslStyle:statistics:solr:q=status:confirmed+year:%5B2013+TO+*%5D&amp;rows=0&amp;facet.field=year" />
             </div>
           </article>
         </div>
@@ -168,7 +172,8 @@
         <div class="col-4">
           <article class="card mb-3">
             <div class="card-body">
-              OA-Veröffentlichungen an der UDE
+              <!-- OA-Veröffentlichungen an der UDE -->
+              <xinclude uri="xslStyle:statistics:solr:q=status:confirmed&amp;rows=0&amp;facet.field=oa" />
             </div>
           </article>
         </div>
@@ -180,7 +185,7 @@
           <article class="card">
             <div class="row">
               <div class="col-4">
-                <img src="../images/UBO_Postkarte.PNG" alt="UBO Postkarte" class="img-fluid" />
+                <img src="images/UBO_Postkarte.PNG" alt="UBO Postkarte" class="img-fluid" />
               </div>
               <div class="col-8">
                 <div class="card-body">
