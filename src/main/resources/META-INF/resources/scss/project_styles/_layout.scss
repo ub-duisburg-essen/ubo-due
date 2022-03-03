@@ -115,7 +115,12 @@
   .bg-filter-blue {
     background-color:rgba(0, 59, 122, .9);
   }
-
+  .bg-filter-white {
+    background-color:rgba(255, 255, 255, .9);
+  }
+  .bg-filter-lightblue {
+    background-color:rgba(24, 92, 157, .9);
+  }
 
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {
