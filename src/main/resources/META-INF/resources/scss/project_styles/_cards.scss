@@ -112,6 +112,25 @@
     }
   }
 
+  .card {
+    .icon-opened {
+      display: inline;
+    }
+    .icon-closed {
+      display: none;
+    }
+    .collapsed {
+      .icon-opened {
+        display: none;
+      }
+      .icon-closed {
+        display: inline;
+      }
+
+    }
+  }
+
+
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {
   // add/overwrite styles for responsive level lg and lower
