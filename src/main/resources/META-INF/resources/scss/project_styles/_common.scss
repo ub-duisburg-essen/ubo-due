@@ -12,6 +12,12 @@
   background-color: transparent;
 }
 
+#home {
+  h3 {
+    font-size: 2.2rem;
+  }
+}
+
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {
   // add/overwrite styles for responsive level lg and lower
