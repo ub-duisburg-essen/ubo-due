@@ -41,6 +41,13 @@
       <xsl:apply-templates select="head" />
 
       <body>
+
+        <xsl:if test="body/section/@id">
+          <xsl:attribute name="class">
+            <xsl:value-of select="body/section/@id" />
+          </xsl:attribute>
+        </xsl:if>
+
         <header>
           <xsl:call-template name="head-bar" />
           <xsl:call-template name="site-header" />
@@ -51,9 +58,9 @@
         <xsl:call-template name="layout.body" />
 
         <xsl:call-template name="footer" />
-        </body>
+      </body>
 
-      </html>
+    </html>
   </xsl:template>
 
   <xsl:template name="doctype">
@@ -429,12 +436,6 @@
   <xsl:template name="layout.body">
 
     <div class="bodywrapper pt-3">
-      <xsl:if test="body/section[@id='home']">
-        <xsl:attribute name="class">
-          <xsl:value-of select="'bodywrapper pt-3 home'" />
-        </xsl:attribute>
-      </xsl:if>
-
       <div class="container">
 
         <xsl:if test="body/section[@class='freestyle']">

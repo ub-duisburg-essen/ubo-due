@@ -12,10 +12,15 @@
   background-color: transparent;
 }
 
-#home {
+.info,
+.home {
   h3 {
     font-size: 2.2rem;
   }
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 // Large devices (desktops) and below: <= 1200px

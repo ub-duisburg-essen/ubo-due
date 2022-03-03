@@ -16,12 +16,15 @@
       background-size: cover;
       padding-bottom: 8rem;
     }
-    & > div.bodywrapper.home {
-      background-color: #5b7cc3;
-      background-image: url("../../../images/background-camp-e_xl.jpg");
-      background-repeat: no-repeat;
-      background-position: 50%;
-      background-attachment: fixed;
+    &.home,
+    &.info {
+      .bodywrapper {
+        background-color: #5b7cc3;
+        background-image: url("../../../images/background-camp-e_xl.jpg");
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-attachment: fixed;
+      }
     }
   }
 
