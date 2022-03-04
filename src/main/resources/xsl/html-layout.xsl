@@ -9,7 +9,7 @@
   xmlns:exslt="http://exslt.org/common"
   exclude-result-prefixes="xsl xalan i18n mcrxsl encoder exslt">
 
-  <xsl:output method="html" encoding="UTF-8" media-type="text/html" indent="yes" xalan:indent-amount="2" />
+  <xsl:output method="xml" encoding="UTF-8" />
 
   <!-- ==================== LANGUAGE PARAMS ==================== -->
 
