@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <webpage lastModified="$Date: 2016-05-20 08:54:29 +0200 (Fr, 20 Mai 2016) $" id="dozbib.info" xmlns:i18n="http://www.mycore.org/i18n">
- <title xml:lang="de">Informationen zur UBO</title>
- <title xml:lang="en">Information about the UBO</title>
+ <title xml:lang="de">Informationen zur Universitätsbibliographie</title>
+ <title xml:lang="en">Information about the University Bibliography</title>
 
   <section id="info" class="freestyle" >
 
@@ -20,15 +20,14 @@
                       Die Universitätsbibliographie verzeichnet sämtliche
                       Publikationen, die Sie als Wissenschaftler:innen der UDE
                       veröffentlichen – damit helfen wir,
-                      Ihre Forschung international sichtbar zu machen. <br/>
-                      ... hier müssen Bilder hin...
+                      Ihre Forschung international sichtbar zu machen.                     
                     </p>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                   <img
-                    src="images/ubo_wordcloud.PNG"
-                    alt="UBO Wordcloud"
+                    src="images/paper_cc_by.jpg"
+                    alt="Papers"
                     class="img-fluid" />
                 </div>
               </div>
@@ -36,13 +35,167 @@
           </div>
         </div>
     </div>
+    
+    <div class="bg-filter-lightblue p-3 mt-3">
+      <div class="row">    
+      
+      
+        <div class="col">            
+         
+          <article>
+            <h3 class="bg-white p-3">Wissenswertes</h3>
+            <div class="accordion" role="tablist" aria-multiselectable="true">       
+              
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingOne1"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseOne1"
+                  aria-expanded="false"
+                  aria-controls="collapseOne1">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    Publikationstypen in der Universitätsbibliographie
+                  </h5>
+                </div>
+                <div id="collapseOne1" class="card-collapse collapse" role="tabcard" aria-labelledby="headingOne1">
+                  <div class="card-body">
+
+                    <h5> Diese Publikationstypen werden in der Universitätsbibliographie erfasst:  </h5>
+                     <p>
+                     <ul>
+                      <li>Monographien, Sammelwerke, Tagungsbände, Lexika</li>
+                      <li>Aufsätze in Zeitschriften, auf Publikationsservern oder in wissenschaftlichen Blogs</li>
+                      <li>Beiträge in Sammelwerken oder Tagungsbänden</li>
+                      <li>Lexikoneinträge</li>
+                      <li>Herausgebertätigkeiten für Sammelwerke, Zeitschriften oder wiss. Blogs</li>
+                      <li>Vorträge</li>
+                      <li>Interviews</li>  
+                      <li>Poster</li> 
+                      <li>Editorials, Vorworte/Nachworte</li>  
+                      <li>Abstracts</li>
+                      <li>wissenschaftliche Rezensionen</li>  
+                      <li>Reviews</li>    
+                      <li>Forschungsberichte, Workingpapers</li> 
+                      <li>Patente</li> 
+                      <li>Dissertationen, Habilitationen</li>         
+                     </ul>
+                     </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingTwo1"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseTwo1"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo1">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    Personen in der Universitätsbibliographie
+                  </h5>
+                </div>
+                <div id="collapseTwo1" class="card-collapse collapse" role="tabcard" aria-labelledby="headingTwo1">
+                  <div class="card-body">
+
+                    <h5> Diese Personengruppen können bzw. sollten der Universitätsbibliographie ihre Publikationen melden:  </h5>
+                     <p>
+                     <ul>
+                      <li>Hochschullehrer:innen</li>
+                      <li>wissenschaftliche und künstlerische Mitarbeiter:innen</li>
+                      <li>Privatdozent:innen</li>
+                      <li>außerplanmäßige Professor:innen</li>
+                      <li>Honorarprofessor:innen</li>
+                      <li>Gastdozent:innen sowie Lehrbeauftragte</li>
+                      <li>auch ehemalige Angehörige der Universität Duisburg-Essen, wie z.B. emeritierte Professorinnen und Professoren können ihre Publikationen melden</li>         
+                     </ul>
+                     </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingThree1"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseThree1"
+                  aria-expanded="false"
+                  aria-controls="collapseThree1">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    Publikationslisten 
+                  </h5>
+                </div>
+                <div id="collapseThree1" class="card-collapse collapse" role="tabcard" aria-labelledby="headingThree1">
+                  <div class="card-body">
+
+                    <h5>Persönliche Publikationslisten  </h5>
+                     <p>
+                     ... können in der Universitätsbibliographie für die <strong>gesamte Publikationstätigkeit</strong> gepflegt werden. <br/>
+                     Es können auch Publikationen, die nicht zum Zeitpunkt der Zugehörigkeit der Autor:innen zu Universität Duisburg-Éssen entstanden sind, nachgewiesen werden.  
+                     </p>
+                     <p>
+                     Wie Sie Publikationslisten aus der Universitätsbibliographie in Ihre persönlichen Webseiten einbinden können, erfahren Sie <a href="list-wizard.xed">hier</a>. 
+                     </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingFour1"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseFour1"
+                  aria-expanded="false"
+                  aria-controls="collapseFour1">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    Publikationsrichtlinie der Universität Duisburg-Essen  
+                  </h5>
+                </div>
+                <div id="collapseFour1" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFour1">
+                  <div class="card-body">      
+                               
+                     <p>
+                     Für die gesamte Universiät Duisburg-Essen (UDE) und das Universitätsklinikum Essen (UK-Essen) gibt die <a href="" target="_blank">Publikationsrichtlinie</a> Hinweise zum Publizieren. <br/>
+                     Insbesondere die korrekte Angabe der institutionellen Zugehörigkeit (Affiliation) von Autor:innen ist maßgeblich, um Publikationen den Einrichtungen zuzuordnen und so
+                     in großen Datenbanken, wie z.B. Scopus oder Web of Science als zugehörige Publikation zu finden. <br/> 
+                     Ebenso relevant ist die Schreibweise des Namens - hier wird zur eindeutigen Identifikation von Personen die Verwendung einer Researcher Contributor Identification 
+                     (<a href="https://orcid.org/" target="_blank">ORCID</a>) empfohlen. 
+                     </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </div>
 
     <div class="bg-filter-lightblue p-3 mt-3">
-      <div class="row">
-        <div class="col">
-
+      <div class="row">    
+      
+      
+        <div class="col">            
+         
           <article>
-            <h3 class="bg-white p-3">Wir sind für Sie da</h3>
+            <h3 class="bg-white p-3">Unser Service für Sie</h3>
             <div class="accordion" role="tablist" aria-multiselectable="true">
 
               <div class="card">
@@ -56,9 +209,8 @@
                   aria-expanded="false"
                   aria-controls="collapseOne">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
-                    <i class="fa fa-chevron-circle-down icon-opened pr-3" aria-hidden="true"></i>
-                    Wir importieren täglich Daten aus großen, fächerübergreifenden Datenbanken in die UBO
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    Wir importieren täglich Daten aus großen, fächerübergreifenden Datenbanken in die Universitätsbibliographie
                   </h5>
                 </div>
                 <div
@@ -73,7 +225,7 @@
                       </a> und <a href="https://www.webofscience.com" target="_blank"> Web of Science</a>,
                       die fächerübergreifend Publikationen verzeichnen, werden von uns über Schnittstellen
                       täglich auf neue Publikationen von UDE-Angehörigen durchsucht.
-                      Diese Daten werden automatisiert in die UBO importiert und von unserem Redaktionsteam kontrolliert, ggf. korrigiert, mit den LSF-Personen-IDs verknüpft und
+                      Diese Daten werden automatisiert in die Universitätsbibliographie importiert und von unserem Redaktionsteam kontrolliert, ggf. korrigiert, mit den LSF-Personen-IDs verknüpft und
                       letztlich freigeschaltet.
                      </p>
                   </div>
@@ -91,8 +243,7 @@
                   aria-expanded="false"
                   aria-controls="collapseTwo">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
-                    <i class="fa fa-chevron-circle-down icon-opened pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
                     Wir prüfen Ihre gemeldeten Publikationen und ergänzen ggf. Informationen
                   </h5>
                 </div>
@@ -101,8 +252,8 @@
                     <h5>Das Redaktionsteam... </h5>
                      <p>
                      ... erhält zu jeder neu gemeldeten Publikation eine E-Mail und prüft daraufhin die Daten auf Vollständigkeit, ergänzt ggf. fehlende Informationen, verknüpft die Autoren mit
-                     den LSF-IDs und schaltet die Einträge frei. Danach sind die Publikationen in der UBO auffindbar und tauchen automatisch in den Publikationslisten auf den UDE-Personenseiten
-                     auf - ebenso in den Publikationslisten, die Sie aus der UBO in Ihre persönliche Webseiten einbinden.
+                     den LSF-IDs und schaltet die Einträge frei. Danach sind die Publikationen in der Universitätsbibliographie auffindbar und tauchen automatisch in den Publikationslisten auf den UDE-Personenseiten
+                     auf - ebenso in den Publikationslisten, die Sie aus der Universitätsbibliographie in Ihre persönliche Webseiten einbinden.
                      </p>
                   </div>
                 </div>
@@ -119,8 +270,7 @@
                   aria-expanded="false"
                   aria-controls="collapseThree">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
-                    <i class="fa fa-chevron-circle-down icon-opened pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
                     Wir reichern Ihre Publikationsdaten mit Identifiern wie DOI, PubMed-ID und Scopus-ID an
                   </h5>
                 </div>
@@ -130,7 +280,7 @@
                      <p>
                        ... wie DOI, PubMed-ID usw. sind hilfreich, um Publikationen eindeutig zu identifizieren. Wir bemühen uns, diese IDs zu ermitteln und ergänzen, falls diese Informationen fehlen
                        sollten. <br/>
-                       Die UBO-Einträge sind über die eingetragenen Identifier mit den Publikationen verlinkt. <br/>
+                       Die Universitätsbibliographie-Einträge sind über die eingetragenen Identifier mit den Publikationen verlinkt. <br/>
                        Diese IDs haben wir eingebunden:
                     </p>
                      <ul>
@@ -154,8 +304,7 @@
                   aria-expanded="false"
                   aria-controls="collapseFour">
                   <h5 class="card-title">
-                      <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
-                      <i class="fa fa-chevron-circle-down icon-opened pr-3" aria-hidden="true"></i>
+                      <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                      
                       Wir sorgen für qualitativ hochwertige Metadaten
                   </h5>
                 </div>
@@ -181,8 +330,7 @@
                   aria-expanded="false"
                   aria-controls="collapseFive">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
-                    <i class="fa fa-chevron-circle-down icon-opened pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
                     Wir unterstützen die Verknüpfung mit ORCID - und verknüpfen mit weiteren Personen-IDs
                   </h5>
                 </div>
@@ -219,8 +367,7 @@
                   aria-expanded="false"
                   aria-controls="collapseSix">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
-                    <i class="fa fa-chevron-circle-down icon-opened pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
                     Wir helfen Ihnen bei der Erstellung Ihrer persönlichen Publikationslisten
                   </h5>
                 </div>
@@ -228,7 +375,7 @@
                   <div class="card-body">
                     <h5> Ihre persöniche Publikationsliste ... </h5>
                      <p>
-                     ... können Sie ganz einfach mit Ihren Daten aus der UBO generieren.
+                     ... können Sie ganz einfach mit Ihren Daten aus der Universitätsbibliographie generieren.
                      Sie können Trefferlisten in unterschiedlichen Formaten exportieren und in Ihre Webseiten einbinden.
                      Weitere Informationen dazu finden Sie <a href="list-wizard.xed">hier</a>.
                      </p>
@@ -247,8 +394,7 @@
                   aria-expanded="false"
                   aria-controls="collapseSeven">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
-                    <i class="fa fa-chevron-circle-down icon-opened pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
                       Wir kennzeichnen Open Access Publikationen
                   </h5>
                 </div>
@@ -256,9 +402,9 @@
                   <div class="card-body">
                     <h5> Open Access Publikationen...  </h5>
                      <p>
-                     ... werden in der UBO gekennzeichnet. So ist es auf einen Blick zu erkennen, ob eine Publikation frei zugänglich ist.
+                     ... werden in der Universitätsbibliographie gekennzeichnet. So ist es auf einen Blick zu erkennen, ob eine Publikation frei zugänglich ist.
                      </p>
-                     <p>Informationen zu den in der UBO verwendeten OA-Kategorien und unserem Verständnis von Open Access finden Sie
+                     <p>Informationen zu den in der Universitätsbibliographie verwendeten OA-Kategorien und unserem Verständnis von Open Access finden Sie
                      <a href="https://www.uni-due.de/ub/publikationsdienste/oa_kategorien.php" target="_blank">hier</a>.</p>
                   </div>
                 </div>
@@ -275,8 +421,7 @@
                   aria-expanded="false"
                   aria-controls="collapseEight">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
-                    <i class="fa fa-chevron-circle-down icon-opened pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
                     Wir können Bibliometrie und Statistik
                   </h5>
                 </div>
@@ -285,13 +430,13 @@
 
                     <h5> Bibliometrische Anfragen ...  </h5>
                      <p>
-                     ... können sinnvoll auf der Datenbasis der UBO beantwortet werden. Weitere Anreicherung mit Informationen aus externen Quellen sind möglich.
+                     ... können sinnvoll auf der Datenbasis der Universitätsbibliographie beantwortet werden. Weitere Anreicherung mit Informationen aus externen Quellen sind möglich.
                      </p>
                      <p>Weitere Informationen zur Bibliometrie finden Sie <a href="https://www.uni-due.de/ub/bibliometrie/" target="_blank">hier</a>.</p>
 
                      <h5> Statistiken ...  </h5>
                      <p>
-                     ... können sowohl über den <a href="statistics.xml">Gesamtbestand der UBO</a> als auch zu einzelnen Trefferlisten abgerufen werden.
+                     ... können sowohl über den <a href="statistics.xml">Gesamtbestand der Universitätsbibliographie</a> als auch zu einzelnen Trefferlisten abgerufen werden.
                      </p>
                   </div>
                 </div>
@@ -321,7 +466,9 @@
                   </h3>
                   <p class="card-text">
                     Haben Sie Fragen zur Universitätsbibliographie
-                    oder benötigen Hilfe oder Beratung, melden Sie sich bei uns:
+                    oder benötigen Hilfe oder Beratung? 
+                    <br/>
+                    Melden Sie sich gern bei uns:
                   </p>
                   <p class="card-text">
                     Redaktionsteam der Universitätsbibliographie
