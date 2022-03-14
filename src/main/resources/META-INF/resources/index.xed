@@ -185,10 +185,10 @@
 
       </div>
       
-      <div class="bg-filter-white p-3 mt-3">
+      <!-- <div class="bg-filter-white p-3 mt-3"> -->
 
         <!-- info -->
-        <div class="row">
+   <!--     <div class="row">
           <div class="col-12">
             <article class="card mb-3 bg-primary">
               <a href="info.xml" class="text-white text-decoration-none">
@@ -208,7 +208,7 @@
           </div>
         </div>
 
-      </div>
+      </div> -->
       
       <div class="bg-filter-blue p-3 mt-3">
         <!-- contact -->
