@@ -36,7 +36,7 @@
       <label xml:lang="en">Register a publication</label>
       <item id="dozbib.edit.publication" />
     </item>
-    <item ref="list-wizard.xed" id="dozbib.list-wizard" role="admin">
+    <item ref="list-wizard.xed" id="dozbib.list-wizard">
       <label xml:lang="de">Persönliche Publikationsliste</label>
       <label xml:lang="en">Personal publication list</label>
     </item>
