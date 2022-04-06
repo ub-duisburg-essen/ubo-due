@@ -114,6 +114,7 @@
         <xsl:choose>
           <xsl:when test="label[contains(@text,'Fakultät')]">Fak./Fb.</xsl:when>
           <xsl:when test="label[contains(@text,'Institut')]">Institut</xsl:when>
+          <xsl:when test="label[contains(@text,'Klinik')]">Klinik</xsl:when> 
           <xsl:when test="ancestor::category[@ID='ZE']">zentr. HsEinr.</xsl:when>
           <xsl:when test="ancestor::category[@ID='ZWE']">zentr. HsEinr.</xsl:when>
           <xsl:when test="ancestor::category[@ID='LV']">zentr. HsEinr.</xsl:when>
@@ -128,7 +129,16 @@
     <xsl:call-template name="value" />
 
     <xsl:call-template name="value">
-      <xsl:with-param name="value" select="label[lang('de')]/@text" />
+      <xsl:with-param name="value">
+        <xsl:choose>
+          <xsl:when test="label[lang('de')]">
+            <xsl:value-of select="label[lang('de')]/@text" />
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="label[1]/@text" />
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:with-param>
     </xsl:call-template>
 
     <xsl:call-template name="value">
