@@ -464,6 +464,10 @@
 					<label xml:lang="de" text="Sichere Software Systeme" /> 
 					<label xml:lang="en" text="Secure Software Systems" />
 				</category>
+                <category ID="05.05.08">
+                    <label xml:lang="de" text="Mensch-Computer Interaktion" />
+                    <label xml:lang="en" text="Human-Computer Interaction" />
+                 </category>
 			</category>
 			<category ID="05.03">
 				<label xml:lang="de" text="Fachgebiet Rechtswissenschaft" />
@@ -1050,7 +1054,19 @@
 			<category ID="18.03">
 				<label xml:lang="de" text="Maschinenbau und Verfahrenstechnik" />
 				<category ID="18.03.03">
-					<label xml:lang="de" text="Institut für Mechatronik und Systemdynamik" />
+				  <label xml:lang="de" text="Institut für Mechatronik und Systemdynamik" />
+				  <category ID="18.03.26">
+            		<label xml:lang="de" text="Mechanik und Robotik" />
+                    <label xml:lang="en" text="Mechanics and Robotics" />
+                  </category>
+                  <category ID="18.03.27">
+                    <label xml:lang="de" text="Mechatronik" />
+                    <label xml:lang="en" text="Mechatronics" />
+                  </category>
+                  <category ID="18.03.28">
+                    <label xml:lang="de" text="Steuerung, Regelung und Systemdynamik" />
+                    <label xml:lang="en" text="Dynamics and Control" />
+                  </category>
 				</category>
 				<category ID="18.03.01">
 					<label xml:lang="de" text="Institut für Verbrennung und Gasdynamik" />
