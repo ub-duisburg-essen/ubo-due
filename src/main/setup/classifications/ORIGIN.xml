@@ -1095,10 +1095,39 @@
 				</category>
 				<category ID="18.03.04">
 					<label xml:lang="de" text="Institut für Energie- und Umweltverfahrenstechnik" />
+					<category ID="18.03.06">
+					<label xml:lang="de" text="Energietechnik" />											 			
+					</category>
+					<category ID="18.03.07">
+					<label xml:lang="de" text="Mechanische Verfahrenstechnik mit dem Schwerpunkt Wassertechnik" />     
+					<label xml:lang="en" text="Mechanical Process Engineering / Water Technology" />
+					</category>
+					<category ID="18.03.08">
+					<label xml:lang="de" text="Strömungsmaschinen" />												 	
+					<label xml:lang="en" text="Turbomachinery" />	
+					</category>
+					<category ID="18.03.09">
+					<label xml:lang="de" text="Thermische Verfahrenstechnik" />											
+					<label xml:lang="en" text="Thermal Process Engineering" />
+					</category>
+					<category ID="18.03.16">
+					<label xml:lang="de" text="Umweltverfahrenstechnik und Anlagentechnik" />							
+					<label xml:lang="en" text="Environmental Process Engineering and Plant Design" />
+					</category>
 				</category>
 				<category ID="18.03.02">
 					<label xml:lang="de" text="Institut für Produkt Engineering" />
 					<label xml:lang="en" text="Institute of Product Engineering"/>
+					<category ID="18.03.29">
+					<label xml:lang="de" text="Fertigungstechnik" />										
+					</category>
+					<category ID="18.03.30">
+					<label xml:lang="de" text="Konstruktion der Kunststoffmaschinen" />					
+					<label xml:lang="en" text="Engineering Design and Plastics Machinery" />
+					</category>
+					<category ID="18.03.31">
+					<label xml:lang="de" text="Produktentstehungsprozesse und Datenmanagement" />			
+					</category>
 					<category ID="18.03.20">
 					<label xml:lang="de" text="Transportsysteme und -logistik" />
 					<label xml:lang="en" text="Transport Systems and Logistics"/>
@@ -1108,20 +1137,48 @@
 					</category>
 				</category>
 				<category ID="18.04">
-					<label xml:lang="de" text="Institut für Technologien der Metalle" />
-				</category>
+					<label xml:lang="de" text="Institut für Technologien der Metalle" /> 
+					<category ID="18.04.01">
+					<label xml:lang="de" text="Mathematik für Ingenieure" />			
+					<label xml:lang="en" text="Mathematics for Engineers" />
+					</category>	
+					<category ID="18.04.02">
+					<label xml:lang="de" text="Metallurgie" />							
+					</category>	
+					<category ID="18.04.03">
+					<label xml:lang="de" text="Umformtechnik" />						
+					<label xml:lang="en" text="Metal Forming" />
+					</category>	
+					<category ID="18.04.04">
+					<label xml:lang="de" text="Werkstofftechnik" />						
+					<label xml:lang="en" text="Materials Science and Engineering" />
+					</category>	
+				</category>				
 				<category ID="18.03.11">
 					<label xml:lang="de" text="Gießerei-Institut" />
 				</category>
 				<category ID="18.03.05">
-					<label xml:lang="de" text="Institut für Schiffstechnik" />
-					<label xml:lang="en" text="Institute of Ship Technology"/>
+					<label xml:lang="de" text="Institut für Institut für Schiffstechnik, Meerestechnik und Transportsysteme (ISMT)" />   
+					<label xml:lang="en" text="Institute of Ship Technology, Ocean Engineering and Transport Systems "/>
 				</category>
 				<category ID="18.03.10">
 					<label xml:lang="de" text="Institut für Wirtschaftsingenieurswesen" />
+					<category ID="18.03.12">
+					<label xml:lang="de" text="Allgemeine Betriebswirtschaftslehre und Mobilität" />   
+					</category>
+					<category ID="18.03.13"> 
+					<label xml:lang="de" text="Allgemeine Betriebswirtschaftslehre und Controlling" />  
+					</category>
+					<category ID="18.03.14">
+					<label xml:lang="de" text="Allgemeine Betriebswirtschaftslehre und Internationales Automobilmanagement" />
+                    </category>
+					<category ID="18.03.15">
+					<label xml:lang="de" text="Allgemeine Betriebswirtschaftslehre und Produktionsmanagement" />  
+				    <label xml:lang="en" text="Business Administration and Production Management"/>
 				</category>
 			</category>
 		</category>
+    </category>
 		<category ID="14">
 			<label xml:lang="de" text="Medizinische Fakultät" />
 			<label xml:lang="en" text="Faculty of Medicine"/>
