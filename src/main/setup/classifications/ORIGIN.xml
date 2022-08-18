@@ -1730,6 +1730,15 @@
 			<category ID="TUD">
 				<label xml:lang="de" text="Technische Universität Dortmund" />
 			</category>
+            <category ID="UK">
+                <label xml:lang="de" text="Universität zu Köln" />
+            </category>
+            <category ID="UW">
+                <label xml:lang="de" text="Universität Wien" />
+            </category>
+            <category ID="GUF">
+                <label xml:lang="de" text="Goethe-Universität Frankfurt am Main" />
+            </category>
 			<category ID="SE">
 				<label xml:lang="de" text="Sonstige Einrichtungen" />
 				<label xml:lang="en" text="Other institutions" />
