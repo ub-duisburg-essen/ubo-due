@@ -38,3 +38,5 @@ select objects with solr query ae_lsf:14547 AND year:[2008 TO 2019] -origin:09.0
 execute for selected edit {x} at publication add origin 09.03
 select objects with solr query ae_lsf:60963 AND year:[2011 TO 2021] -origin:09.03 in core main
 execute for selected edit {x} at publication add origin 09.03
+select objects with solr query ae_lsf:62805 AND year:[2022 TO *] -origin:09.03 in core main
+execute for selected edit {x} at publication add origin 09.03
