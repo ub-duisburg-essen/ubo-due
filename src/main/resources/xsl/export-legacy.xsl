@@ -10,6 +10,8 @@
   xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
   xmlns:mods="http://www.loc.gov/mods/v3" 
   exclude-result-prefixes="xsl xalan i18n mods">
+  
+  <xsl:output method="xml" indent="yes" xalan:indent-amount="2" />
 
   <xsl:template match="/export">
     <bibentries>
