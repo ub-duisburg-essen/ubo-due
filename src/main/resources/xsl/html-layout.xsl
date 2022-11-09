@@ -75,7 +75,6 @@
       <link rel="stylesheet" href="{$WebApplicationBaseURL}rsc/sass/scss/bootstrap-ubo.css"  />
       <link rel="stylesheet" href="{$WebApplicationBaseURL}webjars/chosen-js/{$chosen.version}/chosen.min.css" />
       <link rel="stylesheet" href="{$WebApplicationBaseURL}webjars/jquery-ui/{$jquery-ui.version}/jquery-ui.css" />
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono" />
 
       <script type="text/javascript" src="{$WebApplicationBaseURL}webjars/jquery/{$jquery.version}/jquery.min.js"></script>
       <script type="text/javascript" src="{$WebApplicationBaseURL}webjars/bootstrap/{$bootstrap.version}/js/bootstrap.bundle.min.js"></script>
