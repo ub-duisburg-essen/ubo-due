@@ -70,6 +70,10 @@
       <label xml:lang="de">Dubletten-Bericht</label>
       <label xml:lang="en">Duplicates report</label>
     </item>
+    <item id="ubo.enrichmentDebugger" ref="enrichmentDebugger.xed" role="admin">
+      <label xml:lang="de">Enrichment Debugger</label>
+      <label xml:lang="en">Enrichment Debugger</label>
+    </item>
     <item id="user.admin" ref="servlets/MCRUserServlet" role="admin">
       <label xml:lang="de">Nutzerverwaltung</label>
       <label xml:lang="en">Admin Users</label>
