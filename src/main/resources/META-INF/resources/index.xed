@@ -72,7 +72,7 @@
                   <i18n:en>Registering publication</i18n:en>
                 </h3>
                 <p class="card-text">
-                  <i18n:de>Sie sind Angehöriger der Universität Duisburg-Essen?</i18n:de>
+                  <i18n:de>Sie sind an der Universität Duisburg-Essen beschäftigt?</i18n:de>
                   <i18n:en>You are a member of the University of Duisburg-Essen?</i18n:en>
                   <br/>
                   <i18n:de>Helfen Sie uns bei der Vollständigkeit!</i18n:de>
@@ -112,12 +112,10 @@
                 <p class="card-text">
                   <i18n:de>Wenn Ihre Publikationen in der Universitätsbibliographie verzeichnet sind,
                     können Sie Ihre Publikationsliste in Ihre eigene Website
-                    einbinden. Dabei sind Ihre Daten stets tagesaktuell, sofern
-                    Sie uns neue Titel melden.</i18n:de>
+                    einbinden. Dabei sind Ihre Daten stets tagesaktuell.</i18n:de>
                   <i18n:en>If your publications are listed in the University Bibliography, you can
                     integrate your publication list into your own website.
-                    Your data will always be up-to-date, provided you register
-                    new titles.</i18n:en>
+                    Your data will always be up-to-date.</i18n:en>
                   </p>
                   <p>
                   <i18n:de>Hier können Sie Ihre persönliche Publikationsliste
@@ -216,10 +214,8 @@
           <div class="col-12">
             <article class="card">
               <div class="row">
-                <div class="col-lg-4">
-                  <img src="images/journals.jpg" alt="Journals" class="img-fluid" />
-                </div>
-                <div class="col-lg-4">
+                
+                <div class="col-lg-8">
                   <div class="card-body">
                     <h3 class="card-title">
                       <i18n:de>Kontakt</i18n:de>
@@ -239,8 +235,8 @@
                     </p>
                   </div>
                 </div>
-                <div class="col-lg-4">
-                  <img src="images/ubo_wordcloud.PNG" alt="UBO Wordcloud" class="img-fluid" />
+                 <div class="col-lg-4">
+                  <img src="images/Regal_neu.PNG" alt="Regal" class="img-fluid" />
                 </div>
               </div>
             </article>

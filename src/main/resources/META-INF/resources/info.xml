@@ -24,9 +24,9 @@
                     </p>
                   </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                   <img
-                    src="images/paper_cc_by.jpg"
+                    src="images/journals_regal.jpg"
                     alt="Papers"
                     class="img-fluid" />
                 </div>
@@ -79,9 +79,10 @@
                       <li>Abstracts</li>
                       <li>wissenschaftliche Rezensionen</li>  
                       <li>Reviews</li>    
-                      <li>Forschungsberichte, Workingpapers</li> 
+                      <li>Forschungsberichte, Workingpapers, Reports</li> 
                       <li>Patente</li> 
-                      <li>Dissertationen, Habilitationen</li>         
+                      <li>Dissertationen, Habilitationen</li> 
+                      <li>Forschungsdaten, OER-Lehrmaterial</li>        
                      </ul>
                      </p>
                   </div>
@@ -142,11 +143,11 @@
 
                     <h5>Persönliche Publikationslisten  </h5>
                      <p>
-                     ... können in der Universitätsbibliographie für die <strong>gesamte Publikationstätigkeit</strong> gepflegt werden. <br/>
-                     Es können auch Publikationen, die nicht zum Zeitpunkt der Zugehörigkeit der Autor:innen zu Universität Duisburg-Éssen entstanden sind, nachgewiesen werden.  
+                     können in der Universitätsbibliographie für die <strong>gesamte Publikationstätigkeit</strong> einer Person gepflegt werden. <br/>
+                     D.h. auch Publikationen, die nicht zum Zeitpunkt der Zugehörigkeit der Autor:innen zu Universität Duisburg-Éssen entstanden sind, werden nachgewiesen, sofern das gewünscht ist.  
                      </p>
                      <p>
-                     Wie Sie Publikationslisten aus der Universitätsbibliographie in Ihre persönlichen Webseiten einbinden können, erfahren Sie <a href="list-wizard.xed">hier</a>. 
+                     Wie Sie Publikationslisten aus der Universitätsbibliographie in Ihre persönlichen Webseiten einbinden, erfahren Sie <a href="list-wizard.xed">hier</a>. 
                      </p>
                   </div>
                 </div>
@@ -171,7 +172,7 @@
                   <div class="card-body">      
                                
                      <p>
-                     Für die gesamte Universiät Duisburg-Essen (UDE) und das Universitätsklinikum Essen (UK-Essen) gibt die <a href="" target="_blank">Publikationsrichtlinie</a> Hinweise zum Publizieren. <br/>
+                     Für die gesamte Universiät Duisburg-Essen (UDE) und das Universitätsklinikum Essen (UK-Essen) gibt die <a href="Publikationsrichtlinie_UDE.pdf" target="_blank">Publikationsrichtlinie</a> Hinweise zum Publizieren. <br/>
                      Insbesondere die korrekte Angabe der institutionellen Zugehörigkeit (Affiliation) von Autor:innen ist maßgeblich, um Publikationen den Einrichtungen zuzuordnen und so
                      in großen Datenbanken, wie z.B. Scopus oder Web of Science als zugehörige Publikation zu finden. <br/> 
                      Ebenso relevant ist die Schreibweise des Namens - hier wird zur eindeutigen Identifikation von Personen die Verwendung einer Researcher Contributor Identification 
@@ -251,7 +252,7 @@
                   <div class="card-body">
                     <h5>Das Redaktionsteam... </h5>
                      <p>
-                     ... erhält zu jeder neu gemeldeten Publikation eine E-Mail und prüft daraufhin die Daten auf Vollständigkeit, ergänzt ggf. fehlende Informationen, verknüpft die Autoren mit
+                     ... erhält zu jeder neu gemeldeten Publikation eine E-Mail und prüft daraufhin die Daten auf Vollständigkeit, ergänzt ggf. fehlende Informationen, verknüpft die Autor:innen mit
                      den LSF-IDs und schaltet die Einträge frei. Danach sind die Publikationen in der Universitätsbibliographie auffindbar und tauchen automatisch in den Publikationslisten auf den UDE-Personenseiten
                      auf - ebenso in den Publikationslisten, die Sie aus der Universitätsbibliographie in Ihre persönliche Webseiten einbinden.
                      </p>
@@ -278,7 +279,7 @@
                   <div class="card-body">
                     <h5>Wichtige Identifier... </h5>
                      <p>
-                       ... wie DOI, PubMed-ID usw. sind hilfreich, um Publikationen eindeutig zu identifizieren. Wir bemühen uns, diese IDs zu ermitteln und ergänzen, falls diese Informationen fehlen
+                       ... wie DOI, PubMed-ID usw. sind hilfreich, um Publikationen eindeutig zu identifizieren. Wir bemühen uns, diese IDs zu ermitteln und ergänzen sie, falls diese Informationen fehlen
                        sollten. <br/>
                        Die Universitätsbibliographie-Einträge sind über die eingetragenen Identifier mit den Publikationen verlinkt. <br/>
                        Diese IDs haben wir eingebunden:
@@ -288,6 +289,9 @@
                        <li><a href="http://www.persistent-identifier.de/" target="_blank">URN</a></li>
                        <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed ID</a></li>
                        <li><a href="https://www.scopus.com/" target="_blank">Scopus ID</a></li>
+                       <li><a href="http://wokinfo.com/" target="_blank">Web of Science ID</a></li>
+                       <li><a href="https://ieeexplore.ieee.org/" target="_blank">IEEE ID</a></li>
+                       <li><a href="https://arxiv.org/" target="_blank">arXiv.org ID</a></li>
                      </ul>
                   </div>
                 </div>
@@ -336,9 +340,19 @@
                 </div>
                 <div id="collapseFive" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFive">
                   <div class="card-body">
-                    <h5> Die ORCID-Anbindung ... </h5>
+                    <h5> Die Anbindung der Universitätsbibliographie an ORCID </h5>
                      <p>
-                     ... ist ja quasi da ....
+                     ist bereits implementiert und steht Ihnen bald zur Verfügung. 
+                     </p>
+                     <p>
+                     Die Universität Duisburg-Essen ist <a href="https://orcid.org/" target="_blank">ORCID</a>-Mitglied und kann Ihnen daher 
+                     zukünftig dabei helfen, Ihr ORCID-Profil und Ihre persönliche Publikationsliste zu pflegen, indem wir automatisiert ...
+                     <ul>
+                     <li>... Publikationsdaten aus Ihrem ORCID-Profil in die Universitätsbibliographie übernehmen.</li> 
+                     <li>... in der Universitätsbibliographie verzeichnete Publikationen in Ihr ORCID-Profil eintragen.</li>
+                     <li>... die Angabe der Zugehörigkeit zur UDE (Affiliation) sowie weitere externe Autoren-IDs oder alternative Namensformen
+                     im ORCID-Profil ergänzen</li>
+                     </ul>
                      </p>
                      <h5> Weitere Personen-IDs </h5>
                      <p>
@@ -430,13 +444,14 @@
 
                     <h5> Bibliometrische Anfragen ...  </h5>
                      <p>
-                     ... können sinnvoll auf der Datenbasis der Universitätsbibliographie beantwortet werden. Weitere Anreicherung mit Informationen aus externen Quellen sind möglich.
+                     ... können aussagekräftig auf der Datenbasis der Universitätsbibliographie beantwortet werden. Weitere Anreicherung mit Informationen aus externen Quellen sind möglich.
                      </p>
                      <p>Weitere Informationen zur Bibliometrie finden Sie <a href="https://www.uni-due.de/ub/bibliometrie/" target="_blank">hier</a>.</p>
 
                      <h5> Statistiken ...  </h5>
                      <p>
-                     ... können sowohl über den <a href="statistics.xml">Gesamtbestand der Universitätsbibliographie</a> als auch zu einzelnen Trefferlisten abgerufen werden.
+                     ... können sowohl über den <a href="statistics.xml">Gesamtbestand der Universitätsbibliographie</a> als auch zu einzelnen Trefferlisten abgerufen 
+                     und nachgenutzt werden.
                      </p>
                   </div>
                 </div>
