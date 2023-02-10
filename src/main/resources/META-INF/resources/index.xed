@@ -159,13 +159,13 @@
           </div>
           <div class="col-lg-4">
             <article class="card mb-3">
-              <div class="card-body ude-newestpub">
+              <div class="card-body">
                 <xinclude uri="xslStyle:response-sidebar-mini:solr:q=status:confirmed&amp;rows=0" />
               </div>
             </article>
           </div>
           <div class="col-lg-4">
-            <article class="card mb-3">
+            <article class="card mb-3 ude-newestpub">
               <div class="card-body">
                 <xinclude uri="xslStyle:response-newest:solr:q=status:confirmed+AND+year:2023&amp;rows=3&amp;sort=created+desc,year+desc&amp;facet=false&amp;fl=id,year" />
               </div>
@@ -206,7 +206,9 @@
           <div class="col-12">
             <article class="card">
               <div class="row">
-                
+                <div class="col-lg-4">
+                  <img src="images/Regal_neu.PNG" alt="Regal" class="img-fluid" />
+                </div>
                 <div class="col-lg-8">
                   <div class="card-body">
                     <h3 class="card-title">
@@ -226,9 +228,6 @@
                       <i18n:en>Phone: 0201 / 183-3728</i18n:en>
                     </p>
                   </div>
-                </div>
-                 <div class="col-lg-4">
-                  <img src="images/Regal_neu.PNG" alt="Regal" class="img-fluid" />
                 </div>
               </div>
             </article>
