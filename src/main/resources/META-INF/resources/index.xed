@@ -153,29 +153,21 @@
           <div class="col-lg-4">
             <article class="card mb-3">
               <div class="card-body">
-              Publikationen nach Erscheinungsjahr
-                <!-- Gesamtzahl der verzeichneten Publikationen -->
                 <xinclude uri="xslStyle:statistics:solr:q=status:confirmed+year:%5B2018+TO+*%5D&amp;rows=0&amp;facet.field=year" />
               </div>
             </article>
           </div>
           <div class="col-lg-4">
             <article class="card mb-3">
-              <div class="card-body">
-                Aktuelle Publikationen 
-                <br/>
-                (laufendes Jahr + Vorjahr)
-                <!-- Darstellung muss noch geklärt werden, daher als Platzhalter erstmal was anderes -->
-                <!-- <xinclude uri="xslStyle:statistics:solr:q=status:confirmed&amp;rows=0&amp;facet.field=subject" /> -->
+              <div class="card-body ude-newestpub">
+                <xinclude uri="xslStyle:response-sidebar-mini:solr:q=status:confirmed&amp;rows=0" />
               </div>
             </article>
           </div>
           <div class="col-lg-4">
             <article class="card mb-3">
               <div class="card-body">
-              Neueste Publikationen 
-                <!-- OA-Veröffentlichungen an der UDE 
-                <xinclude uri="xslStyle:statistics:solr:q=status:confirmed&amp;rows=0&amp;facet.field=oa" /> -->
+                <xinclude uri="xslStyle:response-newest:solr:q=status:confirmed+AND+year:2023&amp;rows=3&amp;sort=created+desc,year+desc&amp;facet=false&amp;fl=id,year" />
               </div>
             </article>
           </div>

@@ -23,6 +23,21 @@
   cursor: pointer;
 }
 
+.ude-oafacet {
+  .mycore-facet-count {
+    width: 110px;
+    margin-right: 5px;
+  }
+}
+
+.ude-newestpub {
+  .list-group-item {
+    padding: 0.75rem 0;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  }
+
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {
   // add/overwrite styles for responsive level lg and lower
