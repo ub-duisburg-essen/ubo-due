@@ -150,24 +150,18 @@
           </div>
         </div>
         <div class="row mb-3">
+          <div class="col-lg-8">
+            <article class="card mb-3 ude-newestpub">
+              <div class="card-body">
+                <xinclude uri="xslStyle:response-newest:solr:q=status:confirmed+AND+year:2023&amp;rows=5&amp;sort=created+desc,year+desc&amp;facet=false&amp;fl=id,year" />
+              </div>
+            </article>
+          </div>
           <div class="col-lg-4">
             <article class="card mb-3">
               <div class="card-body">
                 <xinclude uri="xslStyle:statistics:solr:q=status:confirmed+year:%5B2018+TO+*%5D&amp;rows=0&amp;facet.field=year" />
-              </div>
-            </article>
-          </div>
-          <div class="col-lg-4">
-            <article class="card mb-3">
-              <div class="card-body">
                 <xinclude uri="xslStyle:response-sidebar-mini:solr:q=status:confirmed&amp;rows=0" />
-              </div>
-            </article>
-          </div>
-          <div class="col-lg-4">
-            <article class="card mb-3 ude-newestpub">
-              <div class="card-body">
-                <xinclude uri="xslStyle:response-newest:solr:q=status:confirmed+AND+year:2023&amp;rows=3&amp;sort=created+desc,year+desc&amp;facet=false&amp;fl=id,year" />
               </div>
             </article>
           </div>
