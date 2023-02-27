@@ -62,7 +62,7 @@
       <div class="bg-filter-blue p-3">
 
         <!-- register/list -->
-        <div class="row mb-3">
+        <div class="row">
 
           <div class="col-lg-6">
             <article class="card mb-3">
@@ -140,25 +140,25 @@
         </div>
 
       </div>
-      
-      <div class="bg-filter-lightblue p-3 mt-3">
+
+      <div class="bg-filter-blue p-3 mt-3">
 
         <!-- statistic -->
         <div class="row">
           <div class="col-12">
-            <!-- <h3 class="text-white text-center mb-5">Zahlen zur Universitätsbibliographie</h3> --> 
+            <!-- <h3 class="text-white text-center mb-5">Zahlen zur Universitätsbibliographie</h3> -->
           </div>
         </div>
-        <div class="row mb-3">
-          <div class="col-lg-8">
-            <article class="card mb-3 ude-newestpub">
+        <div class="row">
+          <div class="col-lg-8 mb-3">
+            <article class="card h-100 ude-newestpub">
               <div class="card-body">
                 <xinclude uri="xslStyle:response-newest:solr:q=status:confirmed+AND+year:2023&amp;rows=5&amp;sort=created+desc,year+desc&amp;facet=false&amp;fl=id,year" />
               </div>
             </article>
           </div>
-          <div class="col-lg-4">
-            <article class="card mb-3">
+          <div class="col-lg-4 mb-3">
+            <article class="card h-100">
               <div class="card-body">
                 <xinclude uri="xslStyle:statistics:solr:q=status:confirmed+year:%5B2018+TO+*%5D&amp;rows=0&amp;facet.field=year" />
                 <xinclude uri="xslStyle:response-sidebar-mini:solr:q=status:confirmed&amp;rows=0" />
@@ -168,7 +168,7 @@
         </div>
 
       </div>
-      
+
       <!-- <div class="bg-filter-white p-3 mt-3"> -->
 
         <!-- info -->
@@ -193,9 +193,9 @@
         </div>
 
       </div> -->
-      
+
       <div class="bg-filter-blue p-3 mt-3">
-        <!-- contact -->
+        <!-- contact
         <div class="row">
           <div class="col-12">
             <article class="card">
@@ -223,6 +223,38 @@
                     </p>
                   </div>
                 </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        -->
+        <div class="row">
+          <div class="col-4 mb-3">
+            <article class="card h-100">
+              <div class="card-body">
+                <h3 class="card-title">
+                  <i18n:de>Kontakt</i18n:de>
+                  <i18n:en>Contact</i18n:en>
+                </h3>
+                <p class="card-text">
+                  <a href="mailto:universitaetsbibliographie@ub.uni-due.de">
+                    <span>universitaetsbibliographie@ub.uni-due.de</span>
+                  </a>
+                </p>
+                <p class="card-text">
+                  <i18n:de>Universitätsbibliothek</i18n:de>
+                  <i18n:en>University library</i18n:en>
+                  <br/>
+                  <i18n:de>Tel.: 0201 / 183-3728</i18n:de>
+                  <i18n:en>Phone: 0201 / 183-3728</i18n:en>
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-8 mb-3">
+            <article class="card h-100">
+              <div class="card-body">
+                <img src="images/background-contact.jpg" class="contact-figure" alt="Netzwerk" />
               </div>
             </article>
           </div>
