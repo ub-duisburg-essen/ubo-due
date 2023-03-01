@@ -107,7 +107,7 @@
               <div class="card-body">
                 <h3 class="card-title">
                   <i18n:de>Publikationslisten</i18n:de>
-                  <i18n:en>Publikation lists</i18n:en>
+                  <i18n:en>Publication lists</i18n:en>
                 </h3>
                 <p class="card-text">
                   <i18n:de>Wenn Ihre Publikationen in der Universitätsbibliographie verzeichnet sind,
