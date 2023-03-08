@@ -40,7 +40,7 @@
     <html lang="{$CurrentLang}">
       <xsl:apply-templates select="head" />
 
-      <body class="{@id}">
+      <body>
 
         <xsl:if test="body/section/@id">
           <xsl:attribute name="class">
