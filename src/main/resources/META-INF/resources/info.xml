@@ -166,7 +166,7 @@
                 <div id="collapseTwo1" class="card-collapse collapse" role="tabcard" aria-labelledby="headingTwo1">
                   <div class="card-body">
 
-                    <h5> Diese Personengruppen können bzw. sollten der Universitätsbibliographie ihre Publikationen melden:  
+                    <h5> 
                       <i18n:de>Diese Personengruppen können bzw. sollten der Universitätsbibliographie ihre
                         Publikationen melden:</i18n:de>
                       <i18n:en>These groups of persons can or should report their publications to the University
@@ -787,7 +787,7 @@
                       </i18n:en>
                      </p>
 
-                     <h5> Statistiken ...  
+                     <h5> 
                       <i18n:de>Statistiken ...</i18n:de>
                       <i18n:en>Statistics ...</i18n:en>
                      </h5>
