@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<webpage lastModified="$Date: 2016-05-20 08:54:29 +0200 (Fr, 20 Mai 2016) $" id="dozbib.list-wizard">
+<webpage lastModified="$Date: 2016-05-20 08:54:29 +0200 (Fr, 20 Mai 2016) $" id="dozbib.list-wizard" xmlns:i18n="http://www.mycore.org/i18n">
  <title xml:lang="de">Persönliche Publikationsliste erstellen</title>
  <title xml:lang="en">Build your personal publication list</title>
 
@@ -25,7 +25,7 @@
       Dieses Imperia-Modul kann die Publikationsliste einer Person durch Eingabe der LSF-ID einbinden. Es können aber auch komplexere Suchanfragen oder die URLs von 
       Trefferlisten aus der Universitätsbibliographie als Suchstring verwendet werden. <br/>
       Hilfe zur Nutzung des Moduls finden Sie auf den <a href="https://imperia.uni-due.de/imperia-hilfe/flex/_portal_publikationen.php">Imperia-Hilfe-Seiten</a> – oder fragen Sie uns: 
-      <a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de</a>
+      <a href="|code:ude.contact.mailto|"><i18n:code>ude.contact.mail</i18n:code></a>
       </p>
     </div>
   </article>
@@ -39,10 +39,10 @@
         the <strong>Imperia module "Mitarbeiter-Publikationsliste"</strong> to integrate your personal publication list on any webpage.
       </p>
       <p>
-      This Imperia module can include a person's publication list by entering the LSF ID. However, more complex search queries or the URLs of hit lists from the 
-       university bibliography can be used as search strings. <br/>
-      Help on using the module can be found on the Imperia help pages - or ask us:
-      <a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de</a>
+        This Imperia module can include a person's publication list by entering the LSF ID. However, more complex search queries or the URLs of hit lists from the 
+        university bibliography can be used as search strings. <br/>
+        Help on using the module can be found on the Imperia help pages - or ask us:
+        <a href="|code:ude.contact.mailto|"><i18n:code>ude.contact.mail</i18n:code></a>
       </p>
     </div>
   </article>
@@ -101,7 +101,7 @@
       <p>
        Wenn Sie Publikationslisten für bestimmte Einrichtungen, Gruppen oder Forschungsprojekte erzeugen möchten, helfen wir Ihnen gern, die Daten ggf. aufzubereiten 
        und die entsprechende Suchanfrage zu formulieren: 
-       <a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de</a>
+       <a href="|code:ude.contact.mailto|"><i18n:code>ude.contact.mail</i18n:code></a>
       </p>
     </div>
   </article>
@@ -111,7 +111,7 @@
       <p>
        If you would like to generate publication lists for specific institutions, groups or research projects, we will be happy to help you prepare the data if necessary 
        and formulate the corresponding search query: 
-       <a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de</a>
+       <a href="|code:ude.contact.mailto|"><i18n:code>ude.contact.mail</i18n:code></a>
       </p>
     </div>
   </article>

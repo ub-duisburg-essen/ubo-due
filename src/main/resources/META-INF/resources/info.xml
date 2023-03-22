@@ -26,7 +26,7 @@
                       <i18n:en>
                       The University Bibliography lists all publications that you publish as a UDE scientist -
                       this helps us to make your research internationally visible.
-                      </i18n:en>                   
+                      </i18n:en>
                     </p>
                   </div>
                 </div>
@@ -41,19 +41,16 @@
           </div>
         </div>
     </div>
-    
+
     <div class="bg-filter-lightblue p-3 mt-3">
-      <div class="row">    
-      
-      
-        <div class="col">            
-         
+      <div class="row">
+        <div class="col">
           <article>
             <h3 class="bg-white p-3">
               <i18n:de>Wissenswertes </i18n:de>
               <i18n:en>Useful information</i18n:en>
             </h3>
-            <div class="accordion" role="tablist" aria-multiselectable="true">       
+            <div class="accordion" role="tablist" aria-multiselectable="true">
               
               <div class="card">
                 <div
@@ -66,7 +63,7 @@
                   aria-expanded="false"
                   aria-controls="collapseOne1">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
                     <i18n:de>Publikationstypen in der Universitätsbibliographie</i18n:de>
                     <i18n:en>Publication types in the University Bibliography</i18n:en>
                   </h5>
@@ -139,7 +136,7 @@
                       </li>     
                       <li>
                         <i18n:de>OER-Lehrmaterial</i18n:de>
-                        <i18n:en>Open Educational Resources </i18n:en>
+                        <i18n:en>Open Educational Resources</i18n:en>
                       </li>   
                      </ul>
                      </p>
@@ -158,7 +155,7 @@
                   aria-expanded="false"
                   aria-controls="collapseTwo1">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
                     <i18n:de>Personen in der Universitätsbibliographie</i18n:de>
                     <i18n:en> Persons in the University Bibliography</i18n:en>
                   </h5>
@@ -249,7 +246,8 @@
                         Universität Duisburg-Essen entstanden sind, werden nachgewiesen, sofern das gewünscht ist.
                       </i18n:de>
                       <i18n:en>This means that publications that did not originate when the authors belonged to the
-                        University of Duisburg-Essen are also included, if desired.</i18n:en>                     </p>
+                        University of Duisburg-Essen are also included, if desired.</i18n:en>
+                     </p>
                      <p>
                      <i18n:de>
                         Wie Sie Publikationslisten aus der Universitätsbibliographie in Ihre persönlichen Webseiten
@@ -277,13 +275,13 @@
                   aria-expanded="false"
                   aria-controls="collapseFour1">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
                     <i18n:de>Publikationsrichtlinie der Universität Duisburg-Essen </i18n:de>
                     <i18n:en>Publication Guidelines of the University of Duisburg-Essen</i18n:en>  
                   </h5>
                 </div>
                 <div id="collapseFour1" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFour1">
-                  <div class="card-body">      
+                  <div class="card-body">
                                
                      <p>
                      <i18n:de>
@@ -325,10 +323,10 @@
     </div>
 
     <div class="bg-filter-lightblue p-3 mt-3">
-      <div class="row">    
+      <div class="row">
       
       
-        <div class="col">            
+        <div class="col">
          
           <article>
             <h3 class="bg-white p-3">
@@ -348,7 +346,7 @@
                   aria-expanded="false"
                   aria-controls="collapseOne">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
                     <i18n:de> Wir importieren täglich Daten aus großen, fächerübergreifenden Datenbanken in die
                       Universitätsbibliographie</i18n:de>
                     <i18n:en> We import data from large, interdisciplinary databases into the University Bibliography on
@@ -448,7 +446,7 @@
                   aria-expanded="false"
                   aria-controls="collapseThree">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
                    <i18n:de>Wir reichern Ihre Publikationsdaten mit Identifiern wie DOI, PubMed-ID und Scopus-ID an
                     </i18n:de>
                     <i18n:en>We enrich your publication data with identifiers such as DOI, PubMed-ID and Scopus-ID
@@ -501,7 +499,7 @@
                   aria-expanded="false"
                   aria-controls="collapseFour">
                   <h5 class="card-title">
-                      <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                      
+                      <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
                       <i18n:de>Wir sorgen für qualitativ hochwertige Metadaten</i18n:de>
                       <i18n:en> We ensure high quality metadata</i18n:en>
                   </h5>
@@ -673,7 +671,7 @@
                   aria-expanded="false"
                   aria-controls="collapseSix">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
                     <i18n:de>Wir helfen Ihnen bei der Erstellung Ihrer persönlichen Publikationslisten</i18n:de>
                     <i18n:en>We help you to create your personal publication lists</i18n:en>
                   </h5>
@@ -713,7 +711,7 @@
                   aria-expanded="false"
                   aria-controls="collapseSeven">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
                       <i18n:de>Wir kennzeichnen Open Access Publikationen</i18n:de>
                       <i18n:en>We label Open Access publications</i18n:en>
                   </h5>
@@ -758,7 +756,7 @@
                   aria-expanded="false"
                   aria-controls="collapseEight">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
                     <i18n:de>Wir können Bibliometrie und Statistik</i18n:de>
                     <i18n:en>We can create statistics and bibliometric analyses</i18n:en>
                   </h5>
@@ -830,7 +828,7 @@
                   <h3 class="card-title">
                     <i18n:de>Kontakt</i18n:de>
                     <i18n:en>Contact</i18n:en>
-                  </h3>                  
+                  </h3>
                   <p class="card-text">
                     <i18n:de>Haben Sie Fragen zur Universitätsbibliographie
                       oder benötigen Hilfe oder Beratung?
@@ -839,24 +837,24 @@
                     <br />
                     <i18n:de>Melden Sie sich gern bei uns:</i18n:de>
                     <i18n:en>Feel free to contact us:</i18n:en>
-                  </p>                                   
+                  </p>
                   <p class="card-text">
-                    <i18n:de>Redaktionsteam der Universitätsbibliographie: </i18n:de> 
-                    <i18n:en>Editorial team of the University Bibliography: </i18n:en> 
+                    <i18n:de>Redaktionsteam der Universitätsbibliographie: </i18n:de>
+                    <i18n:en>Editorial team of the University Bibliography: </i18n:en>
                     
-                    <a href="mailto:universitaetsbibliographie@ub.uni-due.de">
-                      universitaetsbibliographie@ub.uni-due.de
+                    <a href="|code:ude.contact.mailto|">
+                      <i18n:code>ude.contact.mail</i18n:code>
                     </a>
                   </p>
                   <p class="card-text">
-                    <i18n:de>Kerstin Ponten (Teamleitung): </i18n:de> 
-                    <i18n:en>Kerstin Ponten (Team management): </i18n:en> 
+                    <i18n:de>Kerstin Ponten (Teamleitung): </i18n:de>
+                    <i18n:en>Kerstin Ponten (Team management): </i18n:en>
                    
                     <a href="mailto:kerstin.ponten@uni-due.de">
                       kerstin.ponten@uni-due.de</a>,   
                     <i18n:de>Tel.: 0201 / 183-6019</i18n:de>
                     <i18n:en>Phone: 0201 / 183-6019</i18n:en>
-                  </p>                  
+                  </p>
                 </div>
               </div>
             </div>

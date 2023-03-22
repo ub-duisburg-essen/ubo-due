@@ -88,8 +88,8 @@
                   <i18n:de>Oder schicken Sie uns Ihre Publikationsliste in einem
                     beliebigen Format:</i18n:de>
                   <i18n:en>Or send us your publication list in any format:</i18n:en>
-                  <a href="mailto:universitaetsbibliographie@ub.uni-due.de">
-                    universitaetsbibliographie@ub.uni-due.de
+                  <a href="|code:ude.contact.mailto|">
+                    <i18n:code>ude.contact.mail</i18n:code>
                   </a>
                 </p>
                 <div class="text-center">
@@ -163,6 +163,9 @@
                 <xinclude uri="xslStyle:statistics:solr:q=status:confirmed+year:%5B2018+TO+*%5D&amp;rows=0&amp;facet.field=year" />
                 <xinclude uri="xslStyle:response-sidebar-mini:solr:q=status:confirmed&amp;rows=0" />
               </div>
+              <p class="mt-2">
+                <a href="statistics.xml"><i18n:code>ubo.more</i18n:code>...</a>
+              </p>
             </article>
           </div>
         </div>
@@ -210,8 +213,8 @@
                       <i18n:en>Contact</i18n:en>
                     </h3>
                     <p class="card-text">
-                      <a href="mailto:universitaetsbibliographie@ub.uni-due.de">
-                        <span>universitaetsbibliographie@ub.uni-due.de</span>
+                      <a href="|code:ude.contact.mailto|">
+                        <span><i18n:code>ude.contact.mail</i18n:code></span>
                       </a>
                     </p>
                     <p class="card-text">
@@ -237,8 +240,8 @@
                   <i18n:en>Contact</i18n:en>
                 </h3>
                 <p class="card-text">
-                  <a href="mailto:universitaetsbibliographie@ub.uni-due.de">
-                    <span>universitaetsbibliographie@ub.uni-due.de</span>
+                  <a href="|code:ude.contact.mailto|">
+                    <span><i18n:code>ude.contact.mail</i18n:code></span>
                   </a>
                 </p>
                 <p class="card-text">

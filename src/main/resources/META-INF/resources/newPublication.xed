@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<webpage lastModified="$Date$" id="dozbib.new.publication">
+<webpage lastModified="$Date$" id="dozbib.new.publication" xmlns:i18n="http://www.mycore.org/i18n">
   <title xml:lang="de">Publikation melden</title>
   <title xml:lang="en">Registering publication</title>
 
@@ -11,7 +11,7 @@
        Wir erfassen alle Publikationen, die Sie als UDE-Wissenschaftler:in in Ihrer Publikationsliste nachgewiesen haben möchten – z.B. auch Poster, Vorträge, 
        Meeting Abstracts und Patente. 
        Sollte ein Publikationstyp fehlen, den Sie benötigen, melden Sie sich einfach bei uns: 
-       <a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de</a>        
+       <a href="|code:ude.contact.mailto|"><i18n:code>ude.contact.mail</i18n:code></a>
       </p>
       <p>
       Wir weisen vor allen Dingen die Publikationen von UDE-Angehörigen nach, die zum Zeitpunkt ihrer Tätigkeit an der UDE entstanden sind – aber auch die, 
@@ -26,7 +26,7 @@
       <p>
        We register all publications that you, as a UDE scientist, would like to have included in your list of publications - e.g. posters, lectures, meeting abstracts and patents. 
        If a publication type you need is missing, simply contact us: 
-       <a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de</a>        
+       <a href="|code:ude.contact.mailto|"><i18n:code>ude.contact.mail</i18n:code></a>
       </p>
       <p>
       Above all, we list the publications of UDE members that have been created at the time of their employment at the UDE - but also those, 
@@ -62,7 +62,7 @@
 
             <xed:bind xpath="mods:identifier">
               <div class="form-group form-inline">
-		<div class="mycore-form-label">
+                <div class="mycore-form-label">
                   <xed:bind xpath="@type">
                     <select class="form-control custom-select">
                       <option value="doi">DOI</option>
@@ -83,7 +83,7 @@
                       </xed:if>
                       </select>:
                   </xed:bind>
-		</div>
+                </div>
                 <input id="identifier" class="{$xed-validation-marker} mycore-form-input"/>
               </div>
             </xed:bind>
@@ -151,7 +151,7 @@
       <h2>Literaturlisten</h2>
       <p>
         Sie können uns Literaturlisten in jedem beliebigen Format einfach per Mail zuschicken: 
-        <a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de</a> <br/>
+        <a href="|code:ude.contact.mailto|"><i18n:code>ude.contact.mail</i18n:code></a><br/>
         Wir importieren für Sie Ihre Publikationen in die Universitätsbibliographie und reichern die Daten mit Informationen, z.B. zur Verfügbarkeit, an. 
       </p>
     </div>
@@ -162,7 +162,7 @@
       <h2>Lists of literature</h2>
       <p>
        You can easily send us literature lists in any format by e-mail: 
-       <a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de</a> <br/>
+       <a href="|code:ude.contact.mailto|"><i18n:code>ude.contact.mail</i18n:code></a><br/>
        We import your publications into the University Bibliography and enrich the data with information, e.g. on availability.
       </p>
     </div>
