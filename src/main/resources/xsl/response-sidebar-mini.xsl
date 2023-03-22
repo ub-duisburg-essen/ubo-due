@@ -64,6 +64,9 @@
             </li>
           </xsl:for-each>
         </ul>
+        <p class="mt-2">
+          <a href="statistics.xml"><xsl:value-of select="i18n:translate('ubo.more')" />...</a>
+        </p>
       </div>
     </article>
   </xsl:template>

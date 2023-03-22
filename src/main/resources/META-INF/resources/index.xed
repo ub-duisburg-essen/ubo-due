@@ -163,9 +163,6 @@
                 <xinclude uri="xslStyle:statistics:solr:q=status:confirmed+year:%5B2018+TO+*%5D&amp;rows=0&amp;facet.field=year" />
                 <xinclude uri="xslStyle:response-sidebar-mini:solr:q=status:confirmed&amp;rows=0" />
               </div>
-              <p class="mt-2">
-                <a href="statistics.xml"><i18n:code>ubo.more</i18n:code>...</a>
-              </p>
             </article>
           </div>
         </div>
