@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<webpage lastModified="$Date: 2016-05-20 08:54:29 +0200 (Fr, 20 Mai 2016) $" id="dozbib.info" xmlns:i18n="http://www.mycore.org/i18n">
+ <title xml:lang="de">Informationen zur Universitätsbibliographie</title>
+ <title xml:lang="en">Information about the University Bibliography</title>
+
+  <section id="info" class="freestyle" >
+
+    <div class="bg-filter-blue p-3">
+        <div class="row">
+          <div class="col">
+            <article class="card">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="card-body">
+                    <h3>
+                      <i18n:de>Forschung sichtbar machen</i18n:de>
+                      <i18n:en>Making research visible</i18n:en>
+                    </h3>
+                    <p>
+                      <i18n:de>Die Universitätsbibliographie verzeichnet sämtliche
+                      Publikationen, die Sie als Wissenschaftler:innen der UDE
+                      veröffentlichen – damit helfen wir,
+                      Ihre Forschung international sichtbar zu machen.
+                      </i18n:de> 
+                      <i18n:en>
+                      The University Bibliography lists all publications that you publish as a UDE scientist -
+                      this helps us to make your research internationally visible.
+                      </i18n:en>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <img
+                    src="images/journals_regal.jpg"
+                    alt="Papers"
+                    class="img-fluid" />
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+    </div>
+
+    <div class="bg-filter-lightblue p-3 mt-3">
+      <div class="row">
+        <div class="col">
+          <article>
+            <h3 class="bg-white p-3">
+              <i18n:de>Wissenswertes </i18n:de>
+              <i18n:en>Useful information</i18n:en>
+            </h3>
+            <div class="accordion" role="tablist" aria-multiselectable="true">
+              
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingOne1"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseOne1"
+                  aria-expanded="false"
+                  aria-controls="collapseOne1">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i18n:de>Publikationstypen in der Universitätsbibliographie</i18n:de>
+                    <i18n:en>Publication types in the University Bibliography</i18n:en>
+                  </h5>
+                </div>
+                <div id="collapseOne1" class="card-collapse collapse" role="tabcard" aria-labelledby="headingOne1">
+                  <div class="card-body">
+
+                    <h5>   
+                      <i18n:de>Diese Publikationstypen werden in der Universitätsbibliographie erfasst: </i18n:de>
+                      <i18n:en>These publication types are recorded in the University Bibliography:</i18n:en>
+                    </h5>
+                     <p>
+                     <ul>
+                      <li>
+                        <i18n:de>Monographien, Sammelwerke, Tagungsbände, Lexika</i18n:de>
+                        <i18n:en>Monographs, collections, conference proceedings, lexicons</i18n:en>
+                      </li>
+                      <li>
+                        <i18n:de>Aufsätze in Zeitschriften, in Zeitungen, auf Publikationsservern oder in wissenschaftlichen Blogs</i18n:de>
+                        <i18n:en>Articles in journals, in newspapers, on publication servers or in scientific blogs</i18n:en>
+				      </li>
+                      <li>
+                        <i18n:de>Beiträge in Sammelwerken oder Tagungsbänden</i18n:de>
+                        <i18n:en>Contributions to collections or conference proceedings</i18n:en>
+                      </li>
+                      <li>
+                        <i18n:de>Lexikoneinträge</i18n:de>
+                        <i18n:en>Lexicon entries</i18n:en>
+                      </li>
+                      <li>
+                        <i18n:de>Herausgebertätigkeiten für Sammelwerke, Zeitschriften oder wiss. Blogs</i18n:de>
+                        <i18n:en>Editorial work for collections, journals or scientific blogs</i18n:en>
+                      </li>
+                      <li>
+                        <i18n:de>Vorträge</i18n:de>
+                        <i18n:en>Lectures</i18n:en>
+                      </li>
+                      <li>
+                        <i18n:de>Interviews</i18n:de>
+                        <i18n:en>Interviews</i18n:en>
+                      </li>  
+                      <li>
+                        <i18n:de>Poster</i18n:de>
+                        <i18n:en>Posters</i18n:en>
+                      </li> 
+                      <li>
+                        <i18n:de>Editorials, Vorworte/Nachworte</i18n:de>
+                        <i18n:en>Editorials, forewords/afterwords</i18n:en>
+                      </li>  
+                      <li>Abstracts</li>
+                      <li>
+                        <i18n:de>wissenschaftliche Rezensionen, Reviews</i18n:de>
+                        <i18n:en>Reviews</i18n:en>
+                      </li>                         
+                      <li>
+                        <i18n:de>Forschungsberichte, Working Papers, Reports</i18n:de>
+                        <i18n:en>Research Paper, working paper, reports</i18n:en>
+                      </li> 
+                      <li>
+                        <i18n:de>Patente</i18n:de>
+                        <i18n:en>Patents</i18n:en>
+                      </li> 
+                      <li>
+                        <i18n:de>Dissertationen, Habilitationen</i18n:de>
+                        <i18n:en>Dissertations, habilitations</i18n:en>
+                      </li> 
+                      <li>
+                        <i18n:de>Forschungsdaten</i18n:de>
+                          <i18n:en>Research data</i18n:en>
+                      </li>     
+                      <li>
+                        <i18n:de>OER-Lehrmaterial</i18n:de>
+                        <i18n:en>Open Educational Resources</i18n:en>
+                      </li>   
+                     </ul>
+                     </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingTwo1"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseTwo1"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo1">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i18n:de>Personen in der Universitätsbibliographie</i18n:de>
+                    <i18n:en> Persons in the University Bibliography</i18n:en>
+                  </h5>
+                </div>
+                <div id="collapseTwo1" class="card-collapse collapse" role="tabcard" aria-labelledby="headingTwo1">
+                  <div class="card-body">
+
+                    <h5> 
+                      <i18n:de>Diese Personengruppen können bzw. sollten der Universitätsbibliographie ihre
+                        Publikationen melden:</i18n:de>
+                      <i18n:en>These groups of persons can or should report their publications to the University
+                        Bibliography:</i18n:en>
+                    </h5>
+                     <p>
+                     <ul>
+                      <li>
+                        <i18n:de>Hochschullehrer:innen</i18n:de>
+                        <i18n:en>University lecturers</i18n:en>
+                      </li>
+                      <li>
+                        <i18n:de>wissenschaftliche und künstlerische Mitarbeiter:innen</i18n:de>
+                        <i18n:en>Academic and artistic staff</i18n:en>
+                      </li>
+                      <li>
+                        <i18n:de>Privatdozent:innen</i18n:de>
+                        <i18n:en>Private lecturers</i18n:en>
+                      </li>
+                      <li>
+                        <i18n:de>außerplanmäßige Professor:innen</i18n:de>
+                        <i18n:en>Adjunct professors</i18n:en>
+                      </li>
+                      <li>
+                        <i18n:de>Honorarprofessor:innen</i18n:de>
+                        <i18n:en>Honorary Professors</i18n:en>
+                      </li>
+                      <li>
+                        <i18n:de>Gastdozent:innen sowie Lehrbeauftragte</i18n:de>
+                        <i18n:en>Guest lecturers</i18n:en>
+                      </li>
+                      <li>
+                        <i18n:de>auch ehemalige Angehörige der Universität Duisburg-Essen, wie z.B. emeritierte
+                            Professor:innen können ihre Publikationen melden</i18n:de>
+                          <i18n:en>Former members of the University of Duisburg-Essen, e.g. emeritus professors, can
+                            also report their publications.</i18n:en>
+                      </li>         
+                     </ul>
+                     </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingThree1"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseThree1"
+                  aria-expanded="false"
+                  aria-controls="collapseThree1">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    <i18n:de>Publikationslisten</i18n:de>
+                    <i18n:en>Publication lists</i18n:en> 
+                  </h5>
+                </div>
+                <div id="collapseThree1" class="card-collapse collapse" role="tabcard" aria-labelledby="headingThree1">
+                  <div class="card-body">
+
+                    <h5> 
+                      <i18n:de>Persönliche Publikationslisten</i18n:de>
+                      <i18n:en>Personal publication lists</i18n:en>
+                    </h5>
+                     <p>
+                     <i18n:de>
+                        können in der Universitätsbibliographie für die
+                        <strong>gesamte Publikationstätigkeit</strong>
+                        einer Person gepflegt werden.
+                      </i18n:de>
+                      <i18n:en>
+                        can be maintained in the University Bibliography for the
+                        <strong> entire publication activity</strong>
+                        of a person.
+                      </i18n:en>
+                      <br />
+                      <i18n:de>D.h. auch Publikationen, die nicht zum Zeitpunkt der Zugehörigkeit der Autor:innen zu
+                        Universität Duisburg-Essen entstanden sind, werden nachgewiesen, sofern das gewünscht ist.
+                      </i18n:de>
+                      <i18n:en>This means that publications that did not originate when the authors belonged to the
+                        University of Duisburg-Essen are also included, if desired.</i18n:en>
+                     </p>
+                     <p>
+                     <i18n:de>
+                        Wie Sie Publikationslisten aus der Universitätsbibliographie in Ihre persönlichen Webseiten
+                        einbinden, erfahren Sie
+                        <a href="list-wizard.xed">hier</a>.
+                      </i18n:de>
+                      <i18n:en>
+                        How to integrate publication lists from the University Bibliography into your personal web
+                        pages, you can find out
+                        <a href="list-wizard.xed">here</a>.
+                      </i18n:en>
+                     </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingFour1"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseFour1"
+                  aria-expanded="false"
+                  aria-controls="collapseFour1">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i18n:de>Publikationsrichtlinie der Universität Duisburg-Essen </i18n:de>
+                    <i18n:en>Publication Guidelines of the University of Duisburg-Essen</i18n:en>  
+                  </h5>
+                </div>
+                <div id="collapseFour1" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFour1">
+                  <div class="card-body">
+                               
+                     <p>
+                     <i18n:de>
+                        Für die gesamte Universiät Duisburg-Essen (UDE) und das Universitätsklinikum Essen (UK-Essen)
+                        gibt die
+                        <a href="Publikationsrichtlinie_UDE.pdf" target="_blank">Publikationsrichtlinie</a>
+                        Hinweise zum Publizieren.
+                        <br />
+                        Insbesondere die korrekte Angabe der institutionellen Zugehörigkeit (Affiliation) von
+                        Autor:innen ist maßgeblich, um Publikationen den Einrichtungen zuzuordnen und so
+                        in großen Datenbanken, wie z.B. Scopus oder Web of Science als zugehörige Publikation zu finden.
+                        <br />
+                        Ebenso relevant ist die Schreibweise des Namens - hier wird zur eindeutigen Identifikation von
+                        Personen die Verwendung einer Researcher Contributor Identification
+                        (
+                        <a href="https://orcid.org/" target="_blank">ORCID</a>
+                        ) empfohlen.
+                      </i18n:de>
+                      <i18n:en>
+                        <a href="Publikationsrichtlinie_UDE.pdf" target="_blank">The publication guidelines</a>
+                        provide information on publishing for the entire University of Duisburg-Essen (UDE) and the
+                        University Hospital Essen (UK-Essen).
+                        In particular, the correct indication of the institutional affiliation of authors is crucial in order to
+                        assign publications to institutions and thus to find them in large databases, such as Scopus or
+                        Web of Science, as associated publications.
+                        The spelling of the name is also relevant - the use of a Researcher Contributor Identification (<a href="https://orcid.org/" target="_blank">ORCID</a>)
+                        is recommended for the clear identification of persons.
+                      </i18n:en>
+                     </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-filter-lightblue p-3 mt-3">
+      <div class="row">
+      
+      
+        <div class="col">
+         
+          <article>
+            <h3 class="bg-white p-3">
+              <i18n:de>Unser Service für Sie</i18n:de>
+              <i18n:en>Our service for you</i18n:en>
+            </h3>
+            <div class="accordion" role="tablist" aria-multiselectable="true">
+
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingOne"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i18n:de> Wir importieren täglich Daten aus großen, fächerübergreifenden Datenbanken in die
+                      Universitätsbibliographie</i18n:de>
+                    <i18n:en> We import data from large, interdisciplinary databases into the University Bibliography on
+                      a daily basis </i18n:en>
+                  </h5>
+                </div>
+                <div
+                  id="collapseOne"
+                  class="card-collapse collapse out"
+                  role="tabcard"
+                  aria-labelledby="headingOne">
+                  <div class="card-body">
+                    <h5>
+                      <i18n:de>Datenbanken... </i18n:de>
+                      <i18n:en>Databases...</i18n:en>
+                    </h5>
+                     <p>
+                      <i18n:de>
+                        ... wie
+                        <a href="https://www.scopus.com/" target="_blank">Scopus
+                        </a>
+                        und
+                        <a href="https://www.webofscience.com" target="_blank"> Web of Science</a>,
+                        
+                        die fächerübergreifend Publikationen verzeichnen, werden von uns über Schnittstellen
+                        täglich auf neue Publikationen von UDE-Angehörigen durchsucht.
+                        Diese Daten werden automatisiert in die Universitätsbibliographie importiert und von unserem Redaktionsteam
+                        kontrolliert, ggf. korrigiert, mit den LSF-Personen-IDs verknüpft und
+                        letztlich freigeschaltet.
+                      </i18n:de>
+                      <i18n:en>
+                        ... such as
+                        <a href="https://www.scopus.com/" target="_blank">Scopus</a>
+                        and
+                        <a href="https://www.webofscience.com" target="_blank">Web of Science</a>
+                        , which record interdisciplinary publications, are searched daily for new publications by UDE
+                        members via interfaces.
+                        This data is automatically imported into the University Bibliography and checked by our editorial team,
+                        corrected if necessary, linked to the LSF personal IDs and finally released.
+                      </i18n:en>
+                     </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingTwo"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    <i18n:de> Wir prüfen Ihre gemeldeten Publikationen und ergänzen ggf. Informationen</i18n:de>
+                    <i18n:en>We check your reported publications and add information if necessary</i18n:en>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="card-collapse collapse" role="tabcard" aria-labelledby="headingTwo">
+                  <div class="card-body">
+                    <h5> 
+                      <i18n:de>Das Redaktionsteam...</i18n:de>
+                      <i18n:en>The editorial team...</i18n:en>
+                    </h5>
+                     <p>
+                     <i18n:de>... erhält zu jeder neu gemeldeten Publikation eine E-Mail und prüft daraufhin die Daten
+                        auf Vollständigkeit, ergänzt ggf. fehlende Informationen, verknüpft die Autor:innen mit
+                        den LSF-IDs und schaltet die Einträge frei. Danach sind die Publikationen in der Universitätsbibliographie
+                        auffindbar und tauchen automatisch in den Publikationslisten auf den UDE-Personenseiten
+                        auf - ebenso in den Publikationslisten, die Sie aus der Universitätsbibliographie in Ihre persönliche Webseiten
+                        einbinden.
+                      </i18n:de>
+                      <i18n:en>... receives an e-mail for each newly registered publication and then checks the data for
+                        completeness, adds any missing information, links the authors to the LSF-IDs and activates the
+                        entries.
+                        Afterwards, the publications can be found in the University Bibliography and automatically appear in the publication
+                        lists on the UDE personal pages
+                        as well as in the publication lists that you integrate from the University Bibliography into your personal web
+                        pages.
+                      </i18n:en>
+                     </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingThree"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                   <i18n:de>Wir reichern Ihre Publikationsdaten mit Identifiern wie DOI, PubMed-ID und Scopus-ID an
+                    </i18n:de>
+                    <i18n:en>We enrich your publication data with identifiers such as DOI, PubMed-ID and Scopus-ID
+                    </i18n:en>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="card-collapse collapse" role="tabcard" aria-labelledby="headingThree">
+                  <div class="card-body">
+                    <h5> 
+                      <i18n:de>Wichtige Identifier...</i18n:de>
+                      <i18n:en>Important identifiers...</i18n:en>
+                    </h5>
+                     <p>
+                       <i18n:de>... wie DOI, PubMed-ID usw. sind hilfreich, um Publikationen eindeutig zu identifizieren.
+                        Wir bemühen uns, diese IDs zu ermitteln und ergänzen sie, falls diese Informationen fehlen
+                        sollten.
+                      </i18n:de>
+                      <i18n:en>... such as DOI, PubMed ID, etc. are helpful to clearly identify publications. We make
+                        every effort to identify these IDs and supplement them if this information is missing.</i18n:en>
+                      <br />
+                      <i18n:de>Die Universitätsbibliographie-Einträge sind über die eingetragenen Identifier mit den
+                        Publikationen verlinkt. </i18n:de>
+                      <i18n:en>The University Bibliography entries are linked to the publications via the identifiers
+                        entered.</i18n:en>
+                      <br />
+                      <i18n:de>Diese IDs haben wir eingebunden:</i18n:de>
+                      <i18n:en>We have integrated these IDs:</i18n:en>
+                    </p>
+                     <ul>
+                       <li><a href="https://www.doi.org/" target="_blank">DOI</a></li>
+                       <li><a href="http://www.persistent-identifier.de/" target="_blank">URN</a></li>
+                       <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed ID</a></li>
+                       <li><a href="https://www.scopus.com/" target="_blank">Scopus ID</a></li>
+                       <li><a href="http://wokinfo.com/" target="_blank">Web of Science ID</a></li>
+                       <li><a href="https://ieeexplore.ieee.org/" target="_blank">IEEE ID</a></li>
+                       <li><a href="https://arxiv.org/" target="_blank">arXiv.org ID</a></li>
+                     </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingFour"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour">
+                  <h5 class="card-title">
+                      <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                      <i18n:de>Wir sorgen für qualitativ hochwertige Metadaten</i18n:de>
+                      <i18n:en> We ensure high quality metadata</i18n:en>
+                  </h5>
+                </div>
+                <div id="collapseFour" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFour">
+                  <div class="card-body">
+                    <h5> 
+                      <i18n:de>Die Metadaten...</i18n:de>
+                      <i18n:en>The metadata...</i18n:en>
+                    </h5>
+                     <p>
+                     <i18n:de>... mit denen die Publikationen beschrieben werden, sind wichtig für verlustfreie
+                        Datenexporte und die korrekte Ausgabe in den verschiedenen Zitationsstilen.
+                        Daher kontrollieren wir die Korrektheit der Metadaten nach dem Import bzw. nach der Eingabe und korrigieren diese
+                        ggf.
+                      </i18n:de>
+                      <i18n:en>... with which the publications are described are important for loss-free data exports
+                        and correct output in the various citation styles.
+                        Therefore, we check the correctness of the metadata after import or input and correct it if necessary.
+                      </i18n:en>
+                     </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingFive"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    <i18n:de>Wir unterstützen die Verknüpfung mit ORCID - und verknüpfen mit weiteren Personen-IDs</i18n:de>
+                    <i18n:en>We support linking with ORCID - and link with other personal IDs</i18n:en>
+                  </h5>
+                </div>
+                <div id="collapseFive" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFive">
+                  <div class="card-body">
+                    <h5> 
+                      <i18n:de>Die Anbindung der Universitätsbibliographie an ORCID</i18n:de>
+                      <i18n:en>The connection of the University Bibliography to ORCID</i18n:en>
+                    </h5>
+                     <p>
+                      <i18n:de>ist bereits implementiert und steht Ihnen bald zur Verfügung.</i18n:de>
+                      <i18n:en>is already implemented and will be available to you soon. </i18n:en> 
+                     </p>
+                     <p>
+                     <i18n:de>
+                        Die Universität Duisburg-Essen ist
+                        <a href="https://orcid.org/" target="_blank">ORCID</a>
+                        -Mitglied und kann Ihnen daher
+                        zukünftig dabei helfen, Ihr ORCID-Profil und Ihre persönliche Publikationsliste zu pflegen, indem wir automatisiert
+                        ...
+                      </i18n:de>
+                      <i18n:en>
+                        The University of Duisburg-Essen is
+                        <a href="https://orcid.org/" target="_blank">ORCID</a>
+                        member and can therefore
+                        help you to maintain your ORCID profile and your personal publication list in the future by automatically ...
+                      </i18n:en>
+                      <ul>
+                        <li>
+                          <i18n:de>... Publikationsdaten aus Ihrem ORCID-Profil in die Universitätsbibliographie
+                            übernehmen.</i18n:de>
+                          <i18n:en>... transferring publication data from your ORCID profile to the University Bibliography.
+                          </i18n:en>
+                        </li>
+                        <li>
+                          <i18n:de>... in der Universitätsbibliographie verzeichnete Publikationen in Ihr ORCID-Profil
+                            eintragen.</i18n:de>
+                          <i18n:en>... entering publications listed in the University Bibliography in your ORCID profile.
+                          </i18n:en>
+                        </li>
+                        <li>
+                          <i18n:de>... die Angabe der Zugehörigkeit zur UDE (Affiliation) sowie weitere externe
+                            Autoren-IDs oder alternative Namensformen
+                            im ORCID-Profil ergänzen.
+                          </i18n:de>
+                          <i18n:en>... adding the indication of affiliation to the UDE as well as further external author
+                            IDs or alternative name forms in the ORCID profile.</i18n:en>
+                        </li>
+                      </ul>
+                     </p>
+                     <h5> 
+                       <i18n:de>Weitere Personen-IDs</i18n:de>
+                       <i18n:en>Further person IDs</i18n:en>
+                     </h5>
+                     <p>
+                     <ul>
+                        <li>
+                          <i18n:de>
+                            <strong>LSF-ID:</strong>
+                            über die LSF-ID werden die Personen mit dem
+                            <a href="https://campus.uni-due.de/lsf" target="_blank">LSF</a>
+                            der UDE verknüft.
+                            Darüber werden die Publikationen in die UDE-Personenseiten eingebunden
+                          </i18n:de>
+                          <i18n:en>
+                            <strong>LSF-ID:</strong>
+                            The LSF-ID links the persons to the
+                            <a href="https://campus.uni-due.de/lsf" target="_blank">LSF</a>
+                            of the UDE. This is how the publications are integrated into the UDE personal pages.
+                          </i18n:en>
+                        </li>
+                        <li>
+                          <i18n:de>
+                            <strong>ResearcherID:</strong>
+                            ist der Personen-Identifier der Datenbank
+                            <a href="https://www.webofscience.com" target="_blank">Web of Science</a>
+                          </i18n:de>
+                          <i18n:en>
+                            <strong>ResearcherID:</strong>
+                            is the person identifier of the database
+                            <a href="https://www.webofscience.com" target="_blank">Web of Science</a>
+                          </i18n:en>
+                        </li>
+                        <li>
+                          <i18n:de>
+                            <strong>Sopus Author ID:</strong>
+                            ist der Personen-Identifier der Datenbank
+                            <a href="https://www.scopus.com/" target="_blank">Scopus</a>
+                          </i18n:de>
+                          <i18n:en>
+                            <strong>Sopus Author ID:</strong>
+                            is the person identifier of the database
+                            <a href="https://www.scopus.com/" target="_blank">Scopus</a>
+                          </i18n:en>
+                        </li>
+                        <li>
+                          <i18n:de>
+                            <strong>GND:</strong>
+                            Die
+                            <a href="https://gnd.network/" target="_blank">Gemeinsame Normdatei (GND)</a>
+                            ist eine Normdatei für Personen, Körperschaften, Kongresse, Geografika, Sachschlagwörter und
+                            Werktitel.
+                            Sie wird von der Deutschen Nationalbibliothek (DNB), allen deutschsprachigen Bibliotheksverbünden, der
+                            Zeitschriftendatenbank (ZDB)
+                            und zahlreichen weiteren Institutionen kooperativ geführt.
+                          </i18n:de>
+                          <i18n:en>
+                            <strong>GND:</strong>
+                            The
+                            <a href="https://gnd.network/" target="_blank">Gemeinsame Normdatei (GND)</a>
+                            is a authority file for persons, corporate bodies, congresses, geographies, subject headings
+                            and work titles.
+                            It is maintained cooperatively by the German National Library, all German-language library networks,
+                            the Zeitschriftendatenbank (ZDB) and numerous other institutions.
+                          </i18n:en>
+                        </li>
+                      </ul>
+                     </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingSix"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i18n:de>Wir helfen Ihnen bei der Erstellung Ihrer persönlichen Publikationslisten</i18n:de>
+                    <i18n:en>We help you to create your personal publication lists</i18n:en>
+                  </h5>
+                </div>
+                <div id="collapseSix" class="card-collapse collapse" role="tabcard" aria-labelledby="headingSix">
+                  <div class="card-body">
+                    <h5> 
+                      <i18n:de>Ihre persöniche Publikationsliste ...</i18n:de>
+                      <i18n:en>Your personal publication list ...</i18n:en>
+                    </h5>
+                     <p>
+                     <i18n:de>
+                        ... können Sie ganz einfach mit Ihren Daten aus der Universitätsbibliographie generieren.
+                        Sie können Trefferlisten in unterschiedlichen Formaten exportieren und in Ihre Webseiten einbinden.
+                        Weitere Informationen dazu finden Sie
+                        <a href="list-wizard.xed">hier</a>.
+                      </i18n:de>
+                      <i18n:en>
+                        .. can be easily generated with your data from the University Bibliography.
+                        You can export hit lists in different formats and integrate them into your web pages. You can find more
+                        information
+                        <a href="list-wizard.xed">here</a>.
+                      </i18n:en>
+                     </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingSeven"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="collapseSeven">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                      <i18n:de>Wir kennzeichnen Open Access Publikationen</i18n:de>
+                      <i18n:en>We label Open Access publications</i18n:en>
+                  </h5>
+                </div>
+                <div id="collapseSeven" class="card-collapse collapse" role="tabcard" aria-labelledby="headingSeven">
+                  <div class="card-body">
+                    <h5>   
+                      <i18n:de>Open Access Publikationen ...</i18n:de>
+                      <i18n:en>Open Access publications ...</i18n:en>
+                    </h5>
+                     <p>
+                     <i18n:de>... werden in der Universitätsbibliographie gekennzeichnet. So ist es auf einen Blick zu
+                        erkennen, ob eine Publikation frei zugänglich ist.</i18n:de>
+                      <i18n:en>... are indicated in the University Bibliography. This makes it possible to see at an
+                        instant whether a publication is freely accessible.</i18n:en>
+                     </p>
+                     <p>
+                     <i18n:de>
+                        Informationen zu den in der Universitätsbibliographie verwendeten OA-Kategorien und unserem
+                        Verständnis von Open Access finden Sie
+                        <a href="https://www.uni-due.de/ub/publikationsdienste/oa_kategorien.php" target="_blank">hier</a>
+                        .
+                      </i18n:de>
+                      <i18n:en>
+                        Information on the OA categories used in the University Bibliography and our understanding of
+                        Open Access can be found
+                        <a href="https://www.uni-due.de/ub/publikationsdienste/oa_kategorien.php" target="_blank">here</a>.
+                      </i18n:en>
+                     </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingEight"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseEight"
+                  aria-expanded="false"
+                  aria-controls="collapseEight">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i18n:de>Wir können Bibliometrie und Statistik</i18n:de>
+                    <i18n:en>We can create statistics and bibliometric analyses</i18n:en>
+                  </h5>
+                </div>
+                <div id="collapseEight" class="card-collapse collapse" role="tabcard" aria-labelledby="headingEight">
+                  <div class="card-body">
+
+                    <h5>   
+                      <i18n:de>Bibliometrische Anfragen ... </i18n:de>
+                      <i18n:en>Bibliometric queries ...</i18n:en>
+                    </h5>
+                     <p>
+                     <i18n:de>... können aussagekräftig auf der Datenbasis der Universitätsbibliographie beantwortet
+                        werden. Weitere Anreicherungen mit Informationen aus externen Quellen sind möglich.</i18n:de>
+                      <i18n:en>... can be answered meaningfully on the data basis of the University Bibliography.
+                        Further enrichment with information from external sources is possible.</i18n:en>
+                     </p>
+                     <p>
+                     <i18n:de>
+                        Weitere Informationen zur Bibliometrie finden Sie
+                        <a href="https://www.uni-due.de/ub/bibliometrie/" target="_blank">hier</a>.
+                      </i18n:de>
+                      <i18n:en>
+                        You can find more information on bibliometrics
+                        <a href="https://www.uni-due.de/ub/bibliometrie/" target="_blank">here</a>.
+                      </i18n:en>
+                     </p>
+
+                     <h5> 
+                      <i18n:de>Statistiken ...</i18n:de>
+                      <i18n:en>Statistics ...</i18n:en>
+                     </h5>
+                     <p>
+                     <i18n:de>
+                        ... können sowohl über den
+                        <a href="statistics.xml">Gesamtbestand der Universitätsbibliographie</a>
+                        als auch zu einzelnen Trefferlisten abgerufen
+                        und nachgenutzt werden.
+                      </i18n:de>
+                      <i18n:en>
+                        ... can be retrieved and reused both via the
+                        <a href="statistics.xml">entire collection of the University Bibliography</a>
+                        as well as for individual hit lists.
+                      </i18n:en>
+                     </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="bg-filter-blue p-3 mt-3">
+      <div class="row">
+        <div class="col">
+          <article class="card">
+            <div class="row">
+              <div class="col-lg-4">
+                <img
+                  src="images/Regal_neu.PNG"
+                  alt="UBO Postkarte"
+                  class="img-fluid" />
+              </div>
+              <div class="col-lg-8">
+                <div class="card-body">
+                  <h3 class="card-title">
+                    <i18n:de>Kontakt</i18n:de>
+                    <i18n:en>Contact</i18n:en>
+                  </h3>
+                  <p class="card-text">
+                    <i18n:de>Haben Sie Fragen zur Universitätsbibliographie
+                      oder benötigen Hilfe oder Beratung?
+                    </i18n:de>
+                    <i18n:en>Do you have questions about the University Bibliography or need help or advice?</i18n:en>
+                    <br />
+                    <i18n:de>Melden Sie sich gern bei uns:</i18n:de>
+                    <i18n:en>Feel free to contact us:</i18n:en>
+                  </p>
+                  <p class="card-text">
+                    <i18n:de>Redaktionsteam der Universitätsbibliographie: </i18n:de>
+                    <i18n:en>Editorial team of the University Bibliography: </i18n:en>
+                    
+                    <a href="|code:ude.contact.mailto|">
+                      <i18n:code>ude.contact.mail</i18n:code>
+                    </a>
+                  </p>
+                  <p class="card-text">
+                    <i18n:de>Kerstin Ponten (Teamleitung): </i18n:de>
+                    <i18n:en>Kerstin Ponten (Team management): </i18n:en>
+                   
+                    <a href="mailto:kerstin.ponten@uni-due.de">
+                      kerstin.ponten@uni-due.de</a>,   
+                    <i18n:de>Tel.: 0201 / 183-6019</i18n:de>
+                    <i18n:en>Phone: 0201 / 183-6019</i18n:en>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</webpage>

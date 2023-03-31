@@ -21,8 +21,8 @@
 
   <!-- ==================== WEBJARS VERSIONS (see pom.xml) ==================== -->
 
-  <xsl:variable name="jquery.version" select="'3.3.1'" />
-  <xsl:variable name="jquery-ui.version" select="'1.12.1'" />
+  <xsl:variable name="jquery.version" select="'3.5.1'"/>
+  <xsl:variable name="jquery-ui.version" select="'1.13.2'"/>
   <xsl:variable name="chosen.version" select="'1.8.7'" />
   <xsl:variable name="bootstrap.version" select="'4.4.1'" />
   <xsl:variable name="font-awesome.version" select="'5.13.0'" />
@@ -41,6 +41,13 @@
       <xsl:apply-templates select="head" />
 
       <body>
+
+        <xsl:if test="body/section/@id">
+          <xsl:attribute name="class">
+            <xsl:value-of select="body/section/@id" />
+          </xsl:attribute>
+        </xsl:if>
+
         <header>
           <xsl:call-template name="head-bar" />
           <xsl:call-template name="site-header" />
@@ -51,9 +58,9 @@
         <xsl:call-template name="layout.body" />
 
         <xsl:call-template name="footer" />
-        </body>
+      </body>
 
-      </html>
+    </html>
   </xsl:template>
 
   <xsl:template name="doctype">
@@ -411,7 +418,16 @@
         <xsl:apply-templates mode="breadcrumb" select="$CurrentItem/ancestor-or-self::item[@label|label][ancestor-or-self::*=$navigation.tree[@role='main']]" />
         <xsl:for-each select="body/ul[@id='breadcrumb']/li">
           <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
-            <xsl:copy-of select="node()" />
+            <xsl:choose>
+              <xsl:when test="@data-href">
+                <a href="{@data-href}">
+                  <xsl:copy-of select="node()"/>
+                </a>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:copy-of select="node()"/>
+              </xsl:otherwise>
+            </xsl:choose>
           </li>
         </xsl:for-each>
       </ol>
@@ -427,8 +443,14 @@
   <!-- ==================== MAIN CONTENT ==================== -->
 
   <xsl:template name="layout.body">
+
     <div class="bodywrapper pt-3">
-      <div class="container d-flex flex-column flex-grow-1">
+      <div class="container">
+
+        <xsl:if test="body/section[@class='freestyle']">
+          <xsl:copy-of select="body/section[@class='freestyle']" />
+        </xsl:if>
+
         <div class="row">
           <div class="col-lg">
             <xsl:call-template name="layout.inhalt" />
@@ -439,11 +461,7 @@
             </div>
           </xsl:if>
         </div>
-        <div class="row">
-          <div class="col">
-            <hr class="mb-0"/>
-          </div>
-        </div>
+
       </div>
     </div>
   </xsl:template>
@@ -452,7 +470,7 @@
     <section role="main" id="inhalt">
       <xsl:choose>
         <xsl:when test="$allowed.to.see.this.page = 'true'">
-          <xsl:copy-of select="body/*[not(@id='sidebar')][not(@id='breadcrumb')]" />
+          <xsl:copy-of select="body/*[not(@id='sidebar')][not(@id='breadcrumb')][not(@class='freestyle')]" />
         </xsl:when>
         <xsl:otherwise>
           <h3>
