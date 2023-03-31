@@ -44,6 +44,10 @@
       <label xml:lang="de">Statistiken</label>
       <label xml:lang="en">Statistics</label>
     </item>
+    <item ref="info.xml" id="dozbib.info">
+      <label xml:lang="de">Informationen</label>
+      <label xml:lang="en">Information</label>
+    </item>
     <item ref="import-list.xed" role="admin">
       <label xml:lang="de">Importieren</label>
       <label xml:lang="en">Import</label>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<webpage lastModified="$Date: 2016-05-20 08:54:29 +0200 (Fr, 20 Mai 2016) $" id="dozbib.list-wizard" xmlns:i18n="http://www.mycore.org/i18n">
+ <title xml:lang="de">Persönliche Publikationsliste erstellen</title>
+ <title xml:lang="en">Build your personal publication list</title>
+
+  <article xml:lang="de" class="card mb-1">
+    <div class="card-body bg-alternative">
+      <p>
+       Aus den Daten der Universitätsbibliographie können Publikationslisten erzeugt werden, die auf unterschiedlichen Wegen in eigene Webseiten eingebunden werden können. 
+       Diese Listen sind stets aktuell – sofern uns neue Publikationen gemeldet werden. 
+      </p>
+    </div>
+  </article>
+  
+  <article xml:lang="de" class="card mb-1">
+    <div class="card-body bg-alternative">
+      <h3>Publikationslisten für Imperia-Seiten</h3>
+      <p>
+        In UDE-Webseiten, die mit dem Content-Management-System
+        <a href="https://www.uni-due.de/zim/services/cms/" target="_blank">Imperia</a> erstellt sind, kann ganz einfach durch
+        Aktivierung des <strong>Moduls "Mitarbeiter-Publikationsliste"</strong> eine Publikationsliste eingebunden werden.
+      </p>
+      <p>
+      Dieses Imperia-Modul kann die Publikationsliste einer Person durch Eingabe der LSF-ID einbinden. Es können aber auch komplexere Suchanfragen oder die URLs von 
+      Trefferlisten aus der Universitätsbibliographie als Suchstring verwendet werden. <br/>
+      Hilfe zur Nutzung des Moduls finden Sie auf den <a href="https://imperia.uni-due.de/imperia-hilfe/flex/_portal_publikationen.php">Imperia-Hilfe-Seiten</a> – oder fragen Sie uns: 
+      <a href="|code:ude.contact.mailto|"><i18n:code>ude.contact.mail</i18n:code></a>
+      </p>
+    </div>
+  </article>
+
+  <article xml:lang="en" class="card mb-1">
+    <div class="card-body bg-alternative">
+      <h3>Publication lists for Imperia pages</h3>
+      <p>
+        On webpages of UDE which are built using the content management system
+        <a href="https://www.uni-due.de/zim/services/cms/" target="_blank">Imperia</a>, you can easily activate
+        the <strong>Imperia module "Mitarbeiter-Publikationsliste"</strong> to integrate your personal publication list on any webpage.
+      </p>
+      <p>
+        This Imperia module can include a person's publication list by entering the LSF ID. However, more complex search queries or the URLs of hit lists from the 
+        university bibliography can be used as search strings. <br/>
+        Help on using the module can be found on the Imperia help pages - or ask us:
+        <a href="|code:ude.contact.mailto|"><i18n:code>ude.contact.mail</i18n:code></a>
+      </p>
+    </div>
+  </article>
+
+  <article xml:lang="de" class="card mb-1">
+    <div class="card-body">
+      <h3>Persönliche Publikationsliste erstellen</h3>
+      <p>
+        Alternativ können Sie über das folgende Formular persönliche Publikationslisten direkt aus der Universitätsbibliographie erstellen und
+        in verschiedenen Formaten verlinken oder ausgeben. Voraussetzung ist, dass die Publikationen mit Ihrer HIS LSF Personen-ID verknüpft sind.
+        Falls Publikationen fehlen, <a href="newPublication.xed">melden Sie diese hier.</a>
+        Falls Einträge korrigiert werden müssen, <a href="contact.xml">sprechen Sie uns an.</a>
+        Sie können auch Publikationen über vergebene "Tags" auswählen.
+      </p>
+    </div>
+  </article>
+
+  <article xml:lang="en" class="card mb-1">
+    <div class="card-body">
+      <h3>Create personal publication list</h3>
+      <p>
+        Alternatively, you can use the following form to create your personal publication list directly from university bibliography data to
+        link it or output it in various formats. This requires that the publications are linked with your own HIS LSF person ID.
+        In case publications are missing, <a href="newPublication.xed">you can enter them here.</a>
+        in case entries have to be corrected, <a href="contact.xml">contact us.</a>
+        You can also choose publications by "tags".
+      </p>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-body">
+        <xed:form xmlns:xed="http://www.mycore.de/xeditor" method="post" role="form" style="z-index: 99">
+            <script src="{$WebApplicationBaseURL}vue/vue.min.js" />
+            <script src="{$WebApplicationBaseURL}vue/publication-list/publicationList.umd.min.js" />
+            <link href="{$WebApplicationBaseURL}vue/publication-list/publicationList.css" rel="stylesheet"/>
+            <div id="publicationList">
+            <pl baseurl="{$WebApplicationBaseURL}"
+                              leadid="{$MCR.user2.matching.lead_id}"
+            ></pl>
+            </div>
+            <script>
+                new Vue({
+                components: {
+                pl: publicationList
+                }
+                }).$mount('#publicationList');
+            </script>
+        </xed:form>
+    </div>
+  </article>
+  
+  <article xml:lang="de" class="card mb-1">
+    <div class="card-body">
+      <h3>Projektbezogene Publikationslisten</h3>
+      <p>
+       Wenn Sie Publikationslisten für bestimmte Einrichtungen, Gruppen oder Forschungsprojekte erzeugen möchten, helfen wir Ihnen gern, die Daten ggf. aufzubereiten 
+       und die entsprechende Suchanfrage zu formulieren: 
+       <a href="|code:ude.contact.mailto|"><i18n:code>ude.contact.mail</i18n:code></a>
+      </p>
+    </div>
+  </article>
+  <article xml:lang="en" class="card mb-1">
+    <div class="card-body">
+      <h3>Project-related publication lists </h3>
+      <p>
+       If you would like to generate publication lists for specific institutions, groups or research projects, we will be happy to help you prepare the data if necessary 
+       and formulate the corresponding search query: 
+       <a href="|code:ude.contact.mailto|"><i18n:code>ude.contact.mail</i18n:code></a>
+      </p>
+    </div>
+  </article>
+
+</webpage>

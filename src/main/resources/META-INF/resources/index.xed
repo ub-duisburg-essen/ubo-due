@@ -1,125 +1,265 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<webpage lastModified="$Date$" id="dozbib">
- <title xml:lang="de">Universitätsbibliographie der Universität Duisburg-Essen</title>
- <title xml:lang="en">Bibliography of the University of Duisburg-Essen</title>
+  <webpage lastModified="$Date$" id="dozbib" xmlns:i18n="http://www.mycore.org/i18n">
+    <title xml:lang="de">Universitätsbibliographie der Universität Duisburg-Essen</title>
+    <title xml:lang="en">University Bibliography of the University of Duisburg-Essen</title>
 
- <article class="card mb-3" xml:lang="de">
-   <div class="card-body">
-     <h3>Die Universitätsbibliographie</h3>
-      <p>
-        ist der zentrale Publikationsnachweis der Universität Duisburg-Essen,
-        der online die Publikationstätigkeit der Hochschulangehörigen verzeichnet.
-        Die Einträge beruhen auf Angaben der Autoren selbst und auf Importe aus Publikationsdatenbanken.
-        Die Universitätsbibliographie wird von der Universitätsbibliothek betrieben.
-        Unser Redaktionsteam prüft und vervollständigt die Neueinträge.
-      </p>
-      <h3>Sie sind Angehöriger der Universität Duisburg-Essen?</h3>
-      <p>
-        Helfen Sie uns bei der Vervollständigung!<br/>
-        <a href="../newPublication.xed">Hier können Sie Ihre Publikation an die Universitätsbibliographie melden</a>
-      </p>
-   </div>
- </article>
-  <article class="card mb-3" xml:lang="en">
-    <div class="card-body">
-      <h3>The University Bibliography</h3>
-      <p>
-        is the central resource of Duisburg-Essen University
-        that lists all publication activities of the university members.
-        The entries are based on information provided by the authors themselves and on imports from publication databases.
-        The bibliography is run by the university library.
-        Our editoral team revises and completes new entries.
-      </p>
-      <h3>
-        As a member of Duisburg-Essen University</h3>
-      <p>
-        Help us to complete the bibliography!<br/>
-        <a href="../newPublication.xed">Here you can register your own publication</a>
-      </p>
-    </div>
-  </article>
+    <script src="webjars/highcharts/5.0.1/highcharts.src.js" type="text/javascript"></script>
+    <script src="webjars/highcharts/5.0.1/themes/grid.js" type="text/javascript"></script>
 
-  <article class="card mb-3">
-    <div class="card-body">
-      <xed:form xmlns:xed="http://www.mycore.de/xeditor" method="post" role="form">
-        <div class="form-group form-inline mb-0">
+    <section id="home" class="freestyle" >
 
-          <xed:bind xpath="/query">
-            <xed:bind xpath="@mask" default="index.xed" />
-            <xed:bind xpath="@numPerPage" default="10" />
-            <xed:bind xpath="conditions[@format='xml']/boolean[@operator='and']">
-              <xed:bind xpath="condition[@field='all'][@operator='contains']/@value">
-                <label for="input" class="mycore-form-label">
-                  <xed:output i18n="ubo.search.simple" />
-                </label>
-                <input id="input" type="text" class="mycore-form-input form-control-sm mr-2" />
-              </xed:bind>
+      <!-- search -->
+      <div class="row mt-3 mb-3">
+        <div class="col">
+          <article class="card card-search pt-3">
+            <div class="card-body">
 
-              <!-- Standard users must only find confirmed publications, admins find all publications -->
-              <xed:choose>
-                <xed:when test="not(xed:call-java('org.mycore.ubo.AccessControl','currentUserIsAdmin'))">
-                  <xed:bind xpath="condition[@field='status'][@operator='='][@value='confirmed']" />
-                </xed:when>
-                <xed:otherwise>
-                  <xed:bind xpath="condition[@field='objectType'][@operator='='][@value='mods']" />
-                </xed:otherwise>
-              </xed:choose>
+              <xed:form xmlns:xed="http://www.mycore.de/xeditor" method="post" role="form">
+                <div class="form-group form-inline mb-0">
+                  <xed:bind xpath="/query">
+                    <xed:bind xpath="@mask" default="index.xed" />
+                    <xed:bind xpath="@numPerPage" default="10" />
+                    <xed:bind xpath="conditions[@format='xml']/boolean[@operator='and']">
+                      <xed:bind xpath="condition[@field='all'][@operator='contains']/@value">
+                        <label for="input" class="mycore-form-label">
+                          <xed:output i18n="ubo.search.simple" />
+                        </label>
+                        <input id="input" type="text" class="mycore-form-input form-control mr-2" />
+                      </xed:bind>
+                      <!-- Standard users must only find confirmed publications, admins find all publications -->
+                      <xed:choose>
+                        <xed:when test="not(xed:call-java('org.mycore.ubo.AccessControl','currentUserIsAdmin'))">
+                          <xed:bind xpath="condition[@field='status'][@operator='='][@value='confirmed']" />
+                        </xed:when>
+                        <xed:otherwise>
+                          <xed:bind xpath="condition[@field='objectType'][@operator='='][@value='mods']" />
+                        </xed:otherwise>
+                      </xed:choose>
+                    </xed:bind>
+                    <xed:bind xpath="sortBy[field[@name='year'][@order='descending']]" />
+                  </xed:bind>
+                  <button class="btn btn-primary" type="submit" xed:target="servlet" xed:href="MCRQLSearchServlet">
+                    <xed:output i18n="button.search" />
+                  </button>
+                </div>
+              </xed:form>
 
-            </xed:bind>
+              <p class="card-search__info">
+                <i18n:de>Die Universitätsbibliographie ist der zentrale
+                  Publikationsnachweis der Universität Duisburg-Essen - hier
+                  wird online die Publikationstätigkeit aller
+                  Hochschulangenhörigen verzeichnet.</i18n:de>
+                <i18n:en>The University Bibliography is the central publication
+                  directory of Duisburg-Essen University - here the publication
+                  activities of all university members are recorded online.</i18n:en>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
 
-            <xed:bind xpath="sortBy[field[@name='year'][@order='descending']]" />
+      <div class="bg-filter-blue p-3">
 
-          </xed:bind>
+        <!-- register/list -->
+        <div class="row">
 
-          <button class="btn btn-sm btn-primary" type="submit" xed:target="servlet" xed:href="MCRQLSearchServlet">
-            <xed:output i18n="button.search" />
-          </button>
+          <div class="col-lg-6">
+            <article class="card mb-3">
+              <div class="card-body">
+                <h3 class="card-title">
+                  <i18n:de>Publikationen melden</i18n:de>
+                  <i18n:en>Registering publication</i18n:en>
+                </h3>
+                <p class="card-text">
+                  <i18n:de>Sie sind an der Universität Duisburg-Essen beschäftigt?</i18n:de>
+                  <i18n:en>You are a member of the University of Duisburg-Essen?</i18n:en>
+                  <br/>
+                  <i18n:de>Helfen Sie uns bei der Vollständigkeit!</i18n:de>
+                  <i18n:en>Help us to complete the bibliography!</i18n:en>
+                  <br/>
+                  <a href="newPublication.xed">
+                    <i18n:de>Melden Sie Ihre Publikation an die
+                      Universitätsbibliographie.</i18n:de>
+                    <i18n:en>Register your own publication.</i18n:en>
+                  </a>
+                  </p>
+                  <p>
+                  <i18n:de>Oder schicken Sie uns Ihre Publikationsliste in einem
+                    beliebigen Format:</i18n:de>
+                  <i18n:en>Or send us your publication list in any format:</i18n:en>
+                  <a href="|code:ude.contact.mailto|">
+                    <i18n:code>ude.contact.mail</i18n:code>
+                  </a>
+                </p>
+                <div class="text-center">
+                  <a class="btn btn-primary" href="newPublication.xed">
+                    <i18n:de>Melden</i18n:de>
+                    <i18n:en>Send</i18n:en>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6">
+            <article class="card mb-3">
+              <div class="card-body">
+                <h3 class="card-title">
+                  <i18n:de>Publikationslisten</i18n:de>
+                  <i18n:en>Publication lists</i18n:en>
+                </h3>
+                <p class="card-text">
+                  <i18n:de>Wenn Ihre Publikationen in der Universitätsbibliographie verzeichnet sind,
+                    können Sie Ihre Publikationsliste in Ihre eigene Website
+                    einbinden. Dabei sind Ihre Daten stets tagesaktuell.</i18n:de>
+                  <i18n:en>If your publications are listed in the University Bibliography, you can
+                    integrate your publication list into your own website.
+                    Your data will always be up-to-date.</i18n:en>
+                  </p>
+                  <p>
+                  <i18n:de>Hier können Sie Ihre persönliche Publikationsliste
+                    erstellen und nachnutzen:</i18n:de>
+                  <i18n:en>Here you can create and reuse your
+                    personal publication list:</i18n:en>
+                  <a href="list-wizard.xed">
+                    <i18n:de>Persönliche Publikationsliste erstellen</i18n:de>
+                    <i18n:en>Build your personal publication list</i18n:en>
+                  </a>
+                </p>
+                <div class="text-center">
+                  <a class="btn btn-primary" href="list-wizard.xed">
+                    <i18n:de>Erstellen</i18n:de>
+                    <i18n:en>Build</i18n:en>
+                  </a>
+                </div>
+              </div>
+             </article>
+          </div>
 
         </div>
-      </xed:form>
-    </div>
-  </article>
 
-  <xinclude uri="xslStyle:response-newest:solr:q=status:confirmed+AND+year:2021&amp;rows=4&amp;sort=created+desc,year+desc&amp;facet=false&amp;fl=id,year" />
-
-  <aside id="sidebar">
-    <xinclude uri="xslStyle:response-sidebar-mini:solr:q=status:confirmed&amp;rows=0" />
-    <xinclude uri="xslStyle:response-sidebar-admin:solr:q=*:*&amp;rows=0&amp;facet=true&amp;facet.field=status&amp;facet.mincount=0&amp;facet.range=created&amp;facet.range=modified&amp;facet.range.start=NOW/DAY-30DAY&amp;facet.range.end=NOW&amp;facet.range.gap=%2B1DAY" />
-    <xinclude uri="xslStyle:response-sidebar-admin:solr:q=status:imported+AND+importID:*&amp;rows=0&amp;facet=true&amp;facet.sort=index&amp;facet.limit=-1&amp;facet.field=importID" />
-
-    <article class="card" xml:lang="de">
-      <div class="card-body bg-alternative">
-        <hgroup>
-          <h3>Kontakt:</h3>
-        </hgroup>
-        <p>
-          <a href="mailto:universitaetsbibliographie@ub.uni-due.de">
-            <span>universitaetsbibliographie<br/>@ub.uni-due.de</span>
-          </a>
-        </p>
-        <p>
-          Universitätsbibliothek<br/>
-          Tel.: 0201 / 183-3728
-        </p>
       </div>
-    </article>
-    <article class="card" xml:lang="en">
-      <div class="card-body bg-alternative">
-        <hgroup>
-          <h3>Contact:</h3>
-        </hgroup>
-        <p>
-          <a href="mailto:universitaetsbibliographie@ub.uni-due.de">
-            <span>universitaetsbibliographie<br/>@ub.uni-due.de</span>
-          </a>
-        </p>
-        <p>
-          University library<br/>
-          Phone: 0201 / 183-3728
-        </p>
-      </div>
-    </article>
-  </aside>
 
-</webpage>
+      <div class="bg-filter-blue p-3 mt-3">
+
+        <!-- statistic -->
+        <div class="row">
+          <div class="col-12">
+            <!-- <h3 class="text-white text-center mb-5">Zahlen zur Universitätsbibliographie</h3> -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mb-3">
+            <article class="card h-100 ude-newestpub">
+              <div class="card-body">
+                <xinclude uri="xslStyle:response-newest:solr:q=status:confirmed+AND+year:2023&amp;rows=5&amp;sort=created+desc,year+desc&amp;facet=false&amp;fl=id,year" />
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 mb-3">
+            <article class="card h-100">
+              <div class="card-body">
+                <xinclude uri="xslStyle:statistics:solr:q=status:confirmed+year:%5B2018+TO+*%5D&amp;rows=0&amp;facet.field=year" />
+                <xinclude uri="xslStyle:response-sidebar-mini:solr:q=status:confirmed&amp;rows=0" />
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- <div class="bg-filter-white p-3 mt-3"> -->
+
+        <!-- info -->
+   <!--     <div class="row">
+          <div class="col-12">
+            <article class="card mb-3 bg-primary">
+              <a href="info.xml" class="text-white text-decoration-none">
+                <div class="card-body">
+                  <h3 class="card-title text-white">
+                    <i18n:de>Informationen zur Universitätsbibliographie</i18n:de>
+                    <i18n:en>Information about the University Bibliography</i18n:en>
+                  </h3>
+                  <p class="card-text">
+
+                    <i18n:de>Wissenswertes für die Nutzer:innen der Universitätsbibliographie</i18n:de>
+                    <i18n:en>Things to know for University Bibliography users</i18n:en>
+                  </p>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+
+      </div> -->
+
+      <div class="bg-filter-blue p-3 mt-3">
+        <!-- contact
+        <div class="row">
+          <div class="col-12">
+            <article class="card">
+              <div class="row">
+                <div class="col-lg-4">
+                  <img src="images/Regal_neu.PNG" alt="Regal" class="img-fluid" />
+                </div>
+                <div class="col-lg-8">
+                  <div class="card-body">
+                    <h3 class="card-title">
+                      <i18n:de>Kontakt</i18n:de>
+                      <i18n:en>Contact</i18n:en>
+                    </h3>
+                    <p class="card-text">
+                      <a href="|code:ude.contact.mailto|">
+                        <span><i18n:code>ude.contact.mail</i18n:code></span>
+                      </a>
+                    </p>
+                    <p class="card-text">
+                      <i18n:de>Universitätsbibliothek</i18n:de>
+                      <i18n:en>University library</i18n:en>
+                      <br/>
+                      <i18n:de>Tel.: 0201 / 183-3728</i18n:de>
+                      <i18n:en>Phone: 0201 / 183-3728</i18n:en>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        -->
+        <div class="row">
+          <div class="col-4 mb-3">
+            <article class="card h-100">
+              <div class="card-body">
+                <h3 class="card-title">
+                  <i18n:de>Kontakt</i18n:de>
+                  <i18n:en>Contact</i18n:en>
+                </h3>
+                <p class="card-text">
+                  <a href="|code:ude.contact.mailto|">
+                    <span><i18n:code>ude.contact.mail</i18n:code></span>
+                  </a>
+                </p>
+                <p class="card-text">
+                  <i18n:de>Universitätsbibliothek</i18n:de>
+                  <i18n:en>University library</i18n:en>
+                  <br/>
+                  <i18n:de>Tel.: 0201 / 183-3728</i18n:de>
+                  <i18n:en>Phone: 0201 / 183-3728</i18n:en>
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-8 mb-3">
+            <article class="card h-100">
+              <div class="card-body">
+                <img src="images/background-contact.jpg" class="contact-figure" alt="Netzwerk" />
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </webpage>
