@@ -343,7 +343,7 @@
 
 <xsl:template name="numPublicationsUBO">
   <xsl:variable name="lsf_id" select="attributes/attribute[@name='id_lsf']/@value" />
-  <xsl:variable name="solr_query" select="concat('q=status:confirmed+nid_lsf:',$lsf_id)" />
+  <xsl:variable name="solr_query" select="concat('q=status%3Aconfirmed+nid_lsf%3A',$lsf_id)" />
 
   <li>
     <xsl:value-of select="i18n:translate('user.profile.publications.ubo.intro')" />
