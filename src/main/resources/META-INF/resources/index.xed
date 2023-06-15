@@ -153,15 +153,15 @@
           <div class="col-lg-8 mb-3">
             <article class="card h-100 ude-newestpub">
               <div class="card-body">
-                <xinclude uri="xslStyle:response-newest:solr:q=status:confirmed+AND+year:2023&amp;rows=5&amp;sort=created+desc,year+desc&amp;facet=false&amp;fl=id,year" />
+                <xinclude uri="xslStyle:response-newest:solr:q=status%3Aconfirmed+AND+year%3A2023&amp;rows=5&amp;sort=created+desc,year+desc&amp;facet=false&amp;fl=id,year" />
               </div>
             </article>
           </div>
           <div class="col-lg-4 mb-3">
             <article class="card h-100">
               <div class="card-body">
-                <xinclude uri="xslStyle:statistics:solr:q=status:confirmed+year:%5B2018+TO+*%5D&amp;rows=0&amp;facet.field=year" />
-                <xinclude uri="xslStyle:response-sidebar-mini:solr:q=status:confirmed&amp;rows=0" />
+                <xinclude uri="xslStyle:statistics:solr:q=status%3Aconfirmed+year%3A%5B2018+TO+*%5D&amp;rows=0&amp;facet.field=year" />
+                <xinclude uri="xslStyle:response-sidebar-mini:solr:q=status%3Aconfirmed&amp;rows=0" />
               </div>
             </article>
           </div>
