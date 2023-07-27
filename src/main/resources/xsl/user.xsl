@@ -178,8 +178,13 @@
 <xsl:template name="id_orcid">
   <tr>
     <th scope="row">
-      <xsl:value-of select="i18n:translate('user.profile.id.orcid')" />
-      <xsl:text>:</xsl:text>
+      <xsl:if test="orcidUtils:isConnected(@value)">
+        <xsl:attribute name="title">
+          <xsl:value-of select="i18n:translate('orcid.integration.confirmed.headline')"/>
+        </xsl:attribute>
+      </xsl:if>
+
+      <xsl:value-of select="concat(i18n:translate('user.profile.id.orcid'), ':')" />
     </th>
     <td>
       <xsl:variable name="url" select="concat($MCR.ORCID2.LinkURL,@value)" />
@@ -267,17 +272,9 @@
 </xsl:template>
 
 <xsl:template name="orcidIntegrationConfirmed">
-  <xsl:variable name="has-sync-enabled" select="orcidUtils:hasSyncEnabled()"/>
-
   <h3>
     <span class="fas fa-check" aria-hidden="true" />
-    <xsl:text> </xsl:text>
-    <xsl:value-of select="i18n:translate('orcid.integration.confirmed.headline')" />
-
-    <xsl:if test="$has-sync-enabled = 'true'">
-      <xsl:value-of select="concat(' ', i18n:translate('orcid.integration.confirmed.headline.with.update'))" />
-    </xsl:if>
-    <xsl:text>.</xsl:text>
+    <xsl:value-of select="concat(' ', i18n:translate('orcid.integration.confirmed.headline'), '.')" />
   </h3>
   <p>
     <xsl:value-of disable-output-escaping="yes" select="i18n:translate('orcid.integration.confirmed.text')" />
@@ -394,11 +391,13 @@
 </xsl:template>
 
 <xsl:template match="attribute[contains(@name, 'orcid_credential')]" mode="publications">
+  <xsl:variable name="orcid" select="substring-after(@name, 'orcid_credential_')" />
+
   <li>
-    <xsl:value-of disable-output-escaping="yes" select="concat(i18n:translate('user.profile.publications.orcid.intro'), ' ')" />
-    <a href="{$MCR.ORCID2.LinkURL}{substring-after(@name, 'orcid_credential_')}" target="_blank">
+    <xsl:value-of disable-output-escaping="yes" select="concat(i18n:translate('user.profile.publications.orcid.intro', $orcid), ' ')" />
+    <a href="{$MCR.ORCID2.LinkURL}{$orcid}" target="_blank">
       <xsl:call-template name="numPublications">
-        <xsl:with-param name="num" select="orcidUtils:getNumWorks()" />
+        <xsl:with-param name="num" select="orcidUtils:getNumWorks($orcid)" />
       </xsl:call-template>
       <xsl:text>.</xsl:text>
     </a>
