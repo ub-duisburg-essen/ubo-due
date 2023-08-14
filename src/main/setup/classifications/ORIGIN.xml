@@ -55,7 +55,7 @@
 				</category>
 			</category>
 			<category ID="03.02">
-				<label xml:lang="de" text="Germanistik" />
+				<label xml:lang="de" text="Institut für Germanistik" />
 				<category ID="03.02.01">
 					<label xml:lang="de" text="Linguistik und Sprachdidaktik" />
 				</category>
@@ -171,8 +171,8 @@
 					<label xml:lang="en" text="Working Time and Work Organisation (AZAO)"/>
 				</category>
 				<category ID="BEST">
-					<label xml:lang="de" text="Bildung und Erziehung im Strukturwandel (BEST)" />
-					<label xml:lang="en" text="Learning and Education in Structural Change (BEST)"/>
+					<label xml:lang="de" text="Bildung, Entwicklung, Soziale Teilhabe (BEST)" />
+					<label xml:lang="en" text="Education, Development, Social Participation  (BEST)"/>
 				</category>
 				<category ID="FLEX">
 					<label xml:lang="de" text="Flexibilität und Sicherheit (FLEX)" />
@@ -194,11 +194,7 @@
 			</category>
 			<category ID="16.06">
 				<label xml:lang="de" text="CIVES School of Civic Education" />
-			</category>
-			<category ID="16.08">
-				<label xml:lang="de" text="Profilschwerpunkt &quot;Wandel von Gegenwartsgesellschaften&quot;" />
-				<label xml:lang="en" text="Main Research Area Transformation of contemporary societies" />
-			</category>
+			</category>			
 		</category>
 		<category ID="02">
 			<label xml:lang="de" text="Fakultät für Bildungswissenschaften" />
@@ -288,7 +284,7 @@
 					<label xml:lang="en" text="Intercultural Psychology - Migration and Integration" />
 				</category>
 				<category ID="02.02.16">
-					<label xml:lang="de" text="Klinische Psychologie" />
+					<label xml:lang="de" text="Klinische Psychologie und Psychotherapie" />
 				</category>
 				<category ID="02.02.01">
 					<label xml:lang="de" text="Lehr-Lernpsychologie" />
@@ -300,6 +296,9 @@
 				<category ID="02.02.11">
 					<label xml:lang="de" text="Pädagogische Psychologie" />
 					<label xml:lang="en" text="Educational Psychology" />
+				</category>
+				<category ID="02.02.20">
+					<label xml:lang="de" text="Klinisch-Psychologische Intervention" />					
 				</category>
 				<category ID="02.02.12">
 					<label xml:lang="de" text="Psychologische Diagnostik und Methodik" />
@@ -727,6 +726,9 @@
 			<category ID="08.08">
 				<label xml:lang="de" text="Theoretische Chemie" />
 			</category>
+			<category ID="08.10">
+				<label xml:lang="de" text="Environmental Metagenomics" />
+			</category>
 		</category>
 		<category ID="09.01">
 			<label xml:lang="de" text="Fakultät für Biologie" />
@@ -808,6 +810,10 @@
 			<category ID="09.02.28">
 				<label xml:lang="de" text="Phykologie"/>
 			</category>
+			<category ID="09.02.29">
+				<label xml:lang="de" text="Ökologische Modellierung"/>
+				<label xml:lang="en" text="Ecological Modelling"/>
+			</category>
 			<category ID="09.01.11">
 				<label xml:lang="de" text="Strukturelle und Medizinische Biochemie" />
 			</category>
@@ -863,7 +869,7 @@
 						<label xml:lang="de" text="Mobilitäts- und Stadtplanung" />  
 					</category>
 					<category ID="10.50">
-						<label xml:lang="de" text="Statik und Dynamik der Flächentragwerke" />
+						<label xml:lang="de" text="Statik und Dynamik der Tragwerke" />
 						<label xml:lang="en" text="Structural Analysis of Plates and Shells"/>
 					</category>
 					<category ID="10.15">
@@ -1070,11 +1076,15 @@
                   </category>
 				</category>
 				<category ID="18.03.01">
-					<label xml:lang="de" text="Institut für Verbrennung und Gasdynamik" />
-					<label xml:lang="en" text="Institute for Combustion and Gas Dynamics"/>
+					<label xml:lang="de" text=" Institut für Energie- und Material-Prozesse (EMPI)" />
+					<label xml:lang="en" text="Institute for Energy and Materials Processes (EMPI)"/>
 					<category ID="18.03.21">
 						<label xml:lang="de" text="Fluiddynamik" />
 						<label xml:lang="en" text="Fluid Dynamics" />
+		  			</category>
+		  			<category ID="18.03.40">
+						<label xml:lang="de" text="Angewandte Quantenmaterialien" />
+						<label xml:lang="en" text="Applied Quantum Materials" />
 		  			</category>
 		  			<category ID="18.03.22">
 		   			 	<label xml:lang="de" text="Nanopartikel Prozesstechnik"/>
@@ -1158,11 +1168,11 @@
 					<label xml:lang="de" text="Gießerei-Institut" />
 				</category>
 				<category ID="18.03.05">
-					<label xml:lang="de" text="Institut für Institut für Schiffstechnik, Meerestechnik und Transportsysteme (ISMT)" />   
+					<label xml:lang="de" text="Institut für Schiffstechnik, Meerestechnik und Transportsysteme (ISMT)" />   
 					<label xml:lang="en" text="Institute of Ship Technology, Ocean Engineering and Transport Systems "/>
 				</category>
 				<category ID="18.03.10">
-					<label xml:lang="de" text="Institut für Wirtschaftsingenieurswesen" />
+					<label xml:lang="de" text="Institut für Wirtschaftsingenieurwesen" />
 					<category ID="18.03.12">
 					<label xml:lang="de" text="Allgemeine Betriebswirtschaftslehre und Mobilität" />   
 					</category>
@@ -1525,11 +1535,8 @@
 					<label xml:lang="de" text="Zentrum für klinische Studien Essen (ZKSE)" /> 					
 				</category>
 				<category ID="14.05.17">
-				<label xml:lang="de" text="Center for Translational and Behavioral Neuroscience" /> 	
-				<label xml:lang="en" text="Center for Translational and Behavioral Neuroscience" />	
-                </category>				
-				
-				
+				<label xml:lang="de" text="Center for Translational Neuro- and Behavioral Science (C-TNBS)" /> 				
+                </category>						
 				<category ID="14.11">
 					<label xml:lang="de" text="LVR-Klinikum Essen" />
 					<category ID="14.11.01">
@@ -1682,11 +1689,15 @@
 				<label xml:lang="de" text="Käte Hamburger Kolleg / Centre for Global Cooperation Research (KHK/GCR21)" />
 			</category>
 			<category ID="ELH">
-				<label xml:lang="de" text="Erwin L. Hahn Institute for Resonance Imaging" />
+				<label xml:lang="de" text="Erwin L. Hahn Institute for Magnetic  Resonance Imaging (ELH)" />
 			</category>
 			<category ID="IOAW">
 				<label xml:lang="de" text="Institut für Ostasienwissenschaften (IN-EAST)" />
 				<label xml:lang="en" text="Institute of East Asian Studies (IN-EAST)"/>
+			</category>
+			<category ID="PA">
+				<label xml:lang="de" text="Kompetenzzentrum Personal Analytics" />
+				<label xml:lang="en" text="Personal Analytics Centre of Competence"/>
 			</category>
 			<category ID="ZLB">
 				<label xml:lang="de" text="Zentrum für Lehrkräftebildung (ZLB)" />
@@ -1710,6 +1721,30 @@
 			<category ID="06.02">
 				<label xml:lang="de" text="Institut für Experimentelle Mathematik (IEM) Essen" />
 				<label xml:lang="en" text="Institute for Experimental Mathematics (IEM) Essen"/>
+			</category>
+		</category>
+		<category ID="PS">
+			<label xml:lang="de" text="Forschungsprofil &amp; -schwerpunkte" />				
+			<label xml:lang="en" text="Forschungsprofil &amp; -schwerpunkte" />
+	        <category ID="WF">
+			  <label xml:lang="de" text="Wasserforschung" />
+			  <label xml:lang="en" text="Water Research" />
+			</category>
+			<category ID="BM">
+			  <label xml:lang="de" text="Biomedizinische Wissenschaften" />
+			  <label xml:lang="en" text="Biomedical Sciences" />
+			</category>
+			<category ID="NANO">
+			  <label xml:lang="de" text="Nanowissenschaften" />
+			  <label xml:lang="en" text="Nanoscience" />
+			</category>
+			<category ID="NANO">
+			  <label xml:lang="de" text="Urbane Systeme" />
+			  <label xml:lang="en" text="Joint Center Urban Systems" />
+			</category>
+			<category ID="16.08">
+			  <label xml:lang="de" text="Profilschwerpunkt &quot;Wandel von Gegenwartsgesellschaften&quot;" />
+			  <label xml:lang="en" text="Main Research Area Transformation of contemporary societies" />
 			</category>
 		</category>
 		<category ID="EXT">
