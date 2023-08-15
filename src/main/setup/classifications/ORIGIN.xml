@@ -1738,7 +1738,7 @@
 			  <label xml:lang="de" text="Nanowissenschaften" />
 			  <label xml:lang="en" text="Nanoscience" />
 			</category>
-			<category ID="NANO">
+			<category ID="US">
 			  <label xml:lang="de" text="Urbane Systeme" />
 			  <label xml:lang="en" text="Joint Center Urban Systems" />
 			</category>
