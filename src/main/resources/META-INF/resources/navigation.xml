@@ -29,6 +29,9 @@
         <label xml:lang="de">Expertensuche</label>
         <label xml:lang="en">Expert search</label>
       </item>
+      <item id="search.admin" ref="search-admin.xml" role="admin">
+        <label xml:lang="de">Admin-Suche</label>        
+      </item>
       <item id="dozbib.search" />
     </item>
     <item ref="newPublication.xed" id="dozbib.new.publication">

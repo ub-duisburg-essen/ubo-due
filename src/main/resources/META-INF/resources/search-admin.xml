@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<webpage lastModified="$Date: 2009-07-09 12:25:56 +0200 (Do, 09 Jul 2009) $" id="search.admin">
+  <title xml:lang="de">Admin-Suche</title>
+
+  <article class="card">
+    <div class="card-body">
+    <h1>Suchlinks für Admins</h1> 
+	 <h2>Zuletzt eingetragen</h2>
+      <p>
+	    <ul>
+		 <li><a href="servlets/solr/select?q=created%3A%5BNOW%2FDAY+TO+NOW%5D">Heute</a></li>
+		 <li><a href="servlets/solr/select?q=created%3A%5BNOW%2FDAY-1DAY+TO+NOW%5D">Heute oder gestern</a></li>
+		 <li><a href="servlets/solr/select?q=created%3A%5BNOW%2FDAY-6DAY+TO+NOW%5D">In den letzten 7 Tagen</a></li>
+		 <li><a href="servlets/solr/select?q=created%3A%5BNOW%2FDAY-13DAY+TO+NOW%5D">In den letzten 14 Tagen</a></li>
+		</ul>
+	  </p>  
+	  
+	 <h2>Zuletzt geändert</h2>
+	  <p>
+	    <ul>
+		 <li><a href="servlets/solr/select?q=modified%3A%5BNOW%2FDAY+TO+NOW%5D">Heute</a></li>
+		 <li><a href="servlets/solr/select?q=modified%3A%5BNOW%2FDAY-1DAY+TO+NOW%5D">Heute oder gestern</a></li>
+		 <li><a href="servlets/solr/select?q=modified%3A%5BNOW%2FDAY-6DAY+TO+NOW%5D">In den letzten 7 Tagen</a></li>
+		 <li><a href="servlets/solr/select?q=modified%3A%5BNOW%2FDAY-13DAY+TO+NOW%5D">In den letzten 14 Tagen</a></li>
+		</ul>
+	  </p>
+
+     <h2>SOLR-Suche</h2> 
+	  <p><a href="search/search-expert.xed">Link zur SOLR-Suchseite</a></p>
+      
+    </div>
+  </article>
+</webpage>
