@@ -33,9 +33,9 @@
       <label xml:lang="x-display" text="true" />
       <label xml:lang="x-uri" text="https://www.uni-due.de/zim/services/suchdienste/mitarbeiter.php?id=" />
     </category>
-    <category ID="local">
-      <label xml:lang="de" text="Lokale ID" />
-      <label xml:lang="en" text="Local ID" />
+    <category ID="connection">
+      <label xml:lang="de" text="Connection ID" />
+      <label xml:lang="en" text="Connection ID" />
       <label xml:lang="x-display" text="false" />
     </category>
   </categories>
