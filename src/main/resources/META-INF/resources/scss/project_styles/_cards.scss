@@ -126,10 +126,35 @@
       .icon-closed {
         display: inline;
       }
-
     }
   }
 
+  .card {
+    &.publication-stats {
+      margin-bottom: .5rem;
+      h3,
+      h4 {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+      .list-group {
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+      }
+      .mycore-facet-count {
+        width: 130px;
+        margin-right: 5px;
+      }
+      .mycore-facet-value {
+        width: auto;
+      }
+    }
+  }
+
+  // overwrite common global settings
+  .home .card.publication-stats h3 {
+    font-size: 1rem;
+  }
 
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {
