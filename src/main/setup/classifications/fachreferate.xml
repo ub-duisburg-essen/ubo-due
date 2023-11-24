@@ -29,7 +29,7 @@
 		<category ID="bau">
 			<label xml:lang="de" text="Bauwissenschaften" />
 			<label xml:lang="en" text="Civil Engineering" />
-			<label xml:lang="x-e-mail" text="fachreferat-bauwissenschaften@ub.uni-due.de" />
+			<label xml:lang="x-e-mail" text="fachreferat-bauwissenschaften.ub@uni-due.de" />
 		</category>
 		<category ID="bio">
 			<label xml:lang="de" text="Biologie" />
@@ -94,7 +94,7 @@
 		<category ID="math">
 			<label xml:lang="de" text="Mathematik" />
 			<label xml:lang="en" text="Mathematics" />
-			<label xml:lang="x-e-mail" text="fachreferat-mathematik@ub.uni-due.de" />
+			<label xml:lang="x-e-mail" text="fachref-mathe.ub@uni-due.de" />
 		</category>
 		<category ID="med">
 			<label xml:lang="de" text="Medizin" />
@@ -173,7 +173,7 @@
 		<category ID="turk">
 			<label xml:lang="de" text="Turkistik, Türkisch" />
 			<label xml:lang="en" text="Turkish Studies" />
-			<label xml:lang="x-e-mail" text="tuerklit@ub.uni-due.de" />
+			<label xml:lang="x-e-mail" text="tuerklit.ub@uni-due.de " />
 		</category>
 		<category ID="wiwi">
 			<label xml:lang="de" text="Wirtschaftswissenschaften" />
