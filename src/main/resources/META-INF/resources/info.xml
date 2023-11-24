@@ -314,6 +314,98 @@
                   </div>
                 </div>
               </div>
+              
+              <div class="card">
+                <div
+                  class="card-header collapsed pointer"
+                  role="tab"
+                  id="headingFive1"
+                  data-toggle="collapse"
+                  data-parent=".accordion"
+                  href="#collapseFive1"
+                  aria-expanded="false"
+                  aria-controls="collapseFive1">
+                  <h5 class="card-title">
+                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i18n:de>Zugangsrechte (Access Rights)</i18n:de>
+                    <i18n:en>Access Rights</i18n:en>  
+                  </h5>
+                </div>
+                <div id="collapseFive1" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFive1">
+                  <div class="card-body">
+                               
+                     <h5>
+                     <i18n:de>
+                        Was bedeuten die unterschiedlichen Zugangsrechte (Access Rights)?
+                      </i18n:de>
+                      <i18n:en>
+                        What is the difference between different Access Rights options?
+                      </i18n:en>
+                     </h5>
+                     <p>
+                     <ul>
+                      <li>
+                       <i18n:de>
+                        <strong>Open Access</strong> <br/>
+                        Offener Zugang: Eine Ressource ist Open Access wenn sie sofort und 
+                        dauerhaft online und für alle im Web kostenlos und ohne finanzielle 
+                        und technische Hindernisse verfügbar ist.
+                       </i18n:de>
+                       <i18n:en>
+                        <strong>Open Access</strong> <br/>
+                        Open access refers to a resource that is immediately and permanently 
+                        online, and free for all on the Web, without financial and technical 
+                        barriers.
+                       </i18n:en>
+                      </li>
+                      <li>
+                       <i18n:de>
+                        <strong>Embargoed access</strong> <br/>
+                         Zugang unterliegt Embargo: Eine Ressource, die einem Embargo 
+                         unterliegt, wird ab einem bestimmten Datum für den offenen Zugriff 
+                         freigegeben. Bis dahin können nur die Metadaten angezeigt werden. 
+                         Embargos können von Herausgeber- und Geldgeberrichtlinien verlangt 
+                         oder vom Autor festgelegt werden.
+                       </i18n:de>
+                       <i18n:en>
+                        <strong>Embargoed access</strong> <br/>
+                         Embargoed access refers to a resource that is metadata only access 
+                         until released for open access on a certain date. Embargoes can be 
+                         required by publishers and funders policies, or set by the author.
+                       </i18n:en>
+                      </li>
+                      <li>
+                       <i18n:de>
+                        <strong>Restricted access </strong><br/>
+                         Eingeschränkter Zugang: Ressource, die in einem System verfügbar ist, 
+                         jedoch eine gewisse Einschränkung für den vollständigen offenen Zugriff aufweist.                         
+                       </i18n:de>
+                       <i18n:en>
+                        <strong>Restricted access</strong> <br/>
+                         Restricted access refers to a resource that is available in a system 
+                         but with some type of restriction for full open access.
+                       </i18n:en>
+                      </li>
+                      <li>
+                       <i18n:de>
+                        <strong>Metadata only access</strong><br/>
+                         Nur Metadaten: Eine Ressource, bei der der Zugriff nur auf Metadaten 
+                         beschränkt ist. Die Ressource selbst wird durch die Metadaten 
+                         beschrieben, ist jedoch weder direkt über das System noch über die 
+                         Plattform verfügbar.                       
+                       </i18n:de>
+                       <i18n:en>
+                        <strong>Metadata only access</strong> <br/>
+                         Metadata only access refers to a resource in which access is limited 
+                         to metadata only. The resource itself is described by the metadata, 
+                         but neither is directly available through the system or platform.
+                       </i18n:en>
+                      </li>
+                     </ul>
+                     </p>
+                  </div>
+                </div>
+              </div>     
 
             </div>
 
