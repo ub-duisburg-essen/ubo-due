@@ -1,12 +1,5 @@
 package org.mycore.ubo.publication;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
-import java.util.stream.Collectors;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,63 +17,33 @@ import org.mycore.datamodel.common.MCRXMLMetadataManager;
 import org.mycore.datamodel.metadata.MCRObject;
 import org.mycore.ubo.matcher.MCRUserMatcher;
 import org.mycore.ubo.matcher.MCRUserMatcherDTO;
-import org.mycore.ubo.matcher.MCRUserMatcherLocal;
+import org.mycore.ubo.matcher.UDEUserMatcherLocal;
 import org.mycore.ubo.matcher.MCRUserMatcherUtils;
 import org.mycore.user2.MCRRealmFactory;
 import org.mycore.user2.MCRUser;
 import org.mycore.user2.MCRUserAttribute;
 import org.mycore.user2.MCRUserManager;
 
-import static org.mycore.common.MCRConstants.XPATH_FACTORY;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+import java.util.stream.Collectors;
+
+import static org.mycore.common.MCRConstants.*;
 import static org.mycore.ubo.matcher.MCRUserMatcherUtils.MODS_NAMESPACE;
 
 /**
- * EventHandler for new publications in MODS-format.
+ * This class is same as PublicationEventHandler from ubo-common,
+ * except that enrichModsNameElementByLeadID will not be called.
+ * For UDE, that means the LSF ID is not written back to the MODS xml.
  *
- * 1. For all persons that are listed in a given publication, create a new MCRUser.
- *
- * 2. Match all new MCRUsers against the configured chain of implementations of MCRUserMatcher
- *
- * 2.1 When a match is found, the MCRUserMatcher implementations shall enrich the MCRUsers attributes with the matched
- * Users attributes of the target system, it is also the MCRUserMatcher implementations task to set the realm of the
- * created user appropriately
- *
- * 3. At last, match the new MCRUser against the locally persisted MCRUsers. If a match is found, the already persisted
- * MCRUsers attributes are enriched with the new MCRUsers attributes. Otherwise, persist the new MCRUser
- *
- * 4. Persist all new MCRUsers ONLY if they where matched/enriched in 2.1. or in 3.
- *
- * 5. Extend the mods:name -&gt; mods:nameIdentifier element of the publication with the configured "lead-ID" if it is
- * not present but available in the matched MCRUsers attributes.
- *
- * 6. If no MCRUser was created because there was neither Match found nor attributes enriched (2.1. or 3.), check each
- * person in the publication for affiliation. If an affiliation is found, create a new MCRUser in a special realm and
- * persist it.
- *
- * The following properties in the mycore.properties are used:
- *
- * # Default Role that is assigned to newly created users
- * MCR.user2.IdentityManagement.UserCreation.DefaultRole=submitter
- *
- * # Realm of unvalidated MCRUsers
- * MCR.user2.IdentityManagement.UserCreation.Unvalidated.Realm=unvalidated
- *
- * MCR.user2.matching.chain (Multiple implementations separated by ",")
- * Example:
- * MCR.user2.matching.chain=org.mycore.ubo.matcher.MCRUserMatcherLDAP,org.mycore.ubo.matcher.MCRUserMatcherDummy
- *
- * MCR.user2.matching.lead_id TODO: anpassen...
- * Example:
- * MCR.user2.matching.lead_id=id_scopus
- *
- * # currently only "uuid" can be used, leave empty if no explicit connection should be inserted
- * MCR.user2.matching.publication.connection.strategy=uuid
- *
- * @author Pascal Rost
+ * @author Frank L\u00FCtzenkirchen
  */
-public class PublicationEventHandler extends MCREventHandlerBase {
+public class UDEPublicationEventHandler extends MCREventHandlerBase {
 
-    private final static Logger LOGGER = LogManager.getLogger(PublicationEventHandler.class);
+    private final static Logger LOGGER = LogManager.getLogger(UDEPublicationEventHandler.class);
 
     private final static String CONFIG_MATCHERS = "MCR.user2.matching.chain";
     private final static String CONFIG_LEAD_ID = "MCR.user2.matching.lead_id";
@@ -162,7 +125,7 @@ public class PublicationEventHandler extends MCREventHandlerBase {
 
         // for every mods:name element, call our configured Implementation(s) of MCRUserMatcher
         List<MCRUserMatcher> matchers = loadMatcherImplementationChain();
-        MCRUserMatcher localMatcher = new MCRUserMatcherLocal();
+        MCRUserMatcher localMatcher = new UDEUserMatcherLocal();
 
         for(Element modsNameElement : modsNameElements) {
 
@@ -294,7 +257,7 @@ public class PublicationEventHandler extends MCREventHandlerBase {
             Filters.element(), null, MODS_NAMESPACE).evaluateFirst(nameElement);
 
         if((givenName != null) && (familyName != null)) {
-            return givenName.getText() + " " + familyName.getText();
+            return familyName.getText() + ", " + givenName.getText();
         }
 
         return mcrUser.getUserID();
