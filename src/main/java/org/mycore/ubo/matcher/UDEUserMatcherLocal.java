@@ -10,6 +10,12 @@ import java.util.stream.Collectors;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jaxen.JaxenException;
+import org.jdom2.Element;
+import org.mycore.common.MCRException;
+import org.mycore.common.xml.MCRNodeBuilder;
+import org.mycore.mods.merger.MCRMerger;
+import org.mycore.mods.merger.MCRMergerFactory;
 import org.mycore.user2.MCRUser;
 import org.mycore.user2.MCRUserAttribute;
 import org.mycore.user2.MCRUserManager;
@@ -30,6 +36,10 @@ public class UDEUserMatcherLocal implements MCRUserMatcher {
 
         MCRUser mcrUser = matcherDTO.getMCRUser();
         List<MCRUser> matchingUsers = new ArrayList<>(getUsersForGivenAttributes(mcrUser.getAttributes()));
+        
+        MCRMerger nameThatShouldMatch = buildNameMergerFrom(mcrUser);
+        matchingUsers.removeIf( userToTest -> ! buildNameMergerFrom(userToTest).isProbablySameAs(nameThatShouldMatch) );
+        
         if(matchingUsers.size() >= 1) {
             MCRUser matchingUser = matchingUsers.get(0);
 
@@ -50,6 +60,18 @@ public class UDEUserMatcherLocal implements MCRUserMatcher {
             matcherDTO.setMatchedOrEnriched(true);
         }
         return matcherDTO;
+    }
+
+    private static final String XPATH_TO_BUILD_MODSNAME = "mods:name[@type='personal']/mods:namePart";
+    
+    private MCRMerger buildNameMergerFrom(MCRUser user) {
+        Element nameElement = null;
+        try {
+            nameElement = new MCRNodeBuilder().buildElement(XPATH_TO_BUILD_MODSNAME, user.getRealName(), null);
+        } catch (JaxenException shouldNeverOccur) {
+            throw new MCRException(shouldNeverOccur);
+        }
+        return MCRMergerFactory.buildFrom(nameElement);
     }
 
     private Set<MCRUser> getUsersForGivenAttributes(SortedSet<MCRUserAttribute> mcrAttributes) {
