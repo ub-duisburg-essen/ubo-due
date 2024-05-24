@@ -1,15 +1,24 @@
 [
-	{
-		"add-copy-field": {
-			"source": "name_id_lsf",
-			"dest": "name_id_connection"
-		}
-	},
-	{
-		"add-copy-field": {
-			"source": "nid_lsf",
-			"dest": "nid_connection"
-		}
-	}
+  {
+    "add-copy-field": {
+      "source": "name_id_lsf",
+      "dest": "name_id_connection"
+    }
+  },
+  {
+    "add-copy-field": {
+      "source": "nid_lsf",
+      "dest": "nid_connection"
+    }
+  },
+  {
+    "replace-field": {
+      "name": "conference",
+      "type": "ubo_text",
+      "multiValued": true,
+      "indexed": true,
+      "stored": true
+    }
+  },
 ]
 
