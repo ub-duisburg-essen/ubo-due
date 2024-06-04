@@ -10,15 +10,6 @@
       "source": "nid_lsf",
       "dest": "nid_connection"
     }
-  },
-  {
-    "replace-field": {
-      "name": "conference",
-      "type": "ubo_text",
-      "multiValued": true,
-      "indexed": true,
-      "stored": true
-    }
-  },
+  }
 ]
 
