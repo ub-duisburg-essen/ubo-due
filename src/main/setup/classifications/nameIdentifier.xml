@@ -6,7 +6,7 @@
     <category ID="scopus">
       <label xml:lang="de" text="SCOPUS" />
       <label xml:lang="en" text="SCOPUS" />
-      <label xml:lang="x-display" text="true" />
+      <label xml:lang="x-display" text="false" />
       <label xml:lang="x-uri" text="https://www.scopus.com/authid/detail.url?partnerID=HzOxMe3b&amp;origin=inward&amp;authorId=" />
     </category>
     <category ID="gnd">
@@ -18,7 +18,7 @@
     <category ID="researcherid">
       <label xml:lang="de" text="ResearcherID" />
       <label xml:lang="en" text="ResearcherID" />
-      <label xml:lang="x-display" text="true" />
+      <label xml:lang="x-display" text="false" />
       <label xml:lang="x-uri" text="http://www.researcherid.com/rid/" />
     </category>
     <category ID="orcid">
