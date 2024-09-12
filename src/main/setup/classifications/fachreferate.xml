@@ -19,7 +19,7 @@
 		<category ID="anko">
 			<label xml:lang="de" text="Angewandte Kognitionswissenschaft" />
 			<label xml:lang="en" text="Applied Cognitive Science" />
-			<label xml:lang="x-e-mail" text="simona.koch@uni-due.de" />
+			<label xml:lang="x-e-mail" text="simona.koch@uni-due.de sarah.kritzler@uni-due.de" />
 		</category>		
 		<category ID="ang">
 			<label xml:lang="de" text="Anglistik" />
@@ -44,7 +44,7 @@
 		<category ID="ele">
 			<label xml:lang="de" text="Elektrotechnik" />
 			<label xml:lang="en" text="Electrical Engineering and Information Technology" />
-			<label xml:lang="x-e-mail" text="felix.schmidt@uni-due.de eike.spielberg@uni-due.de" />
+			<label xml:lang="x-e-mail" text="fachreferat-elektrotechnik.ub@uni-due.de" />
 		</category>
 		<category ID="erz">
 			<label xml:lang="de" text="Erziehungswissenschaften" />
@@ -69,7 +69,7 @@
 		<category ID="inf">
 			<label xml:lang="de" text="Informatik" />
 			<label xml:lang="en" text="Computer Science" />
-			<label xml:lang="x-e-mail" text="frank.luetzenkirchen@uni-due.de" />
+			<label xml:lang="x-e-mail" text="leana.neuber@uni-due.de" />
 		</category>
 		<category ID="kowi">
 			<label xml:lang="de" text="Kommunikationswissenschaft" />
@@ -84,17 +84,17 @@
 		<category ID="masch">
 			<label xml:lang="de" text="Maschinenbau" />
 			<label xml:lang="en" text="Mechanical Engineering" />
-			<label xml:lang="x-e-mail" text="felix.schmidt@uni-due.de eike.spielberg@uni-due.de" />
+			<label xml:lang="x-e-mail" text="fachreferat-maschinenbau.ub@uni-due.de" />
 		</category>
 		<category ID="mater">
 			<label xml:lang="de" text="Materialtechnik" />
 			<label xml:lang="en" text="Materials Engineering" />
-			<label xml:lang="x-e-mail" text="felix.schmidt@uni-due.de eike.spielberg@uni-due.de" />
+			<label xml:lang="x-e-mail" text="fachreferat-maschinenbau.ub@uni-due.de" />
 		</category>
 		<category ID="math">
 			<label xml:lang="de" text="Mathematik" />
 			<label xml:lang="en" text="Mathematics" />
-			<label xml:lang="x-e-mail" text="fachref-mathe.ub@uni-due.de" />
+			<label xml:lang="x-e-mail" text="felix.schmidt@uni-due.de" />
 		</category>
 		<category ID="med">
 			<label xml:lang="de" text="Medizin" />
@@ -113,7 +113,7 @@
 		<category ID="oawi">
 			<label xml:lang="de" text="Ostasienwissenschaften" />
 			<label xml:lang="en" text="East Asian Studies" />
-			<label xml:lang="x-e-mail" text="rita.nemeth@uni-due.de christina.klaere@uni-due.de delia.bauer-krupp@uni-due.de" />
+			<label xml:lang="x-e-mail" text="christina.klaere@uni-due.de delia.bauer-krupp@uni-due.de" />
 		</category>
 		<category ID="philo">
 			<label xml:lang="de" text="Philosophie" />
@@ -163,7 +163,7 @@
 		<category ID="tech">
 			<label xml:lang="de" text="Technik" />
 			<label xml:lang="en" text="Technology" />
-			<label xml:lang="x-e-mail" text="felix.schmidt@uni-due.de" />
+			<label xml:lang="x-e-mail" text="fachreferat-maschinenbau.ub@uni-due.de" />
 		</category>
 		<category ID="theo">
 			<label xml:lang="de" text="Theologie" />
@@ -178,7 +178,7 @@
 		<category ID="wiwi">
 			<label xml:lang="de" text="Wirtschaftswissenschaften" />
 			<label xml:lang="en" text="Economics" />
-			<label xml:lang="x-e-mail" text="christina.klaere@uni-due.de simona.koch@uni-due.de" />
+			<label xml:lang="x-e-mail" text="fachreferat-wiwi.ub@uni-due.de" />
 		</category>
 	</categories>
 </mycoreclass>
