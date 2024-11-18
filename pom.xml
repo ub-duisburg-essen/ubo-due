@@ -8,7 +8,7 @@
   <parent>
     <groupId>org.mycore</groupId>
     <artifactId>mycore-parent</artifactId>
-    <version>51</version>
+    <version>53</version>
     <relativePath />
   </parent>
 
@@ -21,7 +21,7 @@
   <description>Universitätsbibliographie der Universität Duisburg-Essen</description>
 
   <properties>
-    <mycore.version>2022.06.3-SNAPSHOT</mycore.version>
+    <mycore.version>2023.06.3-SNAPSHOT</mycore.version>
   </properties>
 
   <build>
