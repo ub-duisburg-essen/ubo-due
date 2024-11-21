@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<webpage id="origin-test">
+  <title xml:lang="de">Test der Versionierung der Origin-Klassifikation</title>
+
+  <article class="card">
+    <div class="card-body">
+      <xed:form xmlns:xed="http://www.mycore.de/xeditor" method="post" role="form" style="z-index: 99">
+        <xed:bind xpath="/test">
+
+          <xed:bind xpath="origin">
+            <div class="form-group form-inline">
+              <label class="mycore-form-label">
+                <a href="api/v1/classifications/ORIGIN">Aktuelle ORIGIN-Klassifikation:</a>
+              </label>
+              <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
+                <option value="">
+                  <xed:output i18n="search.select" />
+                </option>
+                <xed:include uri="xslStyle:items2options:classification:editor:-1:children:ORIGIN" />
+              </select>
+            </div>
+          </xed:bind>
+          
+          <div class="form-group form-inline">
+            <label class="mycore-form-label">
+              <a href="ORIGIN-Complete.xml">ORIGIN-Complete</a>
+              <span>&#160;/&#160;</span> 
+              <a href="ORIGIN-Complete.xml?XSL.Style=complete">mit Gültigkeitsinfos</a>
+            </label>
+            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
+              <option value="">
+                <xed:output i18n="search.select" />
+              </option>
+              <xed:include uri="xslStyle:mycoreclass-complete,mycoreclass-options?indentStyle=ancestors:resource:META-INF/resources/ORIGIN-Complete.xml" />
+            </select>
+          </div>
+
+          <div class="form-group form-inline">
+            <label class="mycore-form-label">
+              <a href="ORIGIN-Complete.xml?XSL.Style=filterForDate">Stand nur des aktuellen Tages:</a>
+            </label>
+            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
+              <option value="">
+                <xed:output i18n="search.select" />
+              </option>
+              <xed:include uri="xslStyle:mycoreclass-filterForDate,mycoreclass-options:resource:META-INF/resources/ORIGIN-Complete.xml" />
+            </select>
+          </div>
+
+          <div class="form-group form-inline">
+            <label class="mycore-form-label">
+              <a href="ORIGIN-Complete.xml?XSL.Style=filterForDate&amp;XSL.date=2023-083">Stand 2023-07:</a>
+            </label>
+            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
+              <option value="">
+                <xed:output i18n="search.select" />
+              </option>
+              <xed:include uri="xslStyle:mycoreclass-filterForDate,mycoreclass-options?date=2023-07:resource:META-INF/resources/ORIGIN-Complete.xml" />
+            </select>
+          </div>
+            
+          <div class="form-group form-inline">
+            <label class="mycore-form-label">Label Variante "parent"</label>
+            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
+              <option value="">
+                <xed:output i18n="search.select" />
+              </option>
+              <xed:include uri="xslStyle:mycoreclass-options?indentStyle=parent:resource:META-INF/resources/ORIGIN-Complete.xml" />
+            </select>
+          </div>
+            
+          <div class="form-group form-inline">
+            <label class="mycore-form-label">Label Variante "ancestors"</label>
+            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
+              <option value="">
+                <xed:output i18n="search.select" />
+              </option>
+              <xed:include uri="xslStyle:mycoreclass-options?indentStyle=ancestors:resource:META-INF/resources/ORIGIN-Complete.xml" />
+            </select>
+          </div>
+
+        </xed:bind>
+      </xed:form>
+
+      <script type="text/javascript">
+        $(document).ready(function() { 
+          $('select[class*="autocomplete"]').chosen({search_contains: true});
+          $(".chosen-results li").css("width","180%"); 
+        } );
+      </script>
+
+    </div>
+  </article>
+
+</webpage>
