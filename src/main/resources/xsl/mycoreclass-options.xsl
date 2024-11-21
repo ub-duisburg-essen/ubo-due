@@ -108,6 +108,10 @@
         <xsl:when test="(string-length($maxLength) &gt; 0) and (. = 'und')">&amp;</xsl:when>
         <xsl:when test="(string-length($maxLength) &gt; 0) and (. = 'and')">&amp;</xsl:when>
         
+        <xsl:when test="position() &lt; $maxWords">
+          <xsl:value-of select="." />
+        </xsl:when>
+
         <xsl:when test="(string-length($maxLength) &gt; 0) and (string-length(.) &gt; $maxLength)">
           <xsl:value-of select="substring(.,0,$maxLength)" />
           <xsl:value-of select="$dot" />
