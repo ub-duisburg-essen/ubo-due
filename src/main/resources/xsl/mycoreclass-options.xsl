@@ -7,7 +7,7 @@
   <xsl:param name="CurrentLang" />
   <xsl:param name="DefaultLang" />
   <xsl:param name="indentStyle" select="'spaces'" />
-
+  
   <xsl:variable name="dot" select="'.'" />
   <xsl:variable name="dots" select="'&#8230;'" />
   <xsl:variable name="nbsp" select="'&#160;'" />
@@ -82,37 +82,38 @@
     </xsl:variable>
     
     <xsl:for-each select="str:tokenize($label,' ')">
+      <xsl:variable name="maxLengthGiven" select="string-length($maxLength) &gt; 0" />
       <xsl:choose>
       
         <xsl:when test="starts-with(.,'(') or contains(.,')')">
           <xsl:value-of select="." />
         </xsl:when>
         
-        <xsl:when test="(string-length($maxLength) &gt; 0) and (position() = ($maxWords + 1)) and (position() != last())">
+        <xsl:when test="$maxLengthGiven and (position() = ($maxWords + 1)) and (position() != last())">
           <xsl:value-of select="$dots" />
         </xsl:when>
 
-        <xsl:when test="(string-length($maxLength) &gt; 0) and (position() &gt; $maxWords) and (position() != last())" />
+        <xsl:when test="$maxLengthGiven and (position() &gt; $maxWords) and (position() != last())" />
         
-        <xsl:when test="(string-length($maxLength) &gt; 0) and (. = 'Fakultät')"><b>Fak.</b></xsl:when>
-        <xsl:when test="(string-length($maxLength) &gt; 0) and (. = 'Faculty')">Fac.</xsl:when>
-        <xsl:when test="(string-length($maxLength) &gt; 0) and (. = 'Institut')">Inst.</xsl:when>
-        <xsl:when test="(string-length($maxLength) &gt; 0) and (. = 'Institute')">Inst.</xsl:when>
-        <xsl:when test="(string-length($maxLength) &gt; 0) and (. = 'Fachgebiet')">FG</xsl:when>
-        <xsl:when test="(string-length($maxLength) &gt; 0) and (. = 'Klinik')">Kl.</xsl:when>
-        <xsl:when test="(string-length($maxLength) &gt; 0) and (. = 'Clinic')">Cl.</xsl:when>
-        <xsl:when test="(string-length($maxLength) &gt; 0) and (. = 'Zentrum')">Z.</xsl:when>
-        <xsl:when test="(string-length($maxLength) &gt; 0) and (. = 'Center')">C.</xsl:when>
-        <xsl:when test="(string-length($maxLength) &gt; 0) and (. = 'für')">f.</xsl:when>
-        <xsl:when test="(string-length($maxLength) &gt; 0) and (. = 'for')">f.</xsl:when>
-        <xsl:when test="(string-length($maxLength) &gt; 0) and (. = 'und')">&amp;</xsl:when>
-        <xsl:when test="(string-length($maxLength) &gt; 0) and (. = 'and')">&amp;</xsl:when>
+        <xsl:when test="$maxLengthGiven and (. = 'Fakultät')"><b>Fak.</b></xsl:when>
+        <xsl:when test="$maxLengthGiven and (. = 'Faculty')">Fac.</xsl:when>
+        <xsl:when test="$maxLengthGiven and (. = 'Institut')">Inst.</xsl:when>
+        <xsl:when test="$maxLengthGiven and (. = 'Institute')">Inst.</xsl:when>
+        <xsl:when test="$maxLengthGiven and (. = 'Fachgebiet')">FG</xsl:when>
+        <xsl:when test="$maxLengthGiven and (. = 'Klinik')">Kl.</xsl:when>
+        <xsl:when test="$maxLengthGiven and (. = 'Clinic')">Cl.</xsl:when>
+        <xsl:when test="$maxLengthGiven and (. = 'Zentrum')">Z.</xsl:when>
+        <xsl:when test="$maxLengthGiven and (. = 'Center')">C.</xsl:when>
+        <xsl:when test="$maxLengthGiven and (. = 'für')">f.</xsl:when>
+        <xsl:when test="$maxLengthGiven and (. = 'for')">f.</xsl:when>
+        <xsl:when test="$maxLengthGiven and (. = 'und')">&amp;</xsl:when>
+        <xsl:when test="$maxLengthGiven and (. = 'and')">&amp;</xsl:when>
         
         <xsl:when test="position() &lt; $maxWords">
           <xsl:value-of select="." />
         </xsl:when>
 
-        <xsl:when test="(string-length($maxLength) &gt; 0) and (string-length(.) &gt; $maxLength)">
+        <xsl:when test="$maxLengthGiven and (string-length(.) &gt; $maxLength)">
           <xsl:value-of select="substring(.,0,$maxLength)" />
           <xsl:value-of select="$dot" />
         </xsl:when>
