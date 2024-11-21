@@ -1,11 +1,24 @@
-<xsl:stylesheet version="1.0" 
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:math="http://exslt.org/math">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:include href="copynodes.xsl" />
 
   <xsl:template match="valid">
     <xsl:apply-templates select="*" />
+  </xsl:template>
+
+  <!-- In case of versioned labels, build new category for each version -->
+  <xsl:template match="category[valid/label]">
+    <xsl:variable name="category" select="." />
+    
+    <xsl:for-each select="valid[label]">
+      <category>
+        <xsl:apply-templates select="$category/@*" />
+        <xsl:apply-templates select="label" />
+        <xsl:apply-templates select="../label" />
+        <xsl:apply-templates select="$category/category|$category/valid[not(label)]" />
+      </category>
+    </xsl:for-each>
+    
   </xsl:template>
 
   <xsl:template match="label[not(starts-with(@text,'x-'))]">
@@ -17,7 +30,6 @@
     <xsl:attribute name="text">
     
       <xsl:value-of select="@text" />
-      <xsl:text> </xsl:text>
       
       <xsl:if test="count($valids) &gt; 0">
         <xsl:text> (</xsl:text>
