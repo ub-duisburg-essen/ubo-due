@@ -78,13 +78,23 @@
           <xsl:value-of select="." />
         </xsl:when>
         
+        <xsl:when test="($maxLength &lt; $defaultMaxLength) and (position() = 4) and (position() != last())">
+          <xsl:text>&#8230;</xsl:text>
+        </xsl:when>
+
         <xsl:when test="($maxLength &lt; $defaultMaxLength) and (position() &gt; 3) and (position() != last())" />
         
         <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'Fakultät')">Fak.</xsl:when>
+        <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'Faculty')">Fac.</xsl:when>
         <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'Institut')">Inst.</xsl:when>
+        <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'Institute')">Inst.</xsl:when>
         <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'Klinik')">Kl.</xsl:when>
+        <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'Zentrum')">Z.</xsl:when>
+        <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'Center')">C.</xsl:when>
         <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'für')">f.</xsl:when>
+        <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'for')">f.</xsl:when>
         <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'und')">u.</xsl:when>
+        <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'and')">u.</xsl:when>
         
         <xsl:when test="string-length(.) &gt; ($maxLength + 2)">
           <xsl:value-of select="substring(.,0,$maxLength)" />
