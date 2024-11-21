@@ -74,7 +74,7 @@
     <xsl:for-each select="str:tokenize($label,' ')">
       <xsl:choose>
       
-        <xsl:when test="contains(.,'(')">
+        <xsl:when test="starts-with(.,'(') or contains(.,')')">
           <xsl:value-of select="." />
         </xsl:when>
         
@@ -88,6 +88,7 @@
         <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'Faculty')">Fac.</xsl:when>
         <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'Institut')">Inst.</xsl:when>
         <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'Institute')">Inst.</xsl:when>
+        <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'Fachgebiet')">FG</xsl:when>
         <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'Klinik')">Kl.</xsl:when>
         <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'Zentrum')">Z.</xsl:when>
         <xsl:when test="($maxLength &lt; $defaultMaxLength) and (. = 'Center')">C.</xsl:when>
