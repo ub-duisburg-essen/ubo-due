@@ -2,7 +2,7 @@
 
 <webpage id="origin-test">
   <title xml:lang="de">Test der Versionierung der Origin-Klassifikation</title>
-  <!-- .chosen-drop { width:900px !important; } -->
+
   <head>
     <style>
       .chosen-drop { 
