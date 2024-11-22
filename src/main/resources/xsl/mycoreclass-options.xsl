@@ -24,17 +24,19 @@
   </xsl:template>
   
   <xsl:template match="category">
+    <xsl:param name="parentTitle" />
     <xsl:param name="indent" />
     <xsl:param name="level" select="1" />
     
-    <option value="{@ID}">
-      <xsl:attribute name="title">
-        <xsl:for-each select="ancestor::category">
-          <xsl:apply-templates select="." mode="label" />
-          <xsl:value-of select="$parentChildDelimiter" />
-        </xsl:for-each>
-        <xsl:apply-templates select="." mode="label" />
-      </xsl:attribute>
+    <xsl:variable name="label">
+      <xsl:apply-templates select="." mode="label" />
+    </xsl:variable>
+    
+    <xsl:variable name="title">
+      <xsl:value-of select="concat($parentTitle,$label)" />
+    </xsl:variable>
+    
+    <option value="{@ID}" title="{$title}">
     
       <xsl:choose>
         <xsl:when test="($numParentLabels &gt; 0) and (($level - $numParentLabels) &gt; 1)">
@@ -52,11 +54,14 @@
         </xsl:otherwise>
       </xsl:choose>
       
-      <xsl:apply-templates select="." mode="label-abbreviated" />
+      <xsl:call-template name="abbreviate">
+        <xsl:with-param name="label" select="$label" />
+      </xsl:call-template>
     </option>
     
     <xsl:apply-templates select="category">
       <xsl:with-param name="level" select="$level + 1" />
+      <xsl:with-param name="parentTitle" select="concat($title,$parentChildDelimiter)" />
       <xsl:with-param name="indent">
         <xsl:choose>
         
@@ -69,8 +74,7 @@
           </xsl:when>
 
           <xsl:otherwise> <!-- default: spaces -->
-            <xsl:value-of select="$indent" />
-            <xsl:value-of select="concat($nbsp,$nbsp)" />
+            <xsl:value-of select="concat($indent,$nbsp,$nbsp)" />
           </xsl:otherwise>
           
         </xsl:choose>
@@ -93,16 +97,28 @@
     </xsl:choose>
   </xsl:template>
 
-  <xsl:variable name="abbreviationsPropertiesPrefix">UBO.ClassificationOutput.Abbreviation.</xsl:variable>
-  <xsl:variable name="abbreviations" select="document(concat('property:',$abbreviationsPropertiesPrefix,'*'))/properties" />
-  
   <xsl:template match="category" mode="label-abbreviated">
     <xsl:param name="maxLength" />
   
     <xsl:variable name="label">
       <xsl:apply-templates select="." mode="label" />
     </xsl:variable>
-    
+ 
+    <xsl:call-template name="abbreviate">
+      <xsl:with-param name="label">
+        <xsl:apply-templates select="." mode="label" />
+      </xsl:with-param>
+      <xsl:with-param name="maxLength" select="$maxLength" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <xsl:variable name="abbreviationsPropertiesPrefix">UBO.ClassificationOutput.Abbreviation.</xsl:variable>
+  <xsl:variable name="abbreviations" select="document(concat('property:',$abbreviationsPropertiesPrefix,'*'))/properties" />
+  
+  <xsl:template name="abbreviate">
+    <xsl:param name="label" />
+    <xsl:param name="maxLength" />
+
     <xsl:for-each select="str:tokenize($label,' ')">
       <xsl:variable name="maxLengthGiven" select="string-length($maxLength) &gt; 0" />
       
@@ -143,9 +159,8 @@
       <xsl:if test="position() != last()">
         <xsl:text> </xsl:text>
       </xsl:if>
-      
+
     </xsl:for-each>
-    
   </xsl:template>
   
 </xsl:stylesheet>
