@@ -6,7 +6,7 @@
 
   <xsl:param name="CurrentLang" />
   <xsl:param name="DefaultLang" />
-  <xsl:param name="indentStyle" select="'spaces'" />
+  <xsl:param name="numParentLabels" select="0" />
 
   <xsl:param name="UBO.ClassificationOutput.MaxWords" select="4" />
   <xsl:param name="UBO.ClassificationOutput.MaxWordLength" select="10" />
@@ -14,7 +14,8 @@
   <xsl:variable name="dot" select="'.'" />
   <xsl:variable name="dots" select="'&#8230;'" />
   <xsl:variable name="nbsp" select="'&#160;'" />
-  <xsl:variable name="parentChildDelimiter" select="concat($nbsp,'&#187;',$nbsp)" />
+  <xsl:variable name="arrow" select="'&#187;'" />
+  <xsl:variable name="parentChildDelimiter" select="concat($nbsp,$arrow,' ')" />
 
   <xsl:template match="/mycoreclass">
     <includes>
@@ -24,31 +25,41 @@
   
   <xsl:template match="category">
     <xsl:param name="indent" />
+    <xsl:param name="level" select="1" />
     
     <option value="{@ID}">
-      <xsl:value-of select="$indent" />
+      <xsl:choose>
+        <xsl:when test="($numParentLabels &gt; 0) and (($level - $numParentLabels) &gt; 1)">
+          <xsl:for-each select="str:tokenize($indent,$arrow)">
+            <xsl:if test="position() &gt;= ($level - $numParentLabels)">
+              <xsl:value-of select="." />
+              <xsl:if test="position() != last()">
+                <xsl:value-of select="$arrow" />
+              </xsl:if>
+            </xsl:if>
+          </xsl:for-each>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$indent" />
+        </xsl:otherwise>
+      </xsl:choose>
+      
       <xsl:apply-templates select="." mode="label" />
     </option>
     
     <xsl:apply-templates select="category">
+      <xsl:with-param name="level" select="$level + 1" />
       <xsl:with-param name="indent">
         <xsl:choose>
         
-          <xsl:when test="$indentStyle='parent'">
+          <xsl:when test="$numParentLabels &gt; 0">
+            <xsl:value-of select="$indent" />
             <xsl:apply-templates select="." mode="label">
               <xsl:with-param name="maxLength" select="$UBO.ClassificationOutput.MaxWordLength" />
             </xsl:apply-templates>
             <xsl:value-of select="$parentChildDelimiter" />
           </xsl:when>
-          
-          <xsl:when test="$indentStyle='ancestors'">
-            <xsl:value-of select="$indent" /><br/>
-            <xsl:apply-templates select="." mode="label">
-              <xsl:with-param name="maxLength" select="$UBO.ClassificationOutput.MaxWordLength" />
-            </xsl:apply-templates>
-            <xsl:value-of select="$parentChildDelimiter" />
-          </xsl:when>
-          
+
           <xsl:otherwise> <!-- default: spaces -->
             <xsl:value-of select="$indent" />
             <xsl:value-of select="concat($nbsp,$nbsp)" />
