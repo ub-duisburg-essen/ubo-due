@@ -60,6 +60,9 @@
     
   </xsl:template>
   
+  <xsl:variable name="abbreviationsPropertiesPrefix">UBO.ClassificationOutput.Abbreviation.</xsl:variable>
+  <xsl:variable name="abbreviations" select="document(concat('property:',$abbreviationsPropertiesPrefix,'*'))/properties" />
+  
   <xsl:template match="category" mode="label">
     <xsl:param name="maxLength" />
   
@@ -83,6 +86,10 @@
     
     <xsl:for-each select="str:tokenize($label,' ')">
       <xsl:variable name="maxLengthGiven" select="string-length($maxLength) &gt; 0" />
+      
+      <xsl:variable name="abbreviationKeyName" select="concat($abbreviationsPropertiesPrefix,.)" />
+      <xsl:variable name="abbreviation" select="$abbreviations/entry[@key=$abbreviationKeyName]" />
+      
       <xsl:choose>
       
         <xsl:when test="starts-with(.,'(') or contains(.,')')">
@@ -94,20 +101,10 @@
         </xsl:when>
 
         <xsl:when test="$maxLengthGiven and (position() &gt; $maxWords) and (position() != last())" />
-        
-        <xsl:when test="$maxLengthGiven and (. = 'Fakultät')"><b>Fak.</b></xsl:when>
-        <xsl:when test="$maxLengthGiven and (. = 'Faculty')">Fac.</xsl:when>
-        <xsl:when test="$maxLengthGiven and (. = 'Institut')">Inst.</xsl:when>
-        <xsl:when test="$maxLengthGiven and (. = 'Institute')">Inst.</xsl:when>
-        <xsl:when test="$maxLengthGiven and (. = 'Fachgebiet')">FG</xsl:when>
-        <xsl:when test="$maxLengthGiven and (. = 'Klinik')">Kl.</xsl:when>
-        <xsl:when test="$maxLengthGiven and (. = 'Clinic')">Cl.</xsl:when>
-        <xsl:when test="$maxLengthGiven and (. = 'Zentrum')">Z.</xsl:when>
-        <xsl:when test="$maxLengthGiven and (. = 'Center')">C.</xsl:when>
-        <xsl:when test="$maxLengthGiven and (. = 'für')">f.</xsl:when>
-        <xsl:when test="$maxLengthGiven and (. = 'for')">f.</xsl:when>
-        <xsl:when test="$maxLengthGiven and (. = 'und')">&amp;</xsl:when>
-        <xsl:when test="$maxLengthGiven and (. = 'and')">&amp;</xsl:when>
+
+        <xsl:when test="$maxLengthGiven and (string-length($abbreviation) &gt; 0)">
+          <xsl:value-of select="$abbreviation" />
+        </xsl:when>
         
         <xsl:when test="position() &lt; $maxWords">
           <xsl:value-of select="." />
