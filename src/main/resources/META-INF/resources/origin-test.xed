@@ -4,6 +4,9 @@
   <title xml:lang="de">Test der Versionierung der Origin-Klassifikation</title>
 
   <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js" />
+    
     <style>
       .chosen-drop { 
         position: absolute;
@@ -29,7 +32,7 @@
                 <option value="">
                   <xed:output i18n="search.select" />
                 </option>
-                <xed:include uri="xslStyle:items2options:classification:editor:-1:children:ORIGIN" />
+                <xed:include uri="cache:xslStyle:mycoreclass-options:classification:metadata:-1:children:ORIGIN" />
               </select>
             </div>
           </xed:bind>
@@ -73,17 +76,7 @@
           </div>
             
           <div class="form-group form-inline">
-            <label class="mycore-form-label">Label Variante "numParentLabels=1"</label>
-            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
-              <option value="">
-                <xed:output i18n="search.select" />
-              </option>
-              <xed:include uri="xslStyle:mycoreclass-filterForDate,mycoreclass-options?numParentLabels=1:resource:META-INF/resources/ORIGIN-Complete.xml" />
-            </select>
-          </div>
-            
-          <div class="form-group form-inline">
-            <label class="mycore-form-label">Label Variante "numParentLabels=2"</label>
+            <label class="mycore-form-label">numParentLabels=2</label>
             <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
               <option value="">
                 <xed:output i18n="search.select" />
@@ -93,7 +86,7 @@
           </div>
 
           <div class="form-group form-inline">
-            <label class="mycore-form-label">Label Variante "numParentLabels=3"</label>
+            <label class="mycore-form-label">numParentLabels=3</label>
             <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
               <option value="">
                 <xed:output i18n="search.select" />
@@ -103,8 +96,8 @@
           </div>
 
           <div class="form-group form-inline">
-            <label class="mycore-form-label">Label Variante "numParentLabels=99"</label>
-            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
+            <label class="mycore-form-label">bootstrap-select numParentLabels=99</label>
+            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-dropup-auto="false" data-width="600px">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
