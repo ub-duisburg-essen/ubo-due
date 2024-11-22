@@ -97,11 +97,11 @@
 
           <div class="form-group form-inline">
             <label class="mycore-form-label">bootstrap-select numParentLabels=99</label>
-            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-dropup-auto="false" data-width="600px">
+            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-show-subtext="true" data-size="10">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
-              <xed:include uri="xslStyle:mycoreclass-filterForDate,mycoreclass-options?numParentLabels=99:resource:META-INF/resources/ORIGIN-Complete.xml" />
+              <xed:include uri="xslStyle:mycoreclass-filterForDate,mycoreclass-options?subtext=true:resource:META-INF/resources/ORIGIN-Complete.xml" />
             </select>
           </div>
 
