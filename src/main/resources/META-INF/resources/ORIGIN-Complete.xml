@@ -441,61 +441,63 @@
           <label xml:lang="en" text="Environmental Economics, esp. Economics of Renewable Energy" />
         </category>
       </category>
-      <category ID="05.05">
-        <label xml:lang="de" text="Fachgebiet Informatik" />
-        <label xml:lang="en" text="Computer Science" />
-        <category ID="05.05.04">
-          <label xml:lang="de" text="Modellierung adaptiver Systeme" />
-          <label xml:lang="en" text="Modelling of adaptive systems" />
+      <valid until="2023-12">
+        <category ID="05.05">
+          <label xml:lang="de" text="Fachgebiet Informatik" />
+          <label xml:lang="en" text="Computer Science" />
+          <category ID="05.05.04">
+            <label xml:lang="de" text="Modellierung adaptiver Systeme" />
+            <label xml:lang="en" text="Modelling of adaptive systems" />
+          </category>
+          <category ID="05.04.13">
+            <label xml:lang="de" text="Datenverwaltungssysteme und Wissensrepräsentation" />
+            <label xml:lang="en" text="Data Management Systems and Knowledge Representation" />
+          </category>
+          <category ID="05.05.01">
+            <label xml:lang="de" text="Pervasive Computing" />
+          </category>
+          <category ID="05.05.03">
+            <label xml:lang="de" text="Software Engineering" />
+          </category>
+          <category ID="05.04.10">
+            <label xml:lang="de" text="Software Systems Engineering" />
+          </category>
+          <category ID="05.04.11">
+            <label xml:lang="de" text="Spezifikation von Softwaresystemen" />
+            <label xml:lang="en" text="Specification of Software Systems" />
+          </category>
+          <category ID="05.04.12">
+            <label xml:lang="de" text="Systemmodellierung" />
+          </category>
+          <category ID="05.04.08">
+            <label xml:lang="de" text="Technik der Rechnernetze" />
+            <label xml:lang="en" text="Computer Networking Technology" />
+          </category>
+          <category ID="05.04.09">
+            <label xml:lang="de" text="Verlässlichkeit von Rechensystemen" />
+            <label xml:lang="en" text="Reliability of Computer Systems" />
+          </category>
+          <category ID="05.05.02">
+            <label xml:lang="de" text="Didaktik der Informatik" />
+            <label xml:lang="en" text="Didactics of Informatics" />
+          </category>
+          <category ID="05.05.06">
+            <label xml:lang="de" text="Fachgebiet Kommunikationsnetze und -systeme" />
+            <label xml:lang="en" text="Networks and Communication Systems Group" />
+          </category>
+          <category ID="18.01.16">
+            <label xml:lang="de" text="Networked Embedded Systems" />
+          </category>
+          <category ID="05.05.07">
+            <label xml:lang="de" text="Sichere Software Systeme" />
+            <label xml:lang="en" text="Secure Software Systems" />
+          </category>
+          <category ID="05.05.08">
+            <label xml:lang="de" text="Mensch-Computer Interaktion" />
+            <label xml:lang="en" text="Human-Computer Interaction" />
+          </category>
         </category>
-        <category ID="05.04.13">
-          <label xml:lang="de" text="Datenverwaltungssysteme und Wissensrepräsentation" />
-          <label xml:lang="en" text="Data Management Systems and Knowledge Representation" />
-        </category>
-        <category ID="05.05.01">
-          <label xml:lang="de" text="Pervasive Computing" />
-        </category>
-        <category ID="05.05.03">
-          <label xml:lang="de" text="Software Engineering" />
-        </category>
-        <category ID="05.04.10">
-          <label xml:lang="de" text="Software Systems Engineering" />
-        </category>
-        <category ID="05.04.11">
-          <label xml:lang="de" text="Spezifikation von Softwaresystemen" />
-          <label xml:lang="en" text="Specification of Software Systems" />
-        </category>
-        <category ID="05.04.12">
-          <label xml:lang="de" text="Systemmodellierung" />
-        </category>
-        <category ID="05.04.08">
-          <label xml:lang="de" text="Technik der Rechnernetze" />
-          <label xml:lang="en" text="Computer Networking Technology" />
-        </category>
-        <category ID="05.04.09">
-          <label xml:lang="de" text="Verlässlichkeit von Rechensystemen" />
-          <label xml:lang="en" text="Reliability of Computer Systems" />
-        </category>
-        <category ID="05.05.02">
-          <label xml:lang="de" text="Didaktik der Informatik" />
-          <label xml:lang="en" text="Didactics of Informatics" />
-        </category>
-        <category ID="05.05.06">
-          <label xml:lang="de" text="Fachgebiet Kommunikationsnetze und -systeme" />
-          <label xml:lang="en" text="Networks and Communication Systems Group" />
-        </category>
-        <category ID="18.01.16">
-          <label xml:lang="de" text="Networked Embedded Systems" />
-        </category>
-        <category ID="05.05.07">
-          <label xml:lang="de" text="Sichere Software Systeme" />
-          <label xml:lang="en" text="Secure Software Systems" />
-        </category>
-        <category ID="05.05.08">
-          <label xml:lang="de" text="Mensch-Computer Interaktion" />
-          <label xml:lang="en" text="Human-Computer Interaction" />
-        </category>
-      </category>
+      </valid>
       <category ID="05.03">
         <label xml:lang="de" text="Fachgebiet Rechtswissenschaft" />
         <label xml:lang="en" text="Law" />
@@ -540,32 +542,34 @@
           <label xml:lang="en" text="Statistics" />
         </category>
       </category>
-      <category ID="05.04">
-        <label xml:lang="de" text="Fachgebiet Wirtschaftsinformatik" />
-        <label xml:lang="en" text="Business Information Systems" />
-        <category ID="05.04.01">
-          <label xml:lang="de" text="Beschaffung, Logistik und Informationsmanagement" />
+      <valid until="2023-12">
+        <category ID="05.04">
+          <label xml:lang="de" text="Fachgebiet Wirtschaftsinformatik" />
+          <label xml:lang="en" text="Business Information Systems" />
+          <category ID="05.04.01">
+            <label xml:lang="de" text="Beschaffung, Logistik und Informationsmanagement" />
+          </category>
+          <category ID="05.04.21">
+            <label xml:lang="de" text="Digital Business und Digital Entrepreneurship" />
+          </category>
+          <category ID="05.04.06">
+            <label xml:lang="de" text="Wirtschaftsinformatik und integrierte Informationssysteme" />
+            <label xml:lang="en" text="Business Informatics and Integrated Information Systems" />
+          </category>
+          <category ID="05.04.30">
+            <label xml:lang="de" text="Wirtschaftsinformatik und Strategisches IT-Management" />
+            <label xml:lang="en" text="Information Systems and Strategic IT Management" />
+          </category>
+          <category ID="05.04.05">
+            <label xml:lang="de" text="Wirtschaftsinformatik und Softwaretechnik" />
+            <label xml:lang="en" text="Business Informatics and Software Engineering" />
+          </category>
+          <category ID="05.04.20">
+            <label xml:lang="de" text="Wirtschaftsinformatik und Unternehmensmodellierung" />
+            <label xml:lang="en" text="Information Systems and Enterprise Modelling" />
+          </category>
         </category>
-        <category ID="05.04.21">
-          <label xml:lang="de" text="Digital Business und Digital Entrepreneurship" />
-        </category>
-        <category ID="05.04.06">
-          <label xml:lang="de" text="Wirtschaftsinformatik und integrierte Informationssysteme" />
-          <label xml:lang="en" text="Business Informatics and Integrated Information Systems" />
-        </category>
-        <category ID="05.04.30">
-          <label xml:lang="de" text="Wirtschaftsinformatik und Strategisches IT-Management" />
-          <label xml:lang="en" text="Information Systems and Strategic IT Management" />
-        </category>
-        <category ID="05.04.05">
-          <label xml:lang="de" text="Wirtschaftsinformatik und Softwaretechnik" />
-          <label xml:lang="en" text="Business Informatics and Software Engineering" />
-        </category>
-        <category ID="05.04.20">
-          <label xml:lang="de" text="Wirtschaftsinformatik und Unternehmensmodellierung" />
-          <label xml:lang="en" text="Information Systems and Enterprise Modelling" />
-        </category>
-      </category>
+      </valid> 
     </category>
     <category ID="15">
       <label xml:lang="de" text="Mercator School of Management - Fakultät für Betriebswirtschaftslehre" />
@@ -996,105 +1000,107 @@
           <label xml:lang="en" text="Electronic Materials and Nanostructures" />
         </category>
       </category>
-      <category ID="18.01">
-        <label xml:lang="de" text="Informatik und Angewandte Kognitionswissenschaft" />
-        <label xml:lang="en" text="Computer Science and Applied Cognitive Science" />
-        <category ID="18.01.30">
-          <label xml:lang="de" text="Informatik" />
-          <label xml:lang="en" text="Computer Science" />
-          <category ID="18.01.04">
-            <label xml:lang="de" text="Computergraphik und Wissenschaftliches Rechnen" />
+      <valid until="2023-12">
+        <category ID="18.01">
+          <label xml:lang="de" text="Informatik und Angewandte Kognitionswissenschaft" />
+          <label xml:lang="en" text="Computer Science and Applied Cognitive Science" />
+          <category ID="18.01.30">
+            <label xml:lang="de" text="Informatik" />
+            <label xml:lang="en" text="Computer Science" />
+            <category ID="18.01.04">
+              <label xml:lang="de" text="Computergraphik und Wissenschaftliches Rechnen" />
+            </category>
+            <category ID="18.01.17">
+              <label xml:lang="de" text="Eingebettete Systeme der Informatik" />
+              <label xml:lang="en" text="Embedded Systems of Computer Science" />
+            </category>
+            <category ID="18.01.18">
+              <label xml:lang="de" text="Formale Methoden der Informatik" />
+              <label xml:lang="en" text="Formal Methods in Computer Science" />
+            </category>
+            <category ID="18.01.20">
+              <label xml:lang="de" text="Hochleistungsrechnen" />
+              <label xml:lang="en" text="High Performance Computing" />
+            </category>
+            <category ID="18.01.06">
+              <label xml:lang="de" text="Informationssysteme" />
+              <label xml:lang="en" text="Information Engineering" />
+            </category>
+            <category ID="18.01.23">
+              <label xml:lang="de" text="Informatische Methoden in der Modellierung und Analyse von Lernprozessen" />
+              <label xml:lang="en"
+                text="Computational Methods in Modeling and Analysis of Learning Processes (colaps)" />
+            </category>
+            <category ID="18.01.07">
+              <label xml:lang="de" text="Intelligente Systeme" />
+            </category>
+            <category ID="18.01.01">
+              <label xml:lang="de" text="Interaktive Systeme / Interaktionsdesign" />
+              <label xml:lang="en" text="Interactive Systems" />
+            </category>
+            <category ID="18.01.03">
+              <label xml:lang="de" text="Kooperative und lernunterstützende Systeme (COLLIDE)" />
+              <label xml:lang="en" text="Colloborative Learning in Intelligent Distributed Environements (COLLIDE)" />
+            </category>
+            <category ID="18.01.19">
+              <label xml:lang="de" text="Social Computing" />
+            </category>
+            <category ID="18.01.08">
+              <label xml:lang="de" text="Mathematische Methoden der Datenübertragung" />
+            </category>
+            <category ID="18.01.15">
+              <label xml:lang="de" text="Medieninformatik - Entertainment Computing" />
+            </category>
+            <category ID="18.01.09">
+              <label xml:lang="de" text="Software Engineering" />
+            </category>
+            <category ID="18.01.11">
+              <label xml:lang="de" text="Theoretische Informatik" />
+              <label xml:lang="en" text="Theoretical Computer Science" />
+            </category>
+            <category ID="18.01.22">
+              <label xml:lang="de" text="Sprachtechnologie" />
+              <label xml:lang="en" text="Language Technology Lab" />
+            </category>
+            <category ID="18.01.12">
+              <label xml:lang="de" text="Verteilte Systeme" />
+            </category>
+            <category ID="18.01.13">
+              <label xml:lang="de" text="Wissensbasierte und Natürlichsprachliche Systeme" />
+            </category>
           </category>
-          <category ID="18.01.17">
-            <label xml:lang="de" text="Eingebettete Systeme der Informatik" />
-            <label xml:lang="en" text="Embedded Systems of Computer Science" />
-          </category>
-          <category ID="18.01.18">
-            <label xml:lang="de" text="Formale Methoden der Informatik" />
-            <label xml:lang="en" text="Formal Methods in Computer Science" />
-          </category>
-          <category ID="18.01.20">
-            <label xml:lang="de" text="Hochleistungsrechnen" />
-            <label xml:lang="en" text="High Performance Computing" />
-          </category>
-          <category ID="18.01.06">
-            <label xml:lang="de" text="Informationssysteme" />
-            <label xml:lang="en" text="Information Engineering" />
-          </category>
-          <category ID="18.01.23">
-            <label xml:lang="de" text="Informatische Methoden in der Modellierung und Analyse von Lernprozessen" />
-            <label xml:lang="en"
-              text="Computational Methods in Modeling and Analysis of Learning Processes (colaps)" />
-          </category>
-          <category ID="18.01.07">
-            <label xml:lang="de" text="Intelligente Systeme" />
-          </category>
-          <category ID="18.01.01">
-            <label xml:lang="de" text="Interaktive Systeme / Interaktionsdesign" />
-            <label xml:lang="en" text="Interactive Systems" />
-          </category>
-          <category ID="18.01.03">
-            <label xml:lang="de" text="Kooperative und lernunterstützende Systeme (COLLIDE)" />
-            <label xml:lang="en" text="Colloborative Learning in Intelligent Distributed Environements (COLLIDE)" />
-          </category>
-          <category ID="18.01.19">
-            <label xml:lang="de" text="Social Computing" />
-          </category>
-          <category ID="18.01.08">
-            <label xml:lang="de" text="Mathematische Methoden der Datenübertragung" />
-          </category>
-          <category ID="18.01.15">
-            <label xml:lang="de" text="Medieninformatik - Entertainment Computing" />
-          </category>
-          <category ID="18.01.09">
-            <label xml:lang="de" text="Software Engineering" />
-          </category>
-          <category ID="18.01.11">
-            <label xml:lang="de" text="Theoretische Informatik" />
-            <label xml:lang="en" text="Theoretical Computer Science" />
-          </category>
-          <category ID="18.01.22">
-            <label xml:lang="de" text="Sprachtechnologie" />
-            <label xml:lang="en" text="Language Technology Lab" />
-          </category>
-          <category ID="18.01.12">
-            <label xml:lang="de" text="Verteilte Systeme" />
-          </category>
-          <category ID="18.01.13">
-            <label xml:lang="de" text="Wissensbasierte und Natürlichsprachliche Systeme" />
+          <category ID="18.01.40">
+            <label xml:lang="de" text="Angewandte Kognitions- und Medienwissenschaft" />
+            <category ID="18.01.02">
+              <label xml:lang="de" text="Allgemeine Psychologie: Kognition" />
+              <label xml:lang="en" text="General Psychology: Cognition" />
+            </category>
+            <category ID="18.01.05">
+              <label xml:lang="de" text="Digitale Kommunikation und Transformation" />
+              <label xml:lang="en" text="Digital Communication and Transformation" />
+            </category>
+            <category ID="18.01.99">
+              <label xml:lang="de" text="Professionelle Kommunikation in elektronischen Medien / Social Media" />
+              <label xml:lang="en" text="Professional Communication in Electronic Media / Social Media" />
+            </category>
+            <category ID="18.01.21">
+              <label xml:lang="de" text="Psychologische Forschungsmethoden: Medienbasierte Wissenskonstruktion" />
+              <label xml:lang="en" text="Research Methods in Psychology - Media-based Knowledge Construction" />
+            </category>
+            <category ID="18.01.24">
+              <label xml:lang="de" text="Psychologische Prozesse der Bildung in sozialen Medien" />
+              <label xml:lang="en" text="Psychological Processes of Education in Social Media" />
+            </category>
+            <category ID="18.01.10">
+              <label xml:lang="de" text="Sozialpsychologie: Medien und Kommunikation" />
+              <label xml:lang="en" text="Social Psychology - Media and Communication" />
+            </category>
+            <category ID="18.01.14">
+              <label xml:lang="de" text="Wirtschaftspsychologie" />
+            </category>
           </category>
         </category>
-        <category ID="18.01.40">
-          <label xml:lang="de" text="Angewandte Kognitions- und Medienwissenschaft" />
-          <category ID="18.01.02">
-            <label xml:lang="de" text="Allgemeine Psychologie: Kognition" />
-            <label xml:lang="en" text="General Psychology: Cognition" />
-          </category>
-          <category ID="18.01.05">
-            <label xml:lang="de" text="Digitale Kommunikation und Transformation" />
-            <label xml:lang="en" text="Digital Communication and Transformation" />
-          </category>
-          <category ID="18.01.99">
-            <label xml:lang="de" text="Professionelle Kommunikation in elektronischen Medien / Social Media" />
-            <label xml:lang="en" text="Professional Communication in Electronic Media / Social Media" />
-          </category>
-          <category ID="18.01.21">
-            <label xml:lang="de" text="Psychologische Forschungsmethoden: Medienbasierte Wissenskonstruktion" />
-            <label xml:lang="en" text="Research Methods in Psychology - Media-based Knowledge Construction" />
-          </category>
-          <category ID="18.01.24">
-            <label xml:lang="de" text="Psychologische Prozesse der Bildung in sozialen Medien" />
-            <label xml:lang="en" text="Psychological Processes of Education in Social Media" />
-          </category>
-          <category ID="18.01.10">
-            <label xml:lang="de" text="Sozialpsychologie: Medien und Kommunikation" />
-            <label xml:lang="en" text="Social Psychology - Media and Communication" />
-          </category>
-          <category ID="18.01.14">
-            <label xml:lang="de" text="Wirtschaftspsychologie" />
-          </category>
-        </category>
-      </category>
+      </valid>
       <category ID="18.03">
         <label xml:lang="de" text="Maschinenbau und Verfahrenstechnik" />
         <category ID="18.03.03">
@@ -1652,6 +1658,190 @@
         </category>
       </category>
     </category>
+    <valid from="2024-01">
+      <category ID="17">
+        <label xml:lang="de" text="Fakultät für Informatik" />
+        <label xml:lang="en" text="Faculty of Computer Science" />
+        <category ID="17.01">
+          <label xml:lang="de" text="Allgemeine Informatik" />
+          <label xml:lang="en" text="Core Informatics" />
+          <category ID="18.01.20">
+            <label xml:lang="de" text="Computergrafik und Visualisierung/Hochleistungsrechnen" />
+            <label xml:lang="en" text="Computergraphics and Visualization" />
+          </category>
+          <category ID="17.01.01">
+            <label xml:lang="de" text="Data Science" />
+          </category>
+          <category ID="05.05.02">
+            <label xml:lang="de" text="Didaktik der Informatik" />
+            <label xml:lang="en" text="Didactics of Informatics" />
+          </category>
+          <category ID="18.01.18">
+            <label xml:lang="de" text="Formale Methoden der Informatik" />
+            <label xml:lang="en" text="Formal Methods in Computer Science" />
+          </category>
+          <category ID="18.01.17">
+            <label xml:lang="de" text="Intelligente Eingebettete Systeme" />
+            <label xml:lang="en" text="Intelligent Embedded Systems" />
+          </category>
+          <category ID="18.01.16">
+            <label xml:lang="de" text="Networked Embedded Systems" />
+          </category>
+          <category ID="17.01.02">
+            <label xml:lang="de" text="Quantencomputing und Algorithmik" />
+          </category>
+          <category ID="05.04.08">
+            <label xml:lang="de" text="Technik der Rechnernetze" />
+            <label xml:lang="en" text="Computer Networking Technology" />
+          </category>
+          <category ID="18.01.11">
+            <label xml:lang="de" text="Theoretische Informatik" />
+            <label xml:lang="en" text="Theoretical computer science" />
+          </category>
+          <category ID="17.01.03">
+            <label xml:lang="de" text="Theorie und Grundlagen der Künstlichen Intelligenz" />
+            <label xml:lang="en" text="Theory and Fundamentals of Artificial Intelligence" />
+          </category>
+          <category ID="17.01.04">
+            <label xml:lang="de" text="Verifikation komplexer Systeme und Model-Checking" />
+            <label xml:lang="en" text="Verification of Complex Systems and Model Checking" />
+          </category>
+          <category ID="18.01.12">
+            <label xml:lang="de" text="Verteilte Systeme" />
+          </category>
+        </category>
+        <category ID="17.02">
+          <label xml:lang="de" text="Software Engineering" />
+          <category ID="18.01.07">
+            <label xml:lang="de" text="Intelligente Systeme" />
+            <label xml:lang="en" text="Intelligent Systems" />
+          </category>
+          <category ID="05.05.08">
+            <label xml:lang="de" text="Mensch-Computer Interaktion" />
+            <label xml:lang="en" text="Human-Computer Interaction" />
+          </category>
+          <category ID="05.05.06">
+            <label xml:lang="de" text="Networks and Communication Systems" />
+          </category>
+          <category ID="17.02.01">
+            <label xml:lang="de" text="Resiliente Systeme" />
+            <label xml:lang="en" text="Resilient Systems" />
+          </category>
+          <category ID="05.05.03 ">
+            <label xml:lang="de" text="Software Engineering, insb. mobile Anwendungen" />
+            <label xml:lang="en" text="Software Engineering, esp. Mobile Applications" />
+          </category>
+          <category ID="17.02.02">
+            <label xml:lang="de" text="Software Qualität" />
+            <label xml:lang="en" text="Software Quality" />
+          </category>
+          <category ID="17.02.03">
+            <label xml:lang="de" text="Software Spezifikation" />
+            <label xml:lang="en" text="Software Specification" />
+          </category>
+          <category ID="05.04.10">
+            <label xml:lang="de" text="Software Systems Engineering" />
+          </category>
+          <category ID="05.05.07">
+            <label xml:lang="de" text="Systemsicherheit" />
+            <label xml:lang="en" text="System Security" />
+          </category>
+          <category ID="17.02.04">
+            <label xml:lang="de" text="Vertrauenswürdige Systeme, insb. Erklärbarkeit" />
+            <label xml:lang="en" text="Trustworthy Systems, especially Explainability" />
+          </category>
+        </category>
+        <category ID="17.03">
+          <label xml:lang="de" text="Human-centered Computing and Cognitive Science (HCCS)" />
+          <category ID="17.03.01">
+            <label xml:lang="de" text="Accountability of Data Science and Security Systems"></label>
+          </category>
+          <category ID="18.01.02">
+            <label xml:lang="de" text="Allgemeine Psychologie: Kognition" />
+            <label xml:lang="en" text="General Psychology: Cognition" />
+          </category>
+          <category ID="18.01.05">
+            <label xml:lang="de" text="Digitale Kommunikation und Transformation" />
+            <label xml:lang="en" text="Digital Communication and Transformation" />
+          </category>
+          <category ID="17.03.02">
+            <label xml:lang="de" text="Human Understanding of Machines and Algorithms" />
+          </category>
+          <category ID="18.01.23">
+            <label xml:lang="de" text="Informatische Methoden in der Modellierung und Analyse von Lernprozessen" />
+            <label xml:lang="en" text="Computational Methods in Modeling and Analysis of Learning Processes" />
+          </category>
+          <category ID="17.03.03">
+            <label xml:lang="de" text="Interaktive Systeme" />
+            <label xml:lang="en" text="Interactive Systems" />
+          </category>
+          <category ID="18.01.15">
+            <label xml:lang="de" text="Medieninformatik " />
+            <label xml:lang="en" text="Entertainment Computing" />
+          </category>
+          <category ID="18.01.21">
+            <label xml:lang="de" text="Psychologische Forschungsmethoden" />
+            <label xml:lang="en" text="Research Methods in Psychology" />
+          </category>
+          <category ID="18.01.24">
+            <label xml:lang="de" text="Psychologische Prozesse der Bildung in sozialen Medien" />
+            <label xml:lang="en" text="Psychological Processes of Education in Social Media" />
+          </category>
+          <category ID="18.01.19">
+            <label xml:lang="de" text="Social Computing" />
+          </category>
+          <category ID="18.01.10">
+            <label xml:lang="de" text="Sozialpsychologie: Medien und Kommunikation" />
+            <label xml:lang="en" text="Social Psychology: Media and Communication" />
+          </category>
+          <category ID="18.01.22">
+            <label xml:lang="de" text="Sprachtechnologie" />
+            <label xml:lang="en" text="Language Technology Lab" />
+          </category>
+          <category ID="18.01.14">
+            <label xml:lang="de" text="Wirtschaftspsychologie" />
+            <label xml:lang="en" text="Economic and Consumer Psychology" />
+          </category>
+        </category>
+        <category ID="17.04">
+          <label xml:lang="de" text="Wirtschaftsinformatik" />
+          <label xml:lang="en" text="Business Informatics" />
+          <category ID="17.04.01">
+            <label xml:lang="de" text="Angewandte Methoden der Künstlichen Intelligenz" />
+            <label xml:lang="en" text="Applied Methods of Aritficial Intelligence" />
+          </category>
+          <category ID="17.04.02">
+            <label xml:lang="de" text="Wirtschaftsinformatik und Applikationsmanagement" />
+            <label xml:lang="en" text="Information Systems and Application Management" />
+          </category>
+          <category ID="05.04.05">
+            <label xml:lang="de" text="Wirtschaftsinformatik und Softwaretechnik" />
+            <label xml:lang="en" text="Information Systems and Software Engineering" />
+          </category>
+          <category ID="05.04.06">
+            <label xml:lang="de" text="Wirtschaftsinformatik und integrierte Informationssysteme" />
+            <label xml:lang="en" text="Business Informatics and Integrated Information Systems" />
+          </category>
+          <category ID="05.04.30">
+            <label xml:lang="de" text="Wirtschaftsinformatik und Strategisches IT-Management" />
+            <label xml:lang="en" text="Business Informatics and Strategic IT Management" />
+          </category>
+          <category ID="17.04.03">
+            <label xml:lang="de" text="Wirtschaftsinformatik und Sustainable Supply Chain Management" />
+            <label xml:lang="en" text="Information Systems and Sustainable Supply Chain Management" />
+          </category>
+          <category ID="17.04.04">
+            <label xml:lang="de" text="Wirtschaftsinformatik und Transformationsmanagement " />
+            <label xml:lang="en" text="Information Systems and Transformation Management" />
+          </category>
+          <category ID="05.04.20">
+            <label xml:lang="de" text="Wirtschaftsinformatik und Unternehmensmodellierung " />
+            <label xml:lang="en" text="Information Systems and Enterprise Modelling" />
+          </category>
+        </category>
+      </category>
+    </valid>
+    
     <category ID="LV">
       <label xml:lang="de" text="Rektorat und Verwaltung" />
       <category ID="REKT">
