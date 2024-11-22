@@ -13,7 +13,7 @@
               <label class="mycore-form-label">
                 <a href="api/v1/classifications/ORIGIN">Aktuelle ORIGIN-Klassifikation:</a>
               </label>
-              <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-show-subtext="true" data-size="10" data-display="static">
+              <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-live-search-normalize="true" data-virtual-scroll="true" data-show-subtext="true" data-size="10" data-display="static">
                 <option value="">
                   <xed:output i18n="search.select" />
                 </option>
@@ -28,7 +28,7 @@
               <span>&#160;/&#160;</span> 
               <a href="ORIGIN-Complete.xml?XSL.Style=complete">mit Gültigkeitsinfos</a>
             </label>
-            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-show-subtext="true" data-size="10" data-display="static">
+            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-live-search-normalize="true" data-virtual-scroll="true" data-show-subtext="true" data-size="10" data-display="static">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
@@ -40,7 +40,7 @@
             <label class="mycore-form-label">
               <a href="ORIGIN-Complete.xml?XSL.Style=filterForDate">Stand heute:</a>
             </label>
-            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-show-subtext="true" data-size="10" data-display="static">
+            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-show-content="true" data-live-search="true" data-live-search-normalize="true" data-virtual-scroll="true" data-show-subtext="true" data-size="10" data-display="static">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
@@ -52,7 +52,7 @@
             <label class="mycore-form-label">
               <a href="ORIGIN-Complete.xml?XSL.Style=filterForDate&amp;XSL.date=2023-07">Stand 2023-07:</a>
             </label>
-            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-show-subtext="true" data-size="10" data-display="static">
+            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-live-search-normalize="true" data-virtual-scroll="true" data-show-subtext="true" data-size="10" data-display="static">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
@@ -64,7 +64,7 @@
             <label class="mycore-form-label">
               <a href="ORIGIN-Complete.xml?XSL.Style=filterForDate&amp;XSL.date=2023-12">Stand 2023-12:</a>
             </label>
-            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-show-subtext="true" data-size="10" data-display="static">
+            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-live-search-normalize="true" data-virtual-scroll="true" data-show-subtext="true" data-size="10" data-display="static">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
