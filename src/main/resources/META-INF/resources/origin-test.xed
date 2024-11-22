@@ -62,7 +62,7 @@
 
           <div class="form-group form-inline">
             <label class="mycore-form-label">
-              <a href="ORIGIN-Complete.xml?XSL.Style=filterForDate&amp;XSL.date=2023-083">Stand 2023-07:</a>
+              <a href="ORIGIN-Complete.xml?XSL.Style=filterForDate&amp;XSL.date=2023-07">Stand 2023-07:</a>
             </label>
             <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
               <option value="">
