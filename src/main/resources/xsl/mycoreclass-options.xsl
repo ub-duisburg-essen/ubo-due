@@ -28,6 +28,14 @@
     <xsl:param name="level" select="1" />
     
     <option value="{@ID}">
+      <xsl:attribute name="title">
+        <xsl:for-each select="ancestor::category">
+          <xsl:apply-templates select="." mode="label" />
+          <xsl:value-of select="$parentChildDelimiter" />
+        </xsl:for-each>
+        <xsl:apply-templates select="." mode="label" />
+      </xsl:attribute>
+    
       <xsl:choose>
         <xsl:when test="($numParentLabels &gt; 0) and (($level - $numParentLabels) &gt; 1)">
           <xsl:for-each select="str:tokenize($indent,$arrow)">
@@ -44,7 +52,7 @@
         </xsl:otherwise>
       </xsl:choose>
       
-      <xsl:apply-templates select="." mode="label" />
+      <xsl:apply-templates select="." mode="label-abbreviated" />
     </option>
     
     <xsl:apply-templates select="category">
@@ -54,7 +62,7 @@
         
           <xsl:when test="$numParentLabels &gt; 0">
             <xsl:value-of select="$indent" />
-            <xsl:apply-templates select="." mode="label">
+            <xsl:apply-templates select="." mode="label-abbreviated">
               <xsl:with-param name="maxLength" select="$UBO.ClassificationOutput.MaxWordLength" />
             </xsl:apply-templates>
             <xsl:value-of select="$parentChildDelimiter" />
@@ -71,28 +79,28 @@
     
   </xsl:template>
   
+  <xsl:template match="category" mode="label">
+    <xsl:choose>
+      <xsl:when test="label[lang($CurrentLang)]">
+        <xsl:value-of select="label[lang($CurrentLang)]/@text" />
+      </xsl:when>
+      <xsl:when test="label[lang($DefaultLang)]">
+        <xsl:value-of select="label[lang($DefaultLang)]/@text" />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="label[not(starts-with(@lang,'x-'))][1]/@text" />
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
   <xsl:variable name="abbreviationsPropertiesPrefix">UBO.ClassificationOutput.Abbreviation.</xsl:variable>
   <xsl:variable name="abbreviations" select="document(concat('property:',$abbreviationsPropertiesPrefix,'*'))/properties" />
   
-  <xsl:template match="category" mode="label">
+  <xsl:template match="category" mode="label-abbreviated">
     <xsl:param name="maxLength" />
   
     <xsl:variable name="label">
-      <xsl:choose>
-      
-        <xsl:when test="label[lang($CurrentLang)]">
-          <xsl:value-of select="label[lang($CurrentLang)]/@text" />
-        </xsl:when>
-        
-        <xsl:when test="label[lang($DefaultLang)]">
-          <xsl:value-of select="label[lang($DefaultLang)]/@text" />
-        </xsl:when>
-        
-        <xsl:otherwise>
-          <xsl:value-of select="label[not(starts-with(@lang,'x-'))][1]/@text" />
-        </xsl:otherwise>
-        
-      </xsl:choose>
+      <xsl:apply-templates select="." mode="label" />
     </xsl:variable>
     
     <xsl:for-each select="str:tokenize($label,' ')">
@@ -139,5 +147,5 @@
     </xsl:for-each>
     
   </xsl:template>
-
+  
 </xsl:stylesheet>
