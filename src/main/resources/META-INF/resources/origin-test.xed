@@ -38,7 +38,7 @@
 
           <div class="form-group form-inline">
             <label class="mycore-form-label">
-              <a href="ORIGIN-Complete.xml?XSL.Style=filterForDate">Stand nur des aktuellen Tages:</a>
+              <a href="ORIGIN-Complete.xml?XSL.Style=filterForDate">Stand heute:</a>
             </label>
             <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-show-subtext="true" data-size="10" data-display="static">
               <option value="">
