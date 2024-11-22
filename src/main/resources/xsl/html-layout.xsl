@@ -80,14 +80,24 @@
       <link rel="icon" href="{$WebApplicationBaseURL}favicon.ico" type="image/x-icon" />
 
       <link rel="stylesheet" href="{$WebApplicationBaseURL}webjars/font-awesome/{$font-awesome.version}/css/all.css" />
-      <link rel="stylesheet" href="{$WebApplicationBaseURL}rsc/sass/scss/bootstrap-ubo.css"  />
       <link rel="stylesheet" href="{$WebApplicationBaseURL}webjars/chosen-js/{$chosen.version}/chosen.min.css" />
       <link rel="stylesheet" href="{$WebApplicationBaseURL}webjars/jquery-ui/{$jquery-ui.version}/jquery-ui.css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/css/bootstrap-select.min.css" />
+      <link rel="stylesheet" href="{$WebApplicationBaseURL}rsc/sass/scss/bootstrap-ubo.css"  />
 
       <script type="text/javascript" src="{$WebApplicationBaseURL}webjars/jquery/{$jquery.version}/jquery.min.js"></script>
       <script type="text/javascript" src="{$WebApplicationBaseURL}webjars/bootstrap/{$bootstrap.version}/js/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/js/bootstrap-select.min.js" />
       <script type="text/javascript" src="{$WebApplicationBaseURL}webjars/chosen-js/{$chosen.version}/chosen.jquery.min.js"></script>
       <script type="text/javascript" src="{$WebApplicationBaseURL}webjars/jquery-ui/{$jquery-ui.version}/jquery-ui.js"></script>
+
+      <!-- 
+        <dependency>
+          <groupId>org.webjars</groupId>
+          <artifactId>bootstrap-select</artifactId>
+          <version>1.13.18</version>
+        </dependency>
+      -->
 
       <script type="text/javascript">var webApplicationBaseURL = '<xsl:value-of select="$WebApplicationBaseURL" />';</script>
       <script type="text/javascript">var currentLang = '<xsl:value-of select="$CurrentLang" />';</script>
