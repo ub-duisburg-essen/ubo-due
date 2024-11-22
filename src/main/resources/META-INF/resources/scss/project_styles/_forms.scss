@@ -2,15 +2,6 @@
  *  - styles for forms and form fields
  */
 
-// JQuery Chosen for select boxes
-.chosen-drop { 
-  position: absolute;
-  width: 1100px !important;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, 0);
-}
-
 // Bootstrap-select for select boxes
 .bootstrap-select .btn {
   background-color: transparent !important;

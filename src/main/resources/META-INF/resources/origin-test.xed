@@ -13,11 +13,11 @@
               <label class="mycore-form-label">
                 <a href="api/v1/classifications/ORIGIN">Aktuelle ORIGIN-Klassifikation:</a>
               </label>
-              <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
+              <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-show-subtext="true" data-size="10" data-display="static">
                 <option value="">
                   <xed:output i18n="search.select" />
                 </option>
-                <xed:include uri="cache:xslStyle:mycoreclass-options:classification:metadata:-1:children:ORIGIN" />
+                <xed:include uri="xslStyle:mycoreclass-options:classification:metadata:-1:children:ORIGIN" />
               </select>
             </div>
           </xed:bind>
@@ -28,11 +28,11 @@
               <span>&#160;/&#160;</span> 
               <a href="ORIGIN-Complete.xml?XSL.Style=complete">mit Gültigkeitsinfos</a>
             </label>
-            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
+            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-show-subtext="true" data-size="10" data-display="static">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
-              <xed:include uri="xslStyle:mycoreclass-complete,mycoreclass-options?numParentLabels=99:resource:META-INF/resources/ORIGIN-Complete.xml" />
+              <xed:include uri="xslStyle:mycoreclass-complete,mycoreclass-options:resource:META-INF/resources/ORIGIN-Complete.xml" />
             </select>
           </div>
 
@@ -40,7 +40,7 @@
             <label class="mycore-form-label">
               <a href="ORIGIN-Complete.xml?XSL.Style=filterForDate">Stand nur des aktuellen Tages:</a>
             </label>
-            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
+            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-show-subtext="true" data-size="10" data-display="static">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
@@ -52,7 +52,7 @@
             <label class="mycore-form-label">
               <a href="ORIGIN-Complete.xml?XSL.Style=filterForDate&amp;XSL.date=2023-07">Stand 2023-07:</a>
             </label>
-            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
+            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-show-subtext="true" data-size="10" data-display="static">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
@@ -61,44 +61,19 @@
           </div>
             
           <div class="form-group form-inline">
-            <label class="mycore-form-label">numParentLabels=2</label>
-            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
-              <option value="">
-                <xed:output i18n="search.select" />
-              </option>
-              <xed:include uri="xslStyle:mycoreclass-filterForDate,mycoreclass-options?numParentLabels=2:resource:META-INF/resources/ORIGIN-Complete.xml" />
-            </select>
-          </div>
-
-          <div class="form-group form-inline">
-            <label class="mycore-form-label">numParentLabels=3</label>
-            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input custom-select">
-              <option value="">
-                <xed:output i18n="search.select" />
-              </option>
-              <xed:include uri="xslStyle:mycoreclass-filterForDate,mycoreclass-options?numParentLabels=2:resource:META-INF/resources/ORIGIN-Complete.xml" />
-            </select>
-          </div>
-
-          <div class="form-group form-inline">
-            <label class="mycore-form-label">complete bootstrap-select subtext=true</label>
+            <label class="mycore-form-label">
+              <a href="ORIGIN-Complete.xml?XSL.Style=filterForDate&amp;XSL.date=2023-12">Stand 2023-12:</a>
+            </label>
             <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-show-subtext="true" data-size="10" data-display="static">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
-              <xed:include uri="xslStyle:mycoreclass-complete,mycoreclass-options?subtext=true:resource:META-INF/resources/ORIGIN-Complete.xml" />
+              <xed:include uri="xslStyle:mycoreclass-filterForDate,mycoreclass-options?date=2023-12:resource:META-INF/resources/ORIGIN-Complete.xml" />
             </select>
           </div>
 
         </xed:bind>
       </xed:form>
-
-      <script type="text/javascript">
-        $(document).ready(function() { 
-          $('select[class*="autocomplete"]').chosen({search_contains: true});
-        } );
-      </script>
-
     </div>
   </article>
 
