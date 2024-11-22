@@ -7,6 +7,7 @@
   <xsl:param name="CurrentLang" />
   <xsl:param name="DefaultLang" />
   <xsl:param name="numParentLabels" select="0" />
+  <xsl:param name="subtext" />
 
   <xsl:param name="UBO.ClassificationOutput.MaxWords" select="4" />
   <xsl:param name="UBO.ClassificationOutput.MaxWordLength" select="10" />
@@ -33,10 +34,25 @@
     </xsl:variable>
     
     <xsl:variable name="title">
-      <xsl:value-of select="concat($parentTitle,$label)" />
+      <xsl:if test="$level &gt; 1">
+        <xsl:value-of select="concat($parentTitle,$parentChildDelimiter)" />
+      </xsl:if>
+      <xsl:value-of select="$label" />
     </xsl:variable>
     
-    <option value="{@ID}" title="{$title}">
+    <option value="{@ID}">
+      <xsl:choose>
+        <xsl:when test="($subtext = 'true') and ($level &gt; 1)">
+          <xsl:attribute name="data-subtext">
+            <xsl:value-of select="concat($nbsp,$nbsp,'in ',$parentTitle)" />
+          </xsl:attribute>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:attribute name="title">
+            <xsl:value-of select="$title" />
+          </xsl:attribute>
+        </xsl:otherwise>
+      </xsl:choose>
     
       <xsl:choose>
         <xsl:when test="($numParentLabels &gt; 0) and (($level - $numParentLabels) &gt; 1)">
@@ -61,7 +77,7 @@
     
     <xsl:apply-templates select="category">
       <xsl:with-param name="level" select="$level + 1" />
-      <xsl:with-param name="parentTitle" select="concat($title,$parentChildDelimiter)" />
+      <xsl:with-param name="parentTitle" select="$title" />
       <xsl:with-param name="indent">
         <xsl:choose>
         
@@ -74,7 +90,7 @@
           </xsl:when>
 
           <xsl:otherwise> <!-- default: spaces -->
-            <xsl:value-of select="concat($indent,$nbsp,$nbsp)" />
+            <xsl:value-of select="concat($indent,$nbsp,$nbsp,$nbsp,$nbsp)" />
           </xsl:otherwise>
           
         </xsl:choose>
