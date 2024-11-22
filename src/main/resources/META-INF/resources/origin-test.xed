@@ -96,7 +96,7 @@
           </div>
 
           <div class="form-group form-inline">
-            <label class="mycore-form-label">bootstrap-select numParentLabels=99</label>
+            <label class="mycore-form-label">bootstrap-select subtext=true</label>
             <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-show-subtext="true" data-size="10">
               <option value="">
                 <xed:output i18n="search.select" />
