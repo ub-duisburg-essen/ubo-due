@@ -7,14 +7,14 @@
   <xsl:param name="CurrentLang" />
   <xsl:param name="DefaultLang" />
   <xsl:param name="indentStyle" select="'spaces'" />
-  
+
+  <xsl:param name="UBO.ClassificationOutput.MaxWords" select="4" />
+  <xsl:param name="UBO.ClassificationOutput.MaxWordLength" select="10" />
+
   <xsl:variable name="dot" select="'.'" />
   <xsl:variable name="dots" select="'&#8230;'" />
   <xsl:variable name="nbsp" select="'&#160;'" />
   <xsl:variable name="parentChildDelimiter" select="concat($nbsp,'&#187;',$nbsp)" />
-
-  <xsl:variable name="maxWords" select="4" />
-  <xsl:variable name="maxWordLength" select="10" />
 
   <xsl:template match="/mycoreclass">
     <includes>
@@ -36,7 +36,7 @@
         
           <xsl:when test="$indentStyle='parent'">
             <xsl:apply-templates select="." mode="label">
-              <xsl:with-param name="maxLength" select="$maxWordLength" />
+              <xsl:with-param name="maxLength" select="$UBO.ClassificationOutput.MaxWordLength" />
             </xsl:apply-templates>
             <xsl:value-of select="$parentChildDelimiter" />
           </xsl:when>
@@ -44,7 +44,7 @@
           <xsl:when test="$indentStyle='ancestors'">
             <xsl:value-of select="$indent" /><br/>
             <xsl:apply-templates select="." mode="label">
-              <xsl:with-param name="maxLength" select="$maxWordLength" />
+              <xsl:with-param name="maxLength" select="$UBO.ClassificationOutput.MaxWordLength" />
             </xsl:apply-templates>
             <xsl:value-of select="$parentChildDelimiter" />
           </xsl:when>
@@ -96,17 +96,17 @@
           <xsl:value-of select="." />
         </xsl:when>
         
-        <xsl:when test="$maxLengthGiven and (position() = ($maxWords + 1)) and (position() != last())">
+        <xsl:when test="$maxLengthGiven and (position() = ($UBO.ClassificationOutput.MaxWords + 1)) and (position() != last())">
           <xsl:value-of select="$dots" />
         </xsl:when>
 
-        <xsl:when test="$maxLengthGiven and (position() &gt; $maxWords) and (position() != last())" />
+        <xsl:when test="$maxLengthGiven and (position() &gt; $UBO.ClassificationOutput.MaxWords) and (position() != last())" />
 
         <xsl:when test="$maxLengthGiven and (string-length($abbreviation) &gt; 0)">
           <xsl:value-of select="$abbreviation" />
         </xsl:when>
         
-        <xsl:when test="position() &lt; $maxWords">
+        <xsl:when test="position() &lt; $UBO.ClassificationOutput.MaxWords">
           <xsl:value-of select="." />
         </xsl:when>
 
