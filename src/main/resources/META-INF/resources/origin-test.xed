@@ -32,7 +32,7 @@
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
-              <xed:include uri="xslStyle:mycoreclass-handleVersionedLabels,mycoreclass-allVersions,mycoreclass-options:resource:META-INF/resources/ORIGIN-versioned.xml" />
+              <xed:include uri="xslStyle:mycoreclass-handleVersionedLabels,mycoreclass-allVersions,mycoreclass-options?buildVersionedCategoryIDs=false:resource:META-INF/resources/ORIGIN-versioned.xml" />
             </select>
           </div>
 

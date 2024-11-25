@@ -1,12 +1,14 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:include href="copynodes.xsl" />
+  
+  <xsl:param name="buildVersionedCategoryIDs" select="'true'" />
 
   <xsl:template match="valid">
     <xsl:apply-templates select="*" />
   </xsl:template>
   
-  <xsl:template match="category/@ID">
+  <xsl:template match="category/@ID[$buildVersionedCategoryIDs = 'true']">
     <xsl:attribute name="ID">
       <xsl:value-of select="." />
       <xsl:apply-templates select="ancestor::valid[1]" mode="id" />
