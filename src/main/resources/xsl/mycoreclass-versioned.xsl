@@ -5,6 +5,25 @@
   <xsl:template match="valid">
     <xsl:apply-templates select="*" />
   </xsl:template>
+  
+  <xsl:template match="category/@ID">
+    <xsl:attribute name="ID">
+      <xsl:value-of select="." />
+      <xsl:apply-templates select="ancestor::valid[1]" mode="id" />
+    </xsl:attribute>
+  </xsl:template>
+  
+  <xsl:template match="valid" mode="id">
+    <xsl:text>_v</xsl:text>
+    <xsl:choose>
+      <xsl:when test="@until">
+        <xsl:copy-of select="translate(@until,'-','')" />
+      </xsl:when>
+      <xsl:when test="@from">
+        <xsl:copy-of select="translate(@from,'-','')" />
+      </xsl:when>
+    </xsl:choose>
+  </xsl:template>
 
   <xsl:template match="label[not(starts-with(@lang,'x-'))]/@text">
     <xsl:attribute name="text">
