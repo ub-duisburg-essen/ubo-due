@@ -11,7 +11,7 @@
           <xed:bind xpath="origin">
             <div class="form-group form-inline">
               <label class="mycore-form-label">
-                <a href="api/v1/classifications/ORIGIN">Aktuelle ORIGIN-Klassifikation:</a>
+                <a href="api/v1/classifications/ORIGIN">Aktuelle ORIGIN-Klassifikation</a>
               </label>
               <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-live-search-normalize="true" data-virtual-scroll="true" data-show-subtext="true" data-size="10" data-display="static">
                 <option value="">
@@ -24,9 +24,11 @@
           
           <div class="form-group form-inline">
             <label class="mycore-form-label">
-              <a href="ORIGIN-versioned.xml">ORIGIN-versioned</a>
+              <a href="ORIGIN-versioned.xml">Alle Versionen</a>
               <span>&#160;/&#160;</span> 
-              <a href="ORIGIN-versioned.xml?XSL.Transformer=versionedClassification">mit Gültigkeitsinfos</a>
+              <a href="ORIGIN-versioned.xml?XSL.Transformer=versionedClassification&amp;XSL.buildVersionedCategoryIDs=true">im Editor</a>
+              <span>&#160;/&#160;</span> 
+              <a href="ORIGIN-versioned.xml?XSL.Transformer=versionedClassification&amp;XSL.buildVersionedCategoryIDs=false">für Suche:</a>
             </label>
             <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-live-search-normalize="true" data-virtual-scroll="true" data-show-subtext="true" data-size="10" data-display="static">
               <option value="">
