@@ -4,6 +4,12 @@
   
   <xsl:param name="buildVersionedCategoryIDs" select="'true'" />
 
+  <xsl:template match="mycoreclass">
+    <mycoreclass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
+      <xsl:apply-templates select="@ID|node()" />
+    </mycoreclass>
+  </xsl:template>
+  
   <xsl:template match="valid">
     <xsl:apply-templates select="*" />
   </xsl:template>

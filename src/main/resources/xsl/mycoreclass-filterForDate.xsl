@@ -13,6 +13,12 @@
     </xsl:if>
   </xsl:template>
   
+  <xsl:template match="mycoreclass">
+    <mycoreclass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
+      <xsl:apply-templates select="@ID|node()" />
+    </mycoreclass>
+  </xsl:template>
+  
   <xsl:template match="mycoreclass/@ID">
     <xsl:attribute name="ID">
       <xsl:value-of select="." />
