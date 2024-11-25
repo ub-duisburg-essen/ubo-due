@@ -24,51 +24,51 @@
           
           <div class="form-group form-inline">
             <label class="mycore-form-label">
-              <a href="ORIGIN-Complete.xml">ORIGIN-Complete</a>
+              <a href="ORIGIN-versioned.xml">ORIGIN-versioned</a>
               <span>&#160;/&#160;</span> 
-              <a href="ORIGIN-Complete.xml?XSL.Style=complete">mit Gültigkeitsinfos</a>
+              <a href="ORIGIN-versioned.xml?XSL.Transformer=versionedClassification">mit Gültigkeitsinfos</a>
             </label>
             <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-live-search-normalize="true" data-virtual-scroll="true" data-show-subtext="true" data-size="10" data-display="static">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
-              <xed:include uri="xslStyle:mycoreclass-complete,mycoreclass-options:resource:META-INF/resources/ORIGIN-Complete.xml" />
+              <xed:include uri="xslStyle:mycoreclass-handleVersionedLabels,mycoreclass-versioned,mycoreclass-options:resource:META-INF/resources/ORIGIN-versioned.xml" />
             </select>
           </div>
 
           <div class="form-group form-inline">
             <label class="mycore-form-label">
-              <a href="ORIGIN-Complete.xml?XSL.Style=filterForDate">Stand heute:</a>
+              <a href="ORIGIN-versioned.xml?XSL.Style=filterForDate">Stand heute:</a>
             </label>
             <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-show-content="true" data-live-search="true" data-live-search-normalize="true" data-virtual-scroll="true" data-show-subtext="true" data-size="10" data-display="static">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
-              <xed:include uri="xslStyle:mycoreclass-filterForDate,mycoreclass-options:resource:META-INF/resources/ORIGIN-Complete.xml" />
+              <xed:include uri="xslStyle:mycoreclass-filterForDate,mycoreclass-options:resource:META-INF/resources/ORIGIN-versioned.xml" />
             </select>
           </div>
 
           <div class="form-group form-inline">
             <label class="mycore-form-label">
-              <a href="ORIGIN-Complete.xml?XSL.Style=filterForDate&amp;XSL.date=2023-07">Stand 2023-07:</a>
+              <a href="ORIGIN-versioned.xml?XSL.Style=filterForDate&amp;XSL.date=2023-07">Stand 2023-07:</a>
             </label>
             <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-live-search-normalize="true" data-virtual-scroll="true" data-show-subtext="true" data-size="10" data-display="static">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
-              <xed:include uri="xslStyle:mycoreclass-filterForDate,mycoreclass-options?date=2023-07:resource:META-INF/resources/ORIGIN-Complete.xml" />
+              <xed:include uri="xslStyle:mycoreclass-filterForDate,mycoreclass-options?date=2023-07:resource:META-INF/resources/ORIGIN-versioned.xml" />
             </select>
           </div>
             
           <div class="form-group form-inline">
             <label class="mycore-form-label">
-              <a href="ORIGIN-Complete.xml?XSL.Style=filterForDate&amp;XSL.date=2023-12">Stand 2023-12:</a>
+              <a href="ORIGIN-versioned.xml?XSL.Style=filterForDate&amp;XSL.date=2023-12">Stand 2023-12:</a>
             </label>
             <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-live-search-normalize="true" data-virtual-scroll="true" data-show-subtext="true" data-size="10" data-display="static">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
-              <xed:include uri="xslStyle:mycoreclass-filterForDate,mycoreclass-options?date=2023-12:resource:META-INF/resources/ORIGIN-Complete.xml" />
+              <xed:include uri="xslStyle:mycoreclass-filterForDate,mycoreclass-options?date=2023-12:resource:META-INF/resources/ORIGIN-versioned.xml" />
             </select>
           </div>
 
