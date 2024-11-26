@@ -2093,7 +2093,7 @@
       </category>
     </category>
     <valid from="2024-01">
-      <category ID="17">
+      <category ID="FakInf">
         <label xml:lang="de" text="Fakultät für Informatik" />
         <label xml:lang="en" text="Faculty of Computer Science" />
         <category ID="17.01">
