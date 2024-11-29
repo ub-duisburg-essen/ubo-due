@@ -2096,16 +2096,18 @@
       <category ID="FakInf">
         <label xml:lang="de" text="Fakultät für Informatik" />
         <label xml:lang="en" text="Faculty of Computer Science" />
-        <category ID="17.01">
+        <category ID="AllInf">
           <label xml:lang="de" text="Allgemeine Informatik" />
           <label xml:lang="en" text="Core Informatics" />
+          <label xml:lang="x-mapping" text="destatis:3500" />
           <category ID="18.01.20">
             <label xml:lang="de" text="Computergrafik und Visualisierung/Hochleistungsrechnen" />
             <label xml:lang="en" text="Computergraphics and Visualization" />
             <label xml:lang="x-mapping" text="destatis:3550" />
           </category>
-          <category ID="17.01.01">
+          <category ID="DaSci">
             <label xml:lang="de" text="Data Science" />
+            <label xml:lang="x-mapping" text="destatis:3520" />
           </category>
           <category ID="05.05.02">
             <label xml:lang="de" text="Didaktik der Informatik" />
@@ -2126,8 +2128,9 @@
             <label xml:lang="de" text="Networked Embedded Systems" />
             <label xml:lang="x-mapping" text="destatis:3550" />
           </category>
-          <category ID="17.01.02">
+          <category ID="QuanAl">
             <label xml:lang="de" text="Quantencomputing und Algorithmik" />
+            <label xml:lang="x-mapping" text="destatis:3530" />
           </category>
           <category ID="05.04.08">
             <label xml:lang="de" text="Technik der Rechnernetze" />
@@ -2139,21 +2142,24 @@
             <label xml:lang="en" text="Theoretical computer science" />
             <label xml:lang="x-mapping" text="destatis:3510" />
           </category>
-          <category ID="17.01.03">
+          <category ID="TheoKI">
             <label xml:lang="de" text="Theorie und Grundlagen der Künstlichen Intelligenz" />
             <label xml:lang="en" text="Theory and Fundamentals of Artificial Intelligence" />
+            <label xml:lang="x-mapping" text="destatis:3560" />
           </category>
-          <category ID="17.01.04">
+          <category ID="komSys">
             <label xml:lang="de" text="Verifikation komplexer Systeme und Model-Checking" />
             <label xml:lang="en" text="Verification of Complex Systems and Model Checking" />
+            <label xml:lang="x-mapping" text="destatis:3553" />
           </category>
           <category ID="18.01.12">
             <label xml:lang="de" text="Verteilte Systeme" />
             <label xml:lang="x-mapping" text="destatis:3550" />
           </category>
         </category>
-        <category ID="17.02">
+        <category ID="SoftEn">
           <label xml:lang="de" text="Software Engineering" />
+          <label xml:lang="x-mapping" text="destatis:3570" />
           <category ID="18.01.07">
             <label xml:lang="de" text="Intelligente Systeme" />
             <label xml:lang="en" text="Intelligent Systems" />
@@ -2168,21 +2174,25 @@
             <label xml:lang="de" text="Networks and Communication Systems" />
             <label xml:lang="x-mapping" text="destatis:3550" />
           </category>
-          <category ID="17.02.01">
+          <category ID="ResSys">
             <label xml:lang="de" text="Resiliente Systeme" />
             <label xml:lang="en" text="Resilient Systems" />
+            <label xml:lang="x-mapping" text="destatis:3570" />
           </category>
           <category ID="05.05.03 ">
             <label xml:lang="de" text="Software Engineering, insb. mobile Anwendungen" />
             <label xml:lang="en" text="Software Engineering, esp. Mobile Applications" />
+            <label xml:lang="x-mapping" text="destatis:3570" />
           </category>
-          <category ID="17.02.02">
+          <category ID="SoftQ">
             <label xml:lang="de" text="Software Qualität" />
             <label xml:lang="en" text="Software Quality" />
+            <label xml:lang="x-mapping" text="destatis:3570" />
           </category>
-          <category ID="17.02.03">
+          <category ID="SoftSpe">
             <label xml:lang="de" text="Software Spezifikation" />
             <label xml:lang="en" text="Software Specification" />
+            <label xml:lang="x-mapping" text="destatis:3570" />
           </category>
           <category ID="05.04.10">
             <label xml:lang="de" text="Software Systems Engineering" />
@@ -2193,15 +2203,18 @@
             <label xml:lang="en" text="System Security" />
             <label xml:lang="x-mapping" text="destatis:3570" />
           </category>
-          <category ID="17.02.04">
+          <category ID="TrustSys">
             <label xml:lang="de" text="Vertrauenswürdige Systeme, insb. Erklärbarkeit" />
             <label xml:lang="en" text="Trustworthy Systems, especially Explainability" />
+            <label xml:lang="x-mapping" text="destatis:3570" />
           </category>
         </category>
-        <category ID="17.03">
+        <category ID="HCCS">
           <label xml:lang="de" text="Human-centered Computing and Cognitive Science (HCCS)" />
-          <category ID="17.03.01">
+          <label xml:lang="x-mapping" text="destatis:3520" />
+          <category ID="AccDat">
             <label xml:lang="de" text="Accountability of Data Science and Security Systems" />
+            <label xml:lang="x-mapping" text="destatis:3520" />
           </category>
           <category ID="18.01.02">
             <label xml:lang="de" text="Allgemeine Psychologie: Kognition" />
@@ -2213,17 +2226,19 @@
             <label xml:lang="en" text="Digital Communication and Transformation" />
             <label xml:lang="x-mapping" text="destatis:0130" />
           </category>
-          <category ID="17.03.02">
+          <category ID="HUMA">
             <label xml:lang="de" text="Human Understanding of Machines and Algorithms" />
+            <label xml:lang="x-mapping" text="destatis:3520" />
           </category>
           <category ID="18.01.23">
             <label xml:lang="de" text="Informatische Methoden in der Modellierung und Analyse von Lernprozessen" />
             <label xml:lang="en" text="Computational Methods in Modeling and Analysis of Learning Processes" />
             <label xml:lang="x-mapping" text="destatis:1750" />
           </category>
-          <category ID="17.03.03">
+          <category ID="InSys">
             <label xml:lang="de" text="Interaktive Systeme" />
             <label xml:lang="en" text="Interactive Systems" />
+            <label xml:lang="x-mapping" text="destatis:3530" />
           </category>
           <category ID="18.01.15">
             <label xml:lang="de" text="Medieninformatik " />
@@ -2260,16 +2275,19 @@
             <label xml:lang="x-mapping" text="destatis:1715" />
           </category>
         </category>
-        <category ID="17.04">
+        <category ID="WiInf">
           <label xml:lang="de" text="Wirtschaftsinformatik" />
           <label xml:lang="en" text="Business Informatics" />
-          <category ID="17.04.01">
+          <label xml:lang="x-mapping" text="destatis:2990" />
+          <category ID="AngKI">
             <label xml:lang="de" text="Angewandte Methoden der Künstlichen Intelligenz" />
             <label xml:lang="en" text="Applied Methods of Aritficial Intelligence" />
+            <label xml:lang="x-mapping" text="destatis:3560" />
           </category>
-          <category ID="17.04.02">
+          <category ID="WiInfApp">
             <label xml:lang="de" text="Wirtschaftsinformatik und Applikationsmanagement" />
             <label xml:lang="en" text="Information Systems and Application Management" />
+            <label xml:lang="x-mapping" text="destatis:2990" />
           </category>
           <category ID="05.04.05">
             <label xml:lang="de" text="Wirtschaftsinformatik und Softwaretechnik" />
@@ -2286,13 +2304,15 @@
             <label xml:lang="en" text="Business Informatics and Strategic IT Management" />
             <label xml:lang="x-mapping" text="destatis:2990" />
           </category>
-          <category ID="17.04.03">
+          <category ID="WiInfSCM">
             <label xml:lang="de" text="Wirtschaftsinformatik und Sustainable Supply Chain Management" />
             <label xml:lang="en" text="Information Systems and Sustainable Supply Chain Management" />
+            <label xml:lang="x-mapping" text="destatis:2990" />
           </category>
-          <category ID="17.04.04">
+          <category ID="WiInfTrans">
             <label xml:lang="de" text="Wirtschaftsinformatik und Transformationsmanagement " />
             <label xml:lang="en" text="Information Systems and Transformation Management" />
+            <label xml:lang="x-mapping" text="destatis:2990" />
           </category>
           <category ID="05.04.20">
             <label xml:lang="de" text="Wirtschaftsinformatik und Unternehmensmodellierung " />
