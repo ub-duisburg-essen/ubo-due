@@ -13,7 +13,7 @@
               <label class="mycore-form-label">
                 <a href="api/v1/classifications/ORIGIN">Aktuelle ORIGIN-Klassifikation</a>
               </label>
-              <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-live-search-normalize="true" data-virtual-scroll="true" data-show-subtext="true" data-size="10" data-display="static">
+              <select id="{xed:generate-id()}" class="autocomplete mycore-form-input">
                 <option value="">
                   <xed:output i18n="search.select" />
                 </option>
@@ -30,7 +30,7 @@
               <span>&#160;/&#160;</span> 
               <a href="ORIGIN-versioned.xml?XSL.Transformer=versionedClassification&amp;XSL.buildVersionedCategoryIDs=false">für Suche:</a>
             </label>
-            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-live-search-normalize="true" data-virtual-scroll="true" data-show-subtext="true" data-size="10" data-display="static">
+            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
@@ -42,7 +42,7 @@
             <label class="mycore-form-label">
               <a href="ORIGIN-versioned.xml?XSL.Style=filterForDate">Stand heute (v2401):</a>
             </label>
-            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-show-content="true" data-live-search="true" data-live-search-normalize="true" data-virtual-scroll="true" data-show-subtext="true" data-size="10" data-display="static">
+            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
@@ -54,7 +54,7 @@
             <label class="mycore-form-label">
               <a href="ORIGIN-versioned.xml?XSL.Style=filterForDate&amp;XSL.date=2023-12">Stand 2023-12 (legacy v2308):</a>
             </label>
-            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-live-search-normalize="true" data-virtual-scroll="true" data-show-subtext="true" data-size="10" data-display="static">
+            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
@@ -66,7 +66,7 @@
             <label class="mycore-form-label">
               <a href="ORIGIN-versioned.xml?XSL.Style=filterForDate&amp;XSL.date=2023-07">Stand 2023-07 (v2307):</a>
             </label>
-            <select id="{xed:generate-id()}" class="selectpicker mycore-form-input" data-live-search="true" data-live-search-normalize="true" data-virtual-scroll="true" data-show-subtext="true" data-size="10" data-display="static">
+            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
@@ -79,4 +79,8 @@
     </div>
   </article>
 
+  <script type="text/javascript">
+    $(document).ready(function() { $('select[class*="autocomplete"]').selectpicker({liveSearch:true, liveSearchNormalize:true, virtualScroll:true, showSubtext:true, size:10}); });
+  </script>
+              
 </webpage>
