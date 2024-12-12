@@ -3,10 +3,10 @@
  */
 
 // Bootstrap-select for select boxes
-.bootstrap-select .btn {
-  background-color: transparent !important;
-  border-color: transparent !important;
-  padding: 0 !important;
+.bootstrap-select {
+  .dropdown-menu {
+    width: auto;
+  }
 }
 
 // Extra large devices (large desktops)
