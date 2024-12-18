@@ -52,7 +52,7 @@
 
           <div class="form-group form-inline">
             <label class="mycore-form-label">
-              <a href="ORIGIN-versioned.xml?XSL.Style=filterForDate&amp;XSL.date=2023-12">Stand 2023-12 (legacy v2308):</a>
+              <a href="ORIGIN-versioned.xml?XSL.Style=filterForDate&amp;XSL.date=2023-12">Stand 2023-12 (legacy v2312):</a>
             </label>
             <select id="{xed:generate-id()}" class="autocomplete mycore-form-input">
               <option value="">
@@ -62,18 +62,6 @@
             </select>
           </div>
 
-          <div class="form-group form-inline">
-            <label class="mycore-form-label">
-              <a href="ORIGIN-versioned.xml?XSL.Style=filterForDate&amp;XSL.date=2023-07">Stand 2023-07 (v2307):</a>
-            </label>
-            <select id="{xed:generate-id()}" class="autocomplete mycore-form-input">
-              <option value="">
-                <xed:output i18n="search.select" />
-              </option>
-              <xed:include uri="xslStyle:mycoreclass-filterForDate,mycoreclass-options?date=2023-07:resource:META-INF/resources/ORIGIN-versioned.xml" />
-            </select>
-          </div>
-            
         </xed:bind>
       </xed:form>
     </div>
