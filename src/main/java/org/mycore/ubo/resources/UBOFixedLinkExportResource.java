@@ -52,7 +52,7 @@ public class UBOFixedLinkExportResource {
      * <li>(obligatory if 'connection-ids' isn't configured) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.<strong>tags</strong>=
      * &lt;comma-separated list of tags&gt;</li>
      * <li>(optional) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.<strong>sort-fields</strong>=&lt;comma-separated list of sort fields&gt;</li>
-     * <li>UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.<strong>sort-directions</strong>=&lt;comma-separated list of sort directions
+     * <li>(optional) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.<strong>sort-directions</strong>=&lt;comma-separated list of sort directions
      * (asc or desc)&gt;</li>
      * <li>(optional) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.<strong>year-from</strong>=&lt;year when to begin search&gt;</li>
      * <li>(optional) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.<strong>year-single</strong>=&lt;single year to search in&gt;</li>
