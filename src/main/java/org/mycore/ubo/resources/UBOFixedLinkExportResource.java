@@ -6,11 +6,13 @@ import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.core.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jdom2.Element;
 import org.mycore.common.config.MCRConfiguration2;
-import org.mycore.frontend.MCRFrontendUtil;
+import org.mycore.common.content.MCRContent;
+import org.mycore.common.content.MCRJDOMContent;
+import org.mycore.common.content.transformer.MCRContentTransformerFactory;
+import org.mycore.common.xml.MCRURIResolver;
 
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -21,7 +23,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-@Path("export-fixed")
+@Path("export-list")
 public class UBOFixedLinkExportResource {
 
     private static final List<String> ROLES = MCRConfiguration2.getString("UBO.Search.PersonalList.Roles")
@@ -39,63 +41,66 @@ public class UBOFixedLinkExportResource {
         .orElse("+status:confirmed");
 
     /**
-     * Translates an ID into a Solr query with configured parameters. Then returns a Response
-     * with a redirect to the Solr query.
+     * Translates an ID into a Solr query with configured parameters. Then returns a response
+     * with the transformed search result of the Solr query.
      * <p><p>
      * The configuration needed:
      * <ul>
-     * <li>(obligatory) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.format=&lt;wanted format, ex. html&gt;</li>
-     * <li>(obligatory if 'tags' isn't configured) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.connection-ids=
+     * <li>(obligatory) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.<strong>transformer</strong>=&lt;transformer to be used&gt;</li>
+     * <li>(obligatory if 'tags' isn't configured) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.<strong>connection-ids</strong>=
      * &lt;comma-separated list of connection-ids&gt;</li>
-     * <li>(obligatory if 'connection-ids' isn't configured) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.tags=
+     * <li>(obligatory if 'connection-ids' isn't configured) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.<strong>tags</strong>=
      * &lt;comma-separated list of tags&gt;</li>
-     * <li>(optional) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.sort-fields=&lt;comma-separated list of sort fields&gt;</li>
-     * <li>UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.sort-directions=&lt;comma-separated list of sort directions
+     * <li>(optional) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.<strong>sort-fields</strong>=&lt;comma-separated list of sort fields&gt;</li>
+     * <li>UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.<strong>sort-directions</strong>=&lt;comma-separated list of sort directions
      * (asc or desc)&gt;</li>
-     * <li>(optional) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.year-from=&lt;year where to begin search&gt;</li>
-     * <li>(optional) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.year-single=&lt;single year to search in&gt;</li>
-     * <li>(optional) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.style=&lt;wanted style, ex. ieee&gt;</li>
-     * <li>(optional, standard value is false) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.part-of=&lt;is part of
+     * <li>(optional) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.<strong>year-from</strong>=&lt;year when to begin search&gt;</li>
+     * <li>(optional) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.<strong>year-single</strong>=&lt;single year to search in&gt;</li>
+     * <li>(optional, standard value is false) UBO.Search.PersonalList.FixedSearch.&lt;id&gt;.<strong>part-of</strong>=&lt;is part of
      * statistics, true or false&gt;</li>
      * </ul>
      * @param id the id with which the configuration is defined
-     * @return a redirect Response to the Solr query
-     * @throws URISyntaxException in case of a malformed URI
+     * @return the response with the transformed content of the Solr search or an error message
      */
     @GET
     @Path("{id}")
-    public Response fixedSearch(@PathParam("id") String id) throws URISyntaxException {
-        Map<String,String> propertiesMap = MCRConfiguration2.getSubPropertiesMap(
+    public Response fixedSearch(@PathParam("id") String id) {
+
+        Map<String, String> propertiesMap = MCRConfiguration2.getSubPropertiesMap(
             "UBO.Search.PersonalList.FixedSearch." + id + ".");
         if (propertiesMap.isEmpty()) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
-        if ((!propertiesMap.containsKey("connection-ids") && !propertiesMap.containsKey("tags"))
-            || !propertiesMap.containsKey("format")) {
+        String connectionsIds = getOrNull(propertiesMap,"connection-ids");
+        String tags = getOrNull(propertiesMap,"tags");
+        String transformer = getOrNull(propertiesMap,"transformer");
+        if ((connectionsIds == null && tags == null)
+            || transformer == null) {
             return Response.status(Response.Status.BAD_REQUEST).entity(
                 "Not all needed parameters for the query are configured").build();
         }
-        if (propertiesMap.containsKey("connection-ids") && propertiesMap.containsKey("tags")) {
+        if (connectionsIds != null && tags != null) {
             return Response.status(Response.Status.BAD_REQUEST).entity(
                 "Configure either pids or tags").build();
         }
 
-        String format = getOrNull(propertiesMap, "format");
+        if (MCRContentTransformerFactory.getTransformer(transformer) == null) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(
+                "No valid transformer configured").build();
+        }
+
         List<String> sortFields = new ArrayList<>(Arrays.asList(propertiesMap.get("sort-fields").split(",")));
         List<String> sortDirections = new ArrayList<>(Arrays.asList(propertiesMap.get("sort-directions").split(",")));
         Integer year = propertiesMap.get("year-from") == null || propertiesMap.get("year-from").isBlank() ? null :
                        Integer.parseInt(propertiesMap.get("year-from"));
         String yearSingle = getOrNull(propertiesMap, "year-single");
-        String style = getOrNull(propertiesMap, "style");
-        Boolean partOf = propertiesMap.get("part-of") == null || propertiesMap.get("part-of").isBlank() ? null :
-                         Boolean.parseBoolean(propertiesMap.get("part-of"));
-
+        Boolean partOf = propertiesMap.get("part-of") != null && !propertiesMap.get("part-of").isBlank()
+            && Boolean.parseBoolean(propertiesMap.get("part-of"));
 
         if (sortFields.size() != sortDirections.size()) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        String baseURL = MCRFrontendUtil.getBaseURL();
         String yearPart;
 
         if (year != null) {
@@ -117,8 +122,8 @@ public class UBOFixedLinkExportResource {
 
         String childFilterQuery;
         StringBuilder solrRequest;
-        if (propertiesMap.containsKey("connection-ids")) {
-            Set<String> pids = Stream.of(propertiesMap.get("connection-ids").split(",")).collect(Collectors.toSet());
+        if (connectionsIds != null) {
+            Set<String> pids = Stream.of(connectionsIds.split(",")).collect(Collectors.toSet());
             String nidConnectionValue = "(" + String.join(" OR ", pids) + ")";
             childFilterQuery = "+name_id_connection:" + nidConnectionValue;
             if (!ROLES.isEmpty()) {
@@ -127,18 +132,15 @@ public class UBOFixedLinkExportResource {
 
             solrQuery += "+{!parent which=\"objectType:mods\" filters=$childfq}objectKind:name";
             solrRequest = new StringBuilder()
-                .append(baseURL).append("servlets/solr/select2")
-                .append("?q=").append(encode(solrQuery))
+                .append("q=").append(encode(solrQuery))
                 .append("&childfq=").append(encode(childFilterQuery))
                 .append("&rows=9999");
-        }
-        else {
-            Set<String> tags = Stream.of(propertiesMap.get("tags").split(",")).collect(Collectors.toSet());
-            String tagValue = "(" + String.join(" OR ", tags) + ")";
+        } else {
+            Set<String> tagsSplit = Stream.of(tags.split(",")).collect(Collectors.toSet());
+            String tagValue = "(" + String.join(" OR ", tagsSplit) + ")";
             solrQuery += "+tag:" + tagValue;
             solrRequest = new StringBuilder()
-                .append(baseURL).append("servlets/solr/select2")
-                .append("?q=").append(encode(solrQuery))
+                .append("q=").append(encode(solrQuery))
                 .append("&rows=9999");
         }
 
@@ -151,22 +153,18 @@ public class UBOFixedLinkExportResource {
             solrRequest.append(String.join(encode(", "), sorts));
         }
 
-        if (style == null) {
-            solrRequest.append("&XSL.Transformer=").append(encode(format));
-        } else {
-            solrRequest.append("&XSL.Transformer=response-csl-").append(encode(format));
-            solrRequest.append("&XSL.style=").append(encode(style));
-        }
-
-        if (format.equals("mods2csv2")) {
-            String s = MCRConfiguration2.getString("UBO.Export.Fields").get();
-            solrRequest.append("&fl=").append(s);
-        }
-
         LOGGER.info("Request is " + solrRequest);
-        URI newLocation = new URI(solrRequest.toString());
-        return Response.temporaryRedirect(newLocation).build();
 
+        String uri = "solr:requestHandler:select2:" + solrRequest;
+        Element source = MCRURIResolver.instance().resolve(uri);
+        MCRJDOMContent content = new MCRJDOMContent(source);
+        try {
+            MCRContent transformed = MCRContentTransformerFactory.getTransformer(transformer).transform(content);
+            return Response.ok(transformed.getContentInputStream()).build();
+        } catch (Exception e) {
+            LOGGER.error(e);
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
     /**
