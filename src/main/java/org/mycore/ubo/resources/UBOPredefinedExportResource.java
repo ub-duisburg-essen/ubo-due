@@ -29,18 +29,16 @@ public class UBOPredefinedExportResource {
     @Path("{id}")
     public Response predefinedExport(@PathParam("id") String id) {
 
-        String solrURI, solrRequest, transformerName;
+        String solrURI, transformerName;
         try {
-            solrURI = MCRConfiguration2.getStringOrThrow("UBO.PredefinedExport." + id + ".DefaultSOLRURI");
-            solrRequest = MCRConfiguration2.getStringOrThrow("UBO.PredefinedExport." + id + ".SolrRequest");
+            solrURI = MCRConfiguration2.getStringOrThrow("UBO.PredefinedExport." + id + ".SolrURI");
             transformerName = MCRConfiguration2.getStringOrThrow("UBO.PredefinedExport." + id + ".Transformer");
         } catch (MCRConfigurationException e) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        String uri = solrURI + solrRequest;
-        LOGGER.info("Request is: {}", uri);
-        Element source = MCRURIResolver.instance().resolve(uri);
+        LOGGER.info("Request is: {}", solrURI);
+        Element source = MCRURIResolver.instance().resolve(solrURI);
         MCRJDOMContent content = new MCRJDOMContent(source);
         try {
             MCRContentTransformer transformer = MCRContentTransformerFactory.getTransformer(transformerName);
