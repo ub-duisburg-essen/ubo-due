@@ -6,14 +6,9 @@ import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.core.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jdom2.Element;
 import org.mycore.common.config.MCRConfiguration2;
 import org.mycore.common.config.MCRConfigurationException;
-import org.mycore.common.content.MCRContent;
-import org.mycore.common.content.MCRJDOMContent;
-import org.mycore.common.content.transformer.MCRContentTransformer;
-import org.mycore.common.content.transformer.MCRContentTransformerFactory;
-import org.mycore.common.xml.MCRURIResolver;
+import org.mycore.common.content.MCRSourceContent;
 
 @Path("export-list")
 public class UBOPredefinedExportResource {
@@ -21,29 +16,26 @@ public class UBOPredefinedExportResource {
     private static final Logger LOGGER = LogManager.getLogger();
 
     /**
-     * Takes an id, executes the corresponding configured Solr-query and returns it.
+     * Takes an id, resolves the corresponding configured URI and returns the requested content, or an error.
+     * Syntax of configuration is:
+     * <pre><code>UBO.PredefinedExport.<id>.URI=<URI to resolve></code></pre>
      * @param id the id with which the configuration is defined
-     * @return the response with the transformed content of the Solr search or an error message
+     * @return the response with the transformed content of the request or an error
      */
     @GET
     @Path("{id}")
     public Response predefinedExport(@PathParam("id") String id) {
 
-        String solrURI, transformerName;
+        String solrURI;
         try {
-            solrURI = MCRConfiguration2.getStringOrThrow("UBO.PredefinedExport." + id + ".SolrURI");
-            transformerName = MCRConfiguration2.getStringOrThrow("UBO.PredefinedExport." + id + ".Transformer");
+            solrURI = MCRConfiguration2.getStringOrThrow("UBO.PredefinedExport." + id + ".URI");
         } catch (MCRConfigurationException e) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
-
         LOGGER.info("Request is: {}", solrURI);
-        Element source = MCRURIResolver.instance().resolve(solrURI);
-        MCRJDOMContent content = new MCRJDOMContent(source);
         try {
-            MCRContentTransformer transformer = MCRContentTransformerFactory.getTransformer(transformerName);
-            MCRContent transformed = transformer.transform(content);
-            return Response.ok(transformed.getContentInputStream()).build();
+            MCRSourceContent content = MCRSourceContent.getInstance(solrURI);
+            return Response.ok(content.getContentInputStream()).build();
         } catch (Exception e) {
             LOGGER.error(e);
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
