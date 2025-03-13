@@ -1843,6 +1843,10 @@
           <label xml:lang="x-eva" text="4" />
           <label xml:lang="x-mapping" text="destatis:4595" />
         </category>
+        <category ID="InDiMe">
+          <label xml:lang="de" text="Institut für Didaktik in der Medizin" />          
+          <label xml:lang="x-mapping" text="4410" />
+        </category>
         <category ID="14.01.30">
           <label xml:lang="de" text="Institut für Experimentelle Immunologie und Bildgebung" />
           <label xml:lang="en" text="Institute of Experimental Immunology and Imaging" />
@@ -2124,6 +2128,10 @@
         </category>
         <category ID="14.70">
           <label xml:lang="de" text="St. Josef-Krankenhaus Kupferdreh" />
+          <label xml:lang="x-mapping" text="destatis:4900" />
+        </category>
+        <category ID="EvK">
+          <label xml:lang="de" text="Evangelisches Krankenhaus Castrop-Rauxel" />
           <label xml:lang="x-mapping" text="destatis:4900" />
         </category>
         <category ID="14.51">
