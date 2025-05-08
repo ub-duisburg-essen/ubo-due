@@ -6,7 +6,7 @@ import org.mycore.common.xml.MCRURIResolver;
 import org.mycore.frontend.servlets.MCRServlet;
 import org.mycore.frontend.servlets.MCRServletJob;
 
-public class LSFSearchService extends MCRServlet {
+public class LSFSearchServlet extends MCRServlet {
 
     private static final long serialVersionUID = 1L;
 

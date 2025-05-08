@@ -11,7 +11,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>LSFSearchServlet</servlet-name>
-    <url-pattern>/servlets/LSFSearchServlett</url-pattern>
+    <url-pattern>/servlets/LSFSearchServlet</url-pattern>
   </servlet-mapping>
 
 </web-fragment>
