@@ -1,0 +1,17 @@
+<web-fragment version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-fragment_6_0.xsd"
+              metadata-complete="true">
+
+  <name>ubo_due</name>
+
+  <servlet id="LSFSearchServlet">
+    <servlet-name>LSFSearchServlet</servlet-name>
+    <servlet-class>org.mycore.ubo.lsf.LSFSearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LSFSearchServlet</servlet-name>
+    <url-pattern>/servlets/LSFSearchServlett</url-pattern>
+  </servlet-mapping>
+
+</web-fragment>
