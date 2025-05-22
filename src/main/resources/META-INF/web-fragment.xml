@@ -14,6 +14,15 @@
     <url-pattern>/servlets/LSFSearchServlet</url-pattern>
   </servlet-mapping>
 
+  <servlet id="CascadingLoginServlet">
+    <servlet-name>CascadingLoginServlet</servlet-name>
+    <servlet-class>org.mycore.ubo.login.CascadingLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CascadingLoginServlet</servlet-name>
+    <url-pattern>/servlets/CascadingLoginServlet</url-pattern>
+  </servlet-mapping>
+
   <filter>
     <filter-name>SessionTimeoutFilter</filter-name>
     <filter-class>org.mycore.ubo.session.SessionTimeoutFilter</filter-class>
@@ -25,6 +34,16 @@
     <dispatcher>REQUEST</dispatcher>
   </filter-mapping>
 
+  <filter>
+    <filter-name>SessionLoginFilter</filter-name>
+    <filter-class>org.mycore.ubo.session.SessionLoginFilter</filter-class>
+  </filter>
 
+  <filter-mapping>
+    <filter-name>SessionLoginFilter</filter-name>
+    <servlet-name>CascadingLoginServlet</servlet-name>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+  </filter-mapping>
 
 </web-fragment>

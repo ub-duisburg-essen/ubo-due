@@ -59,7 +59,10 @@ public class SessionTimeoutFilter implements Filter {
                     MCRIPAddress mcrIpAddressClient = new MCRIPAddress(clientIp);
                     if (!isAllowedIp(mcrIpAddressClient)) {
                         session.setMaxInactiveInterval(TIMEOUT_LENGTH);
-                        LOGGER.debug(String.format("Session with client-IP" + clientIp + " expires in " + TIMEOUT_LENGTH +" seconds"));
+                        LOGGER.debug(String.format("Session with client-IP " + clientIp + " expires in " + TIMEOUT_LENGTH +" seconds"));
+                    }
+                    else {
+                        LOGGER.debug(String.format("Session with client-IP " + clientIp + " won't expire prematurely, because it's in the allowlist"));
                     }
                 } catch (UnknownHostException e) {
                     LOGGER.warn("Invalid remote address: {}", clientIp);
@@ -71,7 +74,8 @@ public class SessionTimeoutFilter implements Filter {
 
     private boolean isAllowedIp(MCRIPAddress ip) {
         for (MCRIPAddress allowlistIp : allowlist) {
-            if (Arrays.equals(allowlistIp.getAddress(), ip.getAddress())) {
+            if (Arrays.equals(allowlistIp.getAddress(), ip.getAddress())
+            || allowlistIp.contains(ip)) {
                 return true;
             }
         }
