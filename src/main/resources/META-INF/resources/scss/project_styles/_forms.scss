@@ -2,15 +2,22 @@
  *  - styles for forms and form fields
  */
 
- // Extra large devices (large desktops)
+// Bootstrap-select for select boxes
+.bootstrap-select {
+  .dropdown-menu {
+    width: auto;
+  }
+}
+
+// Extra large devices (large desktops)
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
-  .searchfield_box {
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
-  }
+.searchfield_box {
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
 
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {
