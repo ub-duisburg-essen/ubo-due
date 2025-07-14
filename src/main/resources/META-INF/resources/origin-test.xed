@@ -26,15 +26,15 @@
             <label class="mycore-form-label">
               <a href="ORIGIN-versioned.xml">Alle Versionen</a>
               <span>&#160;/&#160;</span> 
-              <a href="ORIGIN-versioned.xml?XSL.Transformer=versionedClassification&amp;XSL.buildVersionedCategoryIDs=true">im Editor</a>
+              <a href="ORIGIN-versioned.xml?XSL.Transformer=versionedLabelsAndIDs">im Editor</a>
               <span>&#160;/&#160;</span> 
-              <a href="ORIGIN-versioned.xml?XSL.Transformer=versionedClassification&amp;XSL.buildVersionedCategoryIDs=false">für Suche:</a>
+              <a href="ORIGIN-versioned.xml?XSL.Transformer=versionedLabels">für Suche:</a>
             </label>
             <select id="{xed:generate-id()}" class="autocomplete mycore-form-input">
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
-              <xed:include uri="xslStyle:mycoreclass-handleVersionedLabels,mycoreclass-allVersions,mycoreclass-options?buildVersionedCategoryIDs=false:resource:META-INF/resources/ORIGIN-versioned.xml" />
+              <xed:include uri="xslStyle:mycoreclass-duplicate-versioned-labels,mycoreclass-versioned-labels,mycoreclass-options:resource:META-INF/resources/ORIGIN-versioned.xml" />
             </select>
           </div>
 

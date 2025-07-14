@@ -6,8 +6,6 @@
 
   <xsl:include href="copynodes.xsl" />
   
-  <xsl:param name="buildVersionedCategoryIDs" select="'true'" />
-
   <xsl:template match="mycoreclass">
     <mycoreclass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
       <xsl:apply-templates select="@ID|node()" />
@@ -18,40 +16,35 @@
     <xsl:apply-templates select="*" />
   </xsl:template>
   
-  <xsl:template match="category/@ID[$buildVersionedCategoryIDs = 'true']">
-    <xsl:attribute name="ID">
-      <xsl:value-of select="." />
-      <xsl:apply-templates select="ancestor::valid[1]" mode="id" />
-    </xsl:attribute>
-  </xsl:template>
-  
-  <xsl:template match="valid" mode="id">
-    <xsl:text>_v</xsl:text>
-    <xsl:choose>
-      <xsl:when test="@until">
-        <xsl:copy-of select="translate(substring(@until,3,5),'-','')" />
-      </xsl:when>
-      <xsl:when test="@from">
-        <xsl:copy-of select="translate(substring(@from,3,5),'-','')" />
-      </xsl:when>
-    </xsl:choose>
-  </xsl:template>
-
   <xsl:template match="label[not(starts-with(@xml:lang,'x-'))]/@text">
     <xsl:attribute name="text">
       <xsl:value-of select="." />
-      <xsl:apply-templates select="parent::label/parent::category/parent::valid" mode="label" />
+      <xsl:apply-templates select="../../parent::valid" mode="label" />
     </xsl:attribute>
   </xsl:template>
+
+  <xsl:template match="valid[@from]" mode="label" />
 
   <xsl:template match="valid[@until]" mode="label">
     <xsl:text> (</xsl:text>
     <xsl:value-of select="i18n:translate('ubo.classification.versioning.until')" />
     <xsl:text> </xsl:text>
-    <xsl:value-of select="substring(@until,6,2)" />
-    <xsl:text>/</xsl:text>
-    <xsl:value-of select="substring(@until,1,4)" />
+    <xsl:apply-templates select="@until" mode="date" />
     <xsl:text>)</xsl:text>
   </xsl:template>
   
+  <xsl:template match="valid[@from][@until]" mode="label" priority="1">
+    <xsl:text> (</xsl:text>
+    <xsl:apply-templates select="@from" mode="date" />
+    <xsl:text> - </xsl:text>
+    <xsl:apply-templates select="@until" mode="date" />
+    <xsl:text>)</xsl:text>
+  </xsl:template>
+  
+  <xsl:template match="@from|@until" mode="date">
+    <xsl:value-of select="substring(.,6,2)" />
+    <xsl:text>/</xsl:text>
+    <xsl:value-of select="substring(.,1,4)" />
+  </xsl:template>
+
 </xsl:stylesheet>
