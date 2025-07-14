@@ -2245,7 +2245,7 @@
             <label xml:lang="en" text="Resilient Systems" />
             <label xml:lang="x-mapping" text="destatis:3570" />
           </category>
-          <category ID="05.05.03 ">
+          <category ID="05.05.03">
             <label xml:lang="de" text="Software Engineering, insb. mobile Anwendungen" />
             <label xml:lang="en" text="Software Engineering, esp. Mobile Applications" />
             <label xml:lang="x-mapping" text="destatis:3570" />
