@@ -34,7 +34,7 @@
               <option value="">
                 <xed:output i18n="search.select" />
               </option>
-              <xed:include uri="xslStyle:mycoreclass-duplicate-versioned-labels,mycoreclass-versioned-labels,mycoreclass-options:resource:META-INF/resources/ORIGIN-versioned.xml" />
+              <xed:include uri="xslStyle:mycoreclass-options:xslTransform:versionedLabelsAndIDs:resource:META-INF/resources/ORIGIN-versioned.xml" />
             </select>
           </div>
 
