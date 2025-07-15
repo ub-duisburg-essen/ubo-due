@@ -1486,6 +1486,7 @@
           </category>
           <category ID="18.03.16">
             <label xml:lang="de" text="Energieverfahrenstechnik und Energiesysteme" />
+            <label xml:lang="en" text="Environmental Process Engineering and Plant Design" />
             <label xml:lang="x-mapping" text="destatis:6985" />
           </category>
         </category>
