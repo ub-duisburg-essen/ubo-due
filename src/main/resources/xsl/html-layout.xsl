@@ -80,8 +80,8 @@
       <link rel="icon" href="{$WebApplicationBaseURL}favicon.ico" type="image/x-icon" />
 
       <link rel="stylesheet" href="{$WebApplicationBaseURL}webjars/font-awesome/{$UBO.Frontend.font-awesome.version}/css/all.css" />
-      <link rel="stylesheet" href="{$WebApplicationBaseURL}rsc/sass/scss/bootstrap-ubo.css"  />
       <link rel="stylesheet" href="{$WebApplicationBaseURL}webjars/bootstrap-select/{$UBO.Frontend.bootstrap-select.version}/css/bootstrap-select.min.css" />
+      <link rel="stylesheet" href="{$WebApplicationBaseURL}rsc/sass/scss/bootstrap-ubo.css"  />
       <link rel="stylesheet" href="{$WebApplicationBaseURL}webjars/jquery-ui/{$UBO.Frontend.jquery-ui.version}/jquery-ui.css" />
 
       <script type="text/javascript" src="{$WebApplicationBaseURL}webjars/jquery/{$UBO.Frontend.jquery.version}/jquery.min.js"></script>
