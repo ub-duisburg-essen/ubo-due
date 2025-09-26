@@ -22,6 +22,7 @@
 
   <properties>
     <mycore.version>2023.06.4-SNAPSHOT</mycore.version>
+    <java.target.version>17</java.target.version>
   </properties>
 
   <build>
