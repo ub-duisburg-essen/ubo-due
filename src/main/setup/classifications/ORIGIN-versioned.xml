@@ -228,12 +228,18 @@
           <label xml:lang="de" text="Bildung, Entwicklung, Soziale Teilhabe (BEST)" />
           <label xml:lang="en" text="Education, Development, Social Participation  (BEST)" />
           <label xml:lang="x-mapping" text="destatis:2375" />
-        </category>
+        </category>     
         <category ID="FLEX">
-          <label xml:lang="de" text="Flexibilität und Sicherheit (FLEX)" />
-          <label xml:lang="en" text="Flexibility and Security (FLEX)" />
+          <valid until="2022-12">
+            <label xml:lang="de" text="Flexibilität und Sicherheit (FLEX)" />
+            <label xml:lang="en" text="Flexibility and Security (FLEX)" />
+          </valid>
+          <valid from="2023-01">        
+            <label xml:lang="de" text="Prekarisierung, Regulierung, Arbeitsqualität (PreRA)" />
+            <label xml:lang="en" text="Precarization, Regulation, Job quality (PreRA)" />        
+          </valid>
           <label xml:lang="x-mapping" text="destatis:2375" />
-        </category>
+        </category>   
       </category>
       <category ID="16.02">
         <label xml:lang="de" text="Institut für Entwicklung und Frieden (INEF)" />
@@ -1078,6 +1084,11 @@
         <label xml:lang="de" text="Molekulare Zellbiologie" />
         <label xml:lang="x-mapping" text="destatis:4000" />
       </category>
+      <category ID="OekoToxi">
+        <label xml:lang="de" text="Ökotoxikologie" />
+        <label xml:lang="en" text="Ecotoxicology" />
+        <label xml:lang="x-mapping" text="destatis:4090" />
+      </category>
       <category ID="09.02.28">
         <label xml:lang="de" text="Phykologie" />
         <label xml:lang="x-mapping" text="destatis:4040" />
@@ -1090,7 +1101,11 @@
       <category ID="09.01.11">
         <label xml:lang="de" text="Strukturelle und Medizinische Biochemie" />
         <label xml:lang="x-mapping" text="destatis:4065" />
-      </category>
+      </category> 
+      <category ID="CCAC">
+        <label xml:lang="de" text="Central Collection of Algal Cultures (CCAC)" />
+        <label xml:lang="x-mapping" text="destatis:4040" />
+      </category>     
     </category>
     <category ID="12">
       <label xml:lang="de" text="Fakultät für Ingenieurwissenschaften" />
@@ -1543,12 +1558,18 @@
         <category ID="18.03.11">
           <label xml:lang="de" text="Gießerei-Institut" />
           <label xml:lang="x-mapping" text="destatis:6850" />
-        </category>
+        </category>        
         <category ID="18.03.05">
-          <label xml:lang="de" text="Institut für Schiffstechnik, Meerestechnik und Transportsysteme (ISMT)" />
-          <label xml:lang="en" text="Institute of Ship Technology, Ocean Engineering and Transport Systems " />
+          <valid until="2024-10">
+            <label xml:lang="de" text="Institut für Schiffstechnik, Meerestechnik und Transportsysteme (ISMT)" />
+            <label xml:lang="en" text="Institute of Ship Technology, Ocean Engineering and Transport Systems " />
+          </valid>  
+          <valid from="2024-11">        
+            <label xml:lang="de" text="Institut für Nachhaltige und Autonome Maritime Systeme (INAM)" />
+            <label xml:lang="en" text="Institute of Sustainable and Autonomous Maritime Systems (INAM)" />                 
+          </valid>
           <label xml:lang="x-mapping" text="destatis:7220" />
-        </category>
+        </category>  
         <category ID="18.03.10">
           <label xml:lang="de" text="Institut für Wirtschaftsingenieurwesen" />
           <label xml:lang="x-mapping" text="destatis:6755" />
@@ -1581,6 +1602,10 @@
         <label xml:lang="de" text="Universitätsklinikum Essen" />
         <label xml:lang="en" text="Essen University Hospital" />
         <label xml:lang="x-mapping" text="destatis:4400" />
+        <category ID="MedIn">          
+          <label xml:lang="de" text="Medizinische Intensivtherapie" />
+          <label xml:lang="x-mapping" text="destatis:4900" />
+        </category>
         <category ID="14.08.01">
           <label xml:lang="de" text="Klinik für Allgemeinchirurgie, Viszeral- und Transplantationschirurgie" />
           <label xml:lang="en" text="Surgical Clinic" />
@@ -1837,6 +1862,15 @@
           <label xml:lang="en" text="Institute of Anatomy" />
           <label xml:lang="x-mapping" text="destatis:4560" />
         </category>
+         <category ID="InAn">
+          <label xml:lang="de" text="Institut für Anatomie II" />
+          <label xml:lang="en" text="Institute of Anatomy II" />
+          <label xml:lang="x-mapping" text="destatis:4560" />
+          <category ID="NeuAn">
+            <label xml:lang="de" text="Neuroanatomie" />
+            <label xml:lang="x-mapping" text="destatis:4560" />
+         </category>
+        </category>
         <category ID="14.01.21">
           <label xml:lang="de"
             text="Institut für Diagnostische und Interventionelle Radiologie und Neuroradiologie" />
@@ -1934,6 +1968,10 @@
           <label xml:lang="en" text="Institute of Pathophysiology" />
           <label xml:lang="x-eva" text="15" />
           <label xml:lang="x-mapping" text="destatis:4710" />
+        </category>
+        <category ID="InPaEr">
+          <label xml:lang="de" text="Institut für PatientenErleben" />          
+          <label xml:lang="x-mapping" text="destatis:4450" />
         </category>
         <category ID="14.01.31">
           <label xml:lang="de" text="Institut für Pharmakogenetik" />
@@ -2135,6 +2173,18 @@
           <label xml:lang="de" text="Evangelisches Krankenhaus Castrop-Rauxel" />
           <label xml:lang="x-mapping" text="destatis:4900" />
         </category>
+        <category ID="EvGe">
+          <label xml:lang="de" text="Evangelisches Klinikum Gelsenkirchen" />
+          <label xml:lang="x-mapping" text="destatis:4900" />
+        </category>
+        <category ID="Apo">
+          <label xml:lang="de" text="Apotheke" />
+          <label xml:lang="x-mapping" text="destatis:8930" />
+        </category>
+        <category ID="DIZ">
+          <label xml:lang="de" text="Datenintegrationszentrum (DIZ)" />
+          <label xml:lang="x-mapping" text="destatis:4737" />
+        </category>
         <category ID="14.51">
           <label xml:lang="de" text="Krankenhaushygiene" />
           <label xml:lang="x-mapping" text="destatis:4780" />
@@ -2142,6 +2192,10 @@
         <category ID="PFD">
           <label xml:lang="de" text="Pflegedienst" />
           <label xml:lang="x-mapping" text="destatis:8915" />
+        </category>
+        <category ID="PhTh">
+          <label xml:lang="de" text="Physiotherapie" />
+          <label xml:lang="x-mapping" text="destatis:8900" />
         </category>
         <category ID="SDT">
           <label xml:lang="de" text="Stabsstelle Digitale Transformation" />
@@ -2223,10 +2277,20 @@
             <label xml:lang="de" text="Verteilte Systeme" />
             <label xml:lang="x-mapping" text="destatis:3550" />
           </category>
+          <category ID="18.01.06">
+              <label xml:lang="de" text="Informationssysteme" />
+              <label xml:lang="en" text="Information Systems" />
+              <label xml:lang="x-mapping" text="destatis:2990" />
+            </category>
         </category>
         <category ID="SoftEn">
           <label xml:lang="de" text="Software Engineering" />
-          <label xml:lang="x-mapping" text="destatis:3570" />
+          <label xml:lang="x-mapping" text="destatis:3570" />         
+          <category ID="AdSys">
+            <label xml:lang="de" text="Adaptive Systeme" />
+            <label xml:lang="en" text="Adaptive Systems" />
+            <label xml:lang="x-mapping" text="destatis:3520" />
+          </category>
           <category ID="18.01.07">
             <label xml:lang="de" text="Intelligente Systeme" />
             <label xml:lang="en" text="Intelligent Systems" />
@@ -2273,6 +2337,11 @@
           <category ID="TrustSys">
             <label xml:lang="de" text="Vertrauenswürdige Systeme, insb. Erklärbarkeit" />
             <label xml:lang="en" text="Trustworthy Systems, especially Explainability" />
+            <label xml:lang="x-mapping" text="destatis:3570" />
+          </category>
+          <category ID="05.04.11">
+            <label xml:lang="de" text="Spezifikation von Softwaresystemen" />
+            <label xml:lang="en" text="Specification of Software Systems" />
             <label xml:lang="x-mapping" text="destatis:3570" />
           </category>
         </category>
@@ -2344,7 +2413,7 @@
         </category>
         <category ID="WiInf">
           <label xml:lang="de" text="Wirtschaftsinformatik" />
-          <label xml:lang="en" text="Business Informatics" />
+          <label xml:lang="en" text="Information Systems" />
           <label xml:lang="x-mapping" text="destatis:2990" />
           <category ID="AngKI">
             <label xml:lang="de" text="Angewandte Methoden der Künstlichen Intelligenz" />
@@ -2379,6 +2448,10 @@
           <category ID="WiInfTrans">
             <label xml:lang="de" text="Wirtschaftsinformatik und Transformationsmanagement " />
             <label xml:lang="en" text="Information Systems and Transformation Management" />
+            <label xml:lang="x-mapping" text="destatis:2990" />
+          </category>
+          <category ID="05.04.21">
+            <label xml:lang="de" text="Digital Business und Digital Entrepreneurship" />
             <label xml:lang="x-mapping" text="destatis:2990" />
           </category>
           <category ID="05.04.20">
@@ -2562,7 +2635,7 @@
       </category>
       <category ID="IGSM">
         <label xml:lang="de" text="Institut für Geschlechtersensible Medizin (IGSM)" />
-        <label xml:lang="en" text="Institute for Gender-Sensitive Medicine ()IGSM)" />
+        <label xml:lang="en" text="Institute for Gender-Sensitive Medicine (IGSM)" />
         <label xml:lang="x-mapping" text="destatis:9280" />
       </category>
     </category>
