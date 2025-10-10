@@ -9,6 +9,15 @@
     }
   },
   {
+    "replace-field": {
+      "name": "url",
+      "type": "ubo_id",
+      "multiValued": true,
+      "indexed": true,
+      "stored": true
+    }
+  },
+  {
     "add-field": {
       "name": "origin_unversioned",
       "type": "ubo_id",
