@@ -7,49 +7,44 @@
   <xsl:include href="mycoreclass-versioned-labels.xsl" />
   
   <xsl:key name="categories" match="category" use="@ID" />
-  
-  <xsl:template match="category/@ID">
-    <xsl:variable name="id" select="." />
+
+  <!-- For non-unique (that means versioned) categories, add a version suffix to @ID -->  
+  <xsl:template match="category/@ID[count(key('categories',.)) &gt; 1]">
     <xsl:attribute name="ID">
       <xsl:value-of select="." />
-      <xsl:if test="count(key('categories',$id)) &gt; 1">
-        <xsl:apply-templates select="ancestor::valid[1]" mode="id" />
-      </xsl:if>
+      
+      <xsl:choose>
+        <xsl:when test="ancestor::valid[@from]">
+          <xsl:call-template name="addVersionNumber">
+            <xsl:with-param name="fromUntil" select="'from'" />
+          </xsl:call-template>
+        </xsl:when> 
+        <xsl:when test="ancestor::valid[@until]">
+          <xsl:call-template name="addVersionNumber">
+            <xsl:with-param name="fromUntil" select="'until'" />
+          </xsl:call-template>
+        </xsl:when> 
+      </xsl:choose>
+      
     </xsl:attribute>
   </xsl:template>
   
-  <xsl:template match="valid" mode="id">
-    <xsl:choose>
-      <xsl:when test="@from">
-        <xsl:call-template name="output_version">
-          <xsl:with-param name="date" select="@from" />
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:when test="@until">
-        <xsl:call-template name="output_version">
-          <xsl:with-param name="date" select="@until" />
-        </xsl:call-template>
-      </xsl:when>
-    </xsl:choose>
-  </xsl:template>
-  
-  <xsl:variable name="classifID" select="/mycoreclass/@ID" />
-  <xsl:variable name="properties" select="document(concat('property:UBO.VersionedClassification.',$classifID,'*'))/properties" />
-  <xsl:variable name="legacyVersion" select="$properties/entry[contains(@key,'LegacyVersion')]" />
-
-  <xsl:template name="output_version">
-    <xsl:param name="date" />
-    <xsl:variable name="dateAsNumber" select="number(translate($date,'-',''))" />
+  <xsl:template name="addVersionNumber">
+    <xsl:param name="fromUntil" />
     
-    <xsl:for-each select="$properties/entry[contains(@key,'.from')]">
-      <xsl:variable name="version" select="substring-before(substring-after(@key,'.Version.'),'.')" />
-      <xsl:variable name="from"  select="number(translate($properties/entry[contains(@key,concat($version,'.from'))],'-',''))" />
-      <xsl:variable name="until" select="number(translate($properties/entry[contains(@key,concat($version,'.until'))],'-',''))" />
-      
-      <xsl:if test="($from &lt;= $dateAsNumber) and ($until &gt;= $dateAsNumber) and (not($version = $legacyVersion))">
-        <xsl:value-of select="concat('_',$version)" />
-      </xsl:if>
-    </xsl:for-each>
+    <xsl:variable name="date" select="translate(ancestor::valid[@*[name()=$fromUntil]][1]/@*[name()=$fromUntil],'-','')" />
+
+    <xsl:variable name="id" select="." />
+    
+    <xsl:variable name="numEarlierFrom" select="count(key('categories',$id)[translate(ancestor::valid[@from][1]/@from,'-','') &lt; $date])" />
+    <xsl:variable name="numEarlierUntil" select="count(key('categories',$id)[translate(ancestor::valid[@until][1]/@until,'-','') &lt; $date])" />
+    
+    <xsl:variable name="numEarlier" select="$numEarlierFrom + $numEarlierUntil" />
+
+    <!-- omit version suffix for the first (earliest) version/date -->
+    <xsl:if test="$numEarlier &gt; 0">          
+      <xsl:value-of select="concat('_v',substring($date,3))" />
+    </xsl:if>
   </xsl:template>
 
 </xsl:stylesheet>
