@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="uboPubTypes">
+
+  <label xml:lang="en" text="genre combinations" description="combined publication types of university bibliography" />
+  <label xml:lang="de" text="Genre Kombinationen" description="zusammengesetzte Publikationstypen der Universitätsbibliographie" />
+
+  <categories>
+  
+    <category ID="journal_article">
+      <label xml:lang="de" text="Zeitschriftenaufsatz" />
+      <label xml:lang="en" text="Journal article" />
+      <label xml:lang="x-mapping-xpath" text="(mods:genre[substring-after(@valueURI,'#')='article' or substring-after(@valueURI,'#')='review_article'] and (mods:relatedItem[@type='host']/mods:genre[substring-after(@valueURI,'#')='journal']))" />
+    </category>
+	
+	<category ID="blog_article">
+      <label xml:lang="de" text="Blogbeitrag" />
+      <label xml:lang="en" text="Blog post" />
+      <label xml:lang="x-mapping-xpath" text="mods:genre[substring-after(@valueURI,'#')='article'] and (mods:relatedItem[@type='host']/mods:genre[substring-after(@valueURI,'#')='blog'])" />
+    </category>
+	
+	<category ID="newspaper_article">
+      <label xml:lang="de" text="Zeitungsartikel" />
+      <label xml:lang="en" text="Newspaper article" />
+      <label xml:lang="x-mapping-xpath" text="mods:genre[substring-after(@valueURI,'#')='article'] and (mods:relatedItem[@type='host']/mods:genre[substring-after(@valueURI,'#')='newspaper'])" />
+    </category>
+	
+	<category ID="conference_abstract">
+	  <label xml:lang="de" text="Konferenzabstract" />
+      <label xml:lang="en" text="Conference abstract" />
+	  <label xml:lang="x-mapping-xpath" text="mods:genre[substring-after(@valueURI,'#')='abstract'] and (mods:relatedItem[@type='host']/mods:genre[substring-after(@valueURI,'#')='journal' or substring-after(@valueURI,'#')='proceedings' or substring-after(@valueURI,'#')='festschrift'])" />
+	</category>
+	
+	<category ID="poster_abs">
+      <label xml:lang="de" text="Poster" />
+      <label xml:lang="en" text="poster" />
+      <label xml:lang="x-mapping-xpath" text="mods:genre[substring-after(@valueURI,'#')='poster_abstract'] and (mods:relatedItem[@type='host']/mods:genre[substring-after(@valueURI,'#')='journal' or substring-after(@valueURI,'#')='proceedings'])" />
+	</category>               
+            
+    <category ID="chapter_collection">
+      <label xml:lang="de" text="Beitrag in Sammelwerk" />
+      <label xml:lang="en" text="Contribution to collection" />
+      <label xml:lang="x-mapping-xpath" text="mods:genre[substring-after(@valueURI,'#')='chapter'] and (mods:relatedItem[@type='host']/mods:genre[substring-after(@valueURI,'#')='collection' or substring-after(@valueURI,'#')='festschrift'])" />
+    </category>
+	
+	<category ID="conference_paper">
+      <label xml:lang="de" text="Tagungsbeitrag" />
+      <label xml:lang="en" text="Conference paper" />
+      <label xml:lang="x-mapping-xpath" text="mods:genre[substring-after(@valueURI,'#')='chapter'] and (mods:relatedItem[@type='host']/mods:genre[substring-after(@valueURI,'#')='proceedings'])" />
+    </category>
+		
+    <category ID="editorial">        
+      <label xml:lang="de" text="Editorial" />
+      <label xml:lang="en" text="Editorial" />
+      <label xml:lang="x-mapping-xpath" text="mods:genre[substring-after(@valueURI,'#')='preface'] and (mods:relatedItem[@type='host']/mods:genre[substring-after(@valueURI,'#')='journal'])" />
+    </category>
+	  
+    <category ID="entry_lexicon">
+      <label xml:lang="en" text="Encyclopedia entry" />
+      <label xml:lang="de" text="Lexikoneintrag" />
+      <label xml:lang="x-mapping-xpath" text="mods:genre[substring-after(@valueURI,'#')='entry'] and (mods:relatedItem[@type='host']/mods:genre[substring-after(@valueURI,'#')='lexicon'])" />
+    </category>  
+	
+  </categories>
+  
+</mycoreclass>
