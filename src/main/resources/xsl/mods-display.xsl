@@ -57,16 +57,29 @@
   <!-- ============ Ausgabe Publikationsart ============ -->
 
   <xsl:template name="pubtype">
-    <xsl:variable name="genre" select="substring-after(mods:genre[@type='intern']/@valueURI, '#')"/>
-
-    <span class="label-info badge badge-secondary mr-1 ubo-hover-pointer" title="{i18n:translate('ubo.genre')}"
-          onclick="location.assign('{$WebApplicationBaseURL}servlets/solr/select?sort=modified+desc&amp;q={encoder:encode(concat($fq, '+genre:&quot;', $genre, '&quot;'))}')">
-      <xsl:apply-templates select="mods:genre[@type='intern']"/>
-      <xsl:for-each select="mods:relatedItem[@type='host']/mods:genre[@type='intern']">
-        <xsl:text> in </xsl:text>
-        <xsl:apply-templates select="." />
-      </xsl:for-each>
-    </span>
+    <xsl:choose>
+      <xsl:when test="mods:classification[contains(@authorityURI,'uboPubTypes')]"> 
+        <xsl:for-each select="mods:classification[contains(@authorityURI,'uboPubTypes')]">
+          <span class="label-info badge badge-secondary mr-1 ubo-hover-pointer" title="{i18n:translate('ubo.genre')}">
+            <xsl:variable name="categid" select="substring-after(@valueURI, '#')"/>
+            <xsl:value-of select="mcrxsl:getDisplayName('uboPubTypes', $categid)"/>
+          </span>
+        </xsl:for-each>    
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:variable name="genre" select="substring-after(mods:genre[@type='intern']/@valueURI, '#')"/>
+        <span class="label-info badge badge-secondary mr-1 ubo-hover-pointer" title="{i18n:translate('ubo.genre')}"
+              onclick="location.assign('{$WebApplicationBaseURL}servlets/solr/select?sort=modified+desc&amp;q={encoder:encode(concat($fq, '+genre:&quot;', $genre, '&quot;'))}')">
+          <xsl:apply-templates select="mods:genre[@type='intern']"/>
+          <xsl:for-each select="mods:relatedItem[@type='host']/mods:genre[@type='intern']">
+            <xsl:text> in </xsl:text>
+            <xsl:apply-templates select="." />
+          </xsl:for-each>
+        </span>
+      </xsl:otherwise>
+    </xsl:choose>
+  
+  
   </xsl:template>
 
   <xsl:template name="label-kdsf-pub-doc-type">
@@ -89,16 +102,6 @@
     </xsl:if>
   </xsl:template>
   
-  <xsl:template name="label-ubo-pubtypes-combined">    
-      <xsl:variable name="ubo-pubtypes-combined" select="mods:classification[@generator='xpathmapping2uboPupTypes-mycore']"/>
-      <xsl:for-each select="$ubo-pubtypes-combined">
-        <span class="label-info badge badge-warning text-white mr-1" title="{i18n:translate('ubo.publication.type.combined')}">
-          <xsl:variable name="categid" select="substring-after(@valueURI, '#')"/>
-          <xsl:value-of select="mcrxsl:getDisplayName('uboPubTypes', $categid)"/>
-        </span>
-      </xsl:for-each>    
-  </xsl:template>
-
   <!-- ============ Ausgabe Fach ============ -->
 
   <xsl:template match="mods:mods/mods:classification[contains(@authorityURI,'fachreferate')]" mode="label-info">
