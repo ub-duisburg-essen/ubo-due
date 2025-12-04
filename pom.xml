@@ -21,8 +21,8 @@
   <description>Universitätsbibliographie der Universität Duisburg-Essen</description>
 
   <properties>
-    <mycore.version>2023.06.4-SNAPSHOT</mycore.version>
-    <java.target.version>17</java.target.version>
+    <mycore.version>2024.06.2-SNAPSHOT</mycore.version>
+    <java.target.version>21</java.target.version>
   </properties>
 
   <build>
@@ -44,28 +44,6 @@
       </plugin>
     </plugins>
   </build>
-
-  <repositories>
-    <repository>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <id>central</id>
-      <name>Central Repository</name>
-      <url>https://repo.maven.apache.org/maven2</url>
-    </repository>
-    <repository>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <id>central-portal-snapshots</id>
-      <name>Central Portal Snapshots</name>
-      <url>https://central.sonatype.com/repository/maven-snapshots/</url>
-    </repository>
-  </repositories>
 
   <dependencyManagement>
     <dependencies>

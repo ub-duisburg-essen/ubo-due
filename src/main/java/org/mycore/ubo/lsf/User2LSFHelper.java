@@ -1,6 +1,6 @@
 package org.mycore.ubo.lsf;
 
-import java.net.URL;
+import java.net.URI;
 import java.util.Scanner;
 import java.util.SortedSet;
 import java.util.regex.Pattern;
@@ -96,7 +96,7 @@ public class User2LSFHelper {
         String url = String.format(URL_PATTERN, type, value);
         Scanner scanner = null;
         try {
-            scanner = new Scanner(new URL(url).openStream());
+            scanner = new Scanner(new URI(url).toURL().openStream());
             scanner.findWithinHorizon(AID_PATTERN, AID_SEARCH_HORIZON);
             return scanner.match().group(1);
         } catch (Exception ex) {

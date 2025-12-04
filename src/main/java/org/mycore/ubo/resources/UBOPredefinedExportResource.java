@@ -34,7 +34,7 @@ public class UBOPredefinedExportResource {
         }
         LOGGER.info("Request is: {}", solrURI);
         try {
-            MCRSourceContent content = MCRSourceContent.getInstance(solrURI);
+            MCRSourceContent content = MCRSourceContent.createInstance(solrURI);
             return Response.ok(content.getContentInputStream()).build();
         } catch (Exception e) {
             LOGGER.error(e);
