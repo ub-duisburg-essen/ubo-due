@@ -185,6 +185,20 @@
       </div>
     </xed:bind>
   </xed:template>
+  
+  <xed:template id="funding">
+    <xed:bind xpath="mods:classification[@classID='funding']">
+      <div class="form-group form-inline">
+        <label for="{xed:generate-id()}" class="mycore-form-label">
+          <xed:output value="concat(i18n:translate('ubo.funding'), ': ')" />
+        </label>
+        <select id="{xed:generate-id()}" class="mycore-form-input custom-select">
+          <option value=""><xed:output i18n="search.select" /></option>
+          <xed:include uri="xslStyle:items2options:classification:editor:-1:children:funding" />
+        </select>        
+      </div>
+    </xed:bind>
+  </xed:template>
 
   <xed:template id="partOf">
    <xed:if test="'true'=$UBO.Editor.PartOf.Enabled">
