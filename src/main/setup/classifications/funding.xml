@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="funding">
+  <label xml:lang="en" text="OA Förderung" />
+  <label xml:lang="de" text="OA funding" />
+  <categories>
+    <category ID="ude2018">
+      <label xml:lang="de" text="OA Förderung 2018" />
+      <label xml:lang="en" text="OA funding 2018" />      
+    </category>
+    <category ID="ude2019">
+      <label xml:lang="de" text="OA Förderung 2019" />
+      <label xml:lang="en" text="OA funding 2019" />      
+    </category>
+	<category ID="ude2020">
+      <label xml:lang="de" text="OA Förderung 2020" />
+      <label xml:lang="en" text="OA funding 2020" />      
+    </category>
+	<category ID="ude2021">
+      <label xml:lang="de" text="OA Förderung 2021" />
+      <label xml:lang="en" text="OA funding 2021" />      
+    </category>
+	<category ID="ude2022">
+      <label xml:lang="de" text="OA Förderung 2022" />
+      <label xml:lang="en" text="OA funding 2022" />      
+    </category>
+	<category ID="ude2023">
+      <label xml:lang="de" text="OA Förderung 2023" />
+      <label xml:lang="en" text="OA funding 2023" />      
+    </category>
+	<category ID="ude2024">
+      <label xml:lang="de" text="OA Förderung 2024" />
+      <label xml:lang="en" text="OA funding 2024" />      
+    </category>
+	<category ID="ude2025">
+      <label xml:lang="de" text="OA Förderung 2025" />
+      <label xml:lang="en" text="OA funding 2025" />      
+    </category>
+    <category ID="ude2026">
+      <label xml:lang="de" text="OA Förderung 2026" />
+      <label xml:lang="en" text="OA funding 2026" />      
+    </category>
+    <category ID="S2O">
+      <label xml:lang="de" text="Subscribe to Open (S2O)" />
+      <label xml:lang="en" text="Subscribe to Open (S2O)" />      
+    </category>
+    <category ID="deal">
+      <label xml:lang="de" text="DEAL-finanziert" />
+      <label xml:lang="en" text="DEAL funded" />
+      <category ID="els2023deal">
+        <label xml:lang="de" text="Elsevier-DEAL-finanziert" />
+        <label xml:lang="en" text="Elsevier-DEAL funded" />      
+        <url xlink:href="https://esac-initiative.org/about/transformative-agreements/agreement-registry/els2023deal/" xlink:type="locator" />
+      </category>
+      <category ID="sn2020deal">
+        <label xml:lang="de" text="Springer-Nature-DEAL-finanziert 2020 - 2023" />
+        <label xml:lang="en" text="Springer-Nature-DEAL funded" />      
+        <url xlink:href="https://esac-initiative.org/about/transformative-agreements/agreement-registry/sn2020deal/" xlink:type="locator" />
+      </category>
+      <category ID="sn2024deal">
+        <label xml:lang="de" text="Springer-Nature-DEAL-finanziert 2024 - 2028" />
+        <label xml:lang="en" text="Springer-Nature-DEAL funded" />      
+        <url xlink:href="https://esac-initiative.org/about/transformative-agreements/agreement-registry/sn2024deal/" xlink:type="locator" />
+      </category>
+      <category ID="wiley2019deal">
+        <label xml:lang="de" text="Wiley-DEAL-finanziert 2019 - 2023" />
+        <label xml:lang="en" text="Wiley-DEAL funded 2019 - 2023" />      
+        <url xlink:href="https://esac-initiative.org/about/transformative-agreements/agreement-registry/wiley2019deal/" xlink:type="locator" />
+      </category>
+	  <category ID="wiley2024deal">
+        <label xml:lang="de" text="Wiley-DEAL-finanziert 2024 - 2028" />
+        <label xml:lang="en" text="Wiley-DEAL funded 2024 - 2028" />      
+        <url xlink:href="https://esac-initiative.org/about/transformative-agreements/agreement-registry/wiley2024deal/" xlink:type="locator" />
+      </category>
+    </category>
+  </categories>
+</mycoreclass>
