@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="fundingType">
-  <label xml:lang="en" text="OA Förderung" />
-  <label xml:lang="de" text="OA funding" />
+  <label xml:lang="en" text="OA funding" />
+  <label xml:lang="de" text="OA Förderung" />
   <categories>
     <category ID="ude2018">
       <label xml:lang="de" text="OA Förderung 2018" />
