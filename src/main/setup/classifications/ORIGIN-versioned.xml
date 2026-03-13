@@ -952,14 +952,13 @@
       </category>
       <category ID="08.07">
 	    <valid until="2019-12">
-        <label xml:lang="de" text="Biofilm Center" />
-        <label xml:lang="x-mapping" text="destatis:3850" />
+          <label xml:lang="de" text="Biofilm Center" />          
 		</valid> 
 		<valid from="2020-01">
-        <label xml:lang="de" text="Umweltmikrobiologie und Biotechnologie (UMB)" /> <!-- Einträge hierher migrieren und dann 08.09 löschen --> 
-        <label xml:lang="en" text="Environmental Microbiology and Biotechnology" />
-        <label xml:lang="x-mapping" text="destatis:3850" />
-		</valid> 
+          <label xml:lang="de" text="Umweltmikrobiologie und Biotechnologie (UMB)" /> <!-- Einträge hierher migrieren und dann 08.09 löschen --> 
+          <label xml:lang="en" text="Environmental Microbiology and Biotechnology" />
+        </valid>
+        <label xml:lang="x-mapping" text="destatis:3850" />		 
       </category>
       <category ID="08.02">
         <label xml:lang="de" text="Didaktik der Chemie" />
@@ -974,7 +973,7 @@
         <label xml:lang="x-mapping" text="destatis:3730" />
       </category>
       <category ID="08.09">
-        <label xml:lang="de" text="Umweltmikrobiologie und Biotechnologie (UMB)" /> <!-- Einträge nach 08.07_v2001 migrieren und dann 08.09 löschen -->
+        <label xml:lang="de" text="(Alt) Umweltmikrobiologie und Biotechnologie (UMB)" /> <!-- Einträge nach 08.07_v2001 migrieren und dann 08.09 löschen -->
         <label xml:lang="en" text="Environmental Microbiology and Biotechnology" />
         <label xml:lang="x-mapping" text="destatis:3850" />
       </category>
@@ -1804,12 +1803,8 @@
           <label xml:lang="de" text="Zentrum für Orthopädie und Unfallchirurgie" /> <!-- exakt zugeordnete Einträge verschieben, dann 14.03. löschen -->
           <label xml:lang="x-mapping" text="destatis:5010" />
           <category ID="14.03.02">
-            <label xml:lang="de" text="Klinik für Unfall-, Hand- und Wiederherstellungschirurgie" /> <!-- Einträge zu 14.01.11_v1907 migrieren, dann 14.03.02 löschen   --> 
-            <label xml:lang="x-mapping" text="destatis:4980" />
-			<category ID="14.03.05">
-              <label xml:lang="de" text="Zentrum für Kindertraumatologie und Kinderorthopädie" />
-              <label xml:lang="x-mapping" text="destatis:4950" />
-            </category>
+            <label xml:lang="de" text=" (Alt) Klinik für Unfall-, Hand- und Wiederherstellungschirurgie" /> <!-- Einträge zu 14.01.11_v1907 migrieren, dann 14.03.02 löschen   --> 
+            <label xml:lang="x-mapping" text="destatis:4980" />			
           </category>
           <category ID="14.03.04">
             <label xml:lang="de" text="Klinik für Tumororthopädie und Sarkomchirurgie" />
@@ -1824,6 +1819,10 @@
 			</valid>
             <label xml:lang="x-eva" text="44" />
             <label xml:lang="x-mapping" text="destatis:5010" />
+            <category ID="14.03.05">
+              <label xml:lang="de" text="Zentrum für Kindertraumatologie und Kinderorthopädie" />
+              <label xml:lang="x-mapping" text="destatis:4950" />
+            </category>
           </category>
         </category>
         <category ID="14.01.19">
@@ -2204,13 +2203,12 @@
       </category>
 	  <category ID="14.11">
 	      <valid until="2024-04">
-          <label xml:lang="de" text="LVR-Klinikum Essen" />
-          <label xml:lang="x-mapping" text="destatis:4900" />
+            <label xml:lang="de" text="LVR-Klinikum Essen" />            
 		  </valid>
 		  <valid from="2024-05">
-          <label xml:lang="de" text="LVR-Universitätsklinik Essen" />
-          <label xml:lang="x-mapping" text="destatis:4900" />
+            <label xml:lang="de" text="LVR-Universitätsklinik Essen" />            
 		  </valid>
+		  <label xml:lang="x-mapping" text="destatis:4900" />
           <category ID="14.11.01">
             <label xml:lang="de" text="Klinik für Psychiatrie und Psychotherapie" />
             <label xml:lang="x-eva" text="48" />
