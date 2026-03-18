@@ -236,7 +236,7 @@
           </valid>
           <valid from="2023-01">        
             <label xml:lang="de" text="Prekarisierung, Regulierung, Arbeitsqualität (PreRA)" />
-            <label xml:lang="en" text="Precarization, Regulation, Job quality (PreRA)" />        
+            <label xml:lang="en" text="Precarization, Regulation, Job quality (PreRA)" />
           </valid>
           <label xml:lang="x-mapping" text="destatis:2375" />
         </category>   
@@ -951,14 +951,14 @@
         <label xml:lang="x-mapping" text="destatis:3710" />
       </category>
       <category ID="08.07">
-	    <valid until="2019-12">
-          <label xml:lang="de" text="Biofilm Center" />          
-		</valid> 
-		<valid from="2020-01">
-          <label xml:lang="de" text="Umweltmikrobiologie und Biotechnologie (UMB)" /> <!-- Einträge hierher migrieren und dann 08.09 löschen --> 
+        <valid until="2019-12">
+          <label xml:lang="de" text="Biofilm Center" />
+        </valid> 
+        <valid from="2020-01">
+          <label xml:lang="de" text="Umweltmikrobiologie und Biotechnologie (UMB)" />
           <label xml:lang="en" text="Environmental Microbiology and Biotechnology" />
         </valid>
-        <label xml:lang="x-mapping" text="destatis:3850" />		 
+        <label xml:lang="x-mapping" text="destatis:3850" />
       </category>
       <category ID="08.02">
         <label xml:lang="de" text="Didaktik der Chemie" />
@@ -971,11 +971,6 @@
       <category ID="08.04">
         <label xml:lang="de" text="Physikalische Chemie" />
         <label xml:lang="x-mapping" text="destatis:3730" />
-      </category>
-      <category ID="08.09">
-        <label xml:lang="de" text="(Alt) Umweltmikrobiologie und Biotechnologie (UMB)" /> <!-- Einträge nach 08.07_v2001 migrieren und dann 08.09 löschen -->
-        <label xml:lang="en" text="Environmental Microbiology and Biotechnology" />
-        <label xml:lang="x-mapping" text="destatis:3850" />
       </category>
       <category ID="08.05">
         <label xml:lang="de" text="Technische Chemie" />
@@ -1570,9 +1565,9 @@
             <label xml:lang="de" text="Institut für Schiffstechnik, Meerestechnik und Transportsysteme (ISMT)" />
             <label xml:lang="en" text="Institute of Ship Technology, Ocean Engineering and Transport Systems " />
           </valid>  
-          <valid from="2024-11">        
+          <valid from="2024-11">
             <label xml:lang="de" text="Institut für Nachhaltige und Autonome Maritime Systeme (INAM)" />
-            <label xml:lang="en" text="Institute of Sustainable and Autonomous Maritime Systems (INAM)" />                 
+            <label xml:lang="en" text="Institute of Sustainable and Autonomous Maritime Systems (INAM)" />
           </valid>
           <label xml:lang="x-mapping" text="destatis:7220" />
         </category>  
@@ -1799,30 +1794,22 @@
           <label xml:lang="x-eva" text="43" />
           <label xml:lang="x-mapping" text="destatis:5150" />
         </category>
-        <category ID="14.03">
-          <label xml:lang="de" text="Zentrum für Orthopädie und Unfallchirurgie" /> <!-- exakt zugeordnete Einträge verschieben, dann 14.03. löschen -->
+        <category ID="14.03.04">
+          <label xml:lang="de" text="Klinik für Tumororthopädie und Sarkomchirurgie" />
           <label xml:lang="x-mapping" text="destatis:5010" />
-          <category ID="14.03.02">
-            <label xml:lang="de" text=" (Alt) Klinik für Unfall-, Hand- und Wiederherstellungschirurgie" /> <!-- Einträge zu 14.01.11_v1907 migrieren, dann 14.03.02 löschen   --> 
-            <label xml:lang="x-mapping" text="destatis:4980" />			
-          </category>
-          <category ID="14.03.04">
-            <label xml:lang="de" text="Klinik für Tumororthopädie und Sarkomchirurgie" />
-            <label xml:lang="x-mapping" text="destatis:5010" />
-          </category>          
-          <category ID="14.01.11">
-		    <valid until="2019-06">
-              <label xml:lang="de" text="Klinik für Orthopädie und Unfallchirurgie" />
-			</valid>
-			<valid from="2019-07">
-              <label xml:lang="de" text="Klinik für Unfall-, Hand- und Wiederherstellungschirurgie" /> <!-- Einträge hierher migrieren und  14.03.02 löschen -->
-			</valid>
-            <label xml:lang="x-eva" text="44" />
-            <label xml:lang="x-mapping" text="destatis:5010" />
-            <category ID="14.03.05">
-              <label xml:lang="de" text="Zentrum für Kindertraumatologie und Kinderorthopädie" />
-              <label xml:lang="x-mapping" text="destatis:4950" />
-            </category>
+        </category>          
+        <category ID="14.01.11">
+          <valid until="2019-06">
+            <label xml:lang="de" text="Klinik für Orthopädie und Unfallchirurgie" />
+          </valid>
+          <valid from="2019-07">
+            <label xml:lang="de" text="Klinik für Unfall-, Hand- und Wiederherstellungschirurgie" />
+          </valid>
+          <label xml:lang="x-eva" text="44" />
+          <label xml:lang="x-mapping" text="destatis:5010" />
+        <category ID="14.03.05">
+            <label xml:lang="de" text="Zentrum für Kindertraumatologie und Kinderorthopädie" />
+            <label xml:lang="x-mapping" text="destatis:4950" />
           </category>
         </category>
         <category ID="14.01.19">
@@ -1890,7 +1877,7 @@
           <label xml:lang="x-mapping" text="destatis:4595" />
         </category>
         <category ID="InDiMe">
-          <label xml:lang="de" text="Institut für Didaktik in der Medizin" />          
+          <label xml:lang="de" text="Institut für Didaktik in der Medizin" />
           <label xml:lang="x-mapping" text="4410" />
         </category>
         <category ID="14.01.30">
@@ -1905,14 +1892,14 @@
         </category>
         <category ID="14.05.08">
           <label xml:lang="x-eva" text="67" />
-		  <valid until="2023-12">
+          <valid until="2023-12">
             <label xml:lang="de" text="Institut für translationale HIV-Forschung" />
             <label xml:lang="en" text="Institute for HIV Research" />
-		  </valid>
-		  <valid from="2024-01">
+          </valid>
+          <valid from="2024-01">
             <label xml:lang="de" text=" Institut für die Erforschung von HIV und AIDS-assoziierten Erkrankungen" />
             <label xml:lang="en" text="Institute for the Research on HIV and AIDS-associated Diseases" />
-		  </valid>
+          </valid>
           <label xml:lang="x-mapping" text="destatis:4790" />
         </category>
         <category ID="14.01.07">
@@ -1987,7 +1974,7 @@
           <label xml:lang="x-mapping" text="destatis:4710" />
         </category>
         <category ID="InPaEr">
-          <label xml:lang="de" text="Institut für PatientenErleben" />          
+          <label xml:lang="de" text="Institut für PatientenErleben" />
           <label xml:lang="x-mapping" text="destatis:4450" />
         </category>
         <category ID="14.01.31">
@@ -2049,9 +2036,9 @@
           <label xml:lang="en" text="Institute for Urban Public Health" />
           <label xml:lang="x-mapping" text="destatis:4700" />
         </category>
-		<category ID="OrthUnf">
-          <label xml:lang="de" text="Lehrstuhl für Orthopädie und Unfallchirurgie" />   
-          <label xml:lang="en" text="Department of Orthopedics and Trauma Surgery" />		  
+        <category ID="OrthUnf">
+          <label xml:lang="de" text="Lehrstuhl für Orthopädie und Unfallchirurgie" />
+          <label xml:lang="en" text="Department of Orthopedics and Trauma Surgery" />
           <label xml:lang="x-mapping" text="destatis:5010" />
         </category>
         <category ID="14.05.05">
@@ -2117,7 +2104,7 @@
           <label xml:lang="en" text="Center for Translational Neuro- and Behavioral Science (C-TNBS)" />
           <label xml:lang="x-mapping" text="destatis:4400" />
         </category>
-		<category ID="ZNPG">
+        <category ID="ZNPG">
           <label xml:lang="de" text="Zentrum für Naturheilkunde und Planetare Gesundheit" />
           <label xml:lang="x-mapping" text="destatis:4400" />
         </category>
@@ -2170,45 +2157,45 @@
           <label xml:lang="x-mapping" text="destatis:8950" />
         </category>
       </category>
-	  <category ID="14.32">
+      <category ID="14.32">
           <label xml:lang="de" text="St. Josef Krankenhaus Essen-Werden" />
           <label xml:lang="x-mapping" text="destatis:4900" />
-		  <valid from="2025-04">
-		  <category ID="14.01.18">
-            <label xml:lang="x-eva" text="56" />
-            <label xml:lang="de" text="Universitätsklinik für Mund-, Kiefer- und Gesichtschirurgie" />
-            <label xml:lang="x-mapping" text="destatis:4980" />
-          </category>
-		  </valid>
-		  <category ID="KlOrthUnf">            
+          <valid from="2025-04">
+            <category ID="14.01.18">
+              <label xml:lang="x-eva" text="56" />
+              <label xml:lang="de" text="Universitätsklinik für Mund-, Kiefer- und Gesichtschirurgie" />
+              <label xml:lang="x-mapping" text="destatis:4980" />
+            </category>
+          </valid>
+          <category ID="KlOrthUnf">
             <label xml:lang="de" text="Klinik für Orthopädie und Unfallchirurgie" />
             <label xml:lang="x-mapping" text="destatis:5010" />
           </category>
-		  <category ID="KlAVG">            
+          <category ID="KlAVG">
             <label xml:lang="de" text="Klinik für Allgemein-, Viszeral- und Gefäßchirurgie" />
             <label xml:lang="x-mapping" text="destatis:4980" />
           </category>
-		  <category ID="KlIn">            
+          <category ID="KlIn">
             <label xml:lang="de" text="Klinik für Innere Medizin" />
             <label xml:lang="x-mapping" text="destatis:4936" />
           </category>
-		  <category ID="ZfAnIn">            
+          <category ID="ZfAnIn">
             <label xml:lang="de" text="Zentrum für Anästhesiologie, Intensivmedizin und Schmerztherapie" />
             <label xml:lang="x-mapping" text="destatis:5070" />
           </category>
-		  <category ID="ZfKR">            
+          <category ID="ZfKR">
             <label xml:lang="de" text="Zentrum für Klinische Radiologie" />
             <label xml:lang="x-mapping" text="destatis:4595" />
           </category>
       </category>
-	  <category ID="14.11">
-	      <valid until="2024-04">
-            <label xml:lang="de" text="LVR-Klinikum Essen" />            
-		  </valid>
-		  <valid from="2024-05">
-            <label xml:lang="de" text="LVR-Universitätsklinik Essen" />            
-		  </valid>
-		  <label xml:lang="x-mapping" text="destatis:4900" />
+      <category ID="14.11">
+          <valid until="2024-04">
+            <label xml:lang="de" text="LVR-Klinikum Essen" />
+          </valid>
+          <valid from="2024-05">
+            <label xml:lang="de" text="LVR-Universitätsklinik Essen" />
+          </valid>
+          <label xml:lang="x-mapping" text="destatis:4900" />
           <category ID="14.11.01">
             <label xml:lang="de" text="Klinik für Psychiatrie und Psychotherapie" />
             <label xml:lang="x-eva" text="48" />
@@ -2240,22 +2227,22 @@
             <label xml:lang="x-mapping" text="destatis:5050" />
           </category>
         </category>
-		<category ID="14.20">
+        <category ID="14.20">
           <label xml:lang="de" text="Kliniken Essen-Mitte" />
           <label xml:lang="x-mapping" text="destatis:4900" />
-		  <valid until="2025-03">
-          <category ID="14.01.18">
-            <label xml:lang="x-eva" text="56" />
-            <label xml:lang="de" text="Universitätsklinik für Mund-, Kiefer- und Gesichtschirurgie" />
-            <label xml:lang="x-mapping" text="destatis:4980" />
-          </category>
-		  </valid>
+          <valid until="2025-03">
+            <category ID="14.01.18">
+              <label xml:lang="x-eva" text="56" />
+              <label xml:lang="de" text="Universitätsklinik für Mund-, Kiefer- und Gesichtschirurgie" />
+              <label xml:lang="x-mapping" text="destatis:4980" />
+            </category>
+          </valid>
           <category ID="14.20.01">
             <label xml:lang="x-eva" text="39" />
             <label xml:lang="de" text="Klinik für Naturheilkunde und Integrative Medizin" />
             <label xml:lang="x-mapping" text="destatis:4900" />
           </category>
-        </category>	         
+        </category>
     </category>
     <valid from="2024-01">
       <category ID="FakInf">
@@ -2329,7 +2316,7 @@
         </category>
         <category ID="SoftEn">
           <label xml:lang="de" text="Software Engineering" />
-          <label xml:lang="x-mapping" text="destatis:3570" />         
+          <label xml:lang="x-mapping" text="destatis:3570" />
           <category ID="AdSys">
             <label xml:lang="de" text="Adaptive Systeme" />
             <label xml:lang="en" text="Adaptive Systems" />
@@ -2600,7 +2587,7 @@
         <label xml:lang="de" text="paluno - The Ruhr Institute for Software Technology" />
         <label xml:lang="x-mapping" text="destatis:3570" />
       </category>
-	  <category ID="ACTIVE">
+      <category ID="ACTIVE">
         <label xml:lang="de" text="ACTIVE SITES" />
         <label xml:lang="x-mapping" text="destatis:9280" />
       </category>
@@ -2753,8 +2740,8 @@
         <label xml:lang="de" text="Goethe-Universität Frankfurt am Main" />
         <label xml:lang="x-mapping" text="destatis:9600" />
       </category>
-	  <category ID="MuFo">
-        <label xml:lang="de" text="Museum Folkwang" />
+        <category ID="MuFo">
+      <label xml:lang="de" text="Museum Folkwang" />
         <label xml:lang="x-mapping" text="destatis:9600" />
       </category>
     </category>
