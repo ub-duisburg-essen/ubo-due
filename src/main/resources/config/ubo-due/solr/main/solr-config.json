@@ -23,7 +23,8 @@
 					"subject",
 					"genre",
 					"facet_host_title",
-					"oa"
+					"oa",
+                    "fundingType"
 				],
 				"wt": "xml"
 			}

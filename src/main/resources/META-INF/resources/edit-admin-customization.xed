@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xed:template xmlns:xed="http://www.mycore.de/xeditor">
+
+    <!-- ========== extend editor-admin.xed ========== -->
+    <xed:modify ref="editor-form">
+        <xed:include ref="funding" after="oa" />
+    </xed:modify>
+
+    <!-- ========== added field "funding" ========== -->
+    <xed:template id="funding">
+        <xed:bind xpath="mods:classification[@classID='fundingType']">
+            <div class="form-group form-inline">
+                <label for="{xed:generate-id()}" class="mycore-form-label">
+                    <xed:output value="concat(i18n:translate('ubo.funding'), ': ')" />
+                </label>
+                <select id="{xed:generate-id()}" class="mycore-form-input custom-select">
+                    <option value=""><xed:output i18n="search.select" /></option>
+                    <xed:include uri="xslStyle:items2options:classification:editor:-1:children:fundingType" />
+                </select>
+            </div>
+        </xed:bind>
+    </xed:template>
+
+</xed:template>
+
+
+

@@ -13,7 +13,7 @@ public class LSFSearchServlet extends MCRServlet {
     @Override
     protected void doGetPost(MCRServletJob job) throws Exception {
         String queryString = job.getRequest().getQueryString();
-        Element result = MCRURIResolver.instance().resolve("lsf:" + queryString);
+        Element result = MCRURIResolver.obtainInstance().resolve("lsf:" + queryString);
         getLayoutService().sendXML(job.getRequest(), job.getResponse(), new MCRJDOMContent(result));
     }
 }
