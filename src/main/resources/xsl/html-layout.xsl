@@ -7,7 +7,8 @@
   xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
   xmlns:encoder="xalan://java.net.URLEncoder"
   xmlns:exslt="http://exslt.org/common"
-  exclude-result-prefixes="xsl xalan i18n mcrxsl encoder exslt">
+  xmlns:mcrver="xalan://org.mycore.common.MCRCoreVersion"
+  exclude-result-prefixes="xsl xalan i18n mcrxsl encoder exslt mcrver">
 
   <xsl:output method="xml" encoding="UTF-8" />
 
@@ -548,6 +549,7 @@
                     </a>
                   </li>
                 </ul>
+                <xsl:call-template name="powered_by" />
               </div>
             </div>
 
@@ -555,6 +557,15 @@
         </div>
       </div>
     </footer>
+  </xsl:template>
+
+  <xsl:template name="powered_by">
+    <xsl:variable name="mcr_version" select="concat('MyCoRe ',mcrver:getCompleteVersion())" />
+    <div id="powered_by">
+      <a href="http://www.mycore.de">
+        <img src="{$WebApplicationBaseURL}images/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
+      </a>
+    </div>
   </xsl:template>
 
 </xsl:stylesheet>
