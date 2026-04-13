@@ -4,6 +4,38 @@
   <label xml:lang="en" text="OA funding" />
   <label xml:lang="de" text="OA Förderung" />
   <categories>
+    <category ID="ude2010">
+      <label xml:lang="de" text="OA Förderung 2010" />
+      <label xml:lang="en" text="OA funding 2010" />
+    </category>
+    <category ID="ude2011">
+      <label xml:lang="de" text="OA Förderung 2011" />
+      <label xml:lang="en" text="OA funding 2011" />
+    </category>
+    <category ID="ude2012">
+      <label xml:lang="de" text="OA Förderung 2012" />
+      <label xml:lang="en" text="OA funding 2012" />
+    </category>
+    <category ID="ude2013">
+      <label xml:lang="de" text="OA Förderung 2013" />
+      <label xml:lang="en" text="OA funding 2013" />
+    </category>
+    <category ID="ude2014">
+      <label xml:lang="de" text="OA Förderung 2014" />
+      <label xml:lang="en" text="OA funding 2014" />
+    </category>
+    <category ID="ude2015">
+      <label xml:lang="de" text="OA Förderung 2015" />
+      <label xml:lang="en" text="OA funding 2015" />
+    </category>
+    <category ID="ude2016">
+      <label xml:lang="de" text="OA Förderung 2016" />
+      <label xml:lang="en" text="OA funding 2016" />
+    </category>
+    <category ID="ude2017">
+      <label xml:lang="de" text="OA Förderung 2017" />
+      <label xml:lang="en" text="OA funding 2017" />
+    </category>
     <category ID="ude2018">
       <label xml:lang="de" text="OA Förderung 2018" />
       <label xml:lang="en" text="OA funding 2018" />      
