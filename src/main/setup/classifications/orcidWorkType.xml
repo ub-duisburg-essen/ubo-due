@@ -16,7 +16,7 @@
       <label xml:lang="de" text="Buch"/>
       <label xml:lang="en" text="Book"
              description="Books written by a single author or collaboratively based on research or scholarly findings generally derived from peer reviewed funding."/>
-      <label xml:lang="x-mapping-xpath" text="{pattern:genre(book)} or {pattern:genre(collection)} or {pattern:genre(proceedings)} or {pattern:genre(lexicon)} or {pattern:genre(festschrift)} " />
+      <label xml:lang="x-mapping-xpath" text="{pattern:genre(book)} or {pattern:genre(collection)} or {pattern:genre(proceedings)} or {pattern:genre(lexicon)} or {pattern:genre(festschrift)}" />
     </category>
     <category ID="book-chapter">
       <label xml:lang="de" text="Buchkapitel"/>
@@ -29,7 +29,7 @@
       <label xml:lang="en" text="Book review"
              description="Critical review of works of fiction or non-fiction highlighting the contributions to an art, field or discipline."/>
       <label xml:lang="x-mapping-xpath" text="({pattern:genre(review)} and ({pattern:host-genre(collection)} or {pattern:host-genre(journal)}))" />
-      <label xml:lang="x-mapping-xpathfb" text="{pattern:genre(review)} and (not(mods:relatedItem[@type='host'])" />
+      <label xml:lang="x-mapping-xpathfb" text="{pattern:genre(review)} and (not(mods:relatedItem[@type='host']))" />
     </category>
     <category ID="dictionary-entry">
       <label xml:lang="de" text="Wörterbucheintrag"/>
@@ -62,7 +62,7 @@
       <label xml:lang="de" text="Zeitschriftenartikel"/>
       <label xml:lang="en" text="Journal article"
              description="Articles in peer-reviewed publications that disseminate the results of original research and scholarship."/>
-      <label xml:lang="x-mapping-xpath" text="({pattern:genre(article)}) and {pattern:host-genre(journal)}" />
+      <label xml:lang="x-mapping-xpath" text="{pattern:genre(article)} and {pattern:host-genre(journal)}" />
     </category>
     <category ID="journal-issue">
       <label xml:lang="de" text="Zeitschriftenausgabe"/>
@@ -89,7 +89,7 @@
       <label xml:lang="de" text="Zeitungsartikel"/>
       <label xml:lang="en" text="Newspaper article"
              description="Articles in a daily, weekly or monthly publication reporting on news and social issues aimed at the public."/>
-      <label xml:lang="x-mapping-xpath" text="({pattern:genre(article)} and {pattern:host-genre(newspaper)})" />
+      <label xml:lang="x-mapping-xpath" text="{pattern:genre(article)} and {pattern:host-genre(newspaper)}" />
     </category>
     <category ID="online-resource">
       <label xml:lang="de" text="Online Ressource"/>
@@ -107,7 +107,7 @@
       <label xml:lang="de" text="Bericht"/>
       <label xml:lang="en" text="Report"
              description="Reports disseminating the outcomes and deliverables of a research contract."/>
-      <label xml:lang="x-mapping-xpath" text="{pattern:genre(report)} " />
+      <label xml:lang="x-mapping-xpath" text="{pattern:genre(report)}" />
     </category>
     <category ID="research-tool">
       <label xml:lang="de" text="Forschungswerkzeug"/>
@@ -153,13 +153,13 @@
       <label xml:lang="en" text="Conference abstract"
              description="Texts of a specified length that states the issue to be discussed in a proposed conference paper."/>
       <label xml:lang="x-mapping-xpath" text="{pattern:genre(abstract)} and ({pattern:host-genre(proceedings)} or {pattern:host-genre(journal)})" /> 
-	  <label xml:lang="x-mapping-xpathfb" text="{pattern:genre(abstract)} and (not(mods:relatedItem[@type='host'])" />
+	  <label xml:lang="x-mapping-xpathfb" text="{pattern:genre(abstract)} and (not(mods:relatedItem[@type='host']))" />
     </category>
     <category ID="conference-paper">
       <label xml:lang="de" text="Konferenzpapier"/>
       <label xml:lang="en" text="Conference paper"
              description="Papers written alone or collaboratively, presented at an academic conference, and published in the proceedings (not in scholarly journals)."/>
-      <label xml:lang="x-mapping-xpath" text="({pattern:genre(chapter)} and {pattern:host-genre(proceedings)})" />
+      <label xml:lang="x-mapping-xpath" text="{pattern:genre(chapter)} and {pattern:host-genre(proceedings)}" />
     </category>
     <category ID="conference-poster">
       <label xml:lang="de" text="Konferenzposter"/>
@@ -263,7 +263,7 @@
     <category ID="other">
       <label xml:lang="de" text="Andere"/>
       <label xml:lang="en" text="Other" description="Any other type of work."/>
-      <label xml:lang="x-mapping-xpath" text="{pattern:genre(interview)} or ({pattern:genre(article)} and (not(mods:relatedItem[@type='host']))" />
+      <label xml:lang="x-mapping-xpath" text="{pattern:genre(interview)} or ({pattern:genre(article)} and (not(mods:relatedItem[@type='host'])))" />
     </category>
 
   </categories>
