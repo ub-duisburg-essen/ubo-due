@@ -22,13 +22,13 @@
       <label xml:lang="de" text="Buchkapitel"/>
       <label xml:lang="en" text="Book chapter"
              description="Texts written by a single author or collaboratively based on research or scholarly findings and expertise in a field."/>
-      <label xml:lang="x-mapping-xpath" text="({pattern:genre(chapter)} and ({pattern:host-genre(collection)} or {pattern:host-genre(festschrift)}))" />
+      <label xml:lang="x-mapping-xpath" text="{pattern:genre(chapter)} and ({pattern:host-genre(collection)} or {pattern:host-genre(festschrift)})" />
     </category>
     <category ID="book-review">
       <label xml:lang="de" text="Buchrezension"/>
       <label xml:lang="en" text="Book review"
              description="Critical review of works of fiction or non-fiction highlighting the contributions to an art, field or discipline."/>
-      <label xml:lang="x-mapping-xpath" text="({pattern:genre(review)} and ({pattern:host-genre(collection)} or {pattern:host-genre(journal)}))" />
+      <label xml:lang="x-mapping-xpath" text="{pattern:genre(review)} and ({pattern:host-genre(collection)} or {pattern:host-genre(journal)})" />
       <label xml:lang="x-mapping-xpathfb" text="{pattern:genre(review)} and (not(mods:relatedItem[@type='host']))" />
     </category>
     <category ID="dictionary-entry">
