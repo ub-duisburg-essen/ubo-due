@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
   <webpage lastModified="$Date$" id="dozbib" xmlns:i18n="http://www.mycore.org/i18n">
-    <title xml:lang="de">Universitätsbibliographie der Universität Duisburg-Essen</title>
-    <title xml:lang="en">University Bibliography of the University of Duisburg-Essen</title>
+
+  <img src="{$WebApplicationBaseURL}images/UBO-Logo.svg"
+       title="Universitätsbibliographie online"
+       alt="Universitätsbibliographie online" />
 
     <script src="webjars/highcharts/5.0.1/highcharts.src.js" type="text/javascript"></script>
     <script src="webjars/highcharts/5.0.1/themes/grid.js" type="text/javascript"></script>
