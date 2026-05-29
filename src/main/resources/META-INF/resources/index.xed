@@ -2,10 +2,6 @@
 
   <webpage lastModified="$Date$" id="dozbib" xmlns:i18n="http://www.mycore.org/i18n">
 
-  <img src="{$WebApplicationBaseURL}images/UBO-Logo.svg"
-       title="Universitätsbibliographie online"
-       alt="Universitätsbibliographie online" />
-
     <script src="webjars/highcharts/5.0.1/highcharts.src.js" type="text/javascript"></script>
     <script src="webjars/highcharts/5.0.1/themes/grid.js" type="text/javascript"></script>
 

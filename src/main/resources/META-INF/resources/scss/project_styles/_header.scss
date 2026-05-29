@@ -13,6 +13,10 @@
       content: " ";
       position: absolute;
       left: 0;
+
+      top: 50%;
+      transform: translateY(-50%);
+
       height: 90px;
       width: 90px;
       background-image: url('../../..//images/himmelavatar100.jpg');

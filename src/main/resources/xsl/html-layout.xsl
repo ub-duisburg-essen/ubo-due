@@ -392,7 +392,9 @@
         <div class="container">
           <div class="pagetitle">
             <h1>
-              <xsl:value-of select="head/title" disable-output-escaping="yes" />
+              <img src="images/UBO-Logo.svg" height="100"
+                   title="Universitätsbibliographie online"
+                   alt="Universitätsbibliographie online" />
             </h1>
             <xsl:call-template name="breadcrumbPath" />
           </div>
