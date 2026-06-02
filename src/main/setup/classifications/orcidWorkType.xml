@@ -22,7 +22,7 @@
       <label xml:lang="de" text="Buchkapitel"/>
       <label xml:lang="en" text="Book chapter"
              description="Texts written by a single author or collaboratively based on research or scholarly findings and expertise in a field."/>
-      <label xml:lang="x-mapping-xpath" text="{pattern:genre(chapter)} and ({pattern:host-genre(collection)} or {pattern:host-genre(festschrift)})" />
+      <label xml:lang="x-mapping-xpath" text="({pattern:genre(chapter)} or {pattern:genre(preface)}) and ({pattern:host-genre(collection)} or {pattern:host-genre(festschrift)})" />
     </category>
     <category ID="book-review">
       <label xml:lang="de" text="Buchrezension"/>
@@ -62,7 +62,7 @@
       <label xml:lang="de" text="Zeitschriftenartikel"/>
       <label xml:lang="en" text="Journal article"
              description="Articles in peer-reviewed publications that disseminate the results of original research and scholarship."/>
-      <label xml:lang="x-mapping-xpath" text="{pattern:genre(article)} and {pattern:host-genre(journal)}" />
+      <label xml:lang="x-mapping-xpath" text="({pattern:genre(article)} or {pattern:genre(preface)} or {pattern:genre(comment)}) and {pattern:host-genre(journal)}" />
     </category>
     <category ID="journal-issue">
       <label xml:lang="de" text="Zeitschriftenausgabe"/>
@@ -95,6 +95,11 @@
       <label xml:lang="de" text="Online Ressource"/>
       <label xml:lang="en" text="Online resource"
              description="Information accessible only on the web via traditional technical methods"/>
+    </category>
+    <category ID="blog-post">
+      <label xml:lang="de" text="Blogbeitrag"/>
+      <label xml:lang="en" text="Blog post"
+             description="A piece of writing or other item of content published on a blog. Only available in API 3.0+"/>
       <label xml:lang="x-mapping-xpath" text="{pattern:genre(article)} and {pattern:host-genre(blog)}" />
     </category>
     <category ID="preprint">
@@ -159,7 +164,7 @@
       <label xml:lang="de" text="Konferenzpapier"/>
       <label xml:lang="en" text="Conference paper"
              description="Papers written alone or collaboratively, presented at an academic conference, and published in the proceedings (not in scholarly journals)."/>
-      <label xml:lang="x-mapping-xpath" text="{pattern:genre(chapter)} and {pattern:host-genre(proceedings)}" />
+      <label xml:lang="x-mapping-xpath" text="({pattern:genre(chapter)} or {pattern:genre(preface)}) and {pattern:host-genre(proceedings)}" />
     </category>
     <category ID="conference-poster">
       <label xml:lang="de" text="Konferenzposter"/>
@@ -201,7 +206,6 @@
       <label xml:lang="de" text="Anmerkung"/>
       <label xml:lang="en" text="Annotation"
              description="Annotations contain comments or descriptions about another resource. This is only available with API v3.0+"/>
-      <label xml:lang="x-mapping-xpath" text="({pattern:genre(preface)} and ({pattern:host-genre(journal)} or {pattern:host-genre(collection)} or {pattern:host-genre(proceedings)} or {pattern:host-genre(festschrift)} or {pattern:host-genre(lexicon)})) or ({pattern:genre(comment)} and {pattern:host-genre(journal)})" />
     </category>
     <category ID="artistic-performance">
       <label xml:lang="de" text="künstlerische Darbietung"/>
@@ -228,6 +232,12 @@
       <label xml:lang="en" text="Lecture speech"
              description="An informative talk related to research delivered to an audience."/>
       <label xml:lang="x-mapping-xpath" text="{pattern:genre(speech)}" />
+    </category>
+    <category ID="public-speech">
+      <label xml:lang="de" text="Öffentliche Rede "/>
+      <label xml:lang="en" text="Public speech"
+             description="An oral presentation of information to the public. Including talks, interviews and podcasts."/>
+      <label xml:lang="x-mapping-xpath" text="{pattern:genre(interview)}" />
     </category>
     <category ID="physical-object">
       <label xml:lang="de" text="physisches Objekt"/>
@@ -263,7 +273,7 @@
     <category ID="other">
       <label xml:lang="de" text="Andere"/>
       <label xml:lang="en" text="Other" description="Any other type of work."/>
-      <label xml:lang="x-mapping-xpath" text="{pattern:genre(interview)} or ({pattern:genre(article)} and {pattern:no-host()})" />
+      <label xml:lang="x-mapping-xpath" text="{pattern:genre(article)} and {pattern:no-host()}" />
     </category>
 
   </categories>
