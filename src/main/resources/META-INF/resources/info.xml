@@ -636,38 +636,43 @@
                 <div id="collapseFive" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFive">
                   <div class="card-body">
                     <h5> 
-                      <i18n:de>Die Anbindung der Universitätsbibliographie an ORCID</i18n:de>
-                      <i18n:en>The connection of the University Bibliography to ORCID</i18n:en>
+                      <i18n:de>Die Universitätsbibliographie ist an ORCID angebunden!</i18n:de>
+                      <i18n:en>The University Bibliography is connected to ORCID!</i18n:en>
                     </h5>
-                     <p>
-                      <i18n:de>ist bereits implementiert und steht Ihnen bald zur Verfügung.</i18n:de>
-                      <i18n:en>is already implemented and will be available to you soon. </i18n:en> 
-                     </p>
+                    <p>
+                    <i18n:de>
+                        Ausführliche Informationen zum Thema ORCID® finden Sie auf der
+                        <a href="https://www.uni-due.de/ub/publikationsdienste/orcid.php" target="_blank">Infoseite der UB</a>.
+                    </i18n:de>
+                    <i18n:en>
+                       For detailed information about ORCID®, please visit the 
+                       <a href="https://www.uni-due.de/ub/en/publish/orcid-author-id.php" target="_blank">University Library's website</a>
+                    </i18n:en>
+                    </p>
                      <p>
                      <i18n:de>
                         Die Universität Duisburg-Essen ist
-                        <a href="https://orcid.org/" target="_blank">ORCID</a>
-                        -Mitglied und kann Ihnen daher
-                        zukünftig dabei helfen, Ihr ORCID-Profil und Ihre persönliche Publikationsliste zu pflegen, indem wir automatisiert
+                        <a href="https://orcid.org/" target="_blank">ORCID</a>-Mitglied und kann Ihnen daher
+                        dabei helfen, Ihr ORCID-Profil und Ihre persönliche Publikationsliste zu pflegen, indem wir automatisiert
                         ...
                       </i18n:de>
                       <i18n:en>
                         The University of Duisburg-Essen is
                         <a href="https://orcid.org/" target="_blank">ORCID</a>
                         member and can therefore
-                        help you to maintain your ORCID profile and your personal publication list in the future by automatically ...
+                        help you to maintain your ORCID profile and your personal publication list by automatically ...
                       </i18n:en>
                       <ul>
                         <li>
-                          <i18n:de>... Publikationsdaten aus Ihrem ORCID-Profil in die Universitätsbibliographie
+                          <i18n:de>... Publikationsdaten aus Ihrem ORCID-Profil (einmalig) in die Universitätsbibliographie
                             übernehmen.</i18n:de>
-                          <i18n:en>... transferring publication data from your ORCID profile to the University Bibliography.
+                          <i18n:en>... transferring publication data from your ORCID profile (one-time) to the University Bibliography.
                           </i18n:en>
                         </li>
                         <li>
-                          <i18n:de>... in der Universitätsbibliographie verzeichnete Publikationen in Ihr ORCID-Profil
+                          <i18n:de>... in der Universitätsbibliographie verzeichnete Publikationen (laufend) in Ihr ORCID-Profil
                             eintragen.</i18n:de>
-                          <i18n:en>... entering publications listed in the University Bibliography in your ORCID profile.
+                          <i18n:en>... entering publications (current) listed in the University Bibliography in your ORCID profile.
                           </i18n:en>
                         </li>
                         <li>
@@ -679,6 +684,31 @@
                             IDs or alternative name forms in the ORCID profile.</i18n:en>
                         </li>
                       </ul>
+                     </p>
+                     <h6>
+                       <i18n:de>Und so können Sie Ihr ORCID-Profil mit der UBO (Universitätsbibliographie) verbinden:</i18n:de>
+                       <i18n:en>Here's how to link your ORCID profile to the UBO (University Bibliography):</i18n:en>
+                     </h6>
+                     <p>
+                       <i18n:de>Voraussetzung ist, dass Sie die UBO autorisieren, als "Trusted Party" auf Ihr ORCID-Profil zuzugreifen.</i18n:de>
+                       <i18n:en>In the first step, you must authorize UBO to access your ORCID profile as a “Trusted Party.”</i18n:en> 
+                     </p>
+                     <p>
+                        <i18n:de>Diese Autorisierung erfolgt auf den Seiten der UBO über "Mein Profil":</i18n:de>
+                        <i18n:en>These authorizations are made on the UBO website via "My Profile":</i18n:en>
+                       <ul>
+                         <li>
+                           <i18n:de>Klicken Sie dort auf den Button "Registrieren oder verknüpfen Sie Ihre ORCID-iD hier!" 
+                           und folgen den weiteren Anweisungen.</i18n:de>
+                           <i18n:en>Then select the "Click to Register or Connect your ORCID-iD" button and follow the instructions.</i18n:en>
+                         </li>
+                         <li>
+                           <i18n:de>Sie haben anschließend sowohl die Möglichkeit manuell einzelne Publikationsdaten aus der 
+                           Bibliographie nach ORCID zu übertragen, als auch einen automatischen Import nach ORCID einzurichten.</i18n:de>
+                           <i18n:en>Thereafter, you have the option of either manually transferring individual publication records 
+                           from the bibliography to ORCID or setting up an automatic import to ORCID.</i18n:en>
+                         </li>
+                       </ul>
                      </p>
                      <h5> 
                        <i18n:de>Weitere Personen-IDs</i18n:de>

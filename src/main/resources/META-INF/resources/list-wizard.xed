@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<webpage lastModified="$Date: 2016-05-20 08:54:29 +0200 (Fr, 20 Mai 2016) $" id="dozbib.list-wizard" xmlns:i18n="http://www.mycore.org/i18n">
+<webpage lastModified="$Date$" id="dozbib.list-wizard" xmlns:i18n="http://www.mycore.org/i18n">
  <title xml:lang="de">Persönliche Publikationsliste erstellen</title>
  <title xml:lang="en">Build your personal publication list</title>
 
@@ -27,6 +27,14 @@
       Hilfe zur Nutzung des Moduls finden Sie auf den <a href="https://imperia.uni-due.de/imperia-hilfe/flex/_portal_publikationen.php">Imperia-Hilfe-Seiten</a> – oder fragen Sie uns: 
       <a href="|code:ude.contact.mailto|"><i18n:code>ude.contact.mail</i18n:code></a>
       </p>
+      <h3>Publikationen ins eigene ORCID-Profil übertragen</h3>
+      <p>
+        Sie haben ein <a href="https://orcid.org/" target="_blank">ORCID</a>-Profil und möchten Ihre Publikationsliste nur einmal pflegen? 
+        Dann melden Sie alle Ihre Publikationen der Universitätsbibliographie und machen uns zur "Trusted Party".
+      </p>
+      <p>
+        Wie das funktioniert, finden Sie <a href="info.xml">hier</a>.
+      </p>
     </div>
   </article>
 
@@ -43,6 +51,14 @@
         university bibliography can be used as search strings. <br/>
         Help on using the module can be found on the Imperia help pages - or ask us:
         <a href="|code:ude.contact.mailto|"><i18n:code>ude.contact.mail</i18n:code></a>
+      </p>
+      <h3>Transfer publications to your ORCID profile</h3>
+      <p>
+        Do you have an <a href="https://orcid.org/" target="_blank">ORCID</a> profile and want to maintain your publication list just once? 
+        Then enter all your publications in the university bibliography and make us your "Trusted Party".
+      </p>
+      <p>
+        Find out how it works <a href="info.xml">here</a>.
       </p>
     </div>
   </article>
