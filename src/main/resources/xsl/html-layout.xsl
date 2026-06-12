@@ -220,12 +220,9 @@
           <div class="col-12 col-sm-6 col-md-auto">
             <div id="orgaunitTitle">
               <a href="{$WebApplicationBaseURL}">
-                <h1>
-                  <xsl:value-of select="i18n:translate('ude.ubo')" />
-                </h1>
-                <h2>
-                  <xsl:value-of select="i18n:translate('ude.ubo.subTitle')" />
-                </h2>
+                <img src="images/UBO-Logo.svg" height="77px" margin-top="-7px"
+                     title="Universitätsbibliographie online"
+                     alt="Universitätsbibliographie online" />
               </a>
             </div>
           </div>
@@ -392,9 +389,13 @@
         <div class="container">
           <div class="pagetitle">
             <h1>
-              <img src="images/UBO-Logo.svg" height="100"
-                   title="Universitätsbibliographie online"
-                   alt="Universitätsbibliographie online" />
+              <xsl:value-of select="i18n:translate('ude.ubo')" />
+            </h1>
+            <h2>
+              <xsl:value-of select="i18n:translate('ude.ubo.subTitle')" />
+            </h2>
+            <h1>
+              <xsl:value-of select="head/title" disable-output-escaping="yes" />
             </h1>
             <xsl:call-template name="breadcrumbPath" />
           </div>
