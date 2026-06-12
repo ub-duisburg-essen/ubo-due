@@ -140,7 +140,7 @@
 <!--         <label xml:lang="en">German</label> -->
 <!--       </language> -->
       <li class="nav-item dropdown ml-auto mir-lang">
-        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" title="{i18n:translate('ude.layout.changeLanguage')}">
+        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" title="{i18n:translate('ude.layout.changeLanguage')}" role="button" aria-expanded="false">
           <i class="flag flag-{$curLang/language/@xmlCode}" />
           <span class="current-language">
             <xsl:value-of select="translate($curLang/language/@xmlCode,'den','DEN')" />
@@ -271,7 +271,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
           <button class="navbar-toggler" type="button"
-            data-toggle="collapse" data-target="#mir-main-nav-collapse-box"
+            data-bs-toggle="collapse" data-target="#mir-main-nav-collapse-box"
             aria-controls="mir-main-nav-collapse-box" aria-expanded="false" aria-label="{i18n:translate('ude.layout.toggleNavigation')}">
             <span class="navbar-toggler-icon" />
           </button>
@@ -298,7 +298,7 @@
       <xsl:variable name="entryCount" select="count($basket/entry)" />
 
     <li class="dropdown" id="basket-list-item">
-      <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">
+      <a class="dropdown-toggle nav-link" data-bs-toggle="dropdown" href="#">
         <xsl:attribute name="title">
           <xsl:choose>
             <xsl:when test="$entryCount = 0">
@@ -343,7 +343,7 @@
       <xsl:otherwise>
         <li class="nav-item dropdown">
 
-          <a id="currentUser" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+          <a id="currentUser" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
             <xsl:choose>
               <xsl:when test="contains($CurrentUser,'@')">
                 <xsl:value-of select="substring-before($CurrentUser,'@')" />
@@ -486,7 +486,7 @@
 
   <xsl:template name="layout.sub.navigation.information">
     <xsl:for-each select="$navigation.tree/item[@menu='information']">
-      <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="far fa-fw fa-user"></i>
         <span class="icon-label"><xsl:call-template name="output.label.for.lang"/></span>
       </a>

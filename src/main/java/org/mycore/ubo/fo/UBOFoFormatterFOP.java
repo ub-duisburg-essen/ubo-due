@@ -47,7 +47,7 @@ import org.mycore.component.fo.common.fo.MCRFoFormatterInterface;
 import org.mycore.resource.MCRResourceHelper;
 
 /**
- * Temporarily override MCRFoFormatterFOP until fix is applied in mycore-fo in 2025.06.x
+ * Temporarily override MCRFoFormatterFOP until fix is applied in mycore-fo in 2026.06.x
  */
 public class UBOFoFormatterFOP implements MCRFoFormatterInterface {
 
