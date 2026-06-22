@@ -139,7 +139,7 @@
 <!--         <label xml:lang="de">Deutsch</label> -->
 <!--         <label xml:lang="en">German</label> -->
 <!--       </language> -->
-      <li class="nav-item dropdown ml-auto mir-lang">
+      <li class="nav-item dropdown ms-auto mir-lang">
         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" title="{i18n:translate('ude.layout.changeLanguage')}" role="button" aria-expanded="false">
           <i class="flag flag-{$curLang/language/@xmlCode}" />
           <span class="current-language">
@@ -229,9 +229,9 @@
             </div>
           </div>
           <div class="col-12 col-md">
-            <form action="{$WebApplicationBaseURL}servlets/solr/select" class="searchfield_box form-inline my-2 my-lg-0" role="search">
+            <form action="{$WebApplicationBaseURL}servlets/solr/select" class="searchfield_box d-flex align-items-center my-2 my-lg-0" role="search">
               <div class="input-group mb-3">
-                <input id="searchInput" class="form-control mr-sm-2 search-query" type="search" name="qq" placeholder="{i18n:translate('ude.layout.searchPublications')}" aria-label="{i18n:translate('ude.layout.searchPublications')}" />
+                <input id="searchInput" class="form-control me-sm-2 search-query" type="search" name="qq" placeholder="{i18n:translate('ude.layout.searchPublications')}" aria-label="{i18n:translate('ude.layout.searchPublications')}" />
                 <input type="hidden" name="sort" value="year desc" />
                 <input type="hidden" name="fl" value="*" />
                 <input type="hidden" name="rows" value="10" />
@@ -250,10 +250,7 @@
                     <xsl:text> AND ${qq}</xsl:text>
                   </xsl:attribute>
                 </input>
-
-                <div class="input-group-append">
-                  <button class="btn btn-primary" type="submit"><i class="fas fa-search" /></button>
-                </div>
+                <button class="btn btn-primary" type="submit"><i class="fas fa-search" /></button>
               </div>
             </form>
           </div>
@@ -271,13 +268,13 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
           <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse" data-target="#mir-main-nav-collapse-box"
+            data-bs-toggle="collapse" data-bs-target="#mir-main-nav-collapse-box"
             aria-controls="mir-main-nav-collapse-box" aria-expanded="false" aria-label="{i18n:translate('ude.layout.toggleNavigation')}">
             <span class="navbar-toggler-icon" />
           </button>
 
           <div id="mir-main-nav-collapse-box" class="collapse navbar-collapse mir-main-nav__entries">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
               <xsl:call-template name="layout.mainnav" />
               <xsl:call-template name="menu.basket" />
             </ul>
@@ -355,7 +352,7 @@
             <span class="caret" />
           </a>
 
-          <ul class="dropdown-menu dropdown-menu-right" role="menu">
+          <ul class="dropdown-menu dropdown-menu-end" role="menu">
 
             <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
               <xsl:apply-templates select="$navigation.tree/item[@menu='user']/item" mode="dropdown" />
@@ -405,7 +402,7 @@
       <ol class="breadcrumb py-1" vocab="http://schema.org/" typeof="BreadcrumbList">
         <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
           <a href="https://www.uni-due.de/ub/" property="item" typeof="WebPage">
-            <i class="fas fa-home mr-2" />
+            <i class="fas fa-home me-2" />
             <xsl:text>UB</xsl:text>
           </a>
         </li>
@@ -455,7 +452,7 @@
             <xsl:call-template name="layout.inhalt" />
           </div>
           <xsl:if test="body/aside[@id='sidebar']">
-            <div class="col-lg-3 pl-lg-0">
+            <div class="col-lg-3 ps-lg-0">
               <xsl:copy-of select="body/aside[@id='sidebar']" />
             </div>
           </xsl:if>

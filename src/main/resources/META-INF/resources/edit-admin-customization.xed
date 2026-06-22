@@ -10,11 +10,11 @@
     <!-- ========== added field "funding" ========== -->
     <xed:template id="funding">
         <xed:bind xpath="mods:classification[@classID='fundingType']">
-            <div class="form-group form-inline">
+            <div class="mb-3 d-flex align-items-center">
                 <label for="{xed:generate-id()}" class="mycore-form-label">
                     <xed:output value="concat(i18n:translate('ubo.funding'), ': ')" />
                 </label>
-                <select id="{xed:generate-id()}" class="mycore-form-input custom-select">
+                <select id="{xed:generate-id()}" class="mycore-form-input form-select">
                     <option value=""><xed:output i18n="search.select" /></option>
                     <xed:include uri="xslStyle:items2options:classification:editor:-1:children:fundingType" />
                 </select>

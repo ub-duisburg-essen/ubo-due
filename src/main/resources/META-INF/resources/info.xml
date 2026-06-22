@@ -63,7 +63,7 @@
                   aria-expanded="false"
                   aria-controls="collapseOne1">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-right icon-closed pe-3" aria-hidden="true"></i>
                     <i18n:de>Publikationstypen in der Universitätsbibliographie</i18n:de>
                     <i18n:en>Publication types in the University Bibliography</i18n:en>
                   </h5>
@@ -155,7 +155,7 @@
                   aria-expanded="false"
                   aria-controls="collapseTwo1">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-right icon-closed pe-3" aria-hidden="true"></i>
                     <i18n:de>Personen in der Universitätsbibliographie</i18n:de>
                     <i18n:en> Persons in the University Bibliography</i18n:en>
                   </h5>
@@ -218,7 +218,7 @@
                   aria-expanded="false"
                   aria-controls="collapseThree1">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    <i class="fa fa-chevron-circle-right icon-closed pe-3" aria-hidden="true"></i>                    
                     <i18n:de>Publikationslisten</i18n:de>
                     <i18n:en>Publication lists</i18n:en> 
                   </h5>
@@ -275,7 +275,7 @@
                   aria-expanded="false"
                   aria-controls="collapseFour1">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-right icon-closed pe-3" aria-hidden="true"></i>
                     <i18n:de>Publikationsrichtlinie der Universität Duisburg-Essen </i18n:de>
                     <i18n:en>Publication Guidelines of the University of Duisburg-Essen</i18n:en>  
                   </h5>
@@ -326,7 +326,7 @@
                   aria-expanded="false"
                   aria-controls="collapseFive1">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-right icon-closed pe-3" aria-hidden="true"></i>
                     <i18n:de>Zugangsrechte (Access Rights)</i18n:de>
                     <i18n:en>Access Rights</i18n:en>  
                   </h5>
@@ -438,7 +438,7 @@
                   aria-expanded="false"
                   aria-controls="collapseOne">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-right icon-closed pe-3" aria-hidden="true"></i>
                     <i18n:de> Wir importieren täglich Daten aus großen, fächerübergreifenden Datenbanken in die
                       Universitätsbibliographie</i18n:de>
                     <i18n:en> We import data from large, interdisciplinary databases into the University Bibliography on
@@ -495,7 +495,7 @@
                   aria-expanded="false"
                   aria-controls="collapseTwo">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    <i class="fa fa-chevron-circle-right icon-closed pe-3" aria-hidden="true"></i>                    
                     <i18n:de> Wir prüfen Ihre gemeldeten Publikationen und ergänzen ggf. Informationen</i18n:de>
                     <i18n:en>We check your reported publications and add information if necessary</i18n:en>
                   </h5>
@@ -538,7 +538,7 @@
                   aria-expanded="false"
                   aria-controls="collapseThree">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-right icon-closed pe-3" aria-hidden="true"></i>
                    <i18n:de>Wir reichern Ihre Publikationsdaten mit Identifiern wie DOI, PubMed-ID und Scopus-ID an
                     </i18n:de>
                     <i18n:en>We enrich your publication data with identifiers such as DOI, PubMed-ID and Scopus-ID
@@ -591,7 +591,7 @@
                   aria-expanded="false"
                   aria-controls="collapseFour">
                   <h5 class="card-title">
-                      <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                      <i class="fa fa-chevron-circle-right icon-closed pe-3" aria-hidden="true"></i>
                       <i18n:de>Wir sorgen für qualitativ hochwertige Metadaten</i18n:de>
                       <i18n:en> We ensure high quality metadata</i18n:en>
                   </h5>
@@ -628,7 +628,7 @@
                   aria-expanded="false"
                   aria-controls="collapseFive">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
+                    <i class="fa fa-chevron-circle-right icon-closed pe-3" aria-hidden="true"></i>                    
                     <i18n:de>Wir unterstützen die Verknüpfung mit ORCID - und verknüpfen mit weiteren Personen-IDs</i18n:de>
                     <i18n:en>We support linking with ORCID - and link with other personal IDs</i18n:en>
                   </h5>
@@ -763,7 +763,7 @@
                   aria-expanded="false"
                   aria-controls="collapseSix">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-right icon-closed pe-3" aria-hidden="true"></i>
                     <i18n:de>Wir helfen Ihnen bei der Erstellung Ihrer persönlichen Publikationslisten</i18n:de>
                     <i18n:en>We help you to create your personal publication lists</i18n:en>
                   </h5>
@@ -803,7 +803,7 @@
                   aria-expanded="false"
                   aria-controls="collapseSeven">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-right icon-closed pe-3" aria-hidden="true"></i>
                       <i18n:de>Wir kennzeichnen Open Access Publikationen</i18n:de>
                       <i18n:en>We label Open Access publications</i18n:en>
                   </h5>
@@ -848,7 +848,7 @@
                   aria-expanded="false"
                   aria-controls="collapseEight">
                   <h5 class="card-title">
-                    <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-circle-right icon-closed pe-3" aria-hidden="true"></i>
                     <i18n:de>Wir können Bibliometrie und Statistik</i18n:de>
                     <i18n:en>We can create statistics and bibliometric analyses</i18n:en>
                   </h5>

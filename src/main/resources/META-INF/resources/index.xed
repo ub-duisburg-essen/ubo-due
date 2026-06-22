@@ -16,7 +16,7 @@
             <div class="card-body">
 
               <xed:form xmlns:xed="http://www.mycore.de/xeditor" method="post" role="form">
-                <div class="form-group form-inline mb-0">
+                <div class="mb-3 d-flex align-items-center mb-0">
                   <xed:bind xpath="/query">
                     <xed:bind xpath="@mask" default="index.xed" />
                     <xed:bind xpath="@numPerPage" default="10" />
@@ -25,7 +25,7 @@
                         <label for="input" class="mycore-form-label">
                           <xed:output i18n="ubo.search.simple" />
                         </label>
-                        <input id="input" type="text" class="mycore-form-input form-control mr-2" />
+                        <input id="input" type="text" class="mycore-form-input form-control me-2" />
                       </xed:bind>
                       <!-- Standard users must only find confirmed publications, admins find all publications -->
                       <xed:choose>
@@ -39,7 +39,7 @@
                     </xed:bind>
                     <xed:bind xpath="sortBy[field[@name='year'][@order='descending']]" />
                   </xed:bind>
-                  <button class="btn btn-primary" type="submit" xed:target="servlet" xed:href="MCRQLSearchServlet">
+                  <button class="btn btn-sm btn-primary" type="submit" xed:target="servlet" xed:href="MCRQLSearchServlet">
                     <xed:output i18n="button.search" />
                   </button>
                 </div>
@@ -93,7 +93,7 @@
                   </a>
                 </p>
                 <div class="text-center">
-                  <a class="btn btn-primary" href="newPublication.xed">
+                  <a class="btn btn-sm btn-primary" href="newPublication.xed">
                     <i18n:de>Melden</i18n:de>
                     <i18n:en>Send</i18n:en>
                   </a>
@@ -128,7 +128,7 @@
                   </a>
                 </p>
                 <div class="text-center">
-                  <a class="btn btn-primary" href="list-wizard.xed">
+                  <a class="btn btn-sm btn-primary" href="list-wizard.xed">
                     <i18n:de>Erstellen</i18n:de>
                     <i18n:en>Build</i18n:en>
                   </a>
