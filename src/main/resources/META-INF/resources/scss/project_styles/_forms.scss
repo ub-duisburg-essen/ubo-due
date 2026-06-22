@@ -20,13 +20,13 @@
 }
 
 // Large devices (desktops) and below: <= 1200px
-@include media-breakpoint-down(lg) {
-  // add/overwrite styles for responsive level lg and lower
+@include media-breakpoint-down(xl) {
+  // add/overwrite styles for responsive level xl and lower
 }
 
 // Medium devices (tablets) and below: <= 992px
-@include media-breakpoint-down(md) {
-  // add/overwrite styles for responsive level md and lower
+@include media-breakpoint-down(lg) {
+  // add/overwrite styles for responsive level lg and lower
   .searchfield_box {
     margin-top: 1rem;
     justify-content: center;
@@ -34,13 +34,13 @@
 }
 
 // Small devices (landscape phones) and below: <= 768px
-@include media-breakpoint-down(sm) {
-  // add/overwrite styles for responsive level sm and lower
+@include media-breakpoint-down(md) {
+  // add/overwrite styles for responsive level md and lower
 }
 
 // Extra small devices (portrait phones): <= 576px
-@include media-breakpoint-down(xs) {
-  // add/overwrite styles for responsive level xs
+@include media-breakpoint-down(sm) {
+  // add/overwrite styles for responsive level sm
   #orgaunitTitle {
     margin-top: 1rem;
     text-align: right;
