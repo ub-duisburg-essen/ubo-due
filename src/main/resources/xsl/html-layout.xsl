@@ -230,7 +230,7 @@
           </div>
           <div class="col-12 col-md">
             <form action="{$WebApplicationBaseURL}servlets/solr/select" class="searchfield_box d-flex align-items-center my-2 my-lg-0" role="search">
-              <div class="input-group mb-3">
+              <div class="input-group mb-3 w-auto">
                 <input id="searchInput" class="form-control me-sm-2 search-query" type="search" name="qq" placeholder="{i18n:translate('ude.layout.searchPublications')}" aria-label="{i18n:translate('ude.layout.searchPublications')}" />
                 <input type="hidden" name="sort" value="year desc" />
                 <input type="hidden" name="fl" value="*" />
