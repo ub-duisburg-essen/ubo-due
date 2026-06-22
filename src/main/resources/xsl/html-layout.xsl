@@ -217,15 +217,12 @@
               <img src="{$WebApplicationBaseURL}images/UDE-logo-claim.svg" alt="Logo {i18n:translate('ude.university')}" width="1052" height="414" />
             </a>
           </div>
-          <div class="col-12 col-sm-6 col-md-auto">
+          <div class="col-12 col-sm-6 col-md d-flex justify-content-center align-items-center">
             <div id="orgaunitTitle">
-              <a href="{$WebApplicationBaseURL}">
-                <h1>
-                  <xsl:value-of select="i18n:translate('ude.ubo')" />
-                </h1>
-                <h2>
-                  <xsl:value-of select="i18n:translate('ude.ubo.subTitle')" />
-                </h2>
+              <a href="{$WebApplicationBaseURL}" id="uboLogo" class="containsimage">
+                <img src="{$WebApplicationBaseURL}images/UBO-Logo.svg"
+                     title="Logo {i18n:translate('ude.uboonline')}"
+                     alt="Logo {i18n:translate('ude.uboonline')}" />
               </a>
             </div>
           </div>
