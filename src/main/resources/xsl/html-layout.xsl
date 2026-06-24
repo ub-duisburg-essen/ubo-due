@@ -7,7 +7,8 @@
   xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
   xmlns:encoder="xalan://java.net.URLEncoder"
   xmlns:exslt="http://exslt.org/common"
-  exclude-result-prefixes="xsl xalan i18n mcrxsl encoder exslt">
+  xmlns:mcrver="xalan://org.mycore.common.MCRCoreVersion"
+  exclude-result-prefixes="xsl xalan i18n mcrxsl encoder exslt mcrver">
 
   <xsl:output method="xml" encoding="UTF-8" />
 
@@ -216,15 +217,12 @@
               <img src="{$WebApplicationBaseURL}images/UDE-logo-claim.svg" alt="Logo {i18n:translate('ude.university')}" width="1052" height="414" />
             </a>
           </div>
-          <div class="col-12 col-sm-6 col-md-auto">
+          <div class="col-12 col-sm-6 col-md d-flex justify-content-center align-items-center">
             <div id="orgaunitTitle">
-              <a href="{$WebApplicationBaseURL}">
-                <h1>
-                  <xsl:value-of select="i18n:translate('ude.ubo')" />
-                </h1>
-                <h2>
-                  <xsl:value-of select="i18n:translate('ude.ubo.subTitle')" />
-                </h2>
+              <a href="{$WebApplicationBaseURL}" id="uboLogo" class="containsimage">
+                <img src="{$WebApplicationBaseURL}images/UBO-Logo.svg"
+                     title="Logo {i18n:translate('ude.uboonline')}"
+                     alt="Logo {i18n:translate('ude.uboonline')}" />
               </a>
             </div>
           </div>
@@ -548,6 +546,7 @@
                     </a>
                   </li>
                 </ul>
+                <xsl:call-template name="powered_by" />
               </div>
             </div>
 
@@ -555,6 +554,15 @@
         </div>
       </div>
     </footer>
+  </xsl:template>
+
+  <xsl:template name="powered_by">
+    <xsl:variable name="mcr_version" select="concat('MyCoRe ',mcrver:getCompleteVersion())" />
+    <div id="powered_by">
+      <a href="http://www.mycore.de">
+        <img src="{$WebApplicationBaseURL}images/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
+      </a>
+    </div>
   </xsl:template>
 
 </xsl:stylesheet>
