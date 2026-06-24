@@ -123,6 +123,13 @@
     background-color:rgba(24, 92, 157, .9);
   }
 
+@include media-breakpoint-up(xxl) {
+  .container {
+    max-width: 1250px;
+  }
+}
+
+
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(xl) {
   // add/overwrite styles for responsive level xl and lower
