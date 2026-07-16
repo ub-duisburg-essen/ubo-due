@@ -7,6 +7,7 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 import org.mycore.frontend.jersey.MCRJerseyUtil;
+import org.mycore.ubo.AccessControl;
 import org.mycore.user2.MCRUser;
 import org.mycore.user2.MCRUserManager;
 import com.google.gson.JsonArray;
@@ -21,8 +22,9 @@ public class UBOORCIDUserRescource {
         List<MCRUser> orcidUsers = MCRUserManager.listUsers(
             null,null,null,null,"orcid_credential_",0,9999);
 
-        // TODO how to make Resource admin-only?
-        MCRJerseyUtil.checkPermission("manage-sessions");
+        if (!AccessControl.currentUserIsAdmin()) {
+            return Response.status(Response.Status.FORBIDDEN).build();
+        }
 
         JsonArray rootJSON = orcidUsers.stream()
             .map(user -> {
