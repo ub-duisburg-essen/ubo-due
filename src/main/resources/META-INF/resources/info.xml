@@ -778,6 +778,30 @@
                         </li>
                       </ul>
                      </p>
+                     <h5>
+                       <i18n:de>Weitere Anmerkungen</i18n:de>
+                       <i18n:en>Further notes</i18n:en>
+                     </h5>
+                     <p>
+                       <ul>
+                         <li>
+                           <i18n:de>
+                             Achten Sie auf die Visibility-Settings in Ihren ORCID-Profil!
+                           </i18n:de>
+                           <i18n:en>
+                             Remember to adjust the visibility-settings in your ORCID-profile!
+                           </i18n:en>
+                         </li>
+                         <li>
+                           <i18n:de>
+                             Im Moment können Publikationen nur einzeln durch Mausklick in Ihr ORCID-Profil übertragen werden. Wir arbeiten an einer Lösung, damit alle Publikationen auf einmal auf Ihr Profil übertragen werden können.
+                           </i18n:de>
+                           <i18n:en>
+                             Right now, publications can only be transferred to your ORCID-profile one-by-one via mouse click. We are working on a solution to transfer all publications to your profile at once.
+                           </i18n:en>
+                         </li>
+                       </ul>
+                     </p>
                   </div>
                 </div>
               </div>
