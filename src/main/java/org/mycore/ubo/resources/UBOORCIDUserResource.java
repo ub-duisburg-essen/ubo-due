@@ -22,9 +22,25 @@ public class UBOORCIDUserResource {
             return Response.status(Response.Status.FORBIDDEN).build();
         }
 
-        List<MCRUser> orcidUsers = MCRUserManager.listUsers(
-            null,null,null,null,"orcid_credential_*",0,9999);
-        JsonArray rootJSON = orcidUsers.stream()
+        try {
+            List<MCRUser> orcidUsers = MCRUserManager.listUsers(
+                null, null, null, null, "orcid_credential_*", 0, 9999);
+            JsonArray rootJSON = parseUsers(orcidUsers);
+
+            return Response
+                .status(Response.Status.OK)
+                .type(MediaType.APPLICATION_JSON)
+                .entity(rootJSON.toString())
+                .build();
+        } catch (Exception e) {
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
+                .entity("Failed to list ORCID users: " + e.getMessage())
+                .build();
+        }
+    }
+
+    private JsonArray parseUsers(List<MCRUser> orcidUsers) {
+        return orcidUsers.stream()
             .map(user -> {
                 JsonObject userJSON = new JsonObject();
 
@@ -53,11 +69,5 @@ public class UBOORCIDUserResource {
                 JsonArray::add,
                 JsonArray::addAll
             );
-
-        return Response
-            .status(Response.Status.OK)
-            .type(MediaType.APPLICATION_JSON)
-            .entity(rootJSON.toString())
-            .build();
     }
 }
