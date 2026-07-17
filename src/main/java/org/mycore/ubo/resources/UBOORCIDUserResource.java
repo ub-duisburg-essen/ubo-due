@@ -6,7 +6,6 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-import org.mycore.frontend.jersey.MCRJerseyUtil;
 import org.mycore.ubo.AccessControl;
 import org.mycore.user2.MCRUser;
 import org.mycore.user2.MCRUserManager;
@@ -14,18 +13,17 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 @Path("orcid-user")
-public class UBOORCIDUserRescource {
+public class UBOORCIDUserResource {
 
     @GET
     @Path("list")
     public Response listAll() {
-        List<MCRUser> orcidUsers = MCRUserManager.listUsers(
-            null,null,null,null,"orcid_credential_",0,9999);
-
         if (!AccessControl.currentUserIsAdmin()) {
             return Response.status(Response.Status.FORBIDDEN).build();
         }
 
+        List<MCRUser> orcidUsers = MCRUserManager.listUsers(
+            null,null,null,null,"orcid_credential_*",0,9999);
         JsonArray rootJSON = orcidUsers.stream()
             .map(user -> {
                 JsonObject userJSON = new JsonObject();
