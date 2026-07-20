@@ -710,6 +710,46 @@
                          </li>
                        </ul>
                      </p>
+                     <h6>
+                       <i18n:de>Weitere Hinweise</i18n:de>
+                       <i18n:en>Further notes</i18n:en>
+                     </h6>
+                     <p>
+                       <ul>
+                         <li>
+                           <i18n:de>
+                             <strong>Unsere ORCID-Anbindung befindet sich noch in der Testphase!</strong> 
+                             <br />
+                             Helfen Sie uns, unseren Service zu verbessern und melden Sie sich mit Fragen und Feedback bei uns: 
+                             
+                           </i18n:de>
+                           <i18n:en>
+                             <strong>Our ORCID-feature is still undergoing testing!</strong>
+                             <br />
+                             Please help us improve our service and contact us with any questions or feedback:
+                           </i18n:en>
+                           <a href="|code:ude.contact.mailto|">
+                           <i18n:code>ude.contact.mail</i18n:code>
+                           </a>
+                         </li>
+                         <li>
+                           <i18n:de>
+                             Achten Sie auf die Visibility-Settings in Ihren ORCID-Profil!
+                           </i18n:de>
+                           <i18n:en>
+                             Remember to adjust the visibility-settings in your ORCID-profile!
+                           </i18n:en>
+                         </li>
+                         <li>
+                           <i18n:de>
+                             Im Moment können Publikationen nur einzeln durch Mausklick in Ihr ORCID-Profil übertragen werden. Wir arbeiten an einer Lösung, damit komplette Trefferlisten mit einem Klick in Ihr Profil übertragen werden können.
+                           </i18n:de>
+                           <i18n:en>
+                             Right now, publications can only be transferred to your ORCID-profile one-by-one via mouse click. We are working on a solution to transfer all your publications to your profile at once.
+                           </i18n:en>
+                         </li>
+                       </ul>
+                     </p>
                      <h5> 
                        <i18n:de>Weitere Personen-IDs</i18n:de>
                        <i18n:en>Further person IDs</i18n:en>
@@ -721,7 +761,7 @@
                             <strong>LSF-ID:</strong>
                             über die LSF-ID werden die Personen mit dem
                             <a href="https://campus.uni-due.de/lsf" target="_blank">LSF</a>
-                            der UDE verknüft.
+                            der UDE verknüpft.
                             Darüber werden die Publikationen in die UDE-Personenseiten eingebunden
                           </i18n:de>
                           <i18n:en>
@@ -778,30 +818,7 @@
                         </li>
                       </ul>
                      </p>
-                     <h5>
-                       <i18n:de>Weitere Anmerkungen</i18n:de>
-                       <i18n:en>Further notes</i18n:en>
-                     </h5>
-                     <p>
-                       <ul>
-                         <li>
-                           <i18n:de>
-                             Achten Sie auf die Visibility-Settings in Ihren ORCID-Profil!
-                           </i18n:de>
-                           <i18n:en>
-                             Remember to adjust the visibility-settings in your ORCID-profile!
-                           </i18n:en>
-                         </li>
-                         <li>
-                           <i18n:de>
-                             Im Moment können Publikationen nur einzeln durch Mausklick in Ihr ORCID-Profil übertragen werden. Wir arbeiten an einer Lösung, damit alle Publikationen auf einmal auf Ihr Profil übertragen werden können.
-                           </i18n:de>
-                           <i18n:en>
-                             Right now, publications can only be transferred to your ORCID-profile one-by-one via mouse click. We are working on a solution to transfer all publications to your profile at once.
-                           </i18n:en>
-                         </li>
-                       </ul>
-                     </p>
+                     
                   </div>
                 </div>
               </div>
