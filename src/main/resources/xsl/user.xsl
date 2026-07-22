@@ -274,7 +274,9 @@
     <xsl:value-of select="concat(' ', i18n:translate('orcid.integration.confirmed.headline'), '.')" />
   </h3>
   <p>
-    <xsl:value-of disable-output-escaping="yes" select="i18n:translate('orcid.integration.beta')" />
+    <span style="font-weight: bold;">
+      <xsl:value-of disable-output-escaping="yes" select="i18n:translate('orcid.integration.beta')" />
+    </span>
     <xsl:value-of disable-output-escaping="yes" select="i18n:translate('orcid.integration.beta.feedback')" />
     <a href="mailto:{i18n:translate('ude.contact.mail')}">
       <xsl:value-of select="i18n:translate('ude.contact.mail')" />
@@ -314,7 +316,7 @@
   </h3>
   <p>
    <span style="font-weight: bold;">
-    <xsl:value-of disable-output-escaping="yes" select="i18n:translate('orcid.integration.beta')" />
+      <xsl:value-of disable-output-escaping="yes" select="i18n:translate('orcid.integration.beta')" />
     </span>
     <xsl:value-of disable-output-escaping="yes" select="i18n:translate('orcid.integration.beta.feedback')" />
     <a href="mailto:{i18n:translate('ude.contact.mail')}">
