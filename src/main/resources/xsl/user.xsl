@@ -274,15 +274,6 @@
     <xsl:value-of select="concat(' ', i18n:translate('orcid.integration.confirmed.headline'), '.')" />
   </h3>
   <p>
-    <span style="font-weight: bold;">
-      <xsl:value-of disable-output-escaping="yes" select="i18n:translate('orcid.integration.beta')" />
-    </span>
-    <xsl:value-of disable-output-escaping="yes" select="i18n:translate('orcid.integration.beta.feedback')" />
-    <a href="mailto:{i18n:translate('ude.contact.mail')}">
-      <xsl:value-of select="i18n:translate('ude.contact.mail')" />
-    </a>
-  </p>
-  <p> 
     <xsl:value-of disable-output-escaping="yes" select="i18n:translate('orcid.integration.confirmed.text')" />
   </p>
   <xsl:if test="string-length(normalize-space(i18n:translate('orcid.integration.import'))) &gt; 0 and
@@ -314,15 +305,6 @@
     <xsl:text> </xsl:text>
     <xsl:value-of select="i18n:translate('orcid.integration.pending.headline')" />
   </h3>
-  <p>
-   <span style="font-weight: bold;">
-      <xsl:value-of disable-output-escaping="yes" select="i18n:translate('orcid.integration.beta')" />
-    </span>
-    <xsl:value-of disable-output-escaping="yes" select="i18n:translate('orcid.integration.beta.feedback')" />
-    <a href="mailto:{i18n:translate('ude.contact.mail')}">
-      <xsl:value-of select="i18n:translate('ude.contact.mail')" />
-    </a>
-  </p>
   <p>
     <xsl:value-of disable-output-escaping="yes" select="i18n:translate('orcid.integration.pending.intro')" />
   </p>
@@ -403,15 +385,6 @@
       <xsl:value-of select="concat(' ', i18n:translate(concat('user.profile.publications.ubo.published.extro.plural.', $isMulti)))" disable-output-escaping="yes" />
     </xsl:if>
   </li>
-  <xsl:if test="$numFoundAll = 0">
-    <li>
-      <xsl:value-of select="i18n:translate('user.profile.publications.no.publications')" /> 
-      <a href="mailto:{i18n:translate('ude.contact.mail')}">
-      <xsl:value-of select="i18n:translate('ude.contact.mail')" />
-      </a>
-    </li>
-  </xsl:if>
-
 </xsl:template>
 
 <xsl:template match="attribute[contains(@name, 'orcid_credential')]" mode="publications">
