@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Set;
 
 import org.mycore.common.content.MCRJDOMContent;
+import org.mycore.common.events.MCREvent;
+import org.mycore.datamodel.metadata.MCRObject;
 import org.mycore.orcid2.client.MCRORCIDCredential;
 import org.mycore.orcid2.metadata.MCRORCIDPutCodeInfo;
 import org.mycore.orcid2.util.MCRIdentifier;
@@ -15,6 +17,11 @@ import org.orcid.jaxb.model.v3.release.record.Work;
  * Overrides {@link MCRORCIDWorkEventHandlerImpl} to allow for repair.
  */
 public class UBOORCIDWorkEventHandlerImpl extends MCRORCIDWorkEventHandler<Work> {
+
+    @Override
+    protected void handleObjectRepaired(MCREvent evt, MCRObject object)  {
+        handleObjectUpdated(evt, object);
+    }
 
     @Override
     protected void removeWork(MCRORCIDPutCodeInfo workInfo, String orcid, MCRORCIDCredential credential) {
