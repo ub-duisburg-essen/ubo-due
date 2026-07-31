@@ -629,15 +629,15 @@
                   aria-controls="collapseFive">
                   <h5 class="card-title">
                     <i class="fa fa-chevron-circle-right icon-closed pr-3" aria-hidden="true"></i>                    
-                    <i18n:de>Wir unterstützen die Verknüpfung mit ORCID - und verknüpfen mit weiteren Personen-IDs</i18n:de>
-                    <i18n:en>We support linking with ORCID - and link with other personal IDs</i18n:en>
+                    <i18n:de>Wir unterstützen die Verknüpfung mit ORCID® - und verknüpfen mit weiteren Personen-IDs</i18n:de>
+                    <i18n:en>We support linking with ORCID® - and link with other personal IDs</i18n:en>
                   </h5>
                 </div>
                 <div id="collapseFive" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFive">
                   <div class="card-body">
                     <h5> 
-                      <i18n:de>Die Universitätsbibliographie ist an ORCID angebunden!</i18n:de>
-                      <i18n:en>The University Bibliography is connected to ORCID!</i18n:en>
+                      <i18n:de>Die Universitätsbibliographie ist an ORCID® angebunden!</i18n:de>
+                      <i18n:en>The University Bibliography is connected to ORCID®!</i18n:en>
                     </h5>
                     <p>
                     <i18n:de>
@@ -652,79 +652,79 @@
                      <p>
                      <i18n:de>
                         Die Universität Duisburg-Essen ist
-                        <a href="https://orcid.org/" target="_blank">ORCID</a>-Mitglied und kann Ihnen daher
-                        dabei helfen, Ihr ORCID-Profil und Ihre persönliche Publikationsliste zu pflegen, indem wir automatisiert
+                        <a href="https://orcid.org/" target="_blank">ORCID®</a>-Mitglied und kann Ihnen daher
+                        dabei helfen, Ihr ORCID®-Profil und Ihre persönliche Publikationsliste zu pflegen, indem wir automatisiert
                         ...
                       </i18n:de>
                       <i18n:en>
                         The University of Duisburg-Essen is
                         <a href="https://orcid.org/" target="_blank">ORCID</a>
                         member and can therefore
-                        help you to maintain your ORCID profile and your personal publication list by automatically ...
+                        help you to maintain your ORCID® profile and your personal publication list by automatically ...
                       </i18n:en>
                       <ul>
                         <li>
-                          <i18n:de>... Publikationsdaten aus Ihrem ORCID-Profil (einmalig) in die Universitätsbibliographie
+                          <i18n:de>... Publikationsdaten aus Ihrem ORCID®-Profil (einmalig) in die Universitätsbibliographie
                             übernehmen.</i18n:de>
-                          <i18n:en>... transferring publication data from your ORCID profile (one-time) to the University Bibliography.
+                          <i18n:en>... transferring publication data from your ORCID® profile (one-time) to the University Bibliography.
                           </i18n:en>
                         </li>
                         <li>
-                          <i18n:de>... in der Universitätsbibliographie verzeichnete Publikationen (laufend) in Ihr ORCID-Profil
+                          <i18n:de>... in der Universitätsbibliographie verzeichnete Publikationen (laufend) in Ihr ORCID®-Profil
                             eintragen.</i18n:de>
-                          <i18n:en>... entering publications (current) listed in the University Bibliography in your ORCID profile.
+                          <i18n:en>... entering publications (current) listed in the University Bibliography in your ORCID® profile.
                           </i18n:en>
                         </li>
                         <li>
                           <i18n:de>... die Angabe der Zugehörigkeit zur UDE (Affiliation) sowie weitere externe
                             Autoren-IDs oder alternative Namensformen
-                            im ORCID-Profil ergänzen.
+                            im ORCID®-Profil ergänzen.
                           </i18n:de>
                           <i18n:en>... adding the indication of affiliation to the UDE as well as further external author
-                            IDs or alternative name forms in the ORCID profile.</i18n:en>
+                            IDs or alternative name forms in the ORCID® profile.</i18n:en>
                         </li>
                       </ul>
                      </p>
                      <h6>
-                       <i18n:de>Und so können Sie Ihr ORCID-Profil mit der UBO (Universitätsbibliographie) verbinden:</i18n:de>
-                       <i18n:en>Here's how to link your ORCID profile to the UBO (University Bibliography):</i18n:en>
+                       <i18n:de>Und so können Sie Ihr ORCID®-Profil mit der UBO (Universitätsbibliographie) verbinden:</i18n:de>
+                       <i18n:en>Here's how to link your ORCID® profile to the UBO (University Bibliography):</i18n:en>
                      </h6>
                      <p>
-                       <i18n:de>Voraussetzung ist, dass Sie die UBO autorisieren, als "Trusted Party" auf Ihr ORCID-Profil zuzugreifen.</i18n:de>
-                       <i18n:en>In the first step, you must authorize UBO to access your ORCID profile as a “Trusted Party.”</i18n:en> 
+                       <i18n:de>Voraussetzung ist, dass Sie die UBO autorisieren, als "Trusted Party" auf Ihr ORCID®-Profil zuzugreifen.</i18n:de>
+                       <i18n:en>In the first step, you must authorize UBO to access your ORCID® profile as a “Trusted Party.”</i18n:en>
                      </p>
                      <p>
                         <i18n:de>Diese Autorisierung erfolgt auf den Seiten der UBO über "Mein Profil":</i18n:de>
                         <i18n:en>These authorizations are made on the UBO website via "My Profile":</i18n:en>
                        <ul>
                          <li>
-                           <i18n:de>Klicken Sie dort auf den Button "Registrieren oder verknüpfen Sie Ihre ORCID-iD hier!" 
+                           <i18n:de>Klicken Sie dort auf den Button "Registrieren oder verknüpfen Sie Ihre ORCID®-iD hier!"
                            und folgen den weiteren Anweisungen.</i18n:de>
-                           <i18n:en>Then select the "Click to Register or Connect your ORCID-iD" button and follow the instructions.</i18n:en>
+                           <i18n:en>Then select the "Click to Register or Connect your ORCID®-iD" button and follow the instructions.</i18n:en>
                          </li>
                          <li>
                            <i18n:de>Sie haben anschließend sowohl die Möglichkeit manuell einzelne Publikationsdaten aus der 
-                           Bibliographie nach ORCID zu übertragen, als auch einen automatischen Import nach ORCID einzurichten.</i18n:de>
+                           Bibliographie nach ORCID® zu übertragen, als auch einen automatischen Import nach ORCID® einzurichten.</i18n:de>
                            <i18n:en>Thereafter, you have the option of either manually transferring individual publication records 
-                           from the bibliography to ORCID or setting up an automatic import to ORCID.</i18n:en>
+                           from the bibliography to ORCID® or setting up an automatic import to ORCID®.</i18n:en>
                          </li>
                        </ul>
                      </p>
                      <h6>
-                       <i18n:de>Weitere Hinweise</i18n:de>
-                       <i18n:en>Further notes</i18n:en>
+                       <i18n:de>Weitere Hinweise zur Übertragung von Publikationen in Ihr ORCID®-Profil</i18n:de>
+                       <i18n:en>Additional information on transferring publications to your ORCID® profile</i18n:en>
                      </h6>
                      <p>
                        <ul>
                          <li>
                            <i18n:de>
-                             <strong>Unsere ORCID-Anbindung befindet sich noch in der Testphase!</strong> 
+                             <strong>Unsere ORCID®-Anbindung befindet sich noch in der Testphase!</strong>
                              <br />
                              Helfen Sie uns, unseren Service zu verbessern und melden Sie sich mit Fragen und Feedback bei uns: 
                              
                            </i18n:de>
                            <i18n:en>
-                             <strong>Our ORCID-feature is still undergoing testing!</strong>
+                             <strong>Our ORCID®-feature is still undergoing testing!</strong>
                              <br />
                              Please help us improve our service and contact us with any questions or feedback:
                            </i18n:en>
@@ -734,18 +734,53 @@
                          </li>
                          <li>
                            <i18n:de>
-                             Achten Sie auf die Visibility-Settings in Ihren ORCID-Profil!
+                             Wenn Sie nach der Aktivierung der ORCID®-Anbindung zum ersten Mal Ihre persönliche Trefferliste in der UBO aufrufen, werden zunächst alle Publikationen als „noch nicht in Ihr ORCID®-Profil übertragen“ angezeigt. Dieser Hinweis bezieht sich ausschließlich auf die Übertragung durch die UBO. Die Publikationen können bereits von Ihnen selbst oder von einer anderen „Trusted Party“ in Ihr ORCID®-Profil eingetragen worden sein.
                            </i18n:de>
                            <i18n:en>
-                             Remember to adjust the visibility-settings in your ORCID-profile!
+                             When you view your personal list of results in the UBO for the first time after activating the ORCID® integration, all publications will initially be displayed as “not yet transferred to your ORCID® profile.” This note refers exclusively to the transfer via the UBO. The publications may already have been added to your ORCID® profile by you or by another “trusted party.”
                            </i18n:en>
                          </li>
                          <li>
                            <i18n:de>
-                             Im Moment können Publikationen nur einzeln durch Mausklick in Ihr ORCID-Profil übertragen werden. Wir arbeiten an einer Lösung, damit komplette Trefferlisten mit einem Klick in Ihr Profil übertragen werden können.
+                             Sie können jede Publikation aus der UBO aktiv in Ihr ORCID®-Profil übertragen. Ist dort bereits eine identische Publikation mit demselben eindeutigen Publikationsidentifier (z. B. einem DOI) vorhanden, gruppiert ORCID® die Datensätze automatisch zu einem gemeinsamen Werk. Die Herkunft der einzelnen Datensätze bleibt dabei weiterhin nachvollziehbar. Publikationen ohne gemeinsamen Identifier werden nicht automatisch zusammengeführt.
                            </i18n:de>
                            <i18n:en>
-                             Right now, publications can only be transferred to your ORCID-profile one-by-one via mouse click. We are working on a solution to transfer all your publications to your profile at once.
+                             You can actively transfer any publication from UBO to your ORCID® profile. If an identical publication with the same unique publication identifier (e.g., a DOI) already exists there, ORCID® automatically groups the records into a single work. The origin of the individual records remains traceable. Publications without a common identifier are not automatically merged.
+                           </i18n:en>
+                         </li>
+                         <li>
+                           <i18n:de>
+                             Die UBO wird in Ihrem ORCID®-Profil als Quelle der übertragenen Publikationsdaten angezeigt. Wenn Angaben fehlerhaft oder unvollständig sind, melden Sie Korrekturwünsche bitte an uns. Von der UBO oder einer anderen „Trusted Party“ übertragene Datensätze können in Ihrem ORCID®-Profil nicht direkt bearbeitet werden. Sie können die Einträge aber aus dem Profil löschen.
+                           </i18n:de>
+                           <i18n:en>
+                             The UBO will appear in your ORCID® profile as the source of the transferred publication data. If any information is incorrect or incomplete, please contact us to request corrections. Records transferred by the UBO or another “trusted party” cannot be edited directly in your ORCID® profile. However, you can delete the entries from your profile.
+                           </i18n:en>
+                         </li>
+                         <li>
+                           <i18n:de>
+                             Derzeit können Publikationen nur einzeln per Mausklick in Ihr ORCID®-Profil übertragen werden. Möchten Sie alle Ihre Publikationen oder eine bestimmte Auswahl aus Ihren UBO-Nachweisen übertragen, wenden Sie sich bitte an:
+                           </i18n:de>
+                           <i18n:en>
+                             Currently, publications can only be transferred to your ORCID® profile one at a time with a mouse click. If you would like to transfer all of your publications or a specific selection from your UBO records, please contact:
+                           </i18n:en>
+                           <a href="|code:ude.contact.mailto|">
+                             <i18n:code>ude.contact.mail</i18n:code>
+                           </a>
+                         </li>
+                         <li>
+                           <i18n:de>
+                             Bitte legen Sie in Ihrem UBO-Benutzerprofil unter „ORCID®-Einstellungen“ fest, wie künftig mit Ihren Publikationen verfahren werden soll. Die gewünschten Einstellungen können Sie nach der ersten aktiven Übertragung auswählen.
+                           </i18n:de>
+                           <i18n:en>
+                             Please go to “ORCID® Settings” in your UBO user profile to specify how your publications should be handled in the future. You can select your preferred settings after your first active transfer.
+                           </i18n:en>
+                         </li>
+                         <li>
+                           <i18n:de>
+                             Prüfen Sie außerdem die Sichtbarkeitseinstellungen in Ihrem ORCID®-Profil. Diese bestimmen, wer die übertragenen Publikationen sehen kann.
+                           </i18n:de>
+                           <i18n:en>
+                             Also, check the visibility settings in your ORCID® profile. These settings determine who can view the imported publications.
                            </i18n:en>
                          </li>
                        </ul>
