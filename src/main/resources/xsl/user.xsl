@@ -24,7 +24,6 @@
 <xsl:param name="CurrentUser" />
 <xsl:param name="UBO.LSF.Link" />
 <xsl:param name="UBO.Scopus.Author.Link" />
-<xsl:param name="UBO.ORCID2.InfoURL" />
 <xsl:param name="MCR.ORCID2.LinkURL" />
 <xsl:param name="MCR.ORCID2.OAuth.ClientSecret" select="''"/>
 <xsl:param name="MCR.ORCID2.OAuth.Scope" select="''"/>
@@ -249,10 +248,8 @@
         </xsl:otherwise>
       </xsl:choose>
       <p>
-        <a href="{$UBO.ORCID2.InfoURL}">
-          <xsl:value-of select="i18n:translate('orcid.integration.more')" />
-          <xsl:text>...</xsl:text>
-        </a>
+        <xsl:value-of select="i18n:translate('orcid.integration.more.ude')" />
+        <a href="https://bibliographie.ub.uni-due.de/info.xml">https://bibliographie.ub.uni-due.de/info.xml</a>
       </p>
     </div>
   </article>
