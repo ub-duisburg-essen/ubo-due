@@ -658,7 +658,7 @@
                       </i18n:de>
                       <i18n:en>
                         <strong>The University of Duisburg-Essen is
-                        <a href="https://orcid.org/" target="_blank">ORCID</a>
+                        <a href="https://orcid.org/" target="_blank">ORCID®</a>
                         member and can therefore
                         help you to maintain your ORCID® profile and your personal publication list</strong> by automatically ...
                       </i18n:en>
@@ -687,7 +687,7 @@
                      </p>
                      <p>
                         <i18n:de>Diese Autorisierung erfolgt auf den Seiten der UBO über "Mein Profil":</i18n:de>
-                        <i18n:en>These authorizations are made on the UBO website via "My Profile":</i18n:en>
+                        <i18n:en>These authorizations are made on the UBO website via "My profile":</i18n:en>
                        <ul>
                          <li>
                            <i18n:de>Klicken Sie dort auf den Button "Registrieren oder verknüpfen Sie Ihre ORCID®-iD hier!"
@@ -753,7 +753,7 @@
                              Derzeit können Publikationen nur einzeln per Mausklick in Ihr ORCID®-Profil übertragen werden. Möchten Sie alle Ihre Publikationen oder eine bestimmte Auswahl aus Ihren UBO-Nachweisen übertragen, wenden Sie sich bitte an:
                            </i18n:de>
                            <i18n:en>
-                             Currently, publications can only be transferred to your ORCID® profile one at a time with a mouse click. If you would like to transfer all of your publications or a specific selection from your UBO records, please contact:
+                             Currently, publications can only be transferred to your ORCID® profile one at a time via mouse click. If you would like to transfer all of your publications or a specific selection from your UBO records, please contact:
                            </i18n:en>
                            <a href="|code:ude.contact.mailto|">
                              <i18n:code>ude.contact.mail</i18n:code>
