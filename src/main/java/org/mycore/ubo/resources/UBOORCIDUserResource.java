@@ -50,7 +50,10 @@ public class UBOORCIDUserResource {
                 JsonArray attributesJSON = new JsonArray();
 
                 if (user.getAttributes() != null) {
-                    user.getAttributes().forEach(attribute -> {
+                    user.getAttributes().stream()
+                        .filter(attribute -> attribute.getName() != null &&
+                            !attribute.getName().contains("credential"))
+                        .forEach(attribute -> {
                         JsonObject attributeJSON = new JsonObject();
 
                         attributeJSON.addProperty("name", attribute.getName());
