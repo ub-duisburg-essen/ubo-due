@@ -265,6 +265,7 @@ class OrcidProfileGUI {
      * @returns {Promise<UserProperties>} The updated settings.
      */
     static async settingsDialog(baseURL, language, current) {
+        console.debug("using adapted JS...")
         const [save, cancel, title,
             orcidModalIntro,
             alwaysUpdateWorkLabel,
@@ -281,6 +282,24 @@ class OrcidProfileGUI {
                 OrcidProfileGUI.translate(baseURL, language, "orcid.integration.settings.createFirstWork"),
                 OrcidProfileGUI.translate(baseURL, language, "orcid.integration.settings.recreateDeletedWork"),
             ]);
+
+        const hasCurrentSettings =
+            current !== null &&
+            current !== undefined &&
+            Object.keys(current).length > 0;
+
+        const initialSettings = hasCurrentSettings
+            ? current
+            : {
+                alwaysUpdateWork:
+                    window["MCR.ORCID2.WorkEventHandler.AlwaysUpdateWork"],
+                createDuplicateWork:
+                    window["MCR.ORCID2.WorkEventHandler.CreateDuplicateWork"],
+                createFirstWork:
+                    window["MCR.ORCID2.WorkEventHandler.CreateFirstWork"],
+                recreateDeletedWork:
+                    window["MCR.ORCID2.WorkEventHandler.RecreateDeletedWork"]
+            };
 
         return new Promise((resolve, reject) => {
             const modal = document.createElement("div");
@@ -339,16 +358,16 @@ class OrcidProfileGUI {
             let $modelJq = $(`#${modalId}`);
 
             let alwaysUpdateWorkElement = modal.querySelector(`#${modalId}alwaysUpdateWork`);
-            alwaysUpdateWorkElement.checked = current.alwaysUpdateWork;
+            alwaysUpdateWorkElement.checked = initialSettings.alwaysUpdateWork;
 
             let createDuplicateWorkElement = modal.querySelector(`#${modalId}createDuplicateWork`);
-            createDuplicateWorkElement.checked = current.createDuplicateWork;
+            createDuplicateWorkElement.checked = initialSettings.createDuplicateWork;
 
             let createFirstWorkElement = modal.querySelector(`#${modalId}createFirstWork`);
-            createFirstWorkElement.checked = current.createFirstWork;
+            createFirstWorkElement.checked = initialSettings.createFirstWork;
 
             let recreateDeletedWorkElement = modal.querySelector(`#${modalId}recreateDeletedWork`);
-            recreateDeletedWorkElement.checked = current.recreateDeletedWork;
+            recreateDeletedWorkElement.checked = initialSettings.recreateDeletedWork;
 
             let saveButton = modal.querySelector(".save");
             let resolved = false;
@@ -360,10 +379,14 @@ class OrcidProfileGUI {
                     recreateDeletedWork: recreateDeletedWorkElement.checked
                 }
 
-                if (current.alwaysUpdateWork !== settings.alwaysUpdateWork ||
+                const changed =
+                    !hasCurrentSettings ||
+                    current.alwaysUpdateWork !== settings.alwaysUpdateWork ||
                     current.createDuplicateWork !== settings.createDuplicateWork ||
                     current.createFirstWork !== settings.createFirstWork ||
-                    current.recreateDeletedWork !== settings.recreateDeletedWork) {
+                    current.recreateDeletedWork !== settings.recreateDeletedWork;
+
+                if (changed) {
                     resolved = true;
                     resolve(settings);
                 } else {
