@@ -286,7 +286,16 @@ class OrcidProfileGUI {
         const hasCurrentSettings =
             current !== null &&
             current !== undefined &&
-            Object.keys(current).length > 0;
+            typeof current === "object" &&
+            Object.keys(current).length > 0 &&
+            current.alwaysUpdateWork !== null &&
+            current.alwaysUpdateWork !== undefined &&
+            current.createDuplicateWork !== null &&
+            current.createDuplicateWork !== undefined &&
+            current.createFirstWork !== null &&
+            current.createFirstWork !== undefined &&
+            current.recreateDeletedWork !== null &&
+            current.recreateDeletedWork !== undefined;
 
         const initialSettings = hasCurrentSettings
             ? current
