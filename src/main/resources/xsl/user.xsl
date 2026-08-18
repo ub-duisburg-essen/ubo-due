@@ -28,6 +28,10 @@
 <xsl:param name="MCR.ORCID2.OAuth.ClientSecret" select="''"/>
 <xsl:param name="MCR.ORCID2.OAuth.Scope" select="''"/>
 <xsl:param name="MCR.ORCID2.Client.V3.APIMode"/>
+<xsl:param name="MCR.ORCID2.WorkEventHandler.AlwaysUpdateWork"/>
+<xsl:param name="MCR.ORCID2.WorkEventHandler.CreateDuplicateWork"/>
+<xsl:param name="MCR.ORCID2.WorkEventHandler.CreateFirstWork"/>
+<xsl:param name="MCR.ORCID2.WorkEventHandler.RecreateDeletedWork"/>
 
 <xsl:variable name="uid">
   <xsl:value-of select="/user/@name" />
@@ -296,6 +300,12 @@
 
   <p>
     <b><xsl:value-of select="i18n:translate('orcid.integration.list')" /></b>
+     <script type="text/javascript">
+      window["MCR.ORCID2.WorkEventHandler.AlwaysUpdateWork"] = &quot;<xsl:value-of select="$MCR.ORCID2.WorkEventHandler.AlwaysUpdateWork"/>&quot;;
+      window["MCR.ORCID2.WorkEventHandler.CreateDuplicateWork"] = &quot;<xsl:value-of select="$MCR.ORCID2.WorkEventHandler.CreateDuplicateWork"/>&quot;;
+      window["MCR.ORCID2.WorkEventHandler.CreateFirstWork"] = &quot;<xsl:value-of select="$MCR.ORCID2.WorkEventHandler.CreateFirstWork"/>&quot;;
+      window["MCR.ORCID2.WorkEventHandler.RecreateDeletedWork"] = &quot;<xsl:value-of select="$MCR.ORCID2.WorkEventHandler.RecreateDeletedWork"/>&quot;;
+    </script>
     <script src="{$WebApplicationBaseURL}js/user-profile-orcid.js"/>
     <ul class="orcid-list-gui">
       <!-- this gets filled by the javascript above -->
