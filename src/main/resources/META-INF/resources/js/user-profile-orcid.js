@@ -265,7 +265,6 @@ class OrcidProfileGUI {
      * @returns {Promise<UserProperties>} The updated settings.
      */
     static async settingsDialog(baseURL, language, current) {
-        console.debug("using adapted JS...")
         const [save, cancel, title,
             orcidModalIntro,
             alwaysUpdateWorkLabel,
@@ -301,13 +300,13 @@ class OrcidProfileGUI {
             ? current
             : {
                 alwaysUpdateWork:
-                    window["MCR.ORCID2.WorkEventHandler.AlwaysUpdateWork"],
+                    window["MCR.ORCID2.WorkEventHandler.AlwaysUpdateWork"] === "true",
                 createDuplicateWork:
-                    window["MCR.ORCID2.WorkEventHandler.CreateDuplicateWork"],
+                    window["MCR.ORCID2.WorkEventHandler.CreateDuplicateWork"] === "true",
                 createFirstWork:
-                    window["MCR.ORCID2.WorkEventHandler.CreateFirstWork"],
+                    window["MCR.ORCID2.WorkEventHandler.CreateFirstWork"] === "true",
                 recreateDeletedWork:
-                    window["MCR.ORCID2.WorkEventHandler.RecreateDeletedWork"]
+                    window["MCR.ORCID2.WorkEventHandler.RecreateDeletedWork"] === "true"
             };
 
         return new Promise((resolve, reject) => {
