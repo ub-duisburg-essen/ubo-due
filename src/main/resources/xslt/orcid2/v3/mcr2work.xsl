@@ -5,6 +5,7 @@
                 xmlns:mods="http://www.loc.gov/mods/v3"
                 xmlns:work="http://www.orcid.org/ns/work"
                 xmlns:fn="http://www.w3.org/2005/xpath-functions"
+                xmlns:mcrstringutils="http://www.mycore.de/xslt/stringutils"
                 exclude-result-prefixes="fn mods xsl">
 
     <xsl:import href="resource:xslt/orcid2/v3/mcr2work_generic.xsl"/>
