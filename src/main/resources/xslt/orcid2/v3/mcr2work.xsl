@@ -11,6 +11,12 @@
 
     <xsl:param name="MCR.ORCID2.Genre.Mapping.Default.Genre" select="'other'"/>
 
+    <xsl:template match="mods:abstract[normalize-space(.) != '' and not(preceding-sibling::mods:abstract[normalize-space(.) != ''])]">
+        <work:short-description>
+            <xsl:value-of select="mcrstringutils:shorten(text(), ($short-description-max-length - 1), '…')"/>
+        </work:short-description>
+    </xsl:template>
+
     <xsl:template name="workType">
         <xsl:choose>
             <xsl:when test="mods:classification[@generator = 'xpathmapping2orcidWorkType-mycore'][@valueURI][@authorityURI]">
