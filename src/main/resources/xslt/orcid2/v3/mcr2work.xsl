@@ -5,17 +5,19 @@
                 xmlns:mods="http://www.loc.gov/mods/v3"
                 xmlns:work="http://www.orcid.org/ns/work"
                 xmlns:fn="http://www.w3.org/2005/xpath-functions"
-                xmlns:mcrstringutils="http://www.mycore.de/xslt/stringutils"
+                xmlns:mcrstring="http://www.mycore.de/xslt/stringutils"
                 exclude-result-prefixes="fn mods xsl">
 
     <xsl:import href="resource:xslt/orcid2/v3/mcr2work_generic.xsl"/>
 
     <xsl:param name="MCR.ORCID2.Genre.Mapping.Default.Genre" select="'other'"/>
 
-    <xsl:template match="mods:abstract[normalize-space(.) != '' and not(preceding-sibling::mods:abstract[normalize-space(.) != ''])]">
+    <xsl:template match="mods:abstract[normalize-space(.) != '']" priority="2">
+      <xsl:if test="not(preceding-sibling::mods:abstract[normalize-space(.) != ''])">
         <work:short-description>
-            <xsl:value-of select="mcrstringutils:shorten(text(), ($short-description-max-length - 1), '…')"/>
+          <xsl:value-of select="mcrstring:shorten(text(), ($short-description-max-length - 1), '…')"/>
         </work:short-description>
+      </xsl:if>
     </xsl:template>
 
     <xsl:template name="workType">
