@@ -64,7 +64,9 @@
 				"q.op": "AND",
 				"lowercaseOperators": "true",
 				"df": "all",
-				"wt": "xml"
+				"wt": "xml",
+				"f.year.facet.limit": -1,
+                "sort": "year desc"
 			},
 			"appends": {
 				"facet.field": [

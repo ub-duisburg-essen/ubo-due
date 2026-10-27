@@ -58,7 +58,7 @@
       <xsl:with-param name="facet-name" select="'genre'"/>
     </xsl:apply-templates>
 
-    <xsl:apply-templates select="." mode="bar-chart">
+    <xsl:apply-templates select="." mode="pie-chart">
       <xsl:with-param name="chart-title" select="document('notnull:i18n:ChartsCommon.chart.title.oa')/i18n/text()"/>
       <xsl:with-param name="classId" select="'oa'"/>
       <xsl:with-param name="facet-name" select="'oa'"/>
